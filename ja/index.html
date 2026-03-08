@@ -1416,6 +1416,35 @@
         color: #0d1117;
     }
 
+
+    /* ===== Photo Gallery ===== */
+    .photo-wrap {
+        margin: 20px 0;
+        border-radius: 10px;
+        overflow: hidden;
+        border: 1px solid #21262d;
+    }
+    .photo-wrap img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .photo-caption {
+        padding: 10px 14px;
+        font-size: .8em;
+        color: #8b949e;
+        background: #161b22;
+        border-top: 1px solid #21262d;
+    }
+    .photo-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin: 20px 0;
+    }
+    @media (max-width:600px) {
+        .photo-grid { grid-template-columns: 1fr }
+    }
 </style>
 
 <script>
@@ -1500,7 +1529,11 @@
 
     <hr>
 
-    <h2>対象読者</h2>
+        <div class="photo-wrap fade-in">
+        <img src="../photos/tank_overview.jpg" alt="ホロビオントアクアリウム メインタンク全景 pH 6.87" loading="lazy">
+        <div class="photo-caption">📸 実際のメインタンク — pH モニターが 6.87 を表示。換水ゼロで1年以上維持。焼赤玉土底床にバリスネリアとアズレアが自然繁茂。</div>
+    </div>
+<h2>対象読者</h2>
     <ul>
         <li>オーバーフロー式水槽を持っている、または導入を検討している方</li>
         <li>換水の手間に限界を感じている中〜上級者のアクアリスト</li>
@@ -2184,7 +2217,11 @@
         </table>
     </div>
 
-    <h3>メインタンク生体構成</h3>
+        <div class="photo-wrap fade-in">
+        <img src="../photos/fish_closeup.jpg" alt="メインタンク 水中クローズアップ 小型魚と水草" loading="lazy">
+        <div class="photo-caption">📸 水中クローズアップ — 水草の間を泳ぐ小型魚。給餌ゼロでも健康に生育。底床のデトリタスはベントスの餌となり、食物連鎖が回り続ける。</div>
+    </div>
+<h3>メインタンク生体構成</h3>
     <div class="holo-table-wrap fade-in">
         <table class="holo-table">
             <tr>
