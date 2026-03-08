@@ -1484,6 +1484,35 @@
         color: #0d1117;
     }
 
+
+    /* ===== Photo Gallery ===== */
+    .photo-wrap {
+        margin: 20px 0;
+        border-radius: 10px;
+        overflow: hidden;
+        border: 1px solid #21262d;
+    }
+    .photo-wrap img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .photo-caption {
+        padding: 10px 14px;
+        font-size: .8em;
+        color: #8b949e;
+        background: #161b22;
+        border-top: 1px solid #21262d;
+    }
+    .photo-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin: 20px 0;
+    }
+    @media (max-width:600px) {
+        .photo-grid { grid-template-columns: 1fr }
+    }
 </style>
 
     <script>
@@ -1596,7 +1625,11 @@
 
         <hr>
 
-        <h2>Target Audience</h2>
+            <div class="photo-wrap fade-in">
+        <img src="photos/tank_overview.jpg" alt="Holobiont Aquarium main tank overview pH 6.87" loading="lazy">
+        <div class="photo-caption">📸 The actual main tank — pH monitor reads 6.87. Maintained for over 1 year with zero water changes. Baked Akadama substrate with Vallisneria and Azurea growing naturally.</div>
+    </div>
+<h2>Target Audience</h2>
         <ul>
             <li>You own or are considering an overflow aquarium system</li>
             <li>You are an intermediate-to-advanced aquarist tired of water changes</li>
@@ -2110,7 +2143,11 @@
 
         <h2 id="sec-recipe">Carbon Source Extract Recipe</h2>
 
-        <h3>Base Liquid</h3>
+            <div class="photo-wrap fade-in">
+        <img src="photos/carbon_extract.jpg" alt="Carbon source extract pump bottle" loading="lazy">
+        <div class="photo-caption">📸 The actual carbon source extract — stored in a pump bottle, one squirt into the sump daily. The amber liquid is a vodka + rice vinegar + sugar + mineral blend.</div>
+    </div>
+<h3>Base Liquid</h3>
 
         <!-- Recipe cards -->
 
@@ -2320,7 +2357,11 @@
             </table>
         </div>
 
-        <h3>Main Tank Livestock</h3>
+            <div class="photo-wrap fade-in">
+        <img src="photos/fish_closeup.jpg" alt="Main tank underwater closeup fish and plants" loading="lazy">
+        <div class="photo-caption">📸 Underwater close-up — small fish swimming among the plants. Healthy with zero feeding. Detritus on the substrate feeds benthos, keeping the food chain running.</div>
+    </div>
+<h3>Main Tank Livestock</h3>
         <div class="holo-table-wrap fade-in">
             <table class="holo-table">
                 <tr>
