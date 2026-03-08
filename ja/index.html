@@ -8,9 +8,11 @@
     <meta name="keywords" content="無換水,換水ゼロ,水換え不要,アクアリウム,炭素源,ウォッカ法,ベントス,硝酸塩除去,オーバーフロー水槽,水草水槽,大型水槽,自律型生態系,ホロビオント">
     <meta property="og:title" content="無換水アクアリウム — ホロビオントアクアリウム理論">
     <meta property="og:description" content="炭素源×ベントスの食物連鎖で換水・給餌・CO2添加を不要にした淡水水槽システム。1年間の実証記録。">
+    <meta property="og:image" content="https://holobiont-aqua.github.io/holobiont-aquarium/photos/tank_overview.jpg">
     <meta property="og:type" content="article">
     <link rel="alternate" hreflang="en" href="https://holobiont-aqua.github.io/holobiont-aquarium/">
     <link rel="alternate" hreflang="ja" href="https://holobiont-aqua.github.io/holobiont-aquarium/ja/">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -1447,6 +1449,67 @@
     @media (max-width:600px) {
         .photo-grid { grid-template-columns: 1fr }
     }
+
+    /* ===== Hero Banner ===== */
+    .hero-banner {
+        position: relative;
+        height: 180px;
+        border-radius: 12px;
+        overflow: hidden;
+        margin-bottom: 24px;
+        background: linear-gradient(rgba(10,22,40,.7),rgba(13,17,23,.9)),url('../photos/tank_overview.jpg') center/cover no-repeat;
+    }
+    .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, transparent 50%, #0d1117 100%);
+    }
+    .hero-content {
+        position: absolute;
+        bottom: 24px;
+        left: 24px;
+        z-index: 1;
+    }
+    .hero-badge {
+        display: inline-block;
+        font-size: .82em;
+        padding: 6px 16px;
+        border-radius: 20px;
+        background: rgba(88,166,255,.15);
+        color: #58a6ff;
+        border: 1px solid rgba(88,166,255,.3);
+        letter-spacing: .08em;
+        font-weight: 600;
+    }
+
+    /* ===== Table of Contents ===== */
+    .toc {
+        background: #161b22;
+        border: 1px solid #21262d;
+        border-radius: 8px;
+        padding: 16px 20px;
+        margin: 16px 0;
+    }
+    .toc-list {
+        margin: 0;
+        padding-left: 20px;
+        list-style: decimal;
+    }
+    .toc-list li {
+        margin: 4px 0;
+        font-size: .88em;
+    }
+    .toc-list a {
+        color: #8b949e;
+        text-decoration: none;
+        transition: color .2s;
+    }
+    .toc-list a:hover {
+        color: #58a6ff;
+    }
+
+    html { scroll-behavior: smooth }
+
 </style>
 
 <script>
@@ -1499,7 +1562,14 @@
     <span class="lang-btn active">🇯🇵 日本語</span>
 </div>
 
-    <h1>淡水水槽を「換水ゼロ」にした話——炭素源×ベントスで作る自律型生態系アクアリウム</h1>
+        <!-- Hero Banner -->
+    <div class="hero-banner fade-in">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">🧬 ホロビオントアクアリウム理論</div>
+        </div>
+    </div>
+<h1>淡水水槽を「換水ゼロ」にした話——炭素源×ベントスで作る自律型生態系アクアリウム</h1>
     <p><em>無換水・無給餌・CO₂無添加のオーバーフロー式水草水槽を1年間維持した記録と理論</em></p>
 
     <hr>
@@ -1513,7 +1583,22 @@
             <li>白濁を乗り越える1ヶ月の立ち上げ手順</li>
             <li>1年間・pH 6.85を維持した実際のデータ</li>
         </ul>
-    </div>
+        <nav class="toc fade-in">
+        <p style="margin:0 0 10px;font-weight:bold;color:#58a6ff;font-size:.95em">📑 目次</p>
+        <ol class="toc-list">
+            <li><a href="#sec-why-ja">淡水水槽で「換水なし」が難しい理由</a></li>
+            <li><a href="#sec-how-ja">このシステムの仕組み</a></li>
+            <li><a href="#sec-overflow-ja">なぜオーバーフローなのか</a></li>
+            <li><a href="#sec-recipe-ja">炭素源エキスのレシピ</a></li>
+            <li><a href="#sec-setup-ja">立ち上げガイド（約1ヶ月）</a></li>
+            <li><a href="#sec-data-ja">実測データ</a></li>
+            <li><a href="#sec-not-for-ja">こんな人には向きません</a></li>
+            <li><a href="#sec-cost-ja">費用と入手性</a></li>
+            <li><a href="#sec-big-ja">大きいほどうまくいく</a></li>
+            <li><a href="#sec-conclusion-ja">おわりに</a></li>
+        </ol>
+    </nav>
+</div>
 
     <hr>
 
@@ -1798,7 +1883,7 @@
 
     <hr>
 
-    <h2>このシステムの仕組み</h2>
+    <h2 id="sec-how-ja">このシステムの仕組み</h2>
 
     <h3>硝化サイクルのどこに介入するか</h3>
 
@@ -2023,7 +2108,7 @@
 
     <hr>
 
-    <h2>炭素源エキスのレシピ</h2>
+    <h2 id="sec-recipe-ja">炭素源エキスのレシピ</h2>
 
     <h3>ベース液</h3>
 
@@ -2404,7 +2489,7 @@
 
     <hr>
 
-    <h2>おわりに</h2>
+    <h2 id="sec-conclusion-ja">おわりに</h2>
     <p>本システムの発想の原点は、2chの「砂糖添加水槽」スレッドだった。「白濁する」「酸欠になる」「危険」という失敗談を見て、逆に問いを立てた。</p>
     <div class="holo-blockquote">
         <p>「なぜ失敗するのか？ 構造的に成功させるにはどうすればよいか？」</p>
@@ -2428,6 +2513,7 @@
 
     <hr>
     <p style="color:#8b949e;font-size:.82em">著者：アクアリウム歴約10年 / 換水廃止論者<br>ver.11 / 2026年3月</p>
+    <p style="color:#484f58;font-size:.75em;margin-top:8px">本記事は <a href="https://creativecommons.org/licenses/by/4.0/deed.ja" style="color:#58a6ff" target="_blank">CC BY 4.0</a> で公開しています。出典を明記の上、自由に引用・共有・改変してください。</p>
 
 </div>
 </body>
