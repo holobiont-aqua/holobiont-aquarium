@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
@@ -1389,9 +1389,19 @@
         border-radius: 20px;
         overflow: hidden;
         border: 1px solid #30363d;
-        background: rgba(13,17,23,.9);
+        background: rgba(13,17,23,.92);
         backdrop-filter: blur(8px);
         font-size: .78em;
+        transition: opacity .4s, transform .4s;
+    }
+    .lang-switch.hidden {
+        opacity: 0;
+        transform: translateY(-20px);
+        pointer-events: none;
+    }
+    @media (max-width:600px) {
+        .lang-switch { top:8px; right:8px; font-size:.7em }
+        .lang-btn { padding:5px 10px }
     }
     .lang-btn {
         padding: 6px 14px;
@@ -1435,6 +1445,19 @@
                 }
             }, { threshold: .3 });
             phIo.observe(phEl);
+        }
+
+        // Language switcher: auto-hide on scroll
+        const langSw = document.querySelector('.lang-switch');
+        if (langSw) {
+            let hideTimer;
+            const showSwitch = () => { langSw.classList.remove('hidden'); clearTimeout(hideTimer); hideTimer = setTimeout(() => langSw.classList.add('hidden'), 3000); };
+            window.addEventListener('scroll', () => { langSw.classList.add('hidden'); clearTimeout(hideTimer); hideTimer = setTimeout(() => langSw.classList.remove('hidden'), 800); }, { passive: true });
+            // Show on tap/hover
+            langSw.addEventListener('mouseenter', showSwitch);
+            document.addEventListener('touchstart', (e) => { if (langSw.contains(e.target)) { showSwitch() } });
+            // Initially visible, auto-hide after 4s
+            setTimeout(() => langSw.classList.add('hidden'), 4000);
         }
     });
 </script>
