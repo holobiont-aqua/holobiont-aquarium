@@ -1,917 +1,925 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>No Water Change Freshwater Aquarium — Holobiont Aquarium Theory</title>
-    <meta name="description" content="How carbon dosing and benthos built a self-sustaining freshwater ecosystem with zero water changes, zero feeding, and zero CO2 for over one year.">
-    <meta name="keywords" content="no water change, freshwater aquarium, carbon dosing, vodka dosing, benthos, nitrate removal, self-sustaining, overflow tank, planted tank, zero maintenance">
+    <meta name="description"
+        content="How carbon dosing and benthos built a self-sustaining freshwater ecosystem with zero water changes, zero feeding, and zero CO2 for over one year.">
+    <meta name="keywords"
+        content="no water change, freshwater aquarium, carbon dosing, vodka dosing, benthos, nitrate removal, self-sustaining, overflow tank, planted tank, zero maintenance">
     <meta property="og:title" content="No Water Change Freshwater Aquarium — Holobiont Aquarium Theory">
-    <meta property="og:description" content="A planted overflow tank maintained for 1 year with zero water changes, zero feeding, zero CO2.">
+    <meta property="og:description"
+        content="A planted overflow tank maintained for 1 year with zero water changes, zero feeding, zero CO2.">
     <meta property="og:type" content="article">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body style="margin:0;padding:0;background:#0d1117;font-family:'Inter',sans-serif;">
-<!-- Holobiont Aquarium Theory — English Edition v1.0 -->
-<style>
-
-    /* ===== Base ===== */
-    * {
-        box-sizing: border-box
-    }
-
-    .holo-body {
-        font-size: 16px;
-        line-height: 1.85;
-        color: #c9d1d9;
-        word-break: break-word;background:#0d1117;max-width:800px;margin:0 auto;padding:20px
-    }
-
-    /* ===== Boxes ===== */
-    .holo-summary {
-        background: #0d1117;
-        border: 1px solid #30363d;
-        border-left: 4px solid #58a6ff;
-        border-radius: 8px;
-        padding: 16px 18px;
-        margin: 20px 0
-    }
-
-    .holo-summary ul {
-        margin: 8px 0 0;
-        padding-left: 20px;
-        line-height: 2
-    }
-
-    .holo-card {
-        background: #161b22;
-        border: 1px solid #30363d;
-        border-radius: 8px;
-        padding: 14px 16px;
-        margin: 10px 0
-    }
-
-    .holo-card-green {
-        border-left: 3px solid #3fb950
-    }
-
-    .holo-warn-red {
-        background: #1c0a0a;
-        border: 1px solid #f85149;
-        border-left: 4px solid #f85149;
-        border-radius: 8px;
-        padding: 14px 16px;
-        margin: 14px 0;
-        line-height: 1.8
-    }
-
-    .holo-warn-yellow {
-        background: #1c1409;
-        border: 1px solid #d29922;
-        border-left: 4px solid #d29922;
-        border-radius: 8px;
-        padding: 14px 16px;
-        margin: 14px 0
-    }
-
-    .holo-warn-purple {
-        background: #160d20;
-        border: 1px solid #8957e5;
-        border-left: 4px solid #8957e5;
-        border-radius: 8px;
-        padding: 14px 16px;
-        margin: 14px 0
-    }
-
-    .holo-tip {
-        background: #161b22;
-        border: 1px solid #30363d;
-        border-radius: 8px;
-        padding: 14px 16px;
-        margin: 14px 0
-    }
-
-    .holo-blockquote {
-        border-left: 3px solid #3d444d;
-        padding: 4px 16px;
-        color: #8b949e;
-        margin: 16px 0;
-        font-style: italic
-    }
-
-    .holo-label {
-        font-size: .78em;
-        text-transform: uppercase;
-        letter-spacing: .07em;
-        color: #8b949e;
-        margin: 0 0 6px;
-        display: block
-    }
-
-    /* ===== Tables (mobile:card / PC:table) ===== */
-    .holo-table-wrap {
-        margin: 14px 0
-    }
-
-    .holo-table {
-        width: 100%;
-        border-collapse: collapse;
-        font-size: .9em
-    }
-
-    .holo-table th {
-        background: #161b22;
-        color: #8b949e;
-        font-weight: 500;
-        text-align: left;
-        padding: 9px 12px;
-        border: 1px solid #30363d;
-        font-size: .8em;
-        text-transform: uppercase;
-        letter-spacing: .03em
-    }
-
-    .holo-table td {
-        padding: 9px 12px;
-        border: 1px solid #21262d;
-        color: #c9d1d9;
-        vertical-align: top;
-        line-height: 1.6
-    }
-
-    .holo-table tr:nth-child(even) td {
-        background: #0d1117
-    }
-
-    /* Mobile: card layout */
-    @media(max-width:600px) {
-        .holo-table-wrap {
-            overflow-x: visible
+    <!-- Holobiont Aquarium Theory — English Edition v1.0 -->
+    <style>
+        /* ===== Base ===== */
+        * {
+            box-sizing: border-box
         }
 
-        /* Hide header row via tr:first-child (no thead) */
-        .holo-table tr:first-child {
-            display: none
+        .holo-body {
+            font-size: 16px;
+            line-height: 1.85;
+            color: #c9d1d9;
+            word-break: break-word;
+            background: #0d1117;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px
         }
 
-        .holo-table,
-        .holo-table tbody,
-        .holo-table tr,
-        .holo-table td {
-            display: block;
-            width: 100%
+        /* ===== Boxes ===== */
+        .holo-summary {
+            background: #0d1117;
+            border: 1px solid #30363d;
+            border-left: 4px solid #58a6ff;
+            border-radius: 8px;
+            padding: 16px 18px;
+            margin: 20px 0
         }
 
-        .holo-table tr {
+        .holo-summary ul {
+            margin: 8px 0 0;
+            padding-left: 20px;
+            line-height: 2
+        }
+
+        .holo-card {
             background: #161b22;
             border: 1px solid #30363d;
             border-radius: 8px;
-            margin-bottom: 10px;
-            overflow: hidden
+            padding: 14px 16px;
+            margin: 10px 0
         }
 
-        .holo-table tr:nth-child(even) td {
-            background: transparent
+        .holo-card-green {
+            border-left: 3px solid #3fb950
+        }
+
+        .holo-warn-red {
+            background: #1c0a0a;
+            border: 1px solid #f85149;
+            border-left: 4px solid #f85149;
+            border-radius: 8px;
+            padding: 14px 16px;
+            margin: 14px 0;
+            line-height: 1.8
+        }
+
+        .holo-warn-yellow {
+            background: #1c1409;
+            border: 1px solid #d29922;
+            border-left: 4px solid #d29922;
+            border-radius: 8px;
+            padding: 14px 16px;
+            margin: 14px 0
+        }
+
+        .holo-warn-purple {
+            background: #160d20;
+            border: 1px solid #8957e5;
+            border-left: 4px solid #8957e5;
+            border-radius: 8px;
+            padding: 14px 16px;
+            margin: 14px 0
+        }
+
+        .holo-tip {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 14px 16px;
+            margin: 14px 0
+        }
+
+        .holo-blockquote {
+            border-left: 3px solid #3d444d;
+            padding: 4px 16px;
+            color: #8b949e;
+            margin: 16px 0;
+            font-style: italic
+        }
+
+        .holo-label {
+            font-size: .78em;
+            text-transform: uppercase;
+            letter-spacing: .07em;
+            color: #8b949e;
+            margin: 0 0 6px;
+            display: block
+        }
+
+        /* ===== Tables (mobile:card / PC:table) ===== */
+        .holo-table-wrap {
+            margin: 14px 0
+        }
+
+        .holo-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: .9em
+        }
+
+        .holo-table th {
+            background: #161b22;
+            color: #8b949e;
+            font-weight: 500;
+            text-align: left;
+            padding: 9px 12px;
+            border: 1px solid #30363d;
+            font-size: .8em;
+            text-transform: uppercase;
+            letter-spacing: .03em
         }
 
         .holo-table td {
-            border: none;
-            border-bottom: 1px solid #21262d;
-            padding: 8px 14px
+            padding: 9px 12px;
+            border: 1px solid #21262d;
+            color: #c9d1d9;
+            vertical-align: top;
+            line-height: 1.6
         }
 
-        .holo-table td:last-child {
-            border-bottom: none
+        .holo-table tr:nth-child(even) td {
+            background: #0d1117
         }
 
-        .holo-table td::before {
-            content: attr(data-label);
-            display: block;
-            font-size: .7em;
-            color: #58a6ff;
-            text-transform: uppercase;
-            letter-spacing: .05em;
-            margin-bottom: 3px;
-            font-weight: 600
-        }
-    }
+        /* Mobile: card layout */
+        @media(max-width:600px) {
+            .holo-table-wrap {
+                overflow-x: visible
+            }
 
-    /* PC */
-    @media(min-width:601px) {
-        .holo-table-wrap {
+            /* Hide header row via tr:first-child (no thead) */
+            .holo-table tr:first-child {
+                display: none
+            }
+
+            .holo-table,
+            .holo-table tbody,
+            .holo-table tr,
+            .holo-table td {
+                display: block;
+                width: 100%
+            }
+
+            .holo-table tr {
+                background: #161b22;
+                border: 1px solid #30363d;
+                border-radius: 8px;
+                margin-bottom: 10px;
+                overflow: hidden
+            }
+
+            .holo-table tr:nth-child(even) td {
+                background: transparent
+            }
+
+            .holo-table td {
+                border: none;
+                border-bottom: 1px solid #21262d;
+                padding: 8px 14px
+            }
+
+            .holo-table td:last-child {
+                border-bottom: none
+            }
+
+            .holo-table td::before {
+                content: attr(data-label);
+                display: block;
+                font-size: .7em;
+                color: #58a6ff;
+                text-transform: uppercase;
+                letter-spacing: .05em;
+                margin-bottom: 3px;
+                font-weight: 600
+            }
+        }
+
+        /* PC */
+        @media(min-width:601px) {
+            .holo-table-wrap {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                border-radius: 8px
+            }
+
+            .holo-table {
+                font-size: .93em
+            }
+        }
+
+        /* ===== Code block ===== */
+        .holo-pre {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 14px;
             overflow-x: auto;
             -webkit-overflow-scrolling: touch;
-            border-radius: 8px
+            line-height: 1.7;
+            font-size: .82em;
+            white-space: pre;
+            color: #c9d1d9
         }
 
-        .holo-table {
-            font-size: .93em
-        }
-    }
+        /* ===== PC ===== */
+        @media(min-width:640px) {
+            .holo-table {
+                font-size: .93em;
+                white-space: normal
+            }
 
-    /* ===== Code block ===== */
-    .holo-pre {
-        background: #161b22;
-        border: 1px solid #30363d;
-        border-radius: 8px;
-        padding: 14px;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        line-height: 1.7;
-        font-size: .82em;
-        white-space: pre;
-        color: #c9d1d9
-    }
-
-    /* ===== PC ===== */
-    @media(min-width:640px) {
-        .holo-table {
-            font-size: .93em;
-            white-space: normal
+            .holo-pre {
+                font-size: .88em
+            }
         }
 
-        .holo-pre {
-            font-size: .88em
-        }
-    }
-
-    /* ===== Scroll fade-in ===== */
-    .fade-in {
-        opacity: 0;
-        transform: translateY(16px);
-        transition: opacity .6s ease, transform .6s ease
-    }
-
-    .fade-in.visible {
-        opacity: 1;
-        transform: translateY(0)
-    }
-
-    .fade-in-delay-1 {
-        transition-delay: .1s
-    }
-
-    .fade-in-delay-2 {
-        transition-delay: .2s
-    }
-
-    .fade-in-delay-3 {
-        transition-delay: .3s
-    }
-
-    /* ===== Nitrification cycle diagram ===== */
-    @keyframes nc-flow {
-        0% {
-            transform: translateY(-2px);
-            opacity: 0
-        }
-
-        20% {
-            opacity: 1
-        }
-
-        100% {
-            transform: translateY(36px);
-            opacity: 0
-        }
-    }
-
-    @keyframes nc-fadein {
-        from {
+        /* ===== Scroll fade-in ===== */
+        .fade-in {
             opacity: 0;
-            transform: translateY(8px)
+            transform: translateY(16px);
+            transition: opacity .6s ease, transform .6s ease
         }
 
-        to {
+        .fade-in.visible {
             opacity: 1;
             transform: translateY(0)
         }
-    }
 
-    @keyframes nc-pulse {
-
-        0%,
-        100% {
-            box-shadow: 0 0 0 0 rgba(88, 166, 255, 0)
+        .fade-in-delay-1 {
+            transition-delay: .1s
         }
 
-        50% {
-            box-shadow: 0 0 0 8px rgba(88, 166, 255, .15)
-        }
-    }
-
-    .nc-wrap {
-        max-width: 400px;
-        margin: 20px auto
-    }
-
-    .nc-node {
-        border-radius: 8px;
-        padding: 10px 14px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        animation: nc-fadein .5s ease both
-    }
-
-    .nc-node-base {
-        background: #161b22;
-        border: 1px solid #30363d
-    }
-
-    .nc-node-danger {
-        background: #2d1010;
-        border: 1px solid #f85149
-    }
-
-    .nc-node-warn {
-        background: #2d1f08;
-        border: 1px solid #d29922
-    }
-
-    .nc-node-acc {
-        background: #16200a;
-        border: 1px solid #7ee787
-    }
-
-    .nc-node-sys {
-        background: #0d2440;
-        border: 1px solid #58a6ff;
-        animation: nc-pulse 2s infinite, nc-fadein .5s ease both
-    }
-
-    .nc-node-out {
-        background: #0a2a14;
-        border: 1px solid #3fb950
-    }
-
-    .nc-name {
-        color: #e6edf3;
-        font-weight: bold;
-        font-size: .88em
-    }
-
-    .nc-sub {
-        color: #8b949e;
-        font-size: .74em;
-        margin-top: 2px
-    }
-
-    .nc-badge {
-        font-size: .68em;
-        padding: 2px 8px;
-        border-radius: 10px;
-        white-space: nowrap;
-        flex-shrink: 0;
-        margin-left: 8px
-    }
-
-    .nc-badge-red {
-        background: #3d0f0f;
-        color: #f85149;
-        border: 1px solid #f85149
-    }
-
-    .nc-badge-ora {
-        background: #2d1a06;
-        color: #d29922;
-        border: 1px solid #d29922
-    }
-
-    .nc-badge-yel {
-        background: #1a2a0a;
-        color: #7ee787;
-        border: 1px solid #7ee787
-    }
-
-    .nc-conn {
-        position: relative;
-        height: 48px;
-        display: flex;
-        align-items: center;
-        justify-content: center
-    }
-
-    .nc-line {
-        position: absolute;
-        left: 50%;
-        top: 0;
-        bottom: 0;
-        width: 2px;
-        background: #21262d;
-        transform: translateX(-50%)
-    }
-
-    .nc-dot {
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: #58a6ff;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        animation: nc-flow 1.6s ease-in infinite
-    }
-
-    .nc-dot-green {
-        background: #3fb950
-    }
-
-    .nc-lbl {
-        background: #0d1117;
-        color: #8b949e;
-        font-size: .72em;
-        padding: 3px 10px;
-        border-radius: 4px;
-        border: 1px solid #21262d;
-        position: relative;
-        z-index: 1
-    }
-
-    .nc-cross {
-        max-width: 400px;
-        margin: 0 auto 8px;
-        padding: 8px 14px;
-        background: #111;
-        border: 1px dashed #3d444d;
-        border-radius: 8px;
-        text-align: center;
-        color: #484f58;
-        font-size: .8em;
-        text-decoration: line-through
-    }
-
-    .nc-label-sys {
-        text-align: center;
-        color: #58a6ff;
-        font-size: .72em;
-        letter-spacing: .1em;
-        text-transform: uppercase;
-        margin: 4px 0 0
-    }
-
-    /* ===== Benthos loop diagram ===== */
-    @keyframes bl-spin {
-        to {
-            stroke-dashoffset: -440
-        }
-    }
-
-    @keyframes bl-badge-pulse {
-
-        0%,
-        100% {
-            transform: scale(1)
+        .fade-in-delay-2 {
+            transition-delay: .2s
         }
 
-        50% {
-            transform: scale(1.05)
+        .fade-in-delay-3 {
+            transition-delay: .3s
         }
-    }
 
-    .bl-wrap {
-        margin: 20px auto;
-        max-width: 480px
-    }
+        /* ===== Nitrification cycle diagram ===== */
+        @keyframes nc-flow {
+            0% {
+                transform: translateY(-2px);
+                opacity: 0
+            }
 
-    .bl-cycle {
-        display: grid;
-        grid-template-columns: 1fr auto 1fr;
-        grid-template-rows: auto auto auto;
-        gap: 0;
-        align-items: center;
-        justify-items: center
-    }
+            20% {
+                opacity: 1
+            }
 
-    .bl-box {
-        background: #161b22;
-        border: 1px solid #30363d;
-        border-radius: 8px;
-        padding: 10px 12px;
-        font-size: .82em;
-        color: #c9d1d9;
-        text-align: center;
-        width: 100%;
-        line-height: 1.5
-    }
+            100% {
+                transform: translateY(36px);
+                opacity: 0
+            }
+        }
 
-    .bl-box-sump {
-        border-color: #58a6ff;
-        background: #0a1929
-    }
+        @keyframes nc-fadein {
+            from {
+                opacity: 0;
+                transform: translateY(8px)
+            }
 
-    .bl-box-main {
-        border-color: #3fb950;
-        background: #0a1f10
-    }
+            to {
+                opacity: 1;
+                transform: translateY(0)
+            }
+        }
 
-    .bl-box-label {
-        font-size: .68em;
-        text-transform: uppercase;
-        letter-spacing: .05em;
-        margin-bottom: 4px
-    }
+        @keyframes nc-pulse {
 
-    .bl-box-sump .bl-box-label {
-        color: #58a6ff
-    }
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(88, 166, 255, 0)
+            }
 
-    .bl-box-main .bl-box-label {
-        color: #3fb950
-    }
+            50% {
+                box-shadow: 0 0 0 8px rgba(88, 166, 255, .15)
+            }
+        }
 
-    .bl-arrow-v {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 4px 0;
-        position: relative;
-        min-height: 48px
-    }
+        .nc-wrap {
+            max-width: 400px;
+            margin: 20px auto
+        }
 
-    .bl-arrow-line {
-        width: 2px;
-        flex: 1;
-        background: linear-gradient(to bottom, #21262d, #21262d)
-    }
+        .nc-node {
+            border-radius: 8px;
+            padding: 10px 14px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            animation: nc-fadein .5s ease both
+        }
 
-    .bl-arrow-label {
-        font-size: .68em;
-        color: #8b949e;
-        text-align: center;
-        padding: 2px 6px;
-        background: #0d1117;
-        border: 1px solid #21262d;
-        border-radius: 4px;
-        position: relative;
-        z-index: 1;
-        white-space: nowrap
-    }
+        .nc-node-base {
+            background: #161b22;
+            border: 1px solid #30363d
+        }
 
-    @keyframes bl-dotfall {
-        0% {
+        .nc-node-danger {
+            background: #2d1010;
+            border: 1px solid #f85149
+        }
+
+        .nc-node-warn {
+            background: #2d1f08;
+            border: 1px solid #d29922
+        }
+
+        .nc-node-acc {
+            background: #16200a;
+            border: 1px solid #7ee787
+        }
+
+        .nc-node-sys {
+            background: #0d2440;
+            border: 1px solid #58a6ff;
+            animation: nc-pulse 2s infinite, nc-fadein .5s ease both
+        }
+
+        .nc-node-out {
+            background: #0a2a14;
+            border: 1px solid #3fb950
+        }
+
+        .nc-name {
+            color: #e6edf3;
+            font-weight: bold;
+            font-size: .88em
+        }
+
+        .nc-sub {
+            color: #8b949e;
+            font-size: .74em;
+            margin-top: 2px
+        }
+
+        .nc-badge {
+            font-size: .68em;
+            padding: 2px 8px;
+            border-radius: 10px;
+            white-space: nowrap;
+            flex-shrink: 0;
+            margin-left: 8px
+        }
+
+        .nc-badge-red {
+            background: #3d0f0f;
+            color: #f85149;
+            border: 1px solid #f85149
+        }
+
+        .nc-badge-ora {
+            background: #2d1a06;
+            color: #d29922;
+            border: 1px solid #d29922
+        }
+
+        .nc-badge-yel {
+            background: #1a2a0a;
+            color: #7ee787;
+            border: 1px solid #7ee787
+        }
+
+        .nc-conn {
+            position: relative;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+
+        .nc-line {
+            position: absolute;
+            left: 50%;
             top: 0;
-            opacity: 0
+            bottom: 0;
+            width: 2px;
+            background: #21262d;
+            transform: translateX(-50%)
         }
 
-        10% {
-            opacity: 1
+        .nc-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #58a6ff;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: nc-flow 1.6s ease-in infinite
         }
 
-        90% {
-            opacity: 1
+        .nc-dot-green {
+            background: #3fb950
         }
 
-        100% {
-            top: 100%;
-            opacity: 0
-        }
-    }
-
-    .bl-dot {
-        width: 7px;
-        height: 7px;
-        border-radius: 50%;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        animation: bl-dotfall 2s ease-in infinite
-    }
-
-    .bl-dot-blue {
-        background: #58a6ff
-    }
-
-    .bl-dot-green {
-        background: #3fb950
-    }
-
-    .bl-arrow-h-wrap {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0 4px;
-        height: 100%
-    }
-
-    .bl-arrow-h {
-        display: flex;
-        align-items: center;
-        gap: 4px;
-        flex-direction: column
-    }
-
-    .bl-arrow-h-line {
-        width: 2px;
-        height: 80px;
-        background: #21262d;
-        position: relative;
-        overflow: hidden
-    }
-
-    @keyframes bl-hflow {
-        0% {
-            top: -10px;
-            opacity: 0
+        .nc-lbl {
+            background: #0d1117;
+            color: #8b949e;
+            font-size: .72em;
+            padding: 3px 10px;
+            border-radius: 4px;
+            border: 1px solid #21262d;
+            position: relative;
+            z-index: 1
         }
 
-        20% {
-            opacity: 1
+        .nc-cross {
+            max-width: 400px;
+            margin: 0 auto 8px;
+            padding: 8px 14px;
+            background: #111;
+            border: 1px dashed #3d444d;
+            border-radius: 8px;
+            text-align: center;
+            color: #484f58;
+            font-size: .8em;
+            text-decoration: line-through
         }
 
-        80% {
-            opacity: 1
+        .nc-label-sys {
+            text-align: center;
+            color: #58a6ff;
+            font-size: .72em;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            margin: 4px 0 0
         }
 
-        100% {
-            top: calc(100% + 10px);
-            opacity: 0
+        /* ===== Benthos loop diagram ===== */
+        @keyframes bl-spin {
+            to {
+                stroke-dashoffset: -440
+            }
         }
-    }
 
-    .bl-h-dot {
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        animation: bl-hflow 2s linear infinite
-    }
+        @keyframes bl-badge-pulse {
 
-    .bl-h-dot-down {
-        background: #58a6ff;
-        animation-delay: 0s
-    }
+            0%,
+            100% {
+                transform: scale(1)
+            }
 
-    .bl-h-dot-up {
-        background: #3fb950;
-        animation-delay: 1s
-    }
+            50% {
+                transform: scale(1.05)
+            }
+        }
 
-    .bl-arrow-h-label {
-        font-size: .65em;
-        color: #8b949e;
-        text-align: center;
-        writing-mode: horizontal-tb
-    }
+        .bl-wrap {
+            margin: 20px auto;
+            max-width: 480px
+        }
 
-    /* ===== STEP timeline ===== */
-    .step-wrap {
-        position: relative;
-        padding-left: 20px;
-        margin: 24px 0
-    }
+        .bl-cycle {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            grid-template-rows: auto auto auto;
+            gap: 0;
+            align-items: center;
+            justify-items: center
+        }
 
-    .step-wrap::before {
-        content: '';
-        position: absolute;
-        left: 16px;
-        top: 0;
-        bottom: 0;
-        width: 2px;
-        background: linear-gradient(to bottom, #58a6ff, #3fb950)
-    }
+        .bl-box {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 10px 12px;
+            font-size: .82em;
+            color: #c9d1d9;
+            text-align: center;
+            width: 100%;
+            line-height: 1.5
+        }
 
-    .step-item {
-        position: relative;
-        padding: 0 0 24px 32px
-    }
+        .bl-box-sump {
+            border-color: #58a6ff;
+            background: #0a1929
+        }
 
-    .step-item:last-child {
-        padding-bottom: 0
-    }
+        .bl-box-main {
+            border-color: #3fb950;
+            background: #0a1f10
+        }
 
-    .step-num {
-        position: absolute;
-        left: -4px;
-        top: 0;
-        width: 28px;
-        height: 28px;
-        border-radius: 50%;
-        background: #0d1117;
-        border: 2px solid #58a6ff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: .75em;
-        font-weight: bold;
-        color: #58a6ff;
-        z-index: 1;
-        flex-shrink: 0
-    }
+        .bl-box-label {
+            font-size: .68em;
+            text-transform: uppercase;
+            letter-spacing: .05em;
+            margin-bottom: 4px
+        }
 
-    .step-item:last-child .step-num {
-        border-color: #3fb950;
-        color: #3fb950
-    }
+        .bl-box-sump .bl-box-label {
+            color: #58a6ff
+        }
 
-    .step-title {
-        font-weight: bold;
-        color: #e6edf3;
-        margin: 4px 0 8px;
-        font-size: .95em;
-        padding-top: 3px
-    }
+        .bl-box-main .bl-box-label {
+            color: #3fb950
+        }
 
-    .step-body {
-        color: #c9d1d9;
-        font-size: .9em;
-        line-height: 1.75
-    }
+        .bl-arrow-v {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 4px 0;
+            position: relative;
+            min-height: 48px
+        }
 
-    /* ===== pH counter ===== */
-    .ph-counter-wrap {
-        background: #0d1117;
-        border: 1px solid #30363d;
-        border-radius: 12px;
-        padding: 24px 16px;
-        margin: 20px 0;
-        text-align: center
-    }
+        .bl-arrow-line {
+            width: 2px;
+            flex: 1;
+            background: linear-gradient(to bottom, #21262d, #21262d)
+        }
 
-    .ph-value {
-        font-size: 3.5em;
-        font-weight: bold;
-        color: #58a6ff;
-        letter-spacing: .05em;
-        line-height: 1;
-        font-variant-numeric: tabular-nums
-    }
+        .bl-arrow-label {
+            font-size: .68em;
+            color: #8b949e;
+            text-align: center;
+            padding: 2px 6px;
+            background: #0d1117;
+            border: 1px solid #21262d;
+            border-radius: 4px;
+            position: relative;
+            z-index: 1;
+            white-space: nowrap
+        }
 
-    .ph-unit {
-        font-size: 1.2em;
-        color: #8b949e;
-        margin-left: 4px
-    }
+        @keyframes bl-dotfall {
+            0% {
+                top: 0;
+                opacity: 0
+            }
 
-    .ph-label {
-        color: #8b949e;
-        font-size: .88em;
-        margin-top: 8px
-    }
+            10% {
+                opacity: 1
+            }
 
-    .ph-bar-wrap {
-        background: #161b22;
-        border-radius: 8px;
-        height: 8px;
-        margin: 16px 0 8px;
-        overflow: hidden
-    }
+            90% {
+                opacity: 1
+            }
 
-    .ph-bar {
-        height: 100%;
-        background: linear-gradient(to right, #f85149, #d29922, #58a6ff, #3fb950);
-        width: 0;
-        border-radius: 8px;
-        transition: width 1.5s ease
-    }
+            100% {
+                top: 100%;
+                opacity: 0
+            }
+        }
 
-    .ph-bar.animated {
-        width: 100%
-    }
+        .bl-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bl-dotfall 2s ease-in infinite
+        }
 
-    .ph-bar-labels {
-        display: flex;
-        justify-content: space-between;
-        font-size: .7em;
-        color: #484f58
-    }
+        .bl-dot-blue {
+            background: #58a6ff
+        }
 
-    /* ===== Three Zeroes cards ===== */
-    .zero-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 12px;
-        margin: 16px 0
-    }
+        .bl-dot-green {
+            background: #3fb950
+        }
 
-    @media(min-width:500px) {
+        .bl-arrow-h-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 4px;
+            height: 100%
+        }
+
+        .bl-arrow-h {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            flex-direction: column
+        }
+
+        .bl-arrow-h-line {
+            width: 2px;
+            height: 80px;
+            background: #21262d;
+            position: relative;
+            overflow: hidden
+        }
+
+        @keyframes bl-hflow {
+            0% {
+                top: -10px;
+                opacity: 0
+            }
+
+            20% {
+                opacity: 1
+            }
+
+            80% {
+                opacity: 1
+            }
+
+            100% {
+                top: calc(100% + 10px);
+                opacity: 0
+            }
+        }
+
+        .bl-h-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bl-hflow 2s linear infinite
+        }
+
+        .bl-h-dot-down {
+            background: #58a6ff;
+            animation-delay: 0s
+        }
+
+        .bl-h-dot-up {
+            background: #3fb950;
+            animation-delay: 1s
+        }
+
+        .bl-arrow-h-label {
+            font-size: .65em;
+            color: #8b949e;
+            text-align: center;
+            writing-mode: horizontal-tb
+        }
+
+        /* ===== STEP timeline ===== */
+        .step-wrap {
+            position: relative;
+            padding-left: 20px;
+            margin: 24px 0
+        }
+
+        .step-wrap::before {
+            content: '';
+            position: absolute;
+            left: 16px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #58a6ff, #3fb950)
+        }
+
+        .step-item {
+            position: relative;
+            padding: 0 0 24px 32px
+        }
+
+        .step-item:last-child {
+            padding-bottom: 0
+        }
+
+        .step-num {
+            position: absolute;
+            left: -4px;
+            top: 0;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: #0d1117;
+            border: 2px solid #58a6ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: .75em;
+            font-weight: bold;
+            color: #58a6ff;
+            z-index: 1;
+            flex-shrink: 0
+        }
+
+        .step-item:last-child .step-num {
+            border-color: #3fb950;
+            color: #3fb950
+        }
+
+        .step-title {
+            font-weight: bold;
+            color: #e6edf3;
+            margin: 4px 0 8px;
+            font-size: .95em;
+            padding-top: 3px
+        }
+
+        .step-body {
+            color: #c9d1d9;
+            font-size: .9em;
+            line-height: 1.75
+        }
+
+        /* ===== pH counter ===== */
+        .ph-counter-wrap {
+            background: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 24px 16px;
+            margin: 20px 0;
+            text-align: center
+        }
+
+        .ph-value {
+            font-size: 3.5em;
+            font-weight: bold;
+            color: #58a6ff;
+            letter-spacing: .05em;
+            line-height: 1;
+            font-variant-numeric: tabular-nums
+        }
+
+        .ph-unit {
+            font-size: 1.2em;
+            color: #8b949e;
+            margin-left: 4px
+        }
+
+        .ph-label {
+            color: #8b949e;
+            font-size: .88em;
+            margin-top: 8px
+        }
+
+        .ph-bar-wrap {
+            background: #161b22;
+            border-radius: 8px;
+            height: 8px;
+            margin: 16px 0 8px;
+            overflow: hidden
+        }
+
+        .ph-bar {
+            height: 100%;
+            background: linear-gradient(to right, #f85149, #d29922, #58a6ff, #3fb950);
+            width: 0;
+            border-radius: 8px;
+            transition: width 1.5s ease
+        }
+
+        .ph-bar.animated {
+            width: 100%
+        }
+
+        .ph-bar-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: .7em;
+            color: #484f58
+        }
+
+        /* ===== Three Zeroes cards ===== */
         .zero-grid {
-            grid-template-columns: repeat(3, 1fr)
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            margin: 16px 0
         }
-    }
 
-    .zero-card {
-        background: #0a1929;
-        border: 1px solid #30363d;
-        border-radius: 10px;
-        padding: 16px;
-        text-align: center
-    }
+        @media(min-width:500px) {
+            .zero-grid {
+                grid-template-columns: repeat(3, 1fr)
+            }
+        }
 
-    .zero-icon {
-        font-size: 2em;
-        margin-bottom: 8px
-    }
+        .zero-card {
+            background: #0a1929;
+            border: 1px solid #30363d;
+            border-radius: 10px;
+            padding: 16px;
+            text-align: center
+        }
 
-    .zero-title {
-        font-weight: bold;
-        color: #58a6ff;
-        font-size: .92em;
-        margin-bottom: 6px
-    }
+        .zero-icon {
+            font-size: 2em;
+            margin-bottom: 8px
+        }
 
-    .zero-body {
-        font-size: .82em;
-        color: #8b949e;
-        line-height: 1.6;
-        text-align: left
-    }
+        .zero-title {
+            font-weight: bold;
+            color: #58a6ff;
+            font-size: .92em;
+            margin-bottom: 6px
+        }
 
-    /* ===== Maintenance cards ===== */
-    .maint-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 8px;
-        margin: 14px 0
-    }
+        .zero-body {
+            font-size: .82em;
+            color: #8b949e;
+            line-height: 1.6;
+            text-align: left
+        }
 
-    @media(min-width:400px) {
+        /* ===== Maintenance cards ===== */
         .maint-grid {
-            grid-template-columns: 1fr 1fr
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 8px;
+            margin: 14px 0
         }
-    }
 
-    .maint-card {
-        background: #161b22;
-        border: 1px solid #30363d;
-        border-radius: 8px;
-        padding: 12px 14px;
-        display: flex;
-        gap: 10px;
-        align-items: flex-start
-    }
+        @media(min-width:400px) {
+            .maint-grid {
+                grid-template-columns: 1fr 1fr
+            }
+        }
 
-    .maint-freq {
-        font-size: .7em;
-        font-weight: bold;
-        padding: 2px 8px;
-        border-radius: 4px;
-        white-space: nowrap;
-        flex-shrink: 0;
-        margin-top: 2px
-    }
+        .maint-card {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 12px 14px;
+            display: flex;
+            gap: 10px;
+            align-items: flex-start
+        }
 
-    .maint-freq-daily {
-        background: #0d2440;
-        color: #58a6ff;
-        border: 1px solid #58a6ff
-    }
+        .maint-freq {
+            font-size: .7em;
+            font-weight: bold;
+            padding: 2px 8px;
+            border-radius: 4px;
+            white-space: nowrap;
+            flex-shrink: 0;
+            margin-top: 2px
+        }
 
-    .maint-freq-any {
-        background: #0a2a14;
-        color: #3fb950;
-        border: 1px solid #3fb950
-    }
+        .maint-freq-daily {
+            background: #0d2440;
+            color: #58a6ff;
+            border: 1px solid #58a6ff
+        }
 
-    .maint-text {
-        color: #c9d1d9;
-        font-size: .85em;
-        line-height: 1.5
-    }
+        .maint-freq-any {
+            background: #0a2a14;
+            color: #3fb950;
+            border: 1px solid #3fb950
+        }
 
-    /* ===== FAQ accordion ===== */
-    details.holo-details {
-        background: #161b22;
-        border: 1px solid #30363d;
-        border-radius: 8px;
-        margin: 8px 0;
-        overflow: hidden
-    }
+        .maint-text {
+            color: #c9d1d9;
+            font-size: .85em;
+            line-height: 1.5
+        }
 
-    details.holo-details summary {
-        padding: 12px 16px;
-        cursor: pointer;
-        color: #e6edf3;
-        font-weight: bold;
-        font-size: .9em;
-        list-style: none;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        -webkit-tap-highlight-color: transparent
-    }
+        /* ===== FAQ accordion ===== */
+        details.holo-details {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            margin: 8px 0;
+            overflow: hidden
+        }
 
-    details.holo-details summary::after {
-        content: '＋';
-        color: #8b949e;
-        font-size: 1.1em;
-        flex-shrink: 0
-    }
+        details.holo-details summary {
+            padding: 12px 16px;
+            cursor: pointer;
+            color: #e6edf3;
+            font-weight: bold;
+            font-size: .9em;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            -webkit-tap-highlight-color: transparent
+        }
 
-    details.holo-details[open] summary::after {
-        content: '－'
-    }
+        details.holo-details summary::after {
+            content: '＋';
+            color: #8b949e;
+            font-size: 1.1em;
+            flex-shrink: 0
+        }
 
-    details.holo-details .details-body {
-        padding: 0 16px 14px;
-        color: #c9d1d9;
-        font-size: .88em;
-        line-height: 1.75
-    }
+        details.holo-details[open] summary::after {
+            content: '－'
+        }
+
+        details.holo-details .details-body {
+            padding: 0 16px 14px;
+            color: #c9d1d9;
+            font-size: .88em;
+            line-height: 1.75
+        }
 
 
         .approach-grid {
@@ -988,7 +996,7 @@
             color: #58a6ff;
             border: 1px solid #58a6ff
         }
-    
+
 
         .ap-svg {
             width: 100%;
@@ -1045,7 +1053,7 @@
             stroke-dasharray: 4 4;
             animation: ap-dash 1s linear infinite
         }
-    
+
 
         .recipe-wrap {
             margin: 16px 0
@@ -1190,89 +1198,89 @@
             margin: 14px 0 8px;
             padding-left: 2px
         }
-    
 
-                    .wq-graph {
-                        background: #0d1117;
-                        border: 1px solid #30363d;
-                        border-radius: 10px;
-                        padding: 14px;
-                        margin-top: 14px
-                    }
 
-                    .wq-title {
-                        font-size: .75em;
-                        color: #8b949e;
-                        text-transform: uppercase;
-                        letter-spacing: .06em;
-                        margin-bottom: 10px;
-                        text-align: center
-                    }
+        .wq-graph {
+            background: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 10px;
+            padding: 14px;
+            margin-top: 14px
+        }
 
-                    .wq-chart {
-                        position: relative;
-                        height: 140px;
-                        background: linear-gradient(to bottom, rgba(88, 166, 255, .05), transparent);
-                        border-radius: 6px;
-                        overflow: hidden
-                    }
+        .wq-title {
+            font-size: .75em;
+            color: #8b949e;
+            text-transform: uppercase;
+            letter-spacing: .06em;
+            margin-bottom: 10px;
+            text-align: center
+        }
 
-                    .wq-area {
-                        position: absolute;
-                        bottom: 0;
-                        left: 0;
-                        right: 0;
-                        height: 100%;
-                        background: linear-gradient(to right, transparent 0%, rgba(139, 148, 158, .15) 3%, rgba(139, 148, 158, .4) 8%, rgba(248, 81, 73, .35) 15%, rgba(248, 81, 73, .5) 25%, rgba(248, 81, 73, .45) 35%, rgba(210, 153, 34, .3) 50%, rgba(210, 153, 34, .2) 60%, rgba(63, 185, 80, .15) 72%, rgba(63, 185, 80, .08) 80%, rgba(88, 166, 255, .12) 100%);
-                        clip-path: polygon(0% 95%, 3% 80%, 8% 45%, 15% 20%, 22% 12%, 30% 15%, 40% 18%, 50% 25%, 60% 40%, 70% 70%, 75% 88%, 80% 93%, 85% 95%, 100% 95%, 100% 100%, 0% 100%)
-                    }
+        .wq-chart {
+            position: relative;
+            height: 140px;
+            background: linear-gradient(to bottom, rgba(88, 166, 255, .05), transparent);
+            border-radius: 6px;
+            overflow: hidden
+        }
 
-                    @keyframes wq-line-draw {
-                        from {
-                            stroke-dashoffset: 800
-                        }
+        .wq-area {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background: linear-gradient(to right, transparent 0%, rgba(139, 148, 158, .15) 3%, rgba(139, 148, 158, .4) 8%, rgba(248, 81, 73, .35) 15%, rgba(248, 81, 73, .5) 25%, rgba(248, 81, 73, .45) 35%, rgba(210, 153, 34, .3) 50%, rgba(210, 153, 34, .2) 60%, rgba(63, 185, 80, .15) 72%, rgba(63, 185, 80, .08) 80%, rgba(88, 166, 255, .12) 100%);
+            clip-path: polygon(0% 95%, 3% 80%, 8% 45%, 15% 20%, 22% 12%, 30% 15%, 40% 18%, 50% 25%, 60% 40%, 70% 70%, 75% 88%, 80% 93%, 85% 95%, 100% 95%, 100% 100%, 0% 100%)
+        }
 
-                        to {
-                            stroke-dashoffset: 0
-                        }
-                    }
+        @keyframes wq-line-draw {
+            from {
+                stroke-dashoffset: 800
+            }
 
-                    .wq-svg {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%
-                    }
+            to {
+                stroke-dashoffset: 0
+            }
+        }
 
-                    .wq-svg polyline {
-                        stroke-dasharray: 800;
-                        animation: wq-line-draw 3s ease forwards
-                    }
+        .wq-svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%
+        }
 
-                    .wq-labels {
-                        display: flex;
-                        justify-content: space-between;
-                        margin-top: 6px;
-                        font-size: .65em;
-                        color: #484f58
-                    }
+        .wq-svg polyline {
+            stroke-dasharray: 800;
+            animation: wq-line-draw 3s ease forwards
+        }
 
-                    .wq-event {
-                        position: absolute;
-                        font-size: .65em;
-                        color: #c9d1d9;
-                        text-align: center;
-                        white-space: nowrap
-                    }
+        .wq-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 6px;
+            font-size: .65em;
+            color: #484f58
+        }
 
-                    .wq-event-dot {
-                        width: 8px;
-                        height: 8px;
-                        border-radius: 50%;
-                        margin: 0 auto 3px
-                    }
-                
+        .wq-event {
+            position: absolute;
+            font-size: .65em;
+            color: #c9d1d9;
+            text-align: center;
+            white-space: nowrap
+        }
+
+        .wq-event-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin: 0 auto 3px
+        }
+
 
         .pyramid-section {
             margin: 20px 0;
@@ -1375,963 +1383,1104 @@
             letter-spacing: .05em
         }
     
+    /* ===== Hero Banner ===== */
+    .hero-banner {
+        position: relative;
+        height: 180px;
+        border-radius: 12px;
+        overflow: hidden;
+        margin-bottom: 24px;
+        background: linear-gradient(135deg, #0a1628 0%, #0d2440 30%, #0a2a14 60%, #161b22 100%);
+    }
+    .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, transparent 50%, #0d1117 100%);
+    }
+    .hero-content {
+        position: absolute;
+        bottom: 24px;
+        left: 24px;
+        z-index: 1;
+    }
+    .hero-badge {
+        display: inline-block;
+        font-size: .82em;
+        padding: 6px 16px;
+        border-radius: 20px;
+        background: rgba(88,166,255,.15);
+        color: #58a6ff;
+        border: 1px solid rgba(88,166,255,.3);
+        letter-spacing: .08em;
+        font-weight: 600;
+    }
+
+    /* ===== Table of Contents ===== */
+    .toc {
+        background: #161b22;
+        border: 1px solid #21262d;
+        border-radius: 8px;
+        padding: 16px 20px;
+        margin: 16px 0;
+    }
+    .toc-list {
+        margin: 0;
+        padding-left: 20px;
+        list-style: decimal;
+    }
+    .toc-list li {
+        margin: 4px 0;
+        font-size: .88em;
+    }
+    .toc-list a {
+        color: #8b949e;
+        text-decoration: none;
+        transition: color .2s;
+    }
+    .toc-list a:hover {
+        color: #58a6ff;
+    }
+
+    html { scroll-behavior: smooth }
+
 </style>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        // Scroll fade-in
-        const io = new IntersectionObserver(entries => {
-            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible') } });
-        }, { threshold: .15 });
-        document.querySelectorAll('.fade-in').forEach(el => io.observe(el));
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Scroll fade-in
+            const io = new IntersectionObserver(entries => {
+                entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible') } });
+            }, { threshold: .15 });
+            document.querySelectorAll('.fade-in').forEach(el => io.observe(el));
 
-        // pH counter animation
-        const phEl = document.getElementById('ph-count');
-        const phBar = document.getElementById('ph-bar');
-        let phDone = false;
-        if (phEl) {
-            const phIo = new IntersectionObserver(entries => {
-                if (entries[0].isIntersecting && !phDone) {
-                    phDone = true;
-                    let v = 0, target = 6.85, dur = 1800, step = target / (dur / 16);
-                    const tick = () => {
-                        v = Math.min(v + step, target);
-                        phEl.textContent = v.toFixed(2);
-                        if (v < target) requestAnimationFrame(tick);
-                        else { if (phBar) phBar.classList.add('animated') }
-                    };
-                    requestAnimationFrame(tick);
-                }
-            }, { threshold: .3 });
-            phIo.observe(phEl);
-        }
-    });
-</script>
+            // pH counter animation
+            const phEl = document.getElementById('ph-count');
+            const phBar = document.getElementById('ph-bar');
+            let phDone = false;
+            if (phEl) {
+                const phIo = new IntersectionObserver(entries => {
+                    if (entries[0].isIntersecting && !phDone) {
+                        phDone = true;
+                        let v = 0, target = 6.85, dur = 1800, step = target / (dur / 16);
+                        const tick = () => {
+                            v = Math.min(v + step, target);
+                            phEl.textContent = v.toFixed(2);
+                            if (v < target) requestAnimationFrame(tick);
+                            else { if (phBar) phBar.classList.add('animated') }
+                        };
+                        requestAnimationFrame(tick);
+                    }
+                }, { threshold: .3 });
+                phIo.observe(phEl);
+            }
+        });
+    </script>
 
-<div class="holo-body">
+    <div class="holo-body">
 
-    <h1>No Water Change Freshwater Aquarium — How Carbon Dosing + Benthos Built a Self-Sustaining Ecosystem (1 Year, Zero Maintenance)</h1>
-    <p><em>A planted overflow tank with zero water changes, zero feeding, and zero CO₂ injection — maintained for over one year. Theory, recipe, setup guide, and real data.</em></p>
-
-    <hr>
-
-    <div class="holo-summary fade-in">
-        <p style="margin:0 0 10px;font-weight:bold;color:#79c0ff">📋 What You Will Learn</p>
-        <ul>
-            <li>Why "no water changes" is so difficult in freshwater aquariums</li>
-            <li>How carbon dosing + benthos exports nitrate via the food chain</li>
-            <li>A carbon source recipe made from grocery store ingredients</li>
-            <li>A one-month setup guide (surviving the bacterial bloom)</li>
-            <li>Real data: pH 6.85 maintained for one year</li>
-        </ul>
-    </div>
-
-    <hr>
-
-    <h2>Introduction</h2>
-    <p>Let me say what you are probably thinking right now:</p>
-    <div class="holo-blockquote">
-        <p>"You keep fish. Just do the water changes."</p>
-    </div>
-    <p>Fair point. But honestly? It is tedious.</p>
-    <p>Hauling buckets every week, siphoning, dechlorinating, matching temperature, slowly refilling — doing that for years on end is genuinely exhausting. With a large tank, your back will hate you too.</p>
-    <p>So I thought: "What if I engineer a system that makes water changes unnecessary?"</p>
-    <p>The answer is the system described in this article. By combining organic carbon dosing with a benthic food chain, I have maintained a planted overflow tank with zero water changes, zero feeding, and zero CO₂ injection for over one year. This is the record and theoretical framework.
-    </p>
-    <p>I call this system the "Holobiont Aquarium," named after the biological concept of Holobiont — the idea that a host and its entire community of symbiotic microorganisms form a single superorganism.</p>
-
-    <hr>
-
-    <h2>Target Audience</h2>
-    <ul>
-        <li>You own or are considering an overflow aquarium system</li>
-        <li>You are an intermediate-to-advanced aquarist tired of water changes</li>
-        <li>You are intellectually curious about ecological approaches to fishkeeping</li>
-    </ul>
-    <p>This is NOT recommended for beginners. The equipment requirements are high, and you need both the knowledge and the nerve to endure a month of cloudy water during setup.</p>
-
-    <hr>
-
-    <h2>Why "No Water Changes" Is So Difficult in Freshwater</h2>
-
-    <h3>Comparison of Existing Approaches</h3>
-
-    <!-- Approach Diagram Grid -->
-    
-
-    
-
-    <div class="approach-grid fade-in">
-        <!-- ADA-Style -->
-        <div class="approach-card">
-            <svg class="ap-svg" viewBox="0 0 200 120">
-                <text x="100" y="14" fill="#8b949e" font-size="7" text-anchor="middle"
-                    font-family="sans-serif">Fate of NO₃⁻</text>
-                <!-- Fish → NO₃⁻ -->
-                <text x="30" y="42" fill="#c9d1d9" font-size="16" text-anchor="middle">🐟</text>
-                <line x1="48" y1="38" x2="75" y2="38" stroke="#30363d" stroke-width="1.5" />
-                <rect x="78" y="28" width="44" height="20" rx="4" fill="#16200a" stroke="#7ee787" />
-                <text x="100" y="42" fill="#7ee787" font-size="8" text-anchor="middle"
-                    font-family="sans-serif">NO₃⁻</text>
-                <line x1="122" y1="38" x2="148" y2="38" stroke="#30363d" stroke-width="1.5" />
-                <!-- Plants absorb -->
-                <text x="168" y="42" fill="#c9d1d9" font-size="16" text-anchor="middle">🌿</text>
-                <text x="168" y="55" fill="#3fb950" font-size="6" text-anchor="middle"
-                    font-family="sans-serif">Absorb</text>
-                <!-- Flow dots -->
-                <circle cx="60" cy="38" r="3" fill="#7ee787" class="ap-dot" />
-                <circle cx="135" cy="38" r="3" fill="#3fb950" class="ap-dot" style="animation-delay:.5s" />
-                <!-- CO₂ -->
-                <text x="100" y="75" fill="#d29922" font-size="7" text-anchor="middle" font-family="sans-serif">⚠
-                    CO₂ injection required</text>
-                <rect x="55" y="82" width="90" height="18" rx="4" fill="none" stroke="#d29922" stroke-width="1"
-                    stroke-dasharray="3 3" />
-                <text x="100" y="94" fill="#d29922" font-size="7" text-anchor="middle" font-family="sans-serif">💨 CO₂
-                    Cylinder</text>
-            </svg>
-            <div class="approach-card-body">
-                <span class="approach-card-badge badge-green">Great Aesthetics</span>
-                <div class="approach-card-title">ADA-Style Heavily Planted Tank</div>
-                <div class="approach-card-desc">Plants directly absorb nitrate. Requires CO₂ injection and high lighting.</div>
-            </div>
-        </div>
-
-        <!-- DSB -->
-        <div class="approach-card">
-            <svg class="ap-svg" viewBox="0 0 200 120">
-                <text x="100" y="14" fill="#8b949e" font-size="7" text-anchor="middle"
-                    font-family="sans-serif">Fate of NO₃⁻</text>
-                <rect x="20" y="22" width="160" height="30" rx="4" fill="#16200a" stroke="#7ee787" />
-                <text x="100" y="41" fill="#7ee787" font-size="9" text-anchor="middle" font-family="sans-serif">NO₃⁻
-                    Accumulates</text>
-                <!-- Arrow down -->
-                <line x1="100" y1="52" x2="100" y2="68" stroke="#30363d" stroke-width="1.5" />
-                <circle cx="100" cy="60" r="3" fill="#d29922" class="ap-dot" />
-                <!-- Deep Sand Bed -->
-                <rect x="20" y="70" width="160" height="25" rx="4" fill="#1c1409" stroke="#d29922" />
-                <text x="100" y="80" fill="#d29922" font-size="7" text-anchor="middle"
-                    font-family="sans-serif">Deep Sand Bed (15cm+)</text>
-                <text x="100" y="90" fill="#8b949e" font-size="7" text-anchor="middle" font-family="sans-serif">NO₃⁻ →
-                    N₂↑ Gas released</text>
-                <!-- Danger -->
-                <text x="100" y="110" fill="#f85149" font-size="7" text-anchor="middle" font-family="sans-serif">💀
-                    Collapse: H₂S release (lethal)</text>
-            </svg>
-            <div class="approach-card-body">
-                <span class="approach-card-badge badge-yellow">H₂S Risk</span>
-                <div class="approach-card-title">DSB (Deep Sand Bed)</div>
-                <div class="approach-card-desc">Anaerobic bacteria convert nitrate to N₂ gas. Collapse is catastrophic.</div>
-            </div>
-        </div>
-
-        <!-- External Denitrification Reactor -->
-        <div class="approach-card">
-            <svg class="ap-svg" viewBox="0 0 200 120">
-                <text x="100" y="14" fill="#8b949e" font-size="7" text-anchor="middle"
-                    font-family="sans-serif">Fate of NO₃⁻</text>
-                <!-- Tank -->
-                <rect x="15" y="28" width="55" height="35" rx="4" fill="#161b22" stroke="#30363d" />
-                <text x="42" y="43" fill="#c9d1d9" font-size="7" text-anchor="middle" font-family="sans-serif">Tank</text>
-                <text x="42" y="53" fill="#7ee787" font-size="7" text-anchor="middle"
-                    font-family="sans-serif">NO₃⁻</text>
-                <!-- Arrow -->
-                <line x1="70" y1="45" x2="108" y2="45" stroke="#8957e5" stroke-width="1.5" class="ap-dashed" />
-                <circle cx="90" cy="45" r="3" fill="#8957e5" class="ap-dot" />
-                <!-- Denitri. Reactor -->
-                <rect x="110" y="25" width="75" height="40" rx="6" fill="#160d20" stroke="#8957e5" />
-                <text x="148" y="40" fill="#8957e5" font-size="7" text-anchor="middle"
-                    font-family="sans-serif">External Denitrification Reactor</text>
-                <text x="148" y="52" fill="#8b949e" font-size="7" text-anchor="middle" font-family="sans-serif">NO₃⁻ →
-                    N₂↑</text>
-                <!-- Return -->
-                <path d="M148,65 L148,80 L42,80 L42,63" fill="none" stroke="#30363d" stroke-width="1"
-                    stroke-dasharray="3 3" />
-                <text x="95" y="90" fill="#8b949e" font-size="6" text-anchor="middle" font-family="sans-serif">←
-                    Return treated water</text>
-                <!-- Warning -->
-                <text x="100" y="110" fill="#d29922" font-size="7" text-anchor="middle" font-family="sans-serif">⚠
-                    Complex equipment, clogging risk</text>
-            </svg>
-            <div class="approach-card-body">
-                <span class="approach-card-badge badge-yellow">Complex Setup</span>
-                <div class="approach-card-title">External Denitrification Reactor</div>
-                <div class="approach-card-desc">Forces denitrification in anaerobic chambers. Controllable but operationally complex.</div>
-            </div>
-        </div>
-
-        <!-- This System -->
-        <div class="approach-card" style="border-color:#58a6ff">
-            <svg class="ap-svg" viewBox="0 0 200 120">
-                <text x="100" y="14" fill="#58a6ff" font-size="7" text-anchor="middle" font-family="sans-serif"
-                    font-weight="bold">Fate of NO₃⁻ — This System</text>
-                <!-- NO₃⁻ -->
-                <rect x="10" y="25" width="42" height="20" rx="4" fill="#16200a" stroke="#7ee787" />
-                <text x="31" y="38" fill="#7ee787" font-size="7" text-anchor="middle"
-                    font-family="sans-serif">NO₃⁻</text>
-                <!-- Arrow1 -->
-                <line x1="52" y1="35" x2="68" y2="35" stroke="#1d3a5e" stroke-width="1.5" />
-                <circle cx="60" cy="35" r="3" fill="#58a6ff" class="ap-dot" />
-                <!-- Carbon Assimilation -->
-                <rect x="70" y="24" width="58" height="22" rx="4" fill="#0d2440" stroke="#58a6ff">
-                    <animate attributeName="stroke-opacity" values="1;.4;1" dur="2s" repeatCount="indefinite" />
-                </rect>
-                <text x="99" y="33" fill="#58a6ff" font-size="6.5" text-anchor="middle" font-family="sans-serif">🧪
-                    Carbon Src</text>
-                <text x="99" y="42" fill="#58a6ff" font-size="6" text-anchor="middle" font-family="sans-serif">→
-                    Bacterial Biomass</text>
-                <!-- Arrow2 -->
-                <line x1="128" y1="35" x2="148" y2="35" stroke="#1d3a5e" stroke-width="1.5" />
-                <circle cx="138" cy="35" r="3" fill="#3fb950" class="ap-dot" style="animation-delay:.4s" />
-                <!-- Benthos -->
-                <text x="168" y="39" fill="#c9d1d9" font-size="14" text-anchor="middle">🐛</text>
-                <text x="168" y="50" fill="#3fb950" font-size="6" text-anchor="middle"
-                    font-family="sans-serif">Predation</text>
-                <!-- Loop arrow -->
-                <path d="M168,55 L168,75 L42,75 L42,58" fill="none" stroke="#3fb950" stroke-width="1.5"
-                    class="ap-dashed" />
-                <text x="30" y="66" fill="#c9d1d9" font-size="12" text-anchor="middle">🐟</text>
-                <text x="105" y="84" fill="#3fb950" font-size="6" text-anchor="middle" font-family="sans-serif">🐟
-                    Fish eat benthos → excrete → NO₃⁻ → loop</text>
-                <!-- Conclusion -->
-                <rect x="30" y="95" width="140" height="18" rx="4" fill="#0a2a14" stroke="#3fb950" />
-                <text x="100" y="107" fill="#3fb950" font-size="7" text-anchor="middle" font-family="sans-serif">✅
-                    Exported via food chain — no water changes needed</text>
-            </svg>
-            <div class="approach-card-body">
-                <span class="approach-card-badge badge-blue">This System ✅</span>
-                <div class="approach-card-title">Aerobic Carbon Assimilation + Benthos Loop</div>
-                <div class="approach-card-desc">Nitrate autonomously exported via carbon source → bacteria → benthos → fish loop.</div>
-            </div>
+            <!-- Hero Banner -->
+    <div class="hero-banner fade-in">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">🧬 Holobiont Aquarium Theory</div>
         </div>
     </div>
+<h1>No Water Change Freshwater Aquarium — How Carbon Dosing + Benthos Built a Self-Sustaining Ecosystem (1 Year,
+            Zero Maintenance)</h1>
+        <p><em>A planted overflow tank with zero water changes, zero feeding, and zero CO₂ injection — maintained for
+                over one year. Theory, recipe, setup guide, and real data.</em></p>
 
+        <hr>
 
-    <div class="holo-table-wrap fade-in">
-        <table class="holo-table">
-            <tr>
-                <th>Approach</th>
-                <th>Mechanism</th>
-                <th>Pros</th>
-                <th>Cons</th>
-            </tr>
-            <tr>
-                <td data-label="Approach">Heavily Planted Tank (ADA style)</td>
-                <td data-label="Mechanism">Plants absorb nitrate and phosphate</td>
-                <td data-label="Pros">Beautiful aesthetics</td>
-                <td data-label="Cons">CO₂ required, trimming labor, crash risk</td>
-            </tr>
-            <tr>
-                <td data-label="Approach">DSB (Deep Sand Bed)</td>
-                <td data-label="Mechanism">Anaerobic bacteria convert nitrate to N₂</td>
-                <td data-label="Pros">Eliminates nitrate at source</td>
-                <td data-label="Cons">H₂S on collapse; limited freshwater evidence</td>
-            </tr>
-            <tr>
-                <td data-label="Approach">External Denitrification Reactor</td>
-                <td data-label="Mechanism">Forced denitrification in anaerobic chambers</td>
-                <td data-label="Pros">Easy to control</td>
-                <td data-label="Cons">Complex setup, clogging risk, high maintenance cost</td>
-            </tr>
-            <tr>
-                <td data-label="Approach">This System (Aerobic Carbon Assimilation)</td>
-                <td data-label="Mechanism">Aerobic bacteria assimilate nitrate into biomass; benthos consume it and export it from the system</td>
-                <td data-label="Pros">Near-zero maintenance, no CO₂, self-sustaining, no reset needed</td>
-                <td data-label="Cons">High equipment barrier, benthos required, not for beginners</td>
-            </tr>
-        </table>
-    </div>
-
-    <h3>Why a Method That Works in Saltwater Fails in Freshwater</h3>
-    <div class="holo-table-wrap fade-in">
-        <table class="holo-table">
-            <tr>
-                <th>Comparison</th>
-                <th>Saltwater (Berlin + Vodka)</th>
-                <th>Freshwater (This System)</th>
-            </tr>
-            <tr>
-                <td data-label="Comparison">Final organic waste removal</td>
-                <td data-label="Saltwater (Berlin + Vodka)">Protein skimmer (foam export)</td>
-                <td data-label="Freshwater (This System)">Benthos predation (food chain export)</td>
-            </tr>
-            <tr>
-                <td data-label="Comparison">Protein skimmer viability</td>
-                <td data-label="Saltwater (Berlin + Vodka)">Functional</td>
-                <td data-label="Freshwater (This System)">Does not foam in freshwater (surface tension difference)</td>
-            </tr>
-            <tr>
-                <td data-label="Comparison">Applicable Water Type</td>
-                <td data-label="Saltwater (Berlin + Vodka)">Saltwater only</td>
-                <td data-label="Freshwater (This System)">Freshwater viable</td>
-            </tr>
-        </table>
-    </div>
-    <p>Protein skimmers do not work in freshwater. This is the primary reason aerobic carbon assimilation was considered impossible in freshwater. This system breaks through that barrier using the benthos food chain.</p>
-
-    <h3>Why Aerobic Over Anaerobic?</h3>
-    <div class="holo-card fade-in">
-        <span class="holo-label">Key Point</span>
-        <p style="margin:0">The aerobic approach is <strong>fully observable and adjustable</strong>. Anaerobic approaches are black boxes — you only notice failure when it is too late.</p>
-    </div>
-    <div class="holo-table-wrap fade-in">
-        <table class="holo-table">
-            <tr>
-                <th>Situation</th>
-                <th>Observable Sign</th>
-                <th>Action</th>
-            </tr>
-            <tr>
-                <td data-label="Situation">Sludge removal is falling behind</td>
-                <td data-label="Observable Sign">Sludge builds up in sump</td>
-                <td data-label="Action">Reduce dosing / manually siphon sludge</td>
-            </tr>
-            <tr>
-                <td data-label="Situation">Benthos overpopulation</td>
-                <td data-label="Observable Sign">Sump becomes overcrowded</td>
-                <td data-label="Action">Let fish eat more / manually cull some</td>
-            </tr>
-            <tr>
-                <td data-label="Situation">Oxygen deficiency</td>
-                <td data-label="Observable Sign">Cloudiness with foul smell</td>
-                <td data-label="Action">Add aeration / increase pump power</td>
-            </tr>
-            <tr>
-                <td data-label="Situation">System in balance</td>
-                <td data-label="Observable Sign">Water is clear, no odor</td>
-                <td data-label="Action">Do nothing</td>
-            </tr>
-        </table>
-    </div>
-
-    <hr>
-
-    <h2>How This System Works</h2>
-
-    <h3>Where This System Intervenes in the Nitrogen Cycle</h3>
-
-    <div class="nc-wrap fade-in">
-        <div class="nc-node nc-node-base" style="animation-delay:0s">
-            <div>
-                <div class="nc-name">🐟 Fish waste / uneaten food</div>
-            </div>
-        </div>
-        <div class="nc-conn">
-            <div class="nc-line"></div>
-            <div class="nc-dot" style="animation-delay:0s"></div>
-        </div>
-        <div class="nc-node nc-node-danger" style="animation-delay:.1s">
-            <div>
-                <div class="nc-name">Ammonia (NH₃)</div>
-            </div>
-            <span class="nc-badge nc-badge-red">Highly Toxic</span>
-        </div>
-        <div class="nc-conn">
-            <div class="nc-line"></div>
-            <div class="nc-dot" style="animation-delay:.3s"></div>
-            <div class="nc-lbl">Nitrosomonas</div>
-        </div>
-        <div class="nc-node nc-node-warn" style="animation-delay:.2s">
-            <div>
-                <div class="nc-name">Nitrite (NO₂⁻)</div>
-            </div>
-            <span class="nc-badge nc-badge-ora">Toxic</span>
-        </div>
-        <div class="nc-conn">
-            <div class="nc-line"></div>
-            <div class="nc-dot" style="animation-delay:.6s"></div>
-            <div class="nc-lbl">Nitrobacter</div>
-        </div>
-        <div class="nc-node nc-node-acc" style="animation-delay:.3s">
-            <div>
-                <div class="nc-name">Nitrate (NO₃⁻)</div>
-                <div class="nc-sub">Low toxicity but accumulates endlessly ← THIS is the problem</div>
-            </div>
-            <span class="nc-badge nc-badge-yel">Accumulates</span>
-        </div>
-        <div class="nc-conn" style="height:14px">
-            <div class="nc-line"></div>
-        </div>
-        <div class="nc-cross">🚫 Traditional solution: dilute by water changes</div>
-        <div class="nc-label-sys">▼ This System's Approach</div>
-        <div class="nc-conn">
-            <div class="nc-line" style="background:#1d3a5e"></div>
-            <div class="nc-dot nc-dot-green" style="animation-delay:.9s"></div>
-            <div class="nc-lbl">Heterotrophic bacteria + carbon source dosing</div>
-        </div>
-        <div class="nc-node nc-node-sys" style="animation-delay:.4s">
-            <div>
-                <div class="nc-name">Carbon Assimilation</div>
-                <div class="nc-sub">Nitrate → Bacterial Biomass (incorporated into bacteria)</div>
-            </div>
-        </div>
-        <div class="nc-conn">
-            <div class="nc-line" style="background:#1d3a5e"></div>
-            <div class="nc-dot nc-dot-green" style="animation-delay:1.2s"></div>
-            <div class="nc-lbl">Benthos predation (tubifex, amphipods, etc.)</div>
-        </div>
-        <div class="nc-node nc-node-out" style="animation-delay:.5s">
-            <div>
-                <div class="nc-name">✅ Exported via food chain</div>
-                <div class="nc-sub">No water changes — self-sustaining cycle</div>
-            </div>
-        </div>
-    </div>
-
-    <p>The nitrification cycle — converting ammonia to nitrite, then nitrate — occurs in every tank. The problem is what comes next. Nitrate is relatively harmless but accumulates endlessly. This system replaces the "final nitrate disposal" with carbon assimilation.</p>
-
-    <h3>The Benthos Loop and Nutrient Cycling</h3>
-    <p>The core of this system is the "Benthos Loop" — a continuous nutrient cycle between the sump and the main tank.</p>
-
-    <!-- Benthos loop diagram -->
-    <div class="bl-wrap fade-in">
-        <div style="display:grid;grid-template-columns:1fr 32px 1fr;gap:0;align-items:stretch">
-
-            <!-- Sump side -->
-            <div style="display:flex;flex-direction:column;gap:6px">
-                <div class="bl-box bl-box-sump">
-                    <div class="bl-box-label">Sump (Processing Hub)</div>
-                    🧪 Carbon source dosing<br>↓<br>🦠 Bacterial bloom<br>↓<br>⬛ Sludge formation<br>↓<br>🐛 Benthos feed and multiply
-                </div>
-            </div>
-
-            <!-- Center arrows -->
-            <div
-                style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;position:relative">
-                <div
-                    style="display:flex;flex-direction:column;align-items:center;height:100%;position:relative;width:100%">
-                    <div
-                        style="width:2px;height:50%;background:#21262d;position:absolute;left:50%;top:0;transform:translateX(-50%)">
-                    </div>
-                    <div
-                        style="width:2px;height:50%;background:#21262d;position:absolute;left:50%;bottom:0;transform:translateX(-50%)">
-                    </div>
-                    <!-- Up arrow (overflow to sump)-->
-                    <div style="position:absolute;top:20%;left:50%;transform:translateX(-50%);text-align:center">
-                        <div
-                            style="font-size:.62em;color:#8b949e;writing-mode:vertical-rl;text-orientation:mixed;white-space:nowrap">
-                            ↑ Overflow</div>
-                    </div>
-                    <!-- Down arrow (pump to main)-->
-                    <div style="position:absolute;bottom:20%;left:50%;transform:translateX(-50%);text-align:center">
-                        <div
-                            style="font-size:.62em;color:#8b949e;writing-mode:vertical-rl;text-orientation:mixed;white-space:nowrap">
-                            ↓ Return pump</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Main tank side -->
-            <div style="display:flex;flex-direction:column;gap:6px">
-                <div class="bl-box bl-box-main">
-                    <div class="bl-box-label">Main Tank (Display)</div>
-                    🐟 Fish eat benthos<br>↓<br>💚 Fish grow<br>↓<br>💩 Waste and leftover food<br>↓<br>🌊 Overflow to sump
-                </div>
-            </div>
-
-        </div>
-        <p style="text-align:center;margin:10px 0 0;font-size:.78em;color:#8b949e">This self-sustaining loop eliminates the need for water changes</p>
-    </div>
-
-    <h3>How This Sump Differs from a Conventional Sump</h3>
-    <div class="holo-table-wrap fade-in">
-        <table class="holo-table">
-            <tr>
-                <th>Item</th>
-                <th>Conventional Sump</th>
-                <th>This System's Sump</th>
-            </tr>
-            <tr>
-                <td data-label="Item">Primary Role</td>
-                <td data-label="Conventional Sump">Decomposition (break down organics via biomedia)</td>
-                <td data-label="This System's Sump">Decomposition + Production</td>
-            </tr>
-            <tr>
-                <td data-label="Item">Biology</td>
-                <td data-label="Conventional Sump">Bacteria-centric</td>
-                <td data-label="This System's Sump">Bacteria + Benthos (live food production)</td>
-            </tr>
-            <tr>
-                <td data-label="Item">Relationship to main tank</td>
-                <td data-label="Conventional Sump">Auxiliary processing basin</td>
-                <td data-label="This System's Sump">The real heart of the ecosystem</td>
-            </tr>
-            <tr>
-                <td data-label="Item">Output</td>
-                <td data-label="Conventional Sump">Purified water</td>
-                <td data-label="This System's Sump">Purified water + live food (benthos)</td>
-            </tr>
-        </table>
-    </div>
-
-    <h3>Three "Zeroes" Achieved as Side Effects</h3>
-
-    <div class="zero-grid">
-        <div class="zero-card fade-in fade-in-delay-1">
-            <div class="zero-icon">🍽️</div>
-            <div class="zero-title">① Zero Feeding</div>
-            <div class="zero-body">Benthos multiplying in the sump are constantly delivered to the main tank via the return pump. Feed normally until benthos populations stabilize.</div>
-        </div>
-        <div class="zero-card fade-in fade-in-delay-2">
-            <div class="zero-icon">💨</div>
-            <div class="zero-title">② Zero CO₂ Injection</div>
-            <div class="zero-body">The massive aerobic bacterial population constantly produces CO₂, outpacing gas loss from the overflow. Plants can photosynthesize even in an overflow system.</div>
-        </div>
-        <div class="zero-card fade-in fade-in-delay-3">
-            <div class="zero-icon">♾️</div>
-            <div class="zero-title">③ Zero Reset Required</div>
-            <div class="zero-body">Benthos continuously stir the substrate, preventing anaerobic zones (H₂S production). In theory, the tank never needs to be torn down and reset.</div>
-        </div>
-    </div>
-
-    <hr>
-
-    <h2>Why Overflow Is the Only Option</h2>
-    <div class="holo-table-wrap fade-in">
-        <table class="holo-table">
-            <tr>
-                <th>Filtration Type</th>
-                <th>Sludge Transport</th>
-                <th>O₂ Supply</th>
-                <th>Compatibility</th>
-            </tr>
-            <tr>
-                <td data-label="Filtration Type"><strong>Overflow</strong></td>
-                <td data-label="Sludge Transport">Auto-falls to sump</td>
-                <td data-label="O₂ Supply">Sufficient via fall aeration</td>
-                <td data-label="Compatibility">Only compatible ✅</td>
-            </tr>
-            <tr>
-                <td data-label="Filtration Type">Canister Filter</td>
-                <td data-label="Sludge Transport">Clogs instantly inside</td>
-                <td data-label="O₂ Supply">Pump circulation only</td>
-                <td data-label="Compatibility">Absolute NO 🚫</td>
-            </tr>
-            <tr>
-                <td data-label="Filtration Type">HOB / Top Filter</td>
-                <td data-label="Sludge Transport">Trapped by wool/media</td>
-                <td data-label="O₂ Supply">—</td>
-                <td data-label="Compatibility">Not viable</td>
-            </tr>
-            <tr>
-                <td data-label="Filtration Type">Under-gravel Filter</td>
-                <td data-label="Sludge Transport">Accumulates in substrate</td>
-                <td data-label="O₂ Supply">—</td>
-                <td data-label="Compatibility">Not viable</td>
-            </tr>
-            <tr>
-                <td data-label="Filtration Type">Sponge / Internal</td>
-                <td data-label="Sludge Transport">Trapped in sponge</td>
-                <td data-label="O₂ Supply">—</td>
-                <td data-label="Compatibility">Not viable</td>
-            </tr>
-        </table>
-    </div>
-    <p>This system's bacterial bloom demands extraordinarily high oxygen. Combined with the need to flow sludge without clogging, overflow is the only viable option.</p>
-
-    <hr>
-
-    <h2>Carbon Source Extract Recipe</h2>
-
-    <h3>Base Liquid</h3>
-
-    <!-- Recipe cards -->
-    
-
-    <div class="recipe-wrap fade-in">
-        <div class="recipe-section-label">⚗️ Base Liquid (~265ml total)</div>
-        <div class="recipe-grid">
-            <div class="recipe-card-item recipe-fast">
-                <div class="recipe-emoji">🍶</div>
-                <div class="recipe-name">Vodka</div>
-                <div class="recipe-amount">200 ml</div>
-                <div class="recipe-component">Active: Ethanol</div>
-                <span class="recipe-speed speed-fast">⚡ Fast-acting</span>
-            </div>
-            <div class="recipe-card-item recipe-mid">
-                <div class="recipe-emoji">🍶</div>
-                <div class="recipe-name">Rice Vinegar</div>
-                <div class="recipe-amount">50 ml</div>
-                <div class="recipe-component">Active: Acetic Acid</div>
-                <span class="recipe-speed speed-mid">⏱ Medium</span>
-            </div>
-            <div class="recipe-card-item recipe-slow">
-                <div class="recipe-emoji">🥄</div>
-                <div class="recipe-name">Granulated Sugar</div>
-                <div class="recipe-amount">15 g</div>
-                <div class="recipe-component">Active: Sucrose</div>
-                <span class="recipe-speed speed-slow">🌿 Slow-release</span>
-            </div>
-        </div>
-        <div class="recipe-section-label">🧂 Infused Minerals</div>
-        <div class="recipe-mineral-grid">
-            <div class="recipe-mineral-item">
-                <div class="recipe-mineral-emoji">🌊</div>
-                <div class="recipe-mineral-name">Seaweed Salt</div>
-                <div class="recipe-mineral-note">Na, K, Mg, Ca, Iodine</div>
-            </div>
-            <div class="recipe-mineral-item">
-                <div class="recipe-mineral-emoji">🍌</div>
-                <div class="recipe-mineral-name">Banana (flesh only)</div>
-                <div class="recipe-mineral-note">K and Mg supplement</div>
-            </div>
-            <div class="recipe-mineral-item">
-                <div class="recipe-mineral-emoji">🍵</div>
-                <div class="recipe-mineral-name">Rooibos Tea</div>
-                <div class="recipe-mineral-note">Ca, K, Zn, Mn, etc.</div>
-            </div>
-        </div>
-        <p style="font-size:.78em;color:#8b949e;margin:8px 0 0">Three different carbon sources prevent monoculture and maintain a diverse bacterial community.</p>
-    </div>
-
-    <div class="holo-warn-yellow fade-in">
-        <strong>⚠️ Warning</strong><br>
-        Use ONLY the banana flesh. Pesticide residue on the peel can leach into the extract and kill all shrimp.
-    </div>
-    <p>Dose one pump-squirt into the sump daily. Can be fully automated with a dosing pump. Store at room temperature — the vodka acts as a preservative.</p>
-
-    <hr>
-
-    <h2>Setup Guide (~1 Month)</h2>
-
-    <div class="step-wrap fade-in">
-        <div class="step-item">
-            <div class="step-num">1</div>
-            <div class="step-title">Substrate Selection</div>
-            <div class="step-body">
-                Baked Akadama soil (hard type) is recommended. Its porosity supports bacterial colonization, and its inert nature helps stabilize initial water parameters.
-                <div class="holo-warn-purple" style="margin-top:10px">
-                    <strong>📌 Important</strong><br>Always choose the "hard" type. Regular Akadama disintegrates underwater.
-                </div>
-            </div>
-        </div>
-        <div class="step-item">
-            <div class="step-num">2</div>
-            <div class="step-title">Fill the Sump with Akadama</div>
-            <div class="step-body">Fill the sump with baked Akadama as much as possible. Keep it separated from the pump compartment. Maximize bacterial colonization surface area.</div>
-        </div>
-        <div class="step-item">
-            <div class="step-num">3</div>
-            <div class="step-title">Dry Run + Initial Dosing</div>
-            <div class="step-body">
-                Fill with water and run the overflow empty. Begin ghost feeding (small amounts of fish food as an ammonia source) and carbon source dosing. Expect cloudy water within days.
-                <div class="holo-warn-red" style="margin-top:10px">
-                    <strong>🚫 NEVER Do This</strong><br>
-                    <strong>Water changes</strong> / <strong>Water clarifier chemicals</strong><br>The cloudiness IS the bacterial bloom — it is PROOF that the system is working. Any intervention resets the cycle to zero.
-                </div>
-            </div>
-        </div>
-        <div class="step-item">
-            <div class="step-num">4</div>
-            <div class="step-title">Continue for 1 Month → Sudden Clearing</div>
-            <div class="step-body">
-                Continue daily dosing through the cloudiness. After about one month, the water will suddenly become crystal clear overnight. This signals that the ecosystem has crossed a critical threshold.
-                <div class="holo-tip" style="margin-top:10px">
-                    <span class="holo-label">🔧 Troubleshooting</span>
-                    <strong>If you smell rot</strong>: anaerobic decomposition is occurring — a sign of oxygen deficiency. Add emergency aeration and increase pump flow immediately.
-                </div>
-
-                <!-- Water quality graph -->
-                
-
-                <div class="wq-graph">
-                    <div class="wq-title">📊 Water Clarity During Setup</div>
-                    <div class="wq-chart">
-                        <div class="wq-area"></div>
-                        <svg class="wq-svg" viewBox="0 0 400 140" preserveAspectRatio="none">
-                            <polyline fill="none" stroke="#58a6ff" stroke-width="2.5" stroke-linecap="round"
-                                stroke-linejoin="round"
-                                points="0,133 12,112 32,63 60,28 88,17 120,21 160,25 200,35 240,56 280,98 300,123 320,131 340,133 400,133" />
-                        </svg>
-                        <!-- Event markers -->
-                        <div class="wq-event" style="left:14%;top:8%">
-                            <div class="wq-event-dot" style="background:#f85149"></div>Peak Cloudiness
-                        </div>
-                        <div class="wq-event" style="left:68%;top:55%">
-                            <div class="wq-event-dot" style="background:#d29922"></div>Gradual improvement
-                        </div>
-                        <div class="wq-event" style="right:8%;top:78%">
-                            <div class="wq-event-dot" style="background:#3fb950"></div>Clear ✨
-                        </div>
-                    </div>
-                    <div class="wq-labels">
-                        <span>Day 1</span>
-                        <span>Week 1</span>
-                        <span>Week 2</span>
-                        <span>Week 3</span>
-                        <span>Week 4+</span>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <div class="step-item">
-            <div class="step-num">5</div>
-            <div class="step-title">Plant and Introduce Benthos</div>
-            <div class="step-body">After the water clears, plant aquatic plants and introduce tubifex worms, amphipods, etc. into the sump.</div>
-        </div>
-        <div class="step-item">
-            <div class="step-num">6</div>
-            <div class="step-title">Gradual Fish Introduction</div>
-            <div class="step-body">
-                Introduce fish in order: bottom dwellers → mid-level → upper → apex predators. Feed normally until benthos populations stabilize. Once fish are observed hunting benthos delivered via the return pump, gradually reduce feeding.</div>
-        </div>
-    </div>
-
-    <hr>
-
-    <h2>Actual Tank Data</h2>
-
-    <!-- pH counter animation -->
-    <div class="ph-counter-wrap fade-in">
-        <div class="ph-value"><span id="ph-count">0.00</span><span class="ph-unit">pH</span></div>
-        <div class="ph-label">Maintained for 1 year / Zero water changes</div>
-        <div class="ph-bar-wrap">
-            <div class="ph-bar" id="ph-bar"></div>
-        </div>
-        <div class="ph-bar-labels"><span>Acidic (pH4)</span><span>Neutral (pH7)</span><span>Alkaline (pH9)</span></div>
-    </div>
-
-    <p>In a typical no-water-change tank, acidification from nitrate accumulation is inevitable. In this system, nitrate is removed via carbon assimilation, so pH self-stabilizes. Paradoxically, pH is MORE stable without water changes than with them.</p>
-
-    <div class="holo-table-wrap fade-in">
-        <table class="holo-table">
-            <tr>
-                <th>Item</th>
-                <th>Details</th>
-            </tr>
-            <tr>
-                <td data-label="Item">Tank Size</td>
-                <td data-label="Details">40×60×30cm (tall, custom-built)</td>
-            </tr>
-            <tr>
-                <td data-label="Item">Sump</td>
-                <td data-label="Details">30cm high-type</td>
-            </tr>
-            <tr>
-                <td data-label="Item">Lighting</td>
-                <td data-label="Details">Brim Panel A (plant light)</td>
-            </tr>
-            <tr>
-                <td data-label="Item">Temperature</td>
-                <td data-label="Details">25-26°C (heater controlled)</td>
-            </tr>
-            <tr>
-                <td data-label="Item">Duration</td>
-                <td data-label="Details">Approx. 1 year</td>
-            </tr>
-            <tr>
-                <td data-label="Item">Water Changes</td>
-                <td data-label="Details">None (top-off only)</td>
-            </tr>
-        </table>
-    </div>
-
-    <h3>Main Tank Livestock</h3>
-    <div class="holo-table-wrap fade-in">
-        <table class="holo-table">
-            <tr>
-                <th>Species</th>
-                <th>Qty</th>
-                <th>Role</th>
-            </tr>
-            <tr>
-                <td data-label="Species">Angelfish</td>
-                <td data-label="Qty">3</td>
-                <td data-label="Role">Apex predator</td>
-            </tr>
-            <tr>
-                <td data-label="Species">Nannostomus beckfordi</td>
-                <td data-label="Qty">7</td>
-                <td data-label="Role">Mid-Upper</td>
-            </tr>
-            <tr>
-                <td data-label="Species">Ring Loach</td>
-                <td data-label="Qty">1</td>
-                <td data-label="Role">Bottom</td>
-            </tr>
-            <tr>
-                <td data-label="Species">Hong Kong Pleco</td>
-                <td data-label="Qty">2</td>
-                <td data-label="Role">Bottom / Algae eater</td>
-            </tr>
-            <tr>
-                <td data-label="Species">Dwarf Puffer</td>
-                <td data-label="Qty">1</td>
-                <td data-label="Role">Mid / Snail control</td>
-            </tr>
-            <tr>
-                <td data-label="Species">African Dwarf Frog</td>
-                <td data-label="Qty">3</td>
-                <td data-label="Role">Bottom-Mid</td>
-            </tr>
-            <tr>
-                <td data-label="Species">Neocaridina shrimp</td>
-                <td data-label="Qty">Many</td>
-                <td data-label="Role">Bottom / Cleanup</td>
-            </tr>
-            <tr>
-                <td data-label="Species">Ramshorn Snail</td>
-                <td data-label="Qty">Many</td>
-                <td data-label="Role">Bottom / 分解</td>
-            </tr>
-        </table>
-    </div>
-
-    <h3>Daily Maintenance</h3>
-    <div class="maint-grid fade-in">
-        <div class="maint-card"><span class="maint-freq maint-freq-daily">Daily</span><span
-                class="maint-text">One pump of carbon extract into the sump</span></div>
-        <div class="maint-card"><span class="maint-freq maint-freq-daily">Daily</span><span
-                class="maint-text">Observe the tank (check for anomalies)</span></div>
-        <div class="maint-card"><span class="maint-freq maint-freq-any">As needed</span><span
-                class="maint-text">Top off when water level drops</span></div>
-        <div class="maint-card"><span class="maint-freq maint-freq-any">As needed</span><span
-                class="maint-text">Trim plants when overgrown</span></div>
-    </div>
-    <p>Maintenance effectively converges to "one pump and just watching."</p>
-
-    <hr>
-
-    <h2>Who This Is NOT For</h2>
-
-    <details class="holo-details fade-in">
-        <summary>Requirements</summary>
-        <div class="details-body">
-            <ol>
-                <li>Only implement on a NEW setup. Retrofitting to an established tank is high-risk.</li>
-                <li>Overflow is mandatory. Canister filters are especially dangerous — they clog instantly with sludge.</li>
-            </ol>
-        </div>
-    </details>
-
-    <details class="holo-details fade-in">
-        <summary>Not For You If...</summary>
-        <div class="details-body">
+        <div class="holo-summary fade-in">
+            <p style="margin:0 0 10px;font-weight:bold;color:#79c0ff">📋 What You Will Learn</p>
             <ul>
-                <li><strong>You are squeamish about benthos:</strong>Sumpにはイトミミズ / ヨコエビ / ミズムシ等が大量生息し、メインタンクにも流入する。</li>
-                <li><strong>You enjoy the hands-on ritual of tank maintenance:</strong>Once stable, there is almost nothing left to do.</li>
+                <li>Why "no water changes" is so difficult in freshwater aquariums</li>
+                <li>How carbon dosing + benthos exports nitrate via the food chain</li>
+                <li>A carbon source recipe made from grocery store ingredients</li>
+                <li>A one-month setup guide (surviving the bacterial bloom)</li>
+                <li>Real data: pH 6.85 maintained for one year</li>
             </ul>
-        </div>
-    </details>
-
-    <details class="holo-details fade-in">
-        <summary>Optional Upgrades</summary>
-        <div class="details-body">
-            <ul>
-                <li>Floating particles: add freshwater sponges to the sump for biological removal</li>
-                <li>Full automation: use a dosing pump</li>
-            </ul>
-        </div>
-    </details>
-
-    <hr>
-
-    <h2>Cost and Availability</h2>
-    <div class="holo-table-wrap fade-in">
-        <table class="holo-table">
-            <tr>
-                <th>Item</th>
-                <th>Cost</th>
-                <th>Where to Buy</th>
-            </tr>
-            <tr>
-                <td data-label="Item">Overflow Tank</td>
-                <td data-label="Cost">Expensive (biggest barrier)</td>
-                <td data-label="Where to Buy">Aquarium shops / online</td>
-            </tr>
-            <tr>
-                <td data-label="Item">Baked Akadama</td>
-                <td data-label="Cost">Cheap</td>
-                <td data-label="Where to Buy">Garden center</td>
-            </tr>
-            <tr>
-                <td data-label="Item">Vodka, Vinegar, Sugar</td>
-                <td data-label="Cost">Cheap</td>
-                <td data-label="Where to Buy">Grocery store</td>
-            </tr>
-            <tr>
-                <td data-label="Item">Seaweed Salt / Banana / Rooibos Tea</td>
-                <td data-label="Cost">Cheap</td>
-                <td data-label="Where to Buy">Grocery store</td>
-            </tr>
-            <tr>
-                <td data-label="Item">Benthos</td>
-                <td data-label="Cost">Cheap to free</td>
-                <td data-label="Where to Buy">Bait shops / wild collection (availability is the challenge)</td>
-            </tr>
-        </table>
-    </div>
-    <p>Overflow Tankさえ用意できれば、ランニングCostはほぼゼロに近い。</p>
-
-    <hr>
-
-    <h2>The Bigger the Tank, the Better It Works</h2>
-    <p>大型TankのWater Changesは圧倒的に重労働だ。100L / 200L / 300Lを超えるTankのWater changes作業は、それだけで趣味の継続を断念させるほどの負担になりうる。This SystemはそのWater Changesをゼロにする。</p>
-    <p>More water = greater buffering, less fluctuation. Bacteria and benthos have more habitat, making the system more stable. In conventional management, "bigger = harder." This system inverts that relationship.</p>
-
-    <hr>
-
-    <!-- Food Chain Pyramid -->
-    
-
-    <div class="pyramid-section fade-in">
-        <div class="pyramid-title">🔺 ホロビオントFood Chain Pyramid</div>
-        <div class="pyramid-wrap">
-            <div class="pyramid-tier pyramid-t1 fade-in fade-in-delay-1">
-                <div class="pyramid-emoji">🐟</div>
-                <div class="pyramid-name">Fish (Apex Predator)</div>
-                <div class="pyramid-desc">Angelfish / カエル等</div>
-            </div>
-            <div class="pyramid-arrow">▽</div>
-            <div class="pyramid-tier pyramid-t2 fade-in fade-in-delay-2">
-                <div class="pyramid-emoji">🐛</div>
-                <div class="pyramid-name">Benthos（Primary Consumer）</div>
-                <div class="pyramid-desc">イトミミズ / ヨコエビ / ミズムシ</div>
-            </div>
-            <div class="pyramid-arrow">▽</div>
-            <div class="pyramid-tier pyramid-t3 fade-in fade-in-delay-3">
-                <div class="pyramid-emoji">🦠</div>
-                <div class="pyramid-name">Bacteria (Producer/Decomposer)</div>
-                <div class="pyramid-desc">好気性従属栄養菌 / 硝化菌</div>
-            </div>
-            <div class="pyramid-arrow">▽</div>
-            <div class="pyramid-tier pyramid-t4 fade-in">
-                <div class="pyramid-emoji">🧪</div>
-                <div class="pyramid-name">Organic Matter / Carbon Source</div>
-                <div class="pyramid-desc">Vodka, Vinegar, Sugar + Fish waste</div>
-            </div>
-        </div>
-        <div class="pyramid-label">The entire tank functions as one superorganism (Holobiont)</div>
-        <div><span class="pyramid-concept">Holobiont Aquarium</span></div>
-    </div>
-
-    <hr>
-
-    <h2>Conclusion</h2>
-    <p>The origin of this system was a 2ch (Japanese forum) thread about "sugar-dosed tanks." Reading failure reports — "it gets cloudy," "oxygen crashes," "dangerous" — I asked the opposite question:</p>
-    <div class="holo-blockquote">
-        <p>"Why does it fail? How can it be structurally engineered to succeed?"</p>
-    </div>
-    <ul>
-        <li>Cloudiness is not failure — it is a sign of explosive bacterial growth</li>
-        <li>Oxygen depletion is solved by overflow fall aeration</li>
-        <li>The weakness of a single carbon source is offset by combining multiple types</li>
-        <li>Bacterial sludge can be consumed by benthos</li>
-    </ul>
-    <p>Holobiont——宿主と共生微Biologyの総体を一つの超個体として見る視点——は後から知った概念だが、このシステムの設計思想を的確に表す言葉だと感じた。Tankは魚を飼うための容器ではなく、魚 / バクテリア / Benthos / 水草が一体となって動く、一つの生命体なのだ。
-    </p>
-    <p>One more thing: I have no talent for beautiful aquascape layouts. That is why the only plants in this setup are Azurea and Vallisneria. However, I believe this system could be adapted for ADA-style planted tanks as well.誰かが試してくれたら、ぜひ結果を教えてほしい。
-    </p>
-
-    <div class="ph-counter-wrap fade-in" style="padding:16px 24px">
-        <p style="margin:0;color:#8b949e;font-size:.95em;letter-spacing:.08em;text-align:center">pH 6.85 &nbsp;|&nbsp;
-            No water changes &nbsp;|&nbsp; No feeding &nbsp;|&nbsp; No CO₂</p>
-        <p style="margin:8px 0 0;color:#484f58;font-size:.82em;text-align:center">And the tank quietly runs on its own, as it does every day.</p>
-    </div>
-
-    <hr>
-    <p style="color:#8b949e;font-size:.82em">Author: ~10 years in aquaristics / water-change abolitionist<br>ver.11 / March 2026</p>
-
+            <nav class="toc fade-in">
+        <p style="margin:0 0 10px;font-weight:bold;color:#58a6ff;font-size:.95em">📑 Table of Contents</p>
+        <ol class="toc-list">
+            <li><a href="#sec-why">Why "No Water Changes" Is So Difficult</a></li>
+            <li><a href="#sec-how">How This System Works</a></li>
+            <li><a href="#sec-overflow">Why Overflow Is the Only Option</a></li>
+            <li><a href="#sec-recipe">Carbon Source Extract Recipe</a></li>
+            <li><a href="#sec-setup">Setup Guide (~1 Month)</a></li>
+            <li><a href="#sec-data">Actual Tank Data</a></li>
+            <li><a href="#sec-not-for">Who This Is NOT For</a></li>
+            <li><a href="#sec-cost">Cost and Availability</a></li>
+            <li><a href="#sec-big">The Bigger the Tank, the Better</a></li>
+            <li><a href="#sec-conclusion">Conclusion</a></li>
+        </ol>
+    </nav>
 </div>
+
+        <hr>
+
+        <h2>Introduction</h2>
+        <p>Let me say what you are probably thinking right now:</p>
+        <div class="holo-blockquote">
+            <p>"You keep fish. Just do the water changes."</p>
+        </div>
+        <p>Fair point. But honestly? It is tedious.</p>
+        <p>Hauling buckets every week, siphoning, dechlorinating, matching temperature, slowly refilling — doing that
+            for years on end is genuinely exhausting. With a large tank, your back will hate you too.</p>
+        <p>So I thought: "What if I engineer a system that makes water changes unnecessary?"</p>
+        <p>The answer is the system described in this article. By combining organic carbon dosing with a benthic food
+            chain, I have maintained a planted overflow tank with zero water changes, zero feeding, and zero CO₂
+            injection for over one year. This is the record and theoretical framework.
+        </p>
+        <p>I call this system the "Holobiont Aquarium," named after the biological concept of Holobiont — the idea that
+            a host and its entire community of symbiotic microorganisms form a single superorganism.</p>
+
+        <hr>
+
+        <h2>Target Audience</h2>
+        <ul>
+            <li>You own or are considering an overflow aquarium system</li>
+            <li>You are an intermediate-to-advanced aquarist tired of water changes</li>
+            <li>You are intellectually curious about ecological approaches to fishkeeping</li>
+        </ul>
+        <p>This is NOT recommended for beginners. The equipment requirements are high, and you need both the knowledge
+            and the nerve to endure a month of cloudy water during setup.</p>
+
+        <hr>
+
+        <h2 id="sec-why">Why "No Water Changes" Is So Difficult in Freshwater</h2>
+
+        <h3>Comparison of Existing Approaches</h3>
+
+        <!-- Approach Diagram Grid -->
+
+
+
+
+        <div class="approach-grid fade-in">
+            <!-- ADA-Style -->
+            <div class="approach-card">
+                <svg class="ap-svg" viewBox="0 0 200 120">
+                    <text x="100" y="14" fill="#8b949e" font-size="7" text-anchor="middle" font-family="sans-serif">Fate
+                        of NO₃⁻</text>
+                    <!-- Fish → NO₃⁻ -->
+                    <text x="30" y="42" fill="#c9d1d9" font-size="16" text-anchor="middle">🐟</text>
+                    <line x1="48" y1="38" x2="75" y2="38" stroke="#30363d" stroke-width="1.5" />
+                    <rect x="78" y="28" width="44" height="20" rx="4" fill="#16200a" stroke="#7ee787" />
+                    <text x="100" y="42" fill="#7ee787" font-size="8" text-anchor="middle"
+                        font-family="sans-serif">NO₃⁻</text>
+                    <line x1="122" y1="38" x2="148" y2="38" stroke="#30363d" stroke-width="1.5" />
+                    <!-- Plants absorb -->
+                    <text x="168" y="42" fill="#c9d1d9" font-size="16" text-anchor="middle">🌿</text>
+                    <text x="168" y="55" fill="#3fb950" font-size="6" text-anchor="middle"
+                        font-family="sans-serif">Absorb</text>
+                    <!-- Flow dots -->
+                    <circle cx="60" cy="38" r="3" fill="#7ee787" class="ap-dot" />
+                    <circle cx="135" cy="38" r="3" fill="#3fb950" class="ap-dot" style="animation-delay:.5s" />
+                    <!-- CO₂ -->
+                    <text x="100" y="75" fill="#d29922" font-size="7" text-anchor="middle" font-family="sans-serif">⚠
+                        CO₂ injection required</text>
+                    <rect x="55" y="82" width="90" height="18" rx="4" fill="none" stroke="#d29922" stroke-width="1"
+                        stroke-dasharray="3 3" />
+                    <text x="100" y="94" fill="#d29922" font-size="7" text-anchor="middle" font-family="sans-serif">💨
+                        CO₂
+                        Cylinder</text>
+                </svg>
+                <div class="approach-card-body">
+                    <span class="approach-card-badge badge-green">Great Aesthetics</span>
+                    <div class="approach-card-title">ADA-Style Heavily Planted Tank</div>
+                    <div class="approach-card-desc">Plants directly absorb nitrate. Requires CO₂ injection and high
+                        lighting.</div>
+                </div>
+            </div>
+
+            <!-- DSB -->
+            <div class="approach-card">
+                <svg class="ap-svg" viewBox="0 0 200 120">
+                    <text x="100" y="14" fill="#8b949e" font-size="7" text-anchor="middle" font-family="sans-serif">Fate
+                        of NO₃⁻</text>
+                    <rect x="20" y="22" width="160" height="30" rx="4" fill="#16200a" stroke="#7ee787" />
+                    <text x="100" y="41" fill="#7ee787" font-size="9" text-anchor="middle" font-family="sans-serif">NO₃⁻
+                        Accumulates</text>
+                    <!-- Arrow down -->
+                    <line x1="100" y1="52" x2="100" y2="68" stroke="#30363d" stroke-width="1.5" />
+                    <circle cx="100" cy="60" r="3" fill="#d29922" class="ap-dot" />
+                    <!-- Deep Sand Bed -->
+                    <rect x="20" y="70" width="160" height="25" rx="4" fill="#1c1409" stroke="#d29922" />
+                    <text x="100" y="80" fill="#d29922" font-size="7" text-anchor="middle" font-family="sans-serif">Deep
+                        Sand Bed (15cm+)</text>
+                    <text x="100" y="90" fill="#8b949e" font-size="7" text-anchor="middle" font-family="sans-serif">NO₃⁻
+                        →
+                        N₂↑ Gas released</text>
+                    <!-- Danger -->
+                    <text x="100" y="110" fill="#f85149" font-size="7" text-anchor="middle" font-family="sans-serif">💀
+                        Collapse: H₂S release (lethal)</text>
+                </svg>
+                <div class="approach-card-body">
+                    <span class="approach-card-badge badge-yellow">H₂S Risk</span>
+                    <div class="approach-card-title">DSB (Deep Sand Bed)</div>
+                    <div class="approach-card-desc">Anaerobic bacteria convert nitrate to N₂ gas. Collapse is
+                        catastrophic.</div>
+                </div>
+            </div>
+
+            <!-- External Denitrification Reactor -->
+            <div class="approach-card">
+                <svg class="ap-svg" viewBox="0 0 200 120">
+                    <text x="100" y="14" fill="#8b949e" font-size="7" text-anchor="middle" font-family="sans-serif">Fate
+                        of NO₃⁻</text>
+                    <!-- Tank -->
+                    <rect x="15" y="28" width="55" height="35" rx="4" fill="#161b22" stroke="#30363d" />
+                    <text x="42" y="43" fill="#c9d1d9" font-size="7" text-anchor="middle"
+                        font-family="sans-serif">Tank</text>
+                    <text x="42" y="53" fill="#7ee787" font-size="7" text-anchor="middle"
+                        font-family="sans-serif">NO₃⁻</text>
+                    <!-- Arrow -->
+                    <line x1="70" y1="45" x2="108" y2="45" stroke="#8957e5" stroke-width="1.5" class="ap-dashed" />
+                    <circle cx="90" cy="45" r="3" fill="#8957e5" class="ap-dot" />
+                    <!-- Denitri. Reactor -->
+                    <rect x="110" y="25" width="75" height="40" rx="6" fill="#160d20" stroke="#8957e5" />
+                    <text x="148" y="40" fill="#8957e5" font-size="7" text-anchor="middle"
+                        font-family="sans-serif">External Denitrification Reactor</text>
+                    <text x="148" y="52" fill="#8b949e" font-size="7" text-anchor="middle" font-family="sans-serif">NO₃⁻
+                        →
+                        N₂↑</text>
+                    <!-- Return -->
+                    <path d="M148,65 L148,80 L42,80 L42,63" fill="none" stroke="#30363d" stroke-width="1"
+                        stroke-dasharray="3 3" />
+                    <text x="95" y="90" fill="#8b949e" font-size="6" text-anchor="middle" font-family="sans-serif">←
+                        Return treated water</text>
+                    <!-- Warning -->
+                    <text x="100" y="110" fill="#d29922" font-size="7" text-anchor="middle" font-family="sans-serif">⚠
+                        Complex equipment, clogging risk</text>
+                </svg>
+                <div class="approach-card-body">
+                    <span class="approach-card-badge badge-yellow">Complex Setup</span>
+                    <div class="approach-card-title">External Denitrification Reactor</div>
+                    <div class="approach-card-desc">Forces denitrification in anaerobic chambers. Controllable but
+                        operationally complex.</div>
+                </div>
+            </div>
+
+            <!-- This System -->
+            <div class="approach-card" style="border-color:#58a6ff">
+                <svg class="ap-svg" viewBox="0 0 200 120">
+                    <text x="100" y="14" fill="#58a6ff" font-size="7" text-anchor="middle" font-family="sans-serif"
+                        font-weight="bold">Fate of NO₃⁻ — This System</text>
+                    <!-- NO₃⁻ -->
+                    <rect x="10" y="25" width="42" height="20" rx="4" fill="#16200a" stroke="#7ee787" />
+                    <text x="31" y="38" fill="#7ee787" font-size="7" text-anchor="middle"
+                        font-family="sans-serif">NO₃⁻</text>
+                    <!-- Arrow1 -->
+                    <line x1="52" y1="35" x2="68" y2="35" stroke="#1d3a5e" stroke-width="1.5" />
+                    <circle cx="60" cy="35" r="3" fill="#58a6ff" class="ap-dot" />
+                    <!-- Carbon Assimilation -->
+                    <rect x="70" y="24" width="58" height="22" rx="4" fill="#0d2440" stroke="#58a6ff">
+                        <animate attributeName="stroke-opacity" values="1;.4;1" dur="2s" repeatCount="indefinite" />
+                    </rect>
+                    <text x="99" y="33" fill="#58a6ff" font-size="6.5" text-anchor="middle" font-family="sans-serif">🧪
+                        Carbon Src</text>
+                    <text x="99" y="42" fill="#58a6ff" font-size="6" text-anchor="middle" font-family="sans-serif">→
+                        Bacterial Biomass</text>
+                    <!-- Arrow2 -->
+                    <line x1="128" y1="35" x2="148" y2="35" stroke="#1d3a5e" stroke-width="1.5" />
+                    <circle cx="138" cy="35" r="3" fill="#3fb950" class="ap-dot" style="animation-delay:.4s" />
+                    <!-- Benthos -->
+                    <text x="168" y="39" fill="#c9d1d9" font-size="14" text-anchor="middle">🐛</text>
+                    <text x="168" y="50" fill="#3fb950" font-size="6" text-anchor="middle"
+                        font-family="sans-serif">Predation</text>
+                    <!-- Loop arrow -->
+                    <path d="M168,55 L168,75 L42,75 L42,58" fill="none" stroke="#3fb950" stroke-width="1.5"
+                        class="ap-dashed" />
+                    <text x="30" y="66" fill="#c9d1d9" font-size="12" text-anchor="middle">🐟</text>
+                    <text x="105" y="84" fill="#3fb950" font-size="6" text-anchor="middle" font-family="sans-serif">🐟
+                        Fish eat benthos → excrete → NO₃⁻ → loop</text>
+                    <!-- Conclusion -->
+                    <rect x="30" y="95" width="140" height="18" rx="4" fill="#0a2a14" stroke="#3fb950" />
+                    <text x="100" y="107" fill="#3fb950" font-size="7" text-anchor="middle" font-family="sans-serif">✅
+                        Exported via food chain — no water changes needed</text>
+                </svg>
+                <div class="approach-card-body">
+                    <span class="approach-card-badge badge-blue">This System ✅</span>
+                    <div class="approach-card-title">Aerobic Carbon Assimilation + Benthos Loop</div>
+                    <div class="approach-card-desc">Nitrate autonomously exported via carbon source → bacteria → benthos
+                        → fish loop.</div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="holo-table-wrap fade-in">
+            <table class="holo-table">
+                <tr>
+                    <th>Approach</th>
+                    <th>Mechanism</th>
+                    <th>Pros</th>
+                    <th>Cons</th>
+                </tr>
+                <tr>
+                    <td data-label="Approach">Heavily Planted Tank (ADA style)</td>
+                    <td data-label="Mechanism">Plants absorb nitrate and phosphate</td>
+                    <td data-label="Pros">Beautiful aesthetics</td>
+                    <td data-label="Cons">CO₂ required, trimming labor, crash risk</td>
+                </tr>
+                <tr>
+                    <td data-label="Approach">DSB (Deep Sand Bed)</td>
+                    <td data-label="Mechanism">Anaerobic bacteria convert nitrate to N₂</td>
+                    <td data-label="Pros">Eliminates nitrate at source</td>
+                    <td data-label="Cons">H₂S on collapse; limited freshwater evidence</td>
+                </tr>
+                <tr>
+                    <td data-label="Approach">External Denitrification Reactor</td>
+                    <td data-label="Mechanism">Forced denitrification in anaerobic chambers</td>
+                    <td data-label="Pros">Easy to control</td>
+                    <td data-label="Cons">Complex setup, clogging risk, high maintenance cost</td>
+                </tr>
+                <tr>
+                    <td data-label="Approach">This System (Aerobic Carbon Assimilation)</td>
+                    <td data-label="Mechanism">Aerobic bacteria assimilate nitrate into biomass; benthos consume it and
+                        export it from the system</td>
+                    <td data-label="Pros">Near-zero maintenance, no CO₂, self-sustaining, no reset needed</td>
+                    <td data-label="Cons">High equipment barrier, benthos required, not for beginners</td>
+                </tr>
+            </table>
+        </div>
+
+        <h3>Why a Method That Works in Saltwater Fails in Freshwater</h3>
+        <div class="holo-table-wrap fade-in">
+            <table class="holo-table">
+                <tr>
+                    <th>Comparison</th>
+                    <th>Saltwater (Berlin + Vodka)</th>
+                    <th>Freshwater (This System)</th>
+                </tr>
+                <tr>
+                    <td data-label="Comparison">Final organic waste removal</td>
+                    <td data-label="Saltwater (Berlin + Vodka)">Protein skimmer (foam export)</td>
+                    <td data-label="Freshwater (This System)">Benthos predation (food chain export)</td>
+                </tr>
+                <tr>
+                    <td data-label="Comparison">Protein skimmer viability</td>
+                    <td data-label="Saltwater (Berlin + Vodka)">Functional</td>
+                    <td data-label="Freshwater (This System)">Does not foam in freshwater (surface tension difference)
+                    </td>
+                </tr>
+                <tr>
+                    <td data-label="Comparison">Applicable Water Type</td>
+                    <td data-label="Saltwater (Berlin + Vodka)">Saltwater only</td>
+                    <td data-label="Freshwater (This System)">Freshwater viable</td>
+                </tr>
+            </table>
+        </div>
+        <p>Protein skimmers do not work in freshwater. This is the primary reason aerobic carbon assimilation was
+            considered impossible in freshwater. This system breaks through that barrier using the benthos food chain.
+        </p>
+
+        <h3>Why Aerobic Over Anaerobic?</h3>
+        <div class="holo-card fade-in">
+            <span class="holo-label">Key Point</span>
+            <p style="margin:0">The aerobic approach is <strong>fully observable and adjustable</strong>. Anaerobic
+                approaches are black boxes — you only notice failure when it is too late.</p>
+        </div>
+        <div class="holo-table-wrap fade-in">
+            <table class="holo-table">
+                <tr>
+                    <th>Situation</th>
+                    <th>Observable Sign</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td data-label="Situation">Sludge removal is falling behind</td>
+                    <td data-label="Observable Sign">Sludge builds up in sump</td>
+                    <td data-label="Action">Reduce dosing / manually siphon sludge</td>
+                </tr>
+                <tr>
+                    <td data-label="Situation">Benthos overpopulation</td>
+                    <td data-label="Observable Sign">Sump becomes overcrowded</td>
+                    <td data-label="Action">Let fish eat more / manually cull some</td>
+                </tr>
+                <tr>
+                    <td data-label="Situation">Oxygen deficiency</td>
+                    <td data-label="Observable Sign">Cloudiness with foul smell</td>
+                    <td data-label="Action">Add aeration / increase pump power</td>
+                </tr>
+                <tr>
+                    <td data-label="Situation">System in balance</td>
+                    <td data-label="Observable Sign">Water is clear, no odor</td>
+                    <td data-label="Action">Do nothing</td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+        <h2 id="sec-how">How This System Works</h2>
+
+        <h3>Where This System Intervenes in the Nitrogen Cycle</h3>
+
+        <div class="nc-wrap fade-in">
+            <div class="nc-node nc-node-base" style="animation-delay:0s">
+                <div>
+                    <div class="nc-name">🐟 Fish waste / uneaten food</div>
+                </div>
+            </div>
+            <div class="nc-conn">
+                <div class="nc-line"></div>
+                <div class="nc-dot" style="animation-delay:0s"></div>
+            </div>
+            <div class="nc-node nc-node-danger" style="animation-delay:.1s">
+                <div>
+                    <div class="nc-name">Ammonia (NH₃)</div>
+                </div>
+                <span class="nc-badge nc-badge-red">Highly Toxic</span>
+            </div>
+            <div class="nc-conn">
+                <div class="nc-line"></div>
+                <div class="nc-dot" style="animation-delay:.3s"></div>
+                <div class="nc-lbl">Nitrosomonas</div>
+            </div>
+            <div class="nc-node nc-node-warn" style="animation-delay:.2s">
+                <div>
+                    <div class="nc-name">Nitrite (NO₂⁻)</div>
+                </div>
+                <span class="nc-badge nc-badge-ora">Toxic</span>
+            </div>
+            <div class="nc-conn">
+                <div class="nc-line"></div>
+                <div class="nc-dot" style="animation-delay:.6s"></div>
+                <div class="nc-lbl">Nitrobacter</div>
+            </div>
+            <div class="nc-node nc-node-acc" style="animation-delay:.3s">
+                <div>
+                    <div class="nc-name">Nitrate (NO₃⁻)</div>
+                    <div class="nc-sub">Low toxicity but accumulates endlessly ← THIS is the problem</div>
+                </div>
+                <span class="nc-badge nc-badge-yel">Accumulates</span>
+            </div>
+            <div class="nc-conn" style="height:14px">
+                <div class="nc-line"></div>
+            </div>
+            <div class="nc-cross">🚫 Traditional solution: dilute by water changes</div>
+            <div class="nc-label-sys">▼ This System's Approach</div>
+            <div class="nc-conn">
+                <div class="nc-line" style="background:#1d3a5e"></div>
+                <div class="nc-dot nc-dot-green" style="animation-delay:.9s"></div>
+                <div class="nc-lbl">Heterotrophic bacteria + carbon source dosing</div>
+            </div>
+            <div class="nc-node nc-node-sys" style="animation-delay:.4s">
+                <div>
+                    <div class="nc-name">Carbon Assimilation</div>
+                    <div class="nc-sub">Nitrate → Bacterial Biomass (incorporated into bacteria)</div>
+                </div>
+            </div>
+            <div class="nc-conn">
+                <div class="nc-line" style="background:#1d3a5e"></div>
+                <div class="nc-dot nc-dot-green" style="animation-delay:1.2s"></div>
+                <div class="nc-lbl">Benthos predation (tubifex, amphipods, etc.)</div>
+            </div>
+            <div class="nc-node nc-node-out" style="animation-delay:.5s">
+                <div>
+                    <div class="nc-name">✅ Exported via food chain</div>
+                    <div class="nc-sub">No water changes — self-sustaining cycle</div>
+                </div>
+            </div>
+        </div>
+
+        <p>The nitrification cycle — converting ammonia to nitrite, then nitrate — occurs in every tank. The problem is
+            what comes next. Nitrate is relatively harmless but accumulates endlessly. This system replaces the "final
+            nitrate disposal" with carbon assimilation.</p>
+
+        <h3>The Benthos Loop and Nutrient Cycling</h3>
+        <p>The core of this system is the "Benthos Loop" — a continuous nutrient cycle between the sump and the main
+            tank.</p>
+
+        <!-- Benthos loop diagram -->
+        <div class="bl-wrap fade-in">
+            <div style="display:grid;grid-template-columns:1fr 32px 1fr;gap:0;align-items:stretch">
+
+                <!-- Sump side -->
+                <div style="display:flex;flex-direction:column;gap:6px">
+                    <div class="bl-box bl-box-sump">
+                        <div class="bl-box-label">Sump (Processing Hub)</div>
+                        🧪 Carbon source dosing<br>↓<br>🦠 Bacterial bloom<br>↓<br>⬛ Sludge formation<br>↓<br>🐛 Benthos
+                        feed and multiply
+                    </div>
+                </div>
+
+                <!-- Center arrows -->
+                <div
+                    style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;position:relative">
+                    <div
+                        style="display:flex;flex-direction:column;align-items:center;height:100%;position:relative;width:100%">
+                        <div
+                            style="width:2px;height:50%;background:#21262d;position:absolute;left:50%;top:0;transform:translateX(-50%)">
+                        </div>
+                        <div
+                            style="width:2px;height:50%;background:#21262d;position:absolute;left:50%;bottom:0;transform:translateX(-50%)">
+                        </div>
+                        <!-- Up arrow (overflow to sump)-->
+                        <div style="position:absolute;top:20%;left:50%;transform:translateX(-50%);text-align:center">
+                            <div
+                                style="font-size:.62em;color:#8b949e;writing-mode:vertical-rl;text-orientation:mixed;white-space:nowrap">
+                                ↑ Overflow</div>
+                        </div>
+                        <!-- Down arrow (pump to main)-->
+                        <div style="position:absolute;bottom:20%;left:50%;transform:translateX(-50%);text-align:center">
+                            <div
+                                style="font-size:.62em;color:#8b949e;writing-mode:vertical-rl;text-orientation:mixed;white-space:nowrap">
+                                ↓ Return pump</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main tank side -->
+                <div style="display:flex;flex-direction:column;gap:6px">
+                    <div class="bl-box bl-box-main">
+                        <div class="bl-box-label">Main Tank (Display)</div>
+                        🐟 Fish eat benthos<br>↓<br>💚 Fish grow<br>↓<br>💩 Waste and leftover food<br>↓<br>🌊 Overflow
+                        to sump
+                    </div>
+                </div>
+
+            </div>
+            <p style="text-align:center;margin:10px 0 0;font-size:.78em;color:#8b949e">This self-sustaining loop
+                eliminates the need for water changes</p>
+        </div>
+
+        <h3>How This Sump Differs from a Conventional Sump</h3>
+        <div class="holo-table-wrap fade-in">
+            <table class="holo-table">
+                <tr>
+                    <th>Item</th>
+                    <th>Conventional Sump</th>
+                    <th>This System's Sump</th>
+                </tr>
+                <tr>
+                    <td data-label="Item">Primary Role</td>
+                    <td data-label="Conventional Sump">Decomposition (break down organics via biomedia)</td>
+                    <td data-label="This System's Sump">Decomposition + Production</td>
+                </tr>
+                <tr>
+                    <td data-label="Item">Biology</td>
+                    <td data-label="Conventional Sump">Bacteria-centric</td>
+                    <td data-label="This System's Sump">Bacteria + Benthos (live food production)</td>
+                </tr>
+                <tr>
+                    <td data-label="Item">Relationship to main tank</td>
+                    <td data-label="Conventional Sump">Auxiliary processing basin</td>
+                    <td data-label="This System's Sump">The real heart of the ecosystem</td>
+                </tr>
+                <tr>
+                    <td data-label="Item">Output</td>
+                    <td data-label="Conventional Sump">Purified water</td>
+                    <td data-label="This System's Sump">Purified water + live food (benthos)</td>
+                </tr>
+            </table>
+        </div>
+
+        <h3>Three "Zeroes" Achieved as Side Effects</h3>
+
+        <div class="zero-grid">
+            <div class="zero-card fade-in fade-in-delay-1">
+                <div class="zero-icon">🍽️</div>
+                <div class="zero-title">① Zero Feeding</div>
+                <div class="zero-body">Benthos multiplying in the sump are constantly delivered to the main tank via the
+                    return pump. Feed normally until benthos populations stabilize.</div>
+            </div>
+            <div class="zero-card fade-in fade-in-delay-2">
+                <div class="zero-icon">💨</div>
+                <div class="zero-title">② Zero CO₂ Injection</div>
+                <div class="zero-body">The massive aerobic bacterial population constantly produces CO₂, outpacing gas
+                    loss from the overflow. Plants can photosynthesize even in an overflow system.</div>
+            </div>
+            <div class="zero-card fade-in fade-in-delay-3">
+                <div class="zero-icon">♾️</div>
+                <div class="zero-title">③ Zero Reset Required</div>
+                <div class="zero-body">Benthos continuously stir the substrate, preventing anaerobic zones (H₂S
+                    production). In theory, the tank never needs to be torn down and reset.</div>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2 id="sec-overflow">Why Overflow Is the Only Option</h2>
+        <div class="holo-table-wrap fade-in">
+            <table class="holo-table">
+                <tr>
+                    <th>Filtration Type</th>
+                    <th>Sludge Transport</th>
+                    <th>O₂ Supply</th>
+                    <th>Compatibility</th>
+                </tr>
+                <tr>
+                    <td data-label="Filtration Type"><strong>Overflow</strong></td>
+                    <td data-label="Sludge Transport">Auto-falls to sump</td>
+                    <td data-label="O₂ Supply">Sufficient via fall aeration</td>
+                    <td data-label="Compatibility">Only compatible ✅</td>
+                </tr>
+                <tr>
+                    <td data-label="Filtration Type">Canister Filter</td>
+                    <td data-label="Sludge Transport">Clogs instantly inside</td>
+                    <td data-label="O₂ Supply">Pump circulation only</td>
+                    <td data-label="Compatibility">Absolute NO 🚫</td>
+                </tr>
+                <tr>
+                    <td data-label="Filtration Type">HOB / Top Filter</td>
+                    <td data-label="Sludge Transport">Trapped by wool/media</td>
+                    <td data-label="O₂ Supply">—</td>
+                    <td data-label="Compatibility">Not viable</td>
+                </tr>
+                <tr>
+                    <td data-label="Filtration Type">Under-gravel Filter</td>
+                    <td data-label="Sludge Transport">Accumulates in substrate</td>
+                    <td data-label="O₂ Supply">—</td>
+                    <td data-label="Compatibility">Not viable</td>
+                </tr>
+                <tr>
+                    <td data-label="Filtration Type">Sponge / Internal</td>
+                    <td data-label="Sludge Transport">Trapped in sponge</td>
+                    <td data-label="O₂ Supply">—</td>
+                    <td data-label="Compatibility">Not viable</td>
+                </tr>
+            </table>
+        </div>
+        <p>This system's bacterial bloom demands extraordinarily high oxygen. Combined with the need to flow sludge
+            without clogging, overflow is the only viable option.</p>
+
+        <hr>
+
+        <h2 id="sec-recipe">Carbon Source Extract Recipe</h2>
+
+        <h3>Base Liquid</h3>
+
+        <!-- Recipe cards -->
+
+
+        <div class="recipe-wrap fade-in">
+            <div class="recipe-section-label">⚗️ Base Liquid (~265ml total)</div>
+            <div class="recipe-grid">
+                <div class="recipe-card-item recipe-fast">
+                    <div class="recipe-emoji">🍶</div>
+                    <div class="recipe-name">Vodka</div>
+                    <div class="recipe-amount">200 ml</div>
+                    <div class="recipe-component">Active: Ethanol</div>
+                    <span class="recipe-speed speed-fast">⚡ Fast-acting</span>
+                </div>
+                <div class="recipe-card-item recipe-mid">
+                    <div class="recipe-emoji">🍶</div>
+                    <div class="recipe-name">Rice Vinegar</div>
+                    <div class="recipe-amount">50 ml</div>
+                    <div class="recipe-component">Active: Acetic Acid</div>
+                    <span class="recipe-speed speed-mid">⏱ Medium</span>
+                </div>
+                <div class="recipe-card-item recipe-slow">
+                    <div class="recipe-emoji">🥄</div>
+                    <div class="recipe-name">Granulated Sugar</div>
+                    <div class="recipe-amount">15 g</div>
+                    <div class="recipe-component">Active: Sucrose</div>
+                    <span class="recipe-speed speed-slow">🌿 Slow-release</span>
+                </div>
+            </div>
+            <div class="recipe-section-label">🧂 Infused Minerals</div>
+            <div class="recipe-mineral-grid">
+                <div class="recipe-mineral-item">
+                    <div class="recipe-mineral-emoji">🌊</div>
+                    <div class="recipe-mineral-name">Seaweed Salt</div>
+                    <div class="recipe-mineral-note">Na, K, Mg, Ca, Iodine</div>
+                </div>
+                <div class="recipe-mineral-item">
+                    <div class="recipe-mineral-emoji">🍌</div>
+                    <div class="recipe-mineral-name">Banana (flesh only)</div>
+                    <div class="recipe-mineral-note">K and Mg supplement</div>
+                </div>
+                <div class="recipe-mineral-item">
+                    <div class="recipe-mineral-emoji">🍵</div>
+                    <div class="recipe-mineral-name">Rooibos Tea</div>
+                    <div class="recipe-mineral-note">Ca, K, Zn, Mn, etc.</div>
+                </div>
+            </div>
+            <p style="font-size:.78em;color:#8b949e;margin:8px 0 0">Three different carbon sources prevent monoculture
+                and maintain a diverse bacterial community.</p>
+        </div>
+
+        <div class="holo-warn-yellow fade-in">
+            <strong>⚠️ Warning</strong><br>
+            Use ONLY the banana flesh. Pesticide residue on the peel can leach into the extract and kill all shrimp.
+        </div>
+        <p>Dose one pump-squirt into the sump daily. Can be fully automated with a dosing pump. Store at room
+            temperature — the vodka acts as a preservative.</p>
+
+        <hr>
+
+        <h2 id="sec-setup">Setup Guide (~1 Month)</h2>
+
+        <div class="step-wrap fade-in">
+            <div class="step-item">
+                <div class="step-num">1</div>
+                <div class="step-title">Substrate Selection</div>
+                <div class="step-body">
+                    Baked Akadama soil (hard type) is recommended. Its porosity supports bacterial colonization, and its
+                    inert nature helps stabilize initial water parameters.
+                    <div class="holo-warn-purple" style="margin-top:10px">
+                        <strong>📌 Important</strong><br>Always choose the "hard" type. Regular Akadama disintegrates
+                        underwater.
+                    </div>
+                </div>
+            </div>
+            <div class="step-item">
+                <div class="step-num">2</div>
+                <div class="step-title">Fill the Sump with Akadama</div>
+                <div class="step-body">Fill the sump with baked Akadama as much as possible. Keep it separated from the
+                    pump compartment. Maximize bacterial colonization surface area.</div>
+            </div>
+            <div class="step-item">
+                <div class="step-num">3</div>
+                <div class="step-title">Dry Run + Initial Dosing</div>
+                <div class="step-body">
+                    Fill with water and run the overflow empty. Begin ghost feeding (small amounts of fish food as an
+                    ammonia source) and carbon source dosing. Expect cloudy water within days.
+                    <div class="holo-warn-red" style="margin-top:10px">
+                        <strong>🚫 NEVER Do This</strong><br>
+                        <strong>Water changes</strong> / <strong>Water clarifier chemicals</strong><br>The cloudiness IS
+                        the bacterial bloom — it is PROOF that the system is working. Any intervention resets the cycle
+                        to zero.
+                    </div>
+                </div>
+            </div>
+            <div class="step-item">
+                <div class="step-num">4</div>
+                <div class="step-title">Continue for 1 Month → Sudden Clearing</div>
+                <div class="step-body">
+                    Continue daily dosing through the cloudiness. After about one month, the water will suddenly become
+                    crystal clear overnight. This signals that the ecosystem has crossed a critical threshold.
+                    <div class="holo-tip" style="margin-top:10px">
+                        <span class="holo-label">🔧 Troubleshooting</span>
+                        <strong>If you smell rot</strong>: anaerobic decomposition is occurring — a sign of oxygen
+                        deficiency. Add emergency aeration and increase pump flow immediately.
+                    </div>
+
+                    <!-- Water quality graph -->
+
+
+                    <div class="wq-graph">
+                        <div class="wq-title">📊 Water Clarity During Setup</div>
+                        <div class="wq-chart">
+                            <div class="wq-area"></div>
+                            <svg class="wq-svg" viewBox="0 0 400 140" preserveAspectRatio="none">
+                                <polyline fill="none" stroke="#58a6ff" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    points="0,133 12,112 32,63 60,28 88,17 120,21 160,25 200,35 240,56 280,98 300,123 320,131 340,133 400,133" />
+                            </svg>
+                            <!-- Event markers -->
+                            <div class="wq-event" style="left:14%;top:8%">
+                                <div class="wq-event-dot" style="background:#f85149"></div>Peak Cloudiness
+                            </div>
+                            <div class="wq-event" style="left:68%;top:55%">
+                                <div class="wq-event-dot" style="background:#d29922"></div>Gradual improvement
+                            </div>
+                            <div class="wq-event" style="right:8%;top:78%">
+                                <div class="wq-event-dot" style="background:#3fb950"></div>Clear ✨
+                            </div>
+                        </div>
+                        <div class="wq-labels">
+                            <span>Day 1</span>
+                            <span>Week 1</span>
+                            <span>Week 2</span>
+                            <span>Week 3</span>
+                            <span>Week 4+</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="step-item">
+                <div class="step-num">5</div>
+                <div class="step-title">Plant and Introduce Benthos</div>
+                <div class="step-body">After the water clears, plant aquatic plants and introduce tubifex worms,
+                    amphipods, etc. into the sump.</div>
+            </div>
+            <div class="step-item">
+                <div class="step-num">6</div>
+                <div class="step-title">Gradual Fish Introduction</div>
+                <div class="step-body">
+                    Introduce fish in order: bottom dwellers → mid-level → upper → apex predators. Feed normally until
+                    benthos populations stabilize. Once fish are observed hunting benthos delivered via the return pump,
+                    gradually reduce feeding.</div>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2 id="sec-data">Actual Tank Data</h2>
+
+        <!-- pH counter animation -->
+        <div class="ph-counter-wrap fade-in">
+            <div class="ph-value"><span id="ph-count">0.00</span><span class="ph-unit">pH</span></div>
+            <div class="ph-label">Maintained for 1 year / Zero water changes</div>
+            <div class="ph-bar-wrap">
+                <div class="ph-bar" id="ph-bar"></div>
+            </div>
+            <div class="ph-bar-labels"><span>Acidic (pH4)</span><span>Neutral (pH7)</span><span>Alkaline (pH9)</span>
+            </div>
+        </div>
+
+        <p>In a typical no-water-change tank, acidification from nitrate accumulation is inevitable. In this system,
+            nitrate is removed via carbon assimilation, so pH self-stabilizes. Paradoxically, pH is MORE stable without
+            water changes than with them.</p>
+
+        <div class="holo-table-wrap fade-in">
+            <table class="holo-table">
+                <tr>
+                    <th>Item</th>
+                    <th>Details</th>
+                </tr>
+                <tr>
+                    <td data-label="Item">Tank Size</td>
+                    <td data-label="Details">40×60×30cm (tall, custom-built)</td>
+                </tr>
+                <tr>
+                    <td data-label="Item">Sump</td>
+                    <td data-label="Details">30cm high-type</td>
+                </tr>
+                <tr>
+                    <td data-label="Item">Lighting</td>
+                    <td data-label="Details">Brim Panel A (plant light)</td>
+                </tr>
+                <tr>
+                    <td data-label="Item">Temperature</td>
+                    <td data-label="Details">25-26°C (heater controlled)</td>
+                </tr>
+                <tr>
+                    <td data-label="Item">Duration</td>
+                    <td data-label="Details">Approx. 1 year</td>
+                </tr>
+                <tr>
+                    <td data-label="Item">Water Changes</td>
+                    <td data-label="Details">None (top-off only)</td>
+                </tr>
+            </table>
+        </div>
+
+        <h3>Main Tank Livestock</h3>
+        <div class="holo-table-wrap fade-in">
+            <table class="holo-table">
+                <tr>
+                    <th>Species</th>
+                    <th>Qty</th>
+                    <th>Role</th>
+                </tr>
+                <tr>
+                    <td data-label="Species">Angelfish</td>
+                    <td data-label="Qty">3</td>
+                    <td data-label="Role">Apex predator</td>
+                </tr>
+                <tr>
+                    <td data-label="Species">Nannostomus beckfordi</td>
+                    <td data-label="Qty">7</td>
+                    <td data-label="Role">Mid-Upper</td>
+                </tr>
+                <tr>
+                    <td data-label="Species">Ring Loach</td>
+                    <td data-label="Qty">1</td>
+                    <td data-label="Role">Bottom</td>
+                </tr>
+                <tr>
+                    <td data-label="Species">Hong Kong Pleco</td>
+                    <td data-label="Qty">2</td>
+                    <td data-label="Role">Bottom / Algae eater</td>
+                </tr>
+                <tr>
+                    <td data-label="Species">Dwarf Puffer</td>
+                    <td data-label="Qty">1</td>
+                    <td data-label="Role">Mid / Snail control</td>
+                </tr>
+                <tr>
+                    <td data-label="Species">African Dwarf Frog</td>
+                    <td data-label="Qty">3</td>
+                    <td data-label="Role">Bottom-Mid</td>
+                </tr>
+                <tr>
+                    <td data-label="Species">Neocaridina shrimp</td>
+                    <td data-label="Qty">Many</td>
+                    <td data-label="Role">Bottom / Cleanup</td>
+                </tr>
+                <tr>
+                    <td data-label="Species">Ramshorn Snail</td>
+                    <td data-label="Qty">Many</td>
+                    <td data-label="Role">Bottom / Decomposers</td>
+                </tr>
+            </table>
+        </div>
+
+        <h3>Daily Maintenance</h3>
+        <div class="maint-grid fade-in">
+            <div class="maint-card"><span class="maint-freq maint-freq-daily">Daily</span><span class="maint-text">One
+                    pump of carbon extract into the sump</span></div>
+            <div class="maint-card"><span class="maint-freq maint-freq-daily">Daily</span><span
+                    class="maint-text">Observe the tank (check for anomalies)</span></div>
+            <div class="maint-card"><span class="maint-freq maint-freq-any">As needed</span><span class="maint-text">Top
+                    off when water level drops</span></div>
+            <div class="maint-card"><span class="maint-freq maint-freq-any">As needed</span><span
+                    class="maint-text">Trim plants when overgrown</span></div>
+        </div>
+        <p>Maintenance effectively converges to "one pump and just watching."</p>
+
+        <hr>
+
+        <h2 id="sec-not-for">Who This Is NOT For</h2>
+
+        <details class="holo-details fade-in">
+            <summary>Requirements</summary>
+            <div class="details-body">
+                <ol>
+                    <li>Only implement on a NEW setup. Retrofitting to an established tank is high-risk.</li>
+                    <li>Overflow is mandatory. Canister filters are especially dangerous — they clog instantly with
+                        sludge.</li>
+                </ol>
+            </div>
+        </details>
+
+        <details class="holo-details fade-in">
+            <summary>Not For You If...</summary>
+            <div class="details-body">
+                <ul>
+                    <li><strong>You are squeamish about benthos:</strong>The sump will be teeming with tubifex worms,
+                        amphipods, and isopods. They WILL enter the main tank.</li>
+                    <li><strong>You enjoy the hands-on ritual of tank maintenance:</strong>Once stable, there is almost
+                        nothing left to do.</li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="holo-details fade-in">
+            <summary>Optional Upgrades</summary>
+            <div class="details-body">
+                <ul>
+                    <li>Floating particles: add freshwater sponges to the sump for biological removal</li>
+                    <li>Full automation: use a dosing pump</li>
+                </ul>
+            </div>
+        </details>
+
+        <hr>
+
+        <h2 id="sec-cost">Cost and Availability</h2>
+        <div class="holo-table-wrap fade-in">
+            <table class="holo-table">
+                <tr>
+                    <th>Item</th>
+                    <th>Cost</th>
+                    <th>Where to Buy</th>
+                </tr>
+                <tr>
+                    <td data-label="Item">Overflow Tank</td>
+                    <td data-label="Cost">Expensive (biggest barrier)</td>
+                    <td data-label="Where to Buy">Aquarium shops / online</td>
+                </tr>
+                <tr>
+                    <td data-label="Item">Baked Akadama</td>
+                    <td data-label="Cost">Cheap</td>
+                    <td data-label="Where to Buy">Garden center</td>
+                </tr>
+                <tr>
+                    <td data-label="Item">Vodka, Vinegar, Sugar</td>
+                    <td data-label="Cost">Cheap</td>
+                    <td data-label="Where to Buy">Grocery store</td>
+                </tr>
+                <tr>
+                    <td data-label="Item">Seaweed Salt / Banana / Rooibos Tea</td>
+                    <td data-label="Cost">Cheap</td>
+                    <td data-label="Where to Buy">Grocery store</td>
+                </tr>
+                <tr>
+                    <td data-label="Item">Benthos</td>
+                    <td data-label="Cost">Cheap to free</td>
+                    <td data-label="Where to Buy">Bait shops / wild collection (availability is the challenge)</td>
+                </tr>
+            </table>
+        </div>
+        <p>If you can afford the overflow tank, running costs are near zero.</p>
+
+        <hr>
+
+        <h2 id="sec-big">The Bigger the Tank, the Better It Works</h2>
+        <p>Water changes on large tanks are backbreaking. Maintaining 100L+ tanks can be burdensome enough to make
+            hobbyists quit. This system eliminates that entirely.</p>
+        <p>More water = greater buffering, less fluctuation. Bacteria and benthos have more habitat, making the system
+            more stable. In conventional management, "bigger = harder." This system inverts that relationship.</p>
+
+        <hr>
+
+        <!-- Food Chain Pyramid -->
+
+
+        <div class="pyramid-section fade-in">
+            <div class="pyramid-title">🔺 Holobiont Food Chain Pyramid</div>
+            <div class="pyramid-wrap">
+                <div class="pyramid-tier pyramid-t1 fade-in fade-in-delay-1">
+                    <div class="pyramid-emoji">🐟</div>
+                    <div class="pyramid-name">Fish (Apex Predator)</div>
+                    <div class="pyramid-desc">Angelfish, frogs, etc.</div>
+                </div>
+                <div class="pyramid-arrow">▽</div>
+                <div class="pyramid-tier pyramid-t2 fade-in fade-in-delay-2">
+                    <div class="pyramid-emoji">🐛</div>
+                    <div class="pyramid-name">Benthos（Primary Consumer）</div>
+                    <div class="pyramid-desc">Tubifex, Amphipods, Isopods</div>
+                </div>
+                <div class="pyramid-arrow">▽</div>
+                <div class="pyramid-tier pyramid-t3 fade-in fade-in-delay-3">
+                    <div class="pyramid-emoji">🦠</div>
+                    <div class="pyramid-name">Bacteria (Producer/Decomposer)</div>
+                    <div class="pyramid-desc">Aerobic heterotrophs / Nitrifiers</div>
+                </div>
+                <div class="pyramid-arrow">▽</div>
+                <div class="pyramid-tier pyramid-t4 fade-in">
+                    <div class="pyramid-emoji">🧪</div>
+                    <div class="pyramid-name">Organic Matter / Carbon Source</div>
+                    <div class="pyramid-desc">Vodka, Vinegar, Sugar + Fish waste</div>
+                </div>
+            </div>
+            <div class="pyramid-label">The entire tank functions as one superorganism (Holobiont)</div>
+            <div><span class="pyramid-concept">Holobiont Aquarium</span></div>
+        </div>
+
+        <hr>
+
+        <h2 id="sec-conclusion">Conclusion</h2>
+        <p>The origin of this system was a 2ch (Japanese forum) thread about "sugar-dosed tanks." Reading failure
+            reports — "it gets cloudy," "oxygen crashes," "dangerous" — I asked the opposite question:</p>
+        <div class="holo-blockquote">
+            <p>"Why does it fail? How can it be structurally engineered to succeed?"</p>
+        </div>
+        <ul>
+            <li>Cloudiness is not failure — it is a sign of explosive bacterial growth</li>
+            <li>Oxygen depletion is solved by overflow fall aeration</li>
+            <li>The weakness of a single carbon source is offset by combining multiple types</li>
+            <li>Bacterial sludge can be consumed by benthos</li>
+        </ul>
+        <p>Holobiont — viewing the host and its symbiotic microbiome as a single superorganism — was a concept I
+            discovered after building this system, but it perfectly captures the design philosophy. The tank is not a
+            container for keeping fish; it is a single living organism where fish, bacteria, benthos, and plants
+            perpetually support each other.</p>
+        <p>One more thing: I have no talent for beautiful aquascape layouts. That is why the only plants in this setup
+            are Azurea and Vallisneria. However, I believe this system could be adapted for ADA-style planted tanks as
+            well. If anyone tries it, I would love to hear the results.</p>
+
+        <div class="ph-counter-wrap fade-in" style="padding:16px 24px">
+            <p style="margin:0;color:#8b949e;font-size:.95em;letter-spacing:.08em;text-align:center">pH 6.85
+                &nbsp;|&nbsp;
+                No water changes &nbsp;|&nbsp; No feeding &nbsp;|&nbsp; No CO₂</p>
+            <p style="margin:8px 0 0;color:#484f58;font-size:.82em;text-align:center">And the tank quietly runs on its
+                own, as it does every day.</p>
+        </div>
+
+        <hr>
+        <p style="color:#8b949e;font-size:.82em">Author: ~10 years in aquaristics / water-change abolitionist<br>ver.11
+            / March 2026</p>
+
+    </div>
 </body>
+
 </html>
