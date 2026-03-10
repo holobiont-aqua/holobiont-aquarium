@@ -1544,38 +1544,107 @@
             scroll-behavior: smooth
         }
 
-        /* ===== N収支系統図 ===== */
-        .ntree-wrap { margin: 20px 0; overflow-x: auto; -webkit-overflow-scrolling: touch }
-        .ntree-root-row { display: flex; justify-content: center }
-        .ntree-box { border-radius: 8px; padding: 10px 16px; text-align: center; font-size: .85em; font-weight: 600; color: #e6edf3 }
-        .ntree-en { font-size: .72em; font-weight: 400; color: #8b949e; margin-left: 4px }
-        .ntree-sub { font-size: .7em; font-weight: 400; color: #8b949e; margin-top: 3px }
-        .ntree-root-box { background: #0d1117; border: 2px solid #58a6ff; animation: nc-pulse 2.5s infinite, nc-fadein .5s ease both }
-        .ntree-export-box { background: #1c0a0a; border: 1px solid #f85149 }
-        .ntree-cycle-box { background: #0a2a14; border: 1px solid #3fb950 }
-        .ntree-export-sub-box { background: #161b22; border: 1px solid #d29922; font-size: .8em; padding: 7px 12px }
-        .ntree-connector-v { width: 2px; height: 28px; background: #30363d; margin: 0 auto }
-        .ntree-connector-v-short { width: 2px; height: 16px; background: #30363d; margin: 0 auto }
-        .ntree-l1-row { display: grid; grid-template-columns: 1fr 2px 1fr; border-top: 2px solid #30363d; padding-top: 20px }
-        .ntree-divider { background: #30363d }
-        .ntree-column { display: flex; flex-direction: column; align-items: center; padding: 0 10px }
-        .ntree-l2-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; width: 100%; border-top: 2px solid #d29922; padding-top: 12px; margin-top: 4px }
-        .ntree-column-narrow { display: flex; flex-direction: column; align-items: center }
-        .ntree-leaf-col { display: flex; flex-direction: column; gap: 6px; width: 100%; border-top: 2px solid #3fb950; padding-top: 12px; margin-top: 4px }
-        .ntree-export-leaf-col { display: flex; flex-direction: column; gap: 5px; width: 100% }
-        .ntree-leaf { background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 8px 10px; font-size: .78em; font-weight: 400; color: #c9d1d9; line-height: 1.5 }
-        .ntree-leaf span { display: block; color: #8b949e; font-size: .88em }
-        .ntree-leaf-yellow { border-color: #d29922; background: #1c1409 }
-        .ntree-leaf-purple { border-color: #8957e5; background: #160d20 }
-        .ntree-leaf-holo { background: #0d2440; border: 2px solid #58a6ff; animation: nc-pulse 2.5s infinite; font-weight: 600 }
-        .ntree-leaf-deprecated { color: #484f58; border-color: #21262d; background: #0d1117; font-size: .75em }
-        .ntree-leaf-deprecated span { color: #484f58 }
-        .ntree-holo-badge { display: inline-block; font-size: .7em; padding: 1px 8px; border-radius: 10px; background: #1d3a5e; color: #58a6ff; border: 1px solid #58a6ff; margin-top: 4px }
-        .ntree-axis-label { font-size: .68em; text-transform: uppercase; letter-spacing: .07em; color: #484f58; text-align: center; margin: 12px 0 0 }
+        /* ===== N収支系統図（インタラクティブ版） ===== */
+        .ntree-wrap { margin: 20px 0 }
+        .ntree-root {
+            background: #161b22; border: 1px solid #30363d; border-radius: 10px;
+            padding: 12px; text-align: center; margin-bottom: 4px;
+        }
+        .ntree-root-title { font-weight: 700; font-size: .88em; color: #e6edf3 }
+        .ntree-root-sub { font-size: .7em; color: #8b949e; margin-top: 2px }
+        .ntree-vline { width: 2px; height: 20px; background: #30363d; margin: 0 auto }
+        .ntree-fork {
+            display: flex; align-items: flex-start; justify-content: center;
+            height: 20px; position: relative;
+        }
+        .ntree-fork::before {
+            content: ''; position: absolute; top: 0; left: 50%;
+            width: 2px; height: 10px; background: #30363d; transform: translateX(-50%);
+        }
+        .ntree-fork::after {
+            content: ''; position: absolute; top: 10px;
+            left: 25%; right: 25%; height: 2px; background: #30363d;
+        }
+        .ntree-fork-arm {
+            position: absolute; top: 10px; width: 2px; height: 10px; background: #30363d;
+        }
+        .ntree-fork-arm-l { left: 25%; transform: translateX(-50%) }
+        .ntree-fork-arm-r { right: 25%; transform: translateX(50%) }
+        .ntree-branch { display: flex; gap: 8px; margin-bottom: 4px }
+        .ntree-branch-col { flex: 1; display: flex; flex-direction: column; align-items: center }
+        .ntree-bh {
+            width: 100%; border-radius: 8px; padding: 10px 8px; text-align: center;
+        }
+        .ntree-bh-export { background: linear-gradient(135deg,#1a0a0a,#1c1409); border: 1px solid #d29922 }
+        .ntree-bh-cycle { background: linear-gradient(135deg,#0a1929,#0a2a14); border: 1px solid #58a6ff }
+        .ntree-bl { font-size: .68em; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 2px }
+        .ntree-bl-export { color: #d29922 }
+        .ntree-bl-cycle { color: #58a6ff }
+        .ntree-bt { font-weight: 700; font-size: .82em; color: #e6edf3 }
+        .ntree-bd { font-size: .65em; color: #8b949e; margin-top: 2px }
+        .ntree-vline-sm { width: 2px; height: 8px; background: #30363d; margin: 0 auto }
+        .ntree-sub-label {
+            font-size: .62em; color: #8b949e; text-align: center;
+            padding: 4px 0 2px; letter-spacing: .04em;
+        }
+        /* リーフカード */
+        .ntree-lc {
+            width: 100%; border-radius: 8px; padding: 8px 10px; margin-top: 4px;
+            text-align: left; transition: transform .2s, border-color .2s; cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .ntree-lc:active { transform: scale(.98) }
+        .ntree-lc-phys { background: #161b22; border: 1px solid #30363d }
+        .ntree-lc-gas { background: #1c1409; border: 1px solid #d29922 }
+        .ntree-lc-bio { background: #16200a; border: 1px solid #7ee787 }
+        .ntree-lc-cycle { background: #0d2440; border: 1px solid #58a6ff }
+        .ntree-lc-holo {
+            background: #0d2440; border: 2px solid #58a6ff;
+            animation: nc-pulse 2.5s ease infinite;
+        }
+        .ntree-lc-romance { background: #160d20; border: 1px solid #8957e5; opacity: .7 }
+        .ntree-ln { font-weight: 600; font-size: .78em; color: #e6edf3 }
+        .ntree-ld { font-size: .65em; color: #8b949e; margin-top: 2px; line-height: 1.4 }
+        .ntree-lb {
+            display: inline-block; font-size: .6em; padding: 1px 6px;
+            border-radius: 4px; margin-top: 4px;
+        }
+        .ntree-lb-phys { background: #21262d; color: #8b949e; border: 1px solid #30363d }
+        .ntree-lb-gas { background: #2d1a06; color: #d29922; border: 1px solid #d29922 }
+        .ntree-lb-bio { background: #0a2a14; color: #7ee787; border: 1px solid #7ee787 }
+        .ntree-lb-cycle { background: #0d2440; color: #58a6ff; border: 1px solid #58a6ff }
+        .ntree-lb-romance { background: #1a0d2e; color: #8957e5; border: 1px solid #8957e5 }
+        /* 展開パネル */
+        .ntree-detail {
+            max-height: 0; overflow: hidden; transition: max-height .3s ease;
+        }
+        .ntree-lc.open .ntree-detail { max-height: 200px }
+        .ntree-detail-inner {
+            padding: 6px 0 0; border-top: 1px solid rgba(255,255,255,.08); margin-top: 6px;
+        }
+        .ntree-dr {
+            display: flex; justify-content: space-between; font-size: .62em; padding: 2px 0;
+        }
+        .ntree-dr-l { color: #8b949e }
+        .ntree-dr-v { font-weight: 600 }
+        .ntree-dr-pro { color: #3fb950 }
+        .ntree-dr-con { color: #f85149 }
+        .ntree-tap-hint {
+            text-align: center; font-size: .65em; color: #484f58; margin: 10px 0 16px;
+        }
+        /* 硝化注記 */
+        .ntree-nitri-note {
+            background: #111; border: 1px dashed #3d444d; border-radius: 8px;
+            padding: 10px 12px; margin: 16px auto 0; max-width: 420px; text-align: center;
+        }
+        .ntree-nitri-title {
+            font-size: .72em; color: #484f58; text-decoration: line-through; margin-bottom: 4px;
+        }
+        .ntree-nitri-body { font-size: .68em; color: #484f58; line-height: 1.5 }
+        /* モバイル：縦スタック */
         @media(max-width:600px) {
-            .ntree-l1-row { grid-template-columns: 1fr; border-top: none }
-            .ntree-divider { height: 2px; width: 60%; margin: 16px auto }
-            .ntree-l2-row { grid-template-columns: 1fr }
+            .ntree-branch { flex-direction: column; gap: 12px }
+            .ntree-fork { display: none }
         }
     </style>
 
@@ -1646,7 +1715,7 @@
             <p style="margin:0 0 10px;font-weight:bold;color:#79c0ff">📋 この記事でわかること</p>
             <ul>
                 <li>淡水水槽で「換水なし」が難しい本当の理由</li>
-                <li>炭素源＋ベントスで硝酸塩を食物連鎖で無毒化循環させる仕組み</li>
+                <li>従属栄養細菌によるアンモニア直接同化とベントスループの仕組み</li>
                 <li>スーパーとホムセンで揃う炭素源エキスのレシピ</li>
                 <li>白濁を乗り越える1ヶ月の立ち上げ手順</li>
                 <li>1年間・pH 6.85を維持した実際のデータ</li>
@@ -1682,12 +1751,7 @@
         <p>その答えとして辿り着いたのが、この記事で紹介するシステムだ。炭素源の投入と底生生物（ベントス）の食物連鎖を組み合わせることで、無換水・無給餌・CO₂無添加でのオーバーフロー式水草水槽を1年以上にわたって安定稼働させた。その記録と理論的背景をまとめる。
         </p>
         <p>便宜上このシステムを「ホロビオントアクアリウム」と呼ぶ。生物学の概念・Holobiont（ホロビオント）——宿主と共生微生物群全体を一つの超個体として捉える思想——になぞらえた名称だ。</p>
-        <div class="holo-card holo-card-green fade-in" style="margin-top:20px;">
-            <span class="holo-label" style="color:#3fb950">New Paradigm (2026.03)</span>
-            <p style="margin:0"><strong>最新の理論的アップデート：硝化サイクルの無効化とpHロック</strong><br>
-                本システムの真のメカニズムは、従来考えられてきた「脱窒」ではなく、<strong>「アンモニアの直接同化」</strong>であることが判明した。大量の炭素源によって爆増した従属栄養細菌が、硝化バクテリアより先にアンモニアを猛スピードで消費するため、硝化サイクル自体がバイパスされる。結果として硝酸塩の蓄積も、酸化による水素イオン（H⁺）放出も起きず、pHが中性付近で完全にロックされる究極の動的均衡状態を生み出す。
-            </p>
-        </div>
+        <p>核心のメカニズムは、従来の「硝化サイクル→脱窒」ではなく、<strong>従属栄養細菌によるアンモニアの直接同化</strong>である。大量の炭素源によって爆増した従属栄養細菌が、硝化菌より先にNH₄⁺を猛スピードで消費するため、硝化サイクル自体がバイパスされる。結果として硝酸塩の蓄積も、酸化によるpH低下も起きず、pHが中性付近で完全にロックされる究極の動的均衡状態を生み出す。</p>
 
         <hr>
 
@@ -1707,64 +1771,174 @@
 
         <h2>淡水の「無換水」、なぜ難しいのか</h2>
 
-        <h3 id="sec-ntree-ja">N収支ベース：全窒素管理手法の系統図</h3>
-        <p style="font-size:.9em;color:#8b949e">「窒素が系外に除去されるか（排出）、系内に留まって循環するか（循環）」という<strong style="color:#c9d1d9">総N収支の一軸</strong>で全ての手法を整理した系統図。硝化サイクルは排出にも循環にも実質非寄与という独特の位置に属する。</p>
+        <h3 id="sec-ntree-ja">水槽の窒素はどこへ行くか</h3>
+        <p style="font-size:.88em;color:#8b949e">N総量収支に基づくアクアリウム窒素管理の全体像。各手法は「窒素を系外に排出するか」「系内で循環させるか」の一軸で分類される。</p>
 
         <div class="ntree-wrap fade-in">
-            <div class="ntree-root-row">
-                <div class="ntree-box ntree-root-box">🧬 窒素管理手法（Nitrogen Management）</div>
+            <!-- ルートノード -->
+            <div class="ntree-root">
+                <div class="ntree-root-title">🐟 魚の排泄 → NH₄⁺（アンモニア）発生</div>
+                <div class="ntree-root-sub">各手法は最終的に窒素をどう処理するかで分類される</div>
             </div>
-            <div class="ntree-connector-v"></div>
-            <div class="ntree-l1-row">
-                <!-- Export -->
-                <div class="ntree-column">
-                    <div class="ntree-box ntree-export-box">📤 排出 <span class="ntree-en">Export</span>
-                        <div class="ntree-sub">系外に窒素を物理的に除去</div>
+
+            <!-- 分岐線 -->
+            <div class="ntree-fork">
+                <div class="ntree-fork-arm ntree-fork-arm-l"></div>
+                <div class="ntree-fork-arm ntree-fork-arm-r"></div>
+            </div>
+
+            <!-- 二大分岐 -->
+            <div class="ntree-branch">
+                <!-- 排出（Export）列 -->
+                <div class="ntree-branch-col">
+                    <div class="ntree-bh ntree-bh-export fade-in">
+                        <div class="ntree-bl ntree-bl-export">Export</div>
+                        <div class="ntree-bt">排出</div>
+                        <div class="ntree-bd">窒素を系外へ捨てる</div>
                     </div>
-                    <div class="ntree-connector-v-short"></div>
-                    <div class="ntree-l2-row">
-                        <div class="ntree-column-narrow">
-                            <div class="ntree-box ntree-export-sub-box">🔬 物理・化学的排出</div>
-                            <div class="ntree-connector-v-short"></div>
-                            <div class="ntree-export-leaf-col">
-                                <div class="ntree-leaf">💧 換水（水換え）<br><span>溶存する窒素化合物（NH₄⁺・NO₃⁻ 等）を希釈・排水で系外へ除去</span></div>
-                                <div class="ntree-leaf">🪨 吸着材（ゼオライト等）<br><span>化学吸着→濾材ごと系外へ廃棄</span></div>
-                                <div class="ntree-leaf">🫧 プロテインスキマー<br><span>海水のみ・有機膜を気泡に吸着させ物理排出</span></div>
-                            </div>
-                        </div>
-                        <div class="ntree-column-narrow">
-                            <div class="ntree-box ntree-export-sub-box">🌿 生物的排出</div>
-                            <div class="ntree-connector-v-short"></div>
-                            <div class="ntree-export-leaf-col">
-                                <div class="ntree-leaf">💨 ガス化（異化）<br><span>嫌気脱窒（DSB・外部脱窒炉）→ NO₃⁻ を N₂↑ ガスとして大気へ</span></div>
-                                <div class="ntree-leaf">🌾 バイオマス化排出（同化→持ち出し）<br><span>水草トリミング・バイオフロック（炭素同化→スキマー/濾材洗浄で排出）・生体搬出</span></div>
-                            </div>
-                        </div>
+
+                    <div class="ntree-vline-sm"></div>
+                    <div class="ntree-sub-label">物理・化学的</div>
+
+                    <div class="ntree-lc ntree-lc-phys fade-in" onclick="this.classList.toggle('open')">
+                        <div class="ntree-ln">💧 換水</div>
+                        <div class="ntree-ld">水ごと物理排出</div>
+                        <span class="ntree-lb ntree-lb-phys">物理的</span>
+                        <div class="ntree-detail"><div class="ntree-detail-inner">
+                            <div class="ntree-dr"><span class="ntree-dr-l">利点</span><span class="ntree-dr-v ntree-dr-pro">確実・簡単・即効</span></div>
+                            <div class="ntree-dr"><span class="ntree-dr-l">欠点</span><span class="ntree-dr-v ntree-dr-con">大型水槽で重労働</span></div>
+                        </div></div>
+                    </div>
+
+                    <div class="ntree-lc ntree-lc-phys fade-in" onclick="this.classList.toggle('open')">
+                        <div class="ntree-ln">🧱 吸着材</div>
+                        <div class="ntree-ld">ゼオライト等に吸着→交換</div>
+                        <span class="ntree-lb ntree-lb-phys">化学的</span>
+                        <div class="ntree-detail"><div class="ntree-detail-inner">
+                            <div class="ntree-dr"><span class="ntree-dr-l">利点</span><span class="ntree-dr-v ntree-dr-pro">手軽・併用可能</span></div>
+                            <div class="ntree-dr"><span class="ntree-dr-l">欠点</span><span class="ntree-dr-v ntree-dr-con">交換コスト・容量有限</span></div>
+                        </div></div>
+                    </div>
+
+                    <div class="ntree-lc ntree-lc-phys fade-in" onclick="this.classList.toggle('open')">
+                        <div class="ntree-ln">🫧 プロテインスキマー</div>
+                        <div class="ntree-ld">気泡で有機物を系外排出（海水）</div>
+                        <span class="ntree-lb ntree-lb-phys">物理化学的</span>
+                        <div class="ntree-detail"><div class="ntree-detail-inner">
+                            <div class="ntree-dr"><span class="ntree-dr-l">利点</span><span class="ntree-dr-v ntree-dr-pro">海水では高効率</span></div>
+                            <div class="ntree-dr"><span class="ntree-dr-l">欠点</span><span class="ntree-dr-v ntree-dr-con">淡水では機能しない</span></div>
+                        </div></div>
+                    </div>
+
+                    <div class="ntree-vline-sm"></div>
+                    <div class="ntree-sub-label">生物的 → ガス化</div>
+
+                    <div class="ntree-lc ntree-lc-gas fade-in" onclick="this.classList.toggle('open')">
+                        <div class="ntree-ln">💨 嫌気脱窒</div>
+                        <div class="ntree-ld">NO₃⁻ → N₂ガスとして大気へ放出</div>
+                        <span class="ntree-lb ntree-lb-gas">DSB・脱窒炉</span>
+                        <div class="ntree-detail"><div class="ntree-detail-inner">
+                            <div class="ntree-dr"><span class="ntree-dr-l">利点</span><span class="ntree-dr-v ntree-dr-pro">窒素を完全除去</span></div>
+                            <div class="ntree-dr"><span class="ntree-dr-l">欠点</span><span class="ntree-dr-v ntree-dr-con">H₂S発生リスク・崩壊時致命的</span></div>
+                        </div></div>
+                    </div>
+
+                    <div class="ntree-vline-sm"></div>
+                    <div class="ntree-sub-label">生物的 → バイオマス化</div>
+
+                    <div class="ntree-lc ntree-lc-bio fade-in" onclick="this.classList.toggle('open')">
+                        <div class="ntree-ln">🌿 水草吸収</div>
+                        <div class="ntree-ld">植物が窒素を同化→トリミングで排出</div>
+                        <span class="ntree-lb ntree-lb-bio">ADA式・Walstad式</span>
+                        <div class="ntree-detail"><div class="ntree-detail-inner">
+                            <div class="ntree-dr"><span class="ntree-dr-l">利点</span><span class="ntree-dr-v ntree-dr-pro">景観性優秀</span></div>
+                            <div class="ntree-dr"><span class="ntree-dr-l">欠点</span><span class="ntree-dr-v ntree-dr-con">CO₂添加・高光量が必須</span></div>
+                        </div></div>
+                    </div>
+
+                    <div class="ntree-lc ntree-lc-bio fade-in" onclick="this.classList.toggle('open')">
+                        <div class="ntree-ln">🦠 菌体排出</div>
+                        <div class="ntree-ld">バクテリアを増やし→スキマー等で排出</div>
+                        <span class="ntree-lb ntree-lb-bio">バイオペレット等</span>
+                        <div class="ntree-detail"><div class="ntree-detail-inner">
+                            <div class="ntree-dr"><span class="ntree-dr-l">利点</span><span class="ntree-dr-v ntree-dr-pro">硝酸塩を効率的に除去</span></div>
+                            <div class="ntree-dr"><span class="ntree-dr-l">欠点</span><span class="ntree-dr-v ntree-dr-con">スキマー必須（海水のみ）</span></div>
+                        </div></div>
                     </div>
                 </div>
-                <!-- Divider -->
-                <div class="ntree-divider"></div>
-                <!-- Cycle -->
-                <div class="ntree-column">
-                    <div class="ntree-box ntree-cycle-box">♻️ 循環 <span class="ntree-en">Cycle</span>
-                        <div class="ntree-sub">系内で窒素を変換・再利用（捨てない）</div>
+
+                <!-- 循環（Cycle）列 -->
+                <div class="ntree-branch-col">
+                    <div class="ntree-bh ntree-bh-cycle fade-in">
+                        <div class="ntree-bl ntree-bl-cycle">Cycle</div>
+                        <div class="ntree-bt">循環</div>
+                        <div class="ntree-bd">窒素を系内で回す</div>
                     </div>
-                    <div class="ntree-connector-v-short"></div>
-                    <div class="ntree-leaf-col">
-                        <div class="ntree-leaf ntree-leaf-yellow">🌞 光独立栄養<br><span>植物プランクトン・藻類 → 光合成でNH₄⁺を同化・O₂産生（グリーンウォーター式）</span></div>
-                        <div class="ntree-leaf ntree-leaf-purple">💜 光従属栄養 PNSB<br><span>紅色非硫黄細菌 → 嫌気＋光でカロテノイド豊富バイオマスを産生（未活用枠）</span></div>
-                        <div class="ntree-leaf ntree-leaf-holo">⭐ 従属栄養（炭素同化 ＋ ベントスループ）
-                            <div class="ntree-holo-badge">🔵 本システム（ホロビオント式）</div>
-                        </div>
-                        <div class="ntree-leaf ntree-leaf-deprecated">◇ 化学独立栄養（H₂S硫黄酸化型）<br><span>嫌気チャンバーで硫黄酸化菌が窒素を同化・循環。人体リスクあり（ロマン枠）</span></div>
+
+                    <div class="ntree-vline-sm"></div>
+                    <div class="ntree-sub-label">光独立栄養（光＋CO₂）</div>
+
+                    <div class="ntree-lc ntree-lc-cycle fade-in" onclick="this.classList.toggle('open')">
+                        <div class="ntree-ln">☀️ グリーンウォーター式</div>
+                        <div class="ntree-ld">藻類が光でNH₄⁺を同化→食物連鎖</div>
+                        <span class="ntree-lb ntree-lb-cycle">屋外・低負荷</span>
+                        <div class="ntree-detail"><div class="ntree-detail-inner">
+                            <div class="ntree-dr"><span class="ntree-dr-l">利点</span><span class="ntree-dr-v ntree-dr-pro">太陽光のみで自走</span></div>
+                            <div class="ntree-dr"><span class="ntree-dr-l">欠点</span><span class="ntree-dr-v ntree-dr-con">天候依存・高負荷不可</span></div>
+                        </div></div>
+                    </div>
+
+                    <div class="ntree-vline-sm"></div>
+                    <div class="ntree-sub-label">光従属栄養（光＋有機物）</div>
+
+                    <div class="ntree-lc ntree-lc-cycle fade-in" onclick="this.classList.toggle('open')">
+                        <div class="ntree-ln">🔴 PNSB（紅色非硫黄細菌）</div>
+                        <div class="ntree-ld">光＋有機物でNH₄⁺を同化</div>
+                        <span class="ntree-lb ntree-lb-cycle">嫌気＋光で機能</span>
+                        <div class="ntree-detail"><div class="ntree-detail-inner">
+                            <div class="ntree-dr"><span class="ntree-dr-l">利点</span><span class="ntree-dr-v ntree-dr-pro">高栄養バイオマス生成</span></div>
+                            <div class="ntree-dr"><span class="ntree-dr-l">欠点</span><span class="ntree-dr-v ntree-dr-con">嫌気環境が必要</span></div>
+                        </div></div>
+                    </div>
+
+                    <div class="ntree-vline-sm"></div>
+                    <div class="ntree-sub-label">従属栄養（有機炭素）</div>
+
+                    <div class="ntree-lc ntree-lc-holo fade-in" onclick="this.classList.toggle('open')">
+                        <div class="ntree-ln">🧪 ホロビオント式</div>
+                        <div class="ntree-ld">従属栄養細菌がNH₄⁺を直接同化<br>ベントスが捕食→食物連鎖循環</div>
+                        <span class="ntree-lb ntree-lb-cycle">室内・高負荷・実用</span>
+                        <div class="ntree-detail"><div class="ntree-detail-inner">
+                            <div class="ntree-dr"><span class="ntree-dr-l">利点</span><span class="ntree-dr-v ntree-dr-pro">無換水・pHロック・自走</span></div>
+                            <div class="ntree-dr"><span class="ntree-dr-l">欠点</span><span class="ntree-dr-v ntree-dr-con">OF必須・初期白濁</span></div>
+                        </div></div>
+                    </div>
+
+                    <div class="ntree-vline-sm"></div>
+                    <div class="ntree-sub-label">化学独立栄養（H₂S等）</div>
+
+                    <div class="ntree-lc ntree-lc-romance fade-in" onclick="this.classList.toggle('open')">
+                        <div class="ntree-ln">⚗️ 硫黄駆動型</div>
+                        <div class="ntree-ld">無機物酸化で窒素を同化</div>
+                        <span class="ntree-lb ntree-lb-romance">理論上・未実用</span>
+                        <div class="ntree-detail"><div class="ntree-detail-inner">
+                            <div class="ntree-dr"><span class="ntree-dr-l">利点</span><span class="ntree-dr-v ntree-dr-pro">光も炭素も不要</span></div>
+                            <div class="ntree-dr"><span class="ntree-dr-l">欠点</span><span class="ntree-dr-v ntree-dr-con">H₂S有毒・実現例なし</span></div>
+                        </div></div>
                     </div>
                 </div>
             </div>
-            <p class="ntree-axis-label">分類軸：総N収支（窒素が系外に出るか ／ 系内に留まるか）</p>
-            <!-- 硝化サイクル：排出にも循環にも非寄与の独立補助機構 -->
-            <div style="max-width:420px;margin:16px auto 0;background:#111;border:1px dashed #3d444d;border-radius:8px;padding:10px 14px;text-align:center;font-size:.78em;color:#6e7681;line-height:1.6">
-                ⚙️ <strong style="color:#8b949e">硝化サイクル（硝化菌）——換水の「時間稼ぎ」</strong><br>
-                NH₄⁺（猛毒）→ NO₃⁻（低毒）へ変換し、次の換水まで「放置できるレベル」に下げる補助機構。<br>窒素そのものは排出も循環もしない。<strong>排出型の延命バッファー。</strong>
+
+            <p class="ntree-tap-hint">各カードをタップすると詳細を表示</p>
+
+            <!-- 硝化サイクル注記 -->
+            <div class="ntree-nitri-note fade-in">
+                <div class="ntree-nitri-title">🚫 硝化サイクル（NH₄⁺ → NO₂⁻ → NO₃⁻）</div>
+                <div class="ntree-nitri-body">
+                    窒素の形態を変えるだけで、系内の総窒素量は減らない。<br>
+                    排出にも循環にも寄与しない「毒性変換バッファ」。<br>
+                    上記のどの排出手段が実行されるまでの時間稼ぎとして機能する。
+                </div>
             </div>
         </div>
 
