@@ -1543,6 +1543,40 @@
         html {
             scroll-behavior: smooth
         }
+
+        /* ===== N収支系統図 ===== */
+        .ntree-wrap { margin: 20px 0; overflow-x: auto; -webkit-overflow-scrolling: touch }
+        .ntree-root-row { display: flex; justify-content: center }
+        .ntree-box { border-radius: 8px; padding: 10px 16px; text-align: center; font-size: .85em; font-weight: 600; color: #e6edf3 }
+        .ntree-en { font-size: .72em; font-weight: 400; color: #8b949e; margin-left: 4px }
+        .ntree-sub { font-size: .7em; font-weight: 400; color: #8b949e; margin-top: 3px }
+        .ntree-root-box { background: #0d1117; border: 2px solid #58a6ff; animation: nc-pulse 2.5s infinite, nc-fadein .5s ease both }
+        .ntree-export-box { background: #1c0a0a; border: 1px solid #f85149 }
+        .ntree-cycle-box { background: #0a2a14; border: 1px solid #3fb950 }
+        .ntree-export-sub-box { background: #161b22; border: 1px solid #d29922; font-size: .8em; padding: 7px 12px }
+        .ntree-connector-v { width: 2px; height: 28px; background: #30363d; margin: 0 auto }
+        .ntree-connector-v-short { width: 2px; height: 16px; background: #30363d; margin: 0 auto }
+        .ntree-l1-row { display: grid; grid-template-columns: 1fr 2px 1fr; border-top: 2px solid #30363d; padding-top: 20px }
+        .ntree-divider { background: #30363d }
+        .ntree-column { display: flex; flex-direction: column; align-items: center; padding: 0 10px }
+        .ntree-l2-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; width: 100%; border-top: 2px solid #d29922; padding-top: 12px; margin-top: 4px }
+        .ntree-column-narrow { display: flex; flex-direction: column; align-items: center }
+        .ntree-leaf-col { display: flex; flex-direction: column; gap: 6px; width: 100%; border-top: 2px solid #3fb950; padding-top: 12px; margin-top: 4px }
+        .ntree-export-leaf-col { display: flex; flex-direction: column; gap: 5px; width: 100% }
+        .ntree-leaf { background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 8px 10px; font-size: .78em; font-weight: 400; color: #c9d1d9; line-height: 1.5 }
+        .ntree-leaf span { display: block; color: #8b949e; font-size: .88em }
+        .ntree-leaf-yellow { border-color: #d29922; background: #1c1409 }
+        .ntree-leaf-purple { border-color: #8957e5; background: #160d20 }
+        .ntree-leaf-holo { background: #0d2440; border: 2px solid #58a6ff; animation: nc-pulse 2.5s infinite; font-weight: 600 }
+        .ntree-leaf-deprecated { color: #484f58; border-color: #21262d; background: #0d1117; font-size: .75em }
+        .ntree-leaf-deprecated span { color: #484f58 }
+        .ntree-holo-badge { display: inline-block; font-size: .7em; padding: 1px 8px; border-radius: 10px; background: #1d3a5e; color: #58a6ff; border: 1px solid #58a6ff; margin-top: 4px }
+        .ntree-axis-label { font-size: .68em; text-transform: uppercase; letter-spacing: .07em; color: #484f58; text-align: center; margin: 12px 0 0 }
+        @media(max-width:600px) {
+            .ntree-l1-row { grid-template-columns: 1fr; border-top: none }
+            .ntree-divider { height: 2px; width: 60%; margin: 16px auto }
+            .ntree-l2-row { grid-template-columns: 1fr }
+        }
     </style>
 
     <script>
@@ -1621,6 +1655,7 @@
                 <p style="margin:0 0 10px;font-weight:bold;color:#58a6ff;font-size:.95em">📑 目次</p>
                 <ol class="toc-list">
                     <li><a href="#sec-why-ja">淡水水槽で「換水なし」が難しい理由</a></li>
+                    <li><a href="#sec-ntree-ja">N収支ベース：全手法の系統図</a></li>
                     <li><a href="#sec-how-ja">このシステムの仕組み</a></li>
                     <li><a href="#sec-overflow-ja">なぜオーバーフローなのか</a></li>
                     <li><a href="#sec-recipe-ja">炭素源エキスのレシピ</a></li>
@@ -1671,6 +1706,61 @@
         <hr>
 
         <h2>淡水の「無換水」、なぜ難しいのか</h2>
+
+        <h3 id="sec-ntree-ja">N収支ベース：全窒素管理手法の系統図</h3>
+        <p style="font-size:.9em;color:#8b949e">「窒素が系外に除去されるか（排出）、系内に留まって循環するか（循環）」という<strong style="color:#c9d1d9">総N収支の一軸</strong>で全ての手法を整理した系統図。硝化サイクルは排出にも循環にも実質非寄与という独特の位置に属する。</p>
+
+        <div class="ntree-wrap fade-in">
+            <div class="ntree-root-row">
+                <div class="ntree-box ntree-root-box">🧬 窒素管理手法（Nitrogen Management）</div>
+            </div>
+            <div class="ntree-connector-v"></div>
+            <div class="ntree-l1-row">
+                <!-- Export -->
+                <div class="ntree-column">
+                    <div class="ntree-box ntree-export-box">📤 排出 <span class="ntree-en">Export</span>
+                        <div class="ntree-sub">系外に窒素を物理的に除去</div>
+                    </div>
+                    <div class="ntree-connector-v-short"></div>
+                    <div class="ntree-l2-row">
+                        <div class="ntree-column-narrow">
+                            <div class="ntree-box ntree-export-sub-box">🔬 物理・化学的</div>
+                            <div class="ntree-connector-v-short"></div>
+                            <div class="ntree-export-leaf-col">
+                                <div class="ntree-leaf">💧 換水（水換え）<br><span>水希釈で硝酸塩を系外排出</span></div>
+                                <div class="ntree-leaf">🫧 プロテインスキマー<br><span>海水のみ・泡で有機物を系外排出</span></div>
+                            </div>
+                        </div>
+                        <div class="ntree-column-narrow">
+                            <div class="ntree-box ntree-export-sub-box">🌿 生物的排出</div>
+                            <div class="ntree-connector-v-short"></div>
+                            <div class="ntree-export-leaf-col">
+                                <div class="ntree-leaf">💨 ガス化<br><span>嫌気性脱窒 → N₂↑（大気へ）</span></div>
+                                <div class="ntree-leaf">🌾 バイオマス収穫<br><span>水草トリミング・生体搬出</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Divider -->
+                <div class="ntree-divider"></div>
+                <!-- Cycle -->
+                <div class="ntree-column">
+                    <div class="ntree-box ntree-cycle-box">♻️ 循環 <span class="ntree-en">Cycle</span>
+                        <div class="ntree-sub">系内で窒素を変換・再利用</div>
+                    </div>
+                    <div class="ntree-connector-v-short"></div>
+                    <div class="ntree-leaf-col">
+                        <div class="ntree-leaf ntree-leaf-yellow">🌞 光独立栄養<br><span>植物・藻類 → 光合成でNH₄⁺を同化・O₂産生</span></div>
+                        <div class="ntree-leaf ntree-leaf-purple">💜 光従属栄養 PNSB<br><span>紅色非硫黄細菌 → 嫌気＋光でカロテノイド豊富バイオマスを産生</span></div>
+                        <div class="ntree-leaf ntree-leaf-holo">⭐ 従属栄養（炭素同化 ＋ ベントスループ）
+                            <div class="ntree-holo-badge">🔵 本システム（ホロビオント式）</div>
+                        </div>
+                        <div class="ntree-leaf ntree-leaf-deprecated">◇ 化学独立栄養（硝化菌）<br><span>NH₄⁺ → NO₂⁻ → NO₃⁻ への変換のみ。排出にも循環にも実質非寄与</span></div>
+                    </div>
+                </div>
+            </div>
+            <p class="ntree-axis-label">分類軸：総N収支（窒素が系外に出るか ／ 系内に留まるか）</p>
+        </div>
 
         <h3>既存手法の比較</h3>
 
