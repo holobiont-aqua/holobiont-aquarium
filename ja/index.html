@@ -1724,19 +1724,20 @@
                     <div class="ntree-connector-v-short"></div>
                     <div class="ntree-l2-row">
                         <div class="ntree-column-narrow">
-                            <div class="ntree-box ntree-export-sub-box">🔬 物理・化学的</div>
+                            <div class="ntree-box ntree-export-sub-box">🔬 物理・化学的排出</div>
                             <div class="ntree-connector-v-short"></div>
                             <div class="ntree-export-leaf-col">
                                 <div class="ntree-leaf">💧 換水（水換え）<br><span>溶存する窒素化合物（NH₄⁺・NO₃⁻ 等）を希釈・排水で系外へ除去</span></div>
-                                <div class="ntree-leaf">🫧 プロテインスキマー<br><span>海水のみ・泡で有機物を系外排出</span></div>
+                                <div class="ntree-leaf">🪨 吸着材（ゼオライト等）<br><span>化学吸着→濾材ごと系外へ廃棄</span></div>
+                                <div class="ntree-leaf">🫧 プロテインスキマー<br><span>海水のみ・有機膜を気泡に吸着させ物理排出</span></div>
                             </div>
                         </div>
                         <div class="ntree-column-narrow">
                             <div class="ntree-box ntree-export-sub-box">🌿 生物的排出</div>
                             <div class="ntree-connector-v-short"></div>
                             <div class="ntree-export-leaf-col">
-                                <div class="ntree-leaf">💨 ガス化<br><span>嫌気性脱窒 → N₂↑（大気へ）</span></div>
-                                <div class="ntree-leaf">🌾 バイオマス収穫<br><span>水草トリミング・生体搬出</span></div>
+                                <div class="ntree-leaf">💨 ガス化（異化）<br><span>嫌気脱窒（DSB・ベルリン式・外部脱窒炉）→ NO₃⁻ を N₂↑ ガスとして大気へ</span></div>
+                                <div class="ntree-leaf">🌾 バイオマス化排出（同化→持ち出し）<br><span>水草トリミング・バイオフロック（炭素同化→スキマー/濾材洗浄で排出）・生体搬出</span></div>
                             </div>
                         </div>
                     </div>
@@ -1746,20 +1747,25 @@
                 <!-- Cycle -->
                 <div class="ntree-column">
                     <div class="ntree-box ntree-cycle-box">♻️ 循環 <span class="ntree-en">Cycle</span>
-                        <div class="ntree-sub">系内で窒素を変換・再利用</div>
+                        <div class="ntree-sub">系内で窒素を変換・再利用（捨てない）</div>
                     </div>
                     <div class="ntree-connector-v-short"></div>
                     <div class="ntree-leaf-col">
-                        <div class="ntree-leaf ntree-leaf-yellow">🌞 光独立栄養<br><span>植物・藻類 → 光合成でNH₄⁺を同化・O₂産生</span></div>
-                        <div class="ntree-leaf ntree-leaf-purple">💜 光従属栄養 PNSB<br><span>紅色非硫黄細菌 → 嫌気＋光でカロテノイド豊富バイオマスを産生</span></div>
+                        <div class="ntree-leaf ntree-leaf-yellow">🌞 光独立栄養<br><span>植物プランクトン・藻類 → 光合成でNH₄⁺を同化・O₂産生（グリーンウォーター式）</span></div>
+                        <div class="ntree-leaf ntree-leaf-purple">💜 光従属栄養 PNSB<br><span>紅色非硫黄細菌 → 嫌気＋光でカロテノイド豊富バイオマスを産生（未活用枠）</span></div>
                         <div class="ntree-leaf ntree-leaf-holo">⭐ 従属栄養（炭素同化 ＋ ベントスループ）
                             <div class="ntree-holo-badge">🔵 本システム（ホロビオント式）</div>
                         </div>
-                        <div class="ntree-leaf ntree-leaf-deprecated">◇ 化学独立栄養（硝化菌）——<strong style="color:#6e7681">換水の「時間稼ぎ」</strong><br><span>NH₄⁺（猍毒）→ NO₃⁻（低毒）へ変換し、次の換水まで「放置できるレベル」に下げる補助機構。窒素そのものは排出しない</span></div>
+                        <div class="ntree-leaf ntree-leaf-deprecated">◇ 化学独立栄養（H₂S硫黄酸化型）<br><span>嫌気チャンバーで硫黄酸化菌が窒素を同化・循環。人体リスクあり（ロマン枠）</span></div>
                     </div>
                 </div>
             </div>
             <p class="ntree-axis-label">分類軸：総N収支（窒素が系外に出るか ／ 系内に留まるか）</p>
+            <!-- 硝化サイクル：排出にも循環にも非寄与の独立補助機構 -->
+            <div style="max-width:420px;margin:16px auto 0;background:#111;border:1px dashed #3d444d;border-radius:8px;padding:10px 14px;text-align:center;font-size:.78em;color:#6e7681;line-height:1.6">
+                ⚙️ <strong style="color:#8b949e">硝化サイクル（硝化菌）——換水の「時間稼ぎ」</strong><br>
+                NH₄⁺（猛毒）→ NO₃⁻（低毒）へ変換し、次の換水まで「放置できるレベル」に下げる補助機構。<br>窒素そのものは排出も循環もしない。<strong>排出型の延命バッファー。</strong>
+            </div>
         </div>
 
         <h3>既存手法の比較</h3>
