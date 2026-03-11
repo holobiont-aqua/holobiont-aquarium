@@ -2185,76 +2185,33 @@
             </div>
         </div>
 
+        <h3>なぜ従属栄養細菌がアンモニアを取り込むのか</h3>
+        <p>通常の水槽では、アンモニア（NH₄⁺）は硝化細菌（<em>Nitrosomonas</em> 等）が酸化して亜硝酸→硝酸へと変換する。この酸化反応はH⁺を放出するため、水のpHを継続的に低下させる。</p>
+        <p>ここに炭素源（有機炭素）を加えると状況が変わる。炭素に対して窒素が相対的に不足した状態（高C:N比）では、<strong>従属栄養細菌が爆発的に増殖し、アンモニアを窒素源として菌体タンパクに直接取り込む</strong>。この同化反応では酸化が起きないため、H⁺が放出されない。</p>
 
+        <div class="holo-card fade-in" style="border-left:4px solid #58a6ff;margin:20px 0">
+            <span class="holo-label">直接同化のフロー</span>
+            <div style="display:flex;flex-direction:column;gap:6px;margin-top:8px;font-size:.88em">
+                <div style="display:flex;align-items:center;gap:10px">
+                    <span style="background:#2d1010;border:1px solid #f85149;border-radius:6px;padding:4px 10px;color:#f85149;white-space:nowrap">NH₄⁺（魚の排泄）</span>
+                    <span style="color:#30363d">→</span>
+                    <span style="color:#8b949e;font-size:.85em">炭素源を加えることでC:N比が上昇</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:10px">
+                    <span style="background:#0d2440;border:1px solid #58a6ff;border-radius:6px;padding:4px 10px;color:#58a6ff;white-space:nowrap">従属栄養細菌が増殖</span>
+                    <span style="color:#30363d">→</span>
+                    <span style="color:#8b949e;font-size:.85em">NH₄⁺を窒素源として菌体タンパクに同化（酸化しない）</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:10px">
+                    <span style="background:#0a2a14;border:1px solid #3fb950;border-radius:6px;padding:4px 10px;color:#3fb950;white-space:nowrap">H⁺放出ゼロ</span>
+                    <span style="color:#30363d">→</span>
+                    <span style="color:#8b949e;font-size:.85em">pH低下の原因が消失 → pHが底床の化学平衡点で安定（pHロック）</span>
+                </div>
+            </div>
+        </div>
 
-        <p>以下の図は、従来の硝化サイクルと本理論の同化経路を対比的に示したものである。</p>
-
-        <div class="nc-wrap fade-in">
-            <div class="nc-node nc-node-base" style="animation-delay:0s">
-                <div>
-                    <div class="nc-name">🐟 魚の排泄物・残餌</div>
-                </div>
-            </div>
-            <div class="nc-conn">
-                <div class="nc-line"></div>
-                <div class="nc-dot" style="animation-delay:0s"></div>
-            </div>
-            <div class="nc-node nc-node-danger" style="animation-delay:.1s">
-                <div>
-                    <div class="nc-name">アンモニア（NH₃）</div>
-                </div>
-                <span class="nc-badge nc-badge-red">猛毒</span>
-            </div>
-            <div class="nc-conn">
-                <div class="nc-line"></div>
-                <div class="nc-dot" style="animation-delay:.3s"></div>
-                <div class="nc-lbl">亜硝酸菌 Nitrosomonas</div>
-            </div>
-            <div class="nc-node nc-node-warn" style="animation-delay:.2s">
-                <div>
-                    <div class="nc-name">亜硝酸塩（NO₂⁻）</div>
-                </div>
-                <span class="nc-badge nc-badge-ora">毒性あり</span>
-            </div>
-            <div class="nc-conn">
-                <div class="nc-line"></div>
-                <div class="nc-dot" style="animation-delay:.6s"></div>
-                <div class="nc-lbl">硝酸菌 Nitrobacter</div>
-            </div>
-            <div class="nc-node nc-node-acc" style="animation-delay:.3s">
-                <div>
-                    <div class="nc-name">硝酸塩（NO₃⁻）</div>
-                    <div class="nc-sub">毒性は低いが蓄積し続ける ← ここが問題</div>
-                </div>
-                <span class="nc-badge nc-badge-yel">蓄積</span>
-            </div>
-            <div class="nc-conn" style="height:14px">
-                <div class="nc-line"></div>
-            </div>
-            <div class="nc-cross" style="color:#f85149;border-color:#f85149">🚫 従来：有害なうえに酸化でH⁺を放出し強力なpH低下を招く</div>
-            <div class="nc-label-sys">▼ 本システムのアプローチ（硝化バイパス）</div>
-            <div class="nc-conn">
-                <div class="nc-line" style="background:#1d3a5e"></div>
-                <div class="nc-dot nc-dot-green" style="animation-delay:.9s"></div>
-                <div class="nc-lbl">従属栄養細菌が急速に増殖し、アンモニアを競合的に消費する</div>
-            </div>
-            <div class="nc-node nc-node-sys" style="animation-delay:.4s">
-                <div>
-                    <div class="nc-name">アンモニアの直接同化</div>
-                    <div class="nc-sub">NH₄⁺ → 菌体タンパク（酸化が起きずH⁺放出ゼロ！）</div>
-                </div>
-            </div>
-            <div class="nc-conn">
-                <div class="nc-line" style="background:#1d3a5e"></div>
-                <div class="nc-dot nc-dot-green" style="animation-delay:1.2s"></div>
-                <div class="nc-lbl">ベントスが捕食（イトミミズ・ヨコエビ等）</div>
-            </div>
-            <div class="nc-node nc-node-out" style="animation-delay:.5s">
-                <div>
-                    <div class="nc-name">✅ 食物連鎖で無毒化循環</div>
-                    <div class="nc-sub">水換え不要・自律して完結</div>
-                </div>
-            </div>
+        <div class="holo-warn-yellow fade-in">
+            <strong>⚠ 速度論的な前提：</strong> 従属栄養細菌の増殖速度は硝化細菌より速い。十分な炭素源（C:N比 ≧ 5〜10 程度）が維持されている限り、アンモニアは硝化される前に同化される。この競合関係が成立することが本理論の中心的仮定である。
         </div>
 
 
