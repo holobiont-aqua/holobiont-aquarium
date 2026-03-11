@@ -2074,54 +2074,62 @@
 
         <h3>物質循環の模式図</h3>
 
-        <!-- ベントスループ循環図 -->
-        <div class="bl-wrap fade-in">
-            <div style="display:grid;grid-template-columns:1fr 32px 1fr;gap:0;align-items:stretch">
+        <!-- 物質循環図（リニューアル） -->
+        <style>
+            @keyframes cdot-r {
+                0%   { left: -12px; opacity: 0 }
+                10%  { opacity: 1 }
+                90%  { opacity: 1 }
+                100% { left: calc(100% + 12px); opacity: 0 }
+            }
+            @keyframes cdot-l {
+                0%   { left: calc(100% + 12px); opacity: 0 }
+                10%  { opacity: 1 }
+                90%  { opacity: 1 }
+                100% { left: -12px; opacity: 0 }
+            }
+        </style>
+        <div class="fade-in" style="margin:20px 0">
 
-                <!-- サンプ側 -->
-                <div style="display:flex;flex-direction:column;gap:6px">
-                    <div class="bl-box bl-box-sump">
-                        <div class="bl-box-label">サンプ（処理の主舞台）</div>
-                        🧪 炭素源エキス投入<br>↓<br>🦠 従属栄養バクテリア爆増・アンモニア直吸収<br>↓<br>⬛ 菌体バイオマス蓄積<br>↓<br>🐛 ベントスが捕食・増殖
-                    </div>
+            <!-- 上矢印：サンプ → メインタンク（給水ポンプ＋ベントス） -->
+            <div style="display:flex;align-items:center;gap:8px;margin:0 4px 8px">
+                <span style="font-size:.72em;color:#3fb950;white-space:nowrap;flex-shrink:0">💧 給水ポンプ（🐛 ベントスを含む）</span>
+                <span style="color:#3fb950;font-size:.85em;flex-shrink:0">▶</span>
+                <div style="flex:1;height:2px;background:#21262d;position:relative;overflow:hidden;border-radius:2px">
+                    <div style="width:9px;height:9px;border-radius:50%;background:#3fb950;position:absolute;top:50%;transform:translateY(-50%);animation:cdot-r 1.8s linear infinite;animation-delay:0s"></div>
+                    <div style="width:9px;height:9px;border-radius:50%;background:#3fb950;position:absolute;top:50%;transform:translateY(-50%);animation:cdot-r 1.8s linear infinite;animation-delay:.9s"></div>
                 </div>
-
-                <!-- 中央矢印 -->
-                <div
-                    style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;position:relative">
-                    <div
-                        style="display:flex;flex-direction:column;align-items:center;height:100%;position:relative;width:100%">
-                        <div
-                            style="width:2px;height:50%;background:#21262d;position:absolute;left:50%;top:0;transform:translateX(-50%)">
-                        </div>
-                        <div
-                            style="width:2px;height:50%;background:#21262d;position:absolute;left:50%;bottom:0;transform:translateX(-50%)">
-                        </div>
-                        <!-- 上向き矢印（オーバーフロー → サンプ）-->
-                        <div style="position:absolute;top:20%;left:50%;transform:translateX(-50%);text-align:center">
-                            <div
-                                style="font-size:.62em;color:#8b949e;writing-mode:vertical-rl;text-orientation:mixed;white-space:nowrap">
-                                ↑ OF落水</div>
-                        </div>
-                        <!-- 下向き矢印（ポンプ → メイン）-->
-                        <div style="position:absolute;bottom:20%;left:50%;transform:translateX(-50%);text-align:center">
-                            <div
-                                style="font-size:.62em;color:#8b949e;writing-mode:vertical-rl;text-orientation:mixed;white-space:nowrap">
-                                ↓ 給水ポンプ</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- メインタンク側 -->
-                <div style="display:flex;flex-direction:column;gap:6px">
-                    <div class="bl-box bl-box-main">
-                        <div class="bl-box-label">メインタンク（展示）</div>
-                        🐟 魚がベントスを捕食<br>↓<br>💚 魚が成長<br>↓<br>💩 排泄物・残餌<br>↓<br>🌊 オーバーフローでサンプへ
-                    </div>
-                </div>
-
             </div>
-            <p style="text-align:center;margin:10px 0 0;font-size:.78em;color:#8b949e">この循環が自律して回り続けることで、換水が不要になる</p>
+
+            <!-- 2ボックス横並び -->
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+                <div style="border:1px solid #58a6ff;background:#0a1929;border-radius:8px;padding:12px 14px;font-size:.82em;color:#c9d1d9;line-height:1.75">
+                    <div style="font-size:.68em;text-transform:uppercase;letter-spacing:.05em;color:#58a6ff;font-weight:600;margin-bottom:8px">サンプ（処理の主舞台）</div>
+                    🧪 炭素源エキス投入<br>↓<br>
+                    🦠 バクテリア爆増・NH₄⁺を直接同化<br>↓<br>
+                    ⬛ 菌体バイオマス蓄積<br>↓<br>
+                    🐛 ベントスが捕食・増殖
+                </div>
+                <div style="border:1px solid #3fb950;background:#0a1f10;border-radius:8px;padding:12px 14px;font-size:.82em;color:#c9d1d9;line-height:1.75">
+                    <div style="font-size:.68em;text-transform:uppercase;letter-spacing:.05em;color:#3fb950;font-weight:600;margin-bottom:8px">メインタンク（展示）</div>
+                    🐟 魚がベントスを捕食<br>↓<br>
+                    💚 魚が成長<br>↓<br>
+                    💩 排泄物・残餌が発生<br>↓<br>
+                    🌊 オーバーフローでサンプへ
+                </div>
+            </div>
+
+            <!-- 下矢印：メインタンク → サンプ（オーバーフロー落水） -->
+            <div style="display:flex;align-items:center;gap:8px;margin:8px 4px 0">
+                <div style="flex:1;height:2px;background:#21262d;position:relative;overflow:hidden;border-radius:2px">
+                    <div style="width:9px;height:9px;border-radius:50%;background:#58a6ff;position:absolute;top:50%;transform:translateY(-50%);animation:cdot-l 1.8s linear infinite;animation-delay:0s"></div>
+                    <div style="width:9px;height:9px;border-radius:50%;background:#58a6ff;position:absolute;top:50%;transform:translateY(-50%);animation:cdot-l 1.8s linear infinite;animation-delay:.9s"></div>
+                </div>
+                <span style="color:#58a6ff;font-size:.85em;flex-shrink:0">◀</span>
+                <span style="font-size:.72em;color:#58a6ff;white-space:nowrap;flex-shrink:0">🌊 オーバーフロー落水</span>
+            </div>
+
+            <p style="text-align:center;margin:14px 0 0;font-size:.78em;color:#8b949e">この循環が自律して回り続けることで、換水が不要になる</p>
         </div>
 
         <hr>
