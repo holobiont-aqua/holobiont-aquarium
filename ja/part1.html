@@ -1727,6 +1727,42 @@
         }
         .page-nav-spacer { flex: 1; min-width: 8px; }
 
+        /* ===== Before/After比較グリッド ===== */
+        .compare-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:18px 0 }
+        .compare-box { border-radius:10px; padding:14px 16px; font-size:.85em; line-height:1.85 }
+        .compare-box-label { font-size:.65em; text-transform:uppercase; letter-spacing:.07em; font-weight:700; margin-bottom:8px; padding-bottom:6px; border-bottom:1px solid; display:block }
+        .compare-bad  { border:1px solid #f85149; background:#1c0a0a }
+        .compare-good { border:1px solid #3fb950; background:#0a1f10 }
+        .compare-bad  .compare-box-label { color:#f85149; border-color:#f85149 }
+        .compare-good .compare-box-label { color:#3fb950; border-color:#3fb950 }
+        .compare-step { color:#c9d1d9; font-size:.85em; padding:2px 0 }
+        .compare-result { margin-top:8px; padding:6px 10px; border-radius:6px; font-size:.8em; font-weight:600 }
+        .compare-bad  .compare-result { background:#2d1117; color:#f85149 }
+        .compare-good .compare-result { background:#0d2117; color:#3fb950 }
+
+        /* ===== C:N比ゲージ ===== */
+        .cn-gauge { margin:18px 0; background:#161b22; border:1px solid #30363d; border-radius:10px; padding:14px 16px }
+        .cn-bar-wrap { display:flex; width:100%; height:36px; border-radius:6px; overflow:hidden; margin:8px 0 }
+        .cn-zone { display:flex; align-items:center; justify-content:center; font-size:.7em; font-weight:600; text-align:center; padding:0 6px }
+        .cn-zone-low  { flex:2.5; background:#1c2b3a; color:#58a6ff }
+        .cn-zone-mid  { flex:0.6; background:#21262d; color:#8b949e; font-size:.6em; white-space:nowrap }
+        .cn-zone-high { flex:2.5; background:#0a1f10; color:#3fb950 }
+
+        /* ===== Benthos 2列カード ===== */
+        .benthos-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:14px 0 }
+        .benthos-card { border-radius:10px; padding:14px 16px; font-size:.85em; color:#c9d1d9; line-height:1.7 }
+        .benthos-tag  { font-size:.65em; text-transform:uppercase; letter-spacing:.06em; font-weight:700; margin-bottom:10px; display:block }
+        .benthos-auto { border:1px solid #3fb950; background:#0a1f10 }
+        .benthos-auto .benthos-tag { color:#3fb950 }
+        .benthos-manual { border:1px solid #8b949e; background:#161b22 }
+        .benthos-manual .benthos-tag { color:#8b949e }
+        .benthos-row { display:flex; gap:6px; margin:3px 0; font-size:.88em }
+        .benthos-key { color:#8b949e; font-size:.78em; min-width:58px; flex-shrink:0 }
+
+        @media(max-width:480px) {
+            .compare-grid, .benthos-grid { grid-template-columns:1fr }
+        }
+
     </style>
 
     <script>
@@ -1969,18 +2005,44 @@
 
         <h2 id="sec-assimilation">2. 従属栄養細菌によるアンモニア直接同化</h2>
 
-        <p>通常の水槽では、アンモニア（NH₄⁺）は硝化細菌（<em>Nitrosomonas</em> 等）が酸化して亜硝酸→硝酸へと変換する。この酸化反応はH⁺を放出するため、水のpHを継続的に低下させ、硝酸塩が蓄積し続ける——これが換水の根本的な必要性である。</p>
-        <p>炭素源を加えることでC:N比が高まると、従属栄養細菌がアンモニアを酸化ではなく<strong>自身の細胞タンパクに直接取り込む</strong>。酸化が起きないためH⁺が放出されず、pH低下の原因が消失する。</p>
+        <!-- Before/After 比較カード -->
+        <div class="compare-grid fade-in">
+            <div class="compare-box compare-bad">
+                <span class="compare-box-label">❌ 通常の水槽（硝化経路）</span>
+                <div class="compare-step">NH₄⁺（アンモニア）</div>
+                <div class="compare-step">↓ 硝化菌（<em>Nitrosomonas</em>）</div>
+                <div class="compare-step">NO₂⁻ → NO₃⁻</div>
+                <div class="compare-step">↓ <strong>H⁺を放出</strong></div>
+                <div class="compare-step">pH持続低下・硝酸塩蓄積</div>
+                <div class="compare-result">→ 定期換水が必要</div>
+            </div>
+            <div class="compare-box compare-good">
+                <span class="compare-box-label">✅ ホロビオント式（炭素同化）</span>
+                <div class="compare-step">NH₄⁺ ＋ 炭素源</div>
+                <div class="compare-step">↓ 従属栄養細菌（C:N比 ＞ 20）</div>
+                <div class="compare-step"><strong>菌体タンパクに直接取り込み</strong></div>
+                <div class="compare-step">↓ <strong>H⁺を放出しない</strong></div>
+                <div class="compare-step">pH安定・硝酸塩ゼロ</div>
+                <div class="compare-result">→ 換水が不要</div>
+            </div>
+        </div>
 
         <h3>C:N比と同化条件</h3>
-        <p>従属栄養細菌が窒素をどのように処理するかは、環境中の<strong>C:N比（炭素と窒素の比率）</strong>に大きく依存する。</p>
+        <p>従属栄養細菌がどちらの経路で動作するかは、環境中の<strong>C:N比（炭素と窒素の比率）</strong>が決定する。</p>
 
-        <div class="holo-card fade-in" style="border-left:4px solid #58a6ff">
-            <span class="holo-label">微生物学的背景</span>
-            <ul style="margin:4px 0 0;padding-left:20px;font-size:.88em;line-height:2">
-                <li>C:N比が低い環境（通常の水槽）→ アンモニアは余剰となり、硝化菌による酸化的処理（NH₄⁺ → NO₂⁻ → NO₃⁻）が進行</li>
-                <li>C:N比が高い環境（炭素源投入時、目安 C:N &gt; 約 20）→ 従属栄養細菌が炭素源をエネルギーとして<strong>アンモニアを直接、自身の細胞タンパクに同化</strong></li>
-            </ul>
+        <!-- C:N比ゲージ -->
+        <div class="cn-gauge fade-in">
+            <div style="font-size:.72em;text-transform:uppercase;letter-spacing:.06em;color:#8b949e;margin-bottom:4px">C:N比と細菌の動作モード</div>
+            <div class="cn-bar-wrap">
+                <div class="cn-zone cn-zone-low">🔵 硝化モード<br>C:N ＜ 20</div>
+                <div class="cn-zone cn-zone-mid">─ 閾値 ─</div>
+                <div class="cn-zone cn-zone-high">🟢 同化モード<br>C:N ＞ 20</div>
+            </div>
+            <div style="display:flex;font-size:.7em;color:#6e7681">
+                <span style="flex:2.5;text-align:center">NH₄⁺ → NO₃⁻（H⁺放出）</span>
+                <span style="flex:0.6"></span>
+                <span style="flex:2.5;text-align:center">NH₄⁺ → 菌体タンパク</span>
+            </div>
         </div>
 
         <p>すなわち、炭素源を投入してC:N比を十分に高めることで、アンモニアの処理経路を硝化（酸化）から同化（菌体取り込み）へ切り替えることが可能となる。</p>
@@ -2048,27 +2110,21 @@
 
         <h3>循環の手段——フルオートと手動</h3>
         <p>ベントスをメインタンクに戻す方法は、実装上の選択肢となる。</p>
-        <div class="holo-table-wrap fade-in">
-            <table class="holo-table">
-                <tr>
-                    <th>方式</th>
-                    <th>ベントス（例）</th>
-                    <th>メインタンクへの移送</th>
-                    <th>捕食者</th>
-                </tr>
-                <tr>
-                    <td data-label="方式"><strong>フルオート</strong></td>
-                    <td data-label="ベントス（例）">イトミミズ・ヨコエビ等（微小）</td>
-                    <td data-label="メインタンクへの移送">ポンプを通過して自動供給</td>
-                    <td data-label="捕食者">小〜中型魚</td>
-                </tr>
-                <tr>
-                    <td data-label="方式">手動 / 大型ポンプ</td>
-                    <td data-label="ベントス（例）">ドジョウ等（大型）</td>
-                    <td data-label="メインタンクへの移送">人の手で移送 or 大型ポンプ</td>
-                    <td data-label="捕食者">大型肉食魚</td>
-                </tr>
-            </table>
+        <div class="benthos-grid fade-in">
+            <div class="benthos-card benthos-auto">
+                <span class="benthos-tag">⚡ フルオート方式</span>
+                <div class="benthos-row"><span class="benthos-key">ベントス</span>イトミミズ・ヨコエビ等（微小種）</div>
+                <div class="benthos-row"><span class="benthos-key">移送</span>給水ポンプで常時自動供給</div>
+                <div class="benthos-row"><span class="benthos-key">捕食者</span>小〜中型魚</div>
+                <div class="benthos-row"><span class="benthos-key">特徴</span>人手不要・24時間ループ稼働</div>
+            </div>
+            <div class="benthos-card benthos-manual">
+                <span class="benthos-tag">🤲 手動 / 大型ポンプ方式</span>
+                <div class="benthos-row"><span class="benthos-key">ベントス</span>ドジョウ等（大型種）</div>
+                <div class="benthos-row"><span class="benthos-key">移送</span>人の手で移送 or 大型ポンプ</div>
+                <div class="benthos-row"><span class="benthos-key">捕食者</span>大型肉食魚</div>
+                <div class="benthos-row"><span class="benthos-key">特徴</span>大型水槽・定期管理が必要</div>
+            </div>
         </div>
         <p>本稿で報告するシステムでは、家庭用ポンプの現実的なサイズを考慮し、微小なベントス（イトミミズ・ヨコエビ等）によるフルオート方式を採用した。</p>
 
