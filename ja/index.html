@@ -1646,6 +1646,50 @@
             .ntree-branch { flex-direction: column; gap: 12px }
             .ntree-fork { display: none }
         }
+        /* ===== Part ヘッダー ===== */
+        .part-header {
+            margin: 40px 0 24px;
+            text-align: center;
+        }
+        .part-label {
+            display: inline-block;
+            font-size: .65em;
+            text-transform: uppercase;
+            letter-spacing: .12em;
+            padding: 3px 12px;
+            border-radius: 4px;
+            margin-bottom: 8px;
+        }
+        .part-label-theory {
+            background: #0d2440;
+            color: #58a6ff;
+            border: 1px solid #58a6ff;
+        }
+        .part-label-practice {
+            background: #1c2d0a;
+            color: #3fb950;
+            border: 1px solid #3fb950;
+        }
+        .part-title {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #e6edf3;
+        }
+        .part-subtitle {
+            font-size: .78em;
+            color: #8b949e;
+            margin-top: 4px;
+        }
+        /* TOC ネスト */
+        .toc-part-label {
+            font-size: .7em;
+            text-transform: uppercase;
+            letter-spacing: .08em;
+            margin: 10px 0 4px;
+            padding-left: 0;
+        }
+        .toc-part-theory { color: #58a6ff }
+        .toc-part-practice { color: #3fb950 }
     </style>
 
     <script>
@@ -1722,17 +1766,20 @@
             </ul>
             <nav class="toc fade-in">
                 <p style="margin:0 0 10px;font-weight:bold;color:#58a6ff;font-size:.95em">📑 目次</p>
+                <div class="toc-part-label toc-part-theory">Part 1 — 理論編</div>
                 <ol class="toc-list">
-                    <li><a href="#sec-why-ja">淡水水槽で「換水なし」が難しい理由</a></li>
-                    <li><a href="#sec-ntree-ja">N収支ベース：全手法の系統図</a></li>
-                    <li><a href="#sec-how-ja">このシステムの仕組み</a></li>
-                    <li><a href="#sec-overflow-ja">なぜオーバーフローなのか</a></li>
+                    <li><a href="#sec-ntree-ja">水槽の窒素はどこへ行くか（N収支系統図）</a></li>
+                    <li><a href="#sec-compare-ja">各窒素処理アプローチの比較</a></li>
+                    <li><a href="#sec-how-ja">ホロビオント式の原理</a></li>
+                </ol>
+                <div class="toc-part-label toc-part-practice">Part 2 — 実践編</div>
+                <ol class="toc-list" start="4">
+                    <li><a href="#sec-overflow-ja">設備要件（なぜオーバーフローか）</a></li>
                     <li><a href="#sec-recipe-ja">炭素源エキスのレシピ</a></li>
                     <li><a href="#sec-setup-ja">立ち上げガイド（約1ヶ月）</a></li>
                     <li><a href="#sec-data-ja">実測データ</a></li>
-                    <li><a href="#sec-not-for-ja">こんな人には向きません</a></li>
+                    <li><a href="#sec-not-for-ja">注意事項</a></li>
                     <li><a href="#sec-cost-ja">費用と入手性</a></li>
-                    <li><a href="#sec-big-ja">大きいほどうまくいく</a></li>
                     <li><a href="#sec-conclusion-ja">おわりに</a></li>
                 </ol>
             </nav>
@@ -1769,7 +1816,14 @@
 
         <hr>
 
-        <h2>淡水の「無換水」、なぜ難しいのか</h2>
+        <!-- ===== Part 1：理論編 ===== -->
+        <div class="part-header fade-in" id="part-theory">
+            <div><span class="part-label part-label-theory">Part 1</span></div>
+            <div class="part-title">理論編 — 水槽の窒素はどこへ行くか</div>
+            <div class="part-subtitle">各手法を客観的に分類し、ホロビオント式のメカニズムを解説する</div>
+        </div>
+
+        <h2 id="sec-why-ja">淡水の「無換水」、なぜ難しいのか</h2>
 
         <h3 id="sec-ntree-ja">水槽の窒素はどこへ行くか</h3>
         <p style="font-size:.88em;color:#8b949e">N総量収支に基づくアクアリウム窒素管理の全体像。各手法は「窒素を系外に排出するか」「系内で循環させるか」の一軸で分類される。</p>
@@ -1942,7 +1996,7 @@
             </div>
         </div>
 
-        <h3>既存手法の比較</h3>
+        <h3 id="sec-compare-ja">各窒素処理アプローチの比較</h3>
 
         <!-- 概念図グリッド -->
 
@@ -2379,7 +2433,14 @@
 
         <hr>
 
-        <h2>なぜオーバーフロー式でなければならないか</h2>
+        <!-- ===== Part 2：実践編 ===== -->
+        <div class="part-header fade-in" id="part-practice">
+            <div><span class="part-label part-label-practice">Part 2</span></div>
+            <div class="part-title">実践編 — どうやるか</div>
+            <div class="part-subtitle">設備・レシピ・手順・実測データ</div>
+        </div>
+
+        <h2 id="sec-overflow-ja">なぜオーバーフロー式でなければならないか</h2>
         <div class="holo-table-wrap fade-in">
             <table class="holo-table">
                 <tr>
