@@ -1634,13 +1634,13 @@
         }
         /* 硝化注記 */
         .ntree-nitri-note {
-            background: #111; border: 1px dashed #3d444d; border-radius: 8px;
-            padding: 10px 12px; margin: 16px auto 0; max-width: 420px; text-align: center;
+            background: #0d1117; border: 1px solid #58a6ff40; border-radius: 8px;
+            padding: 14px 16px; margin: 20px auto 0; max-width: 480px; text-align: left;
         }
         .ntree-nitri-title {
-            font-size: .72em; color: #484f58; text-decoration: line-through; margin-bottom: 4px;
+            font-size: .8em; color: #8b949e; font-weight: 600; margin-bottom: 6px;
         }
-        .ntree-nitri-body { font-size: .68em; color: #484f58; line-height: 1.5 }
+        .ntree-nitri-body { font-size: .78em; color: #6e7681; line-height: 1.7 }
         /* モバイル：縦スタック */
         @media(max-width:600px) {
             .ntree-branch { flex-direction: column; gap: 12px }
@@ -1955,11 +1955,12 @@
 
             <!-- 硝化サイクル注記 -->
             <div class="ntree-nitri-note fade-in">
-                <div class="ntree-nitri-title">🚫 硝化サイクル（NH₄⁺ → NO₂⁻ → NO₃⁻）</div>
+                <div class="ntree-nitri-title">📌 硝化サイクル（NH₄⁺ → NO₂⁻ → NO₃⁻）について</div>
                 <div class="ntree-nitri-body">
-                    窒素の形態を変えるだけで、系内の総窒素量は減らない。<br>
-                    排出にも循環にも寄与しない「毒性変換バッファ」。<br>
-                    上記のどの排出手段が実行されるまでの時間稼ぎとして機能する。
+                    硝化サイクルはアクアリウムの根幹であり、猛毒のアンモニアを毒性の低い硝酸塩へ変換することで生体の急性死亡を防ぐ。<br>
+                    ただし、<strong style="color:#8b949e">窒素の形態を変えるのみで系内の総窒素量は変化しない</strong>。<br>
+                    硝酸塩が蓄積し続けるため、排出または循環の手段と組み合わせなければ水換えが必須となる。<br>
+                    本理論はこの硝化経路自体をバイパスし、窒素を系内で循環させることを目的とする。
                 </div>
             </div>
         </div>
