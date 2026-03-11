@@ -2074,7 +2074,7 @@
 
         <h3>物質循環の模式図</h3>
 
-        <!-- 物質循環図（V2: 縦型フロー） -->
+        <!-- 物質循環図（V3: メイン上・サンプ下・双方向コネクター） -->
         <style>
             @keyframes vdot-dn {
                 0%   { top: -12px; opacity: 0 }
@@ -2082,32 +2082,16 @@
                 90%  { opacity: 1 }
                 100% { top: calc(100% + 12px); opacity: 0 }
             }
+            @keyframes vdot-up {
+                0%   { top: calc(100% + 12px); opacity: 0 }
+                10%  { opacity: 1 }
+                90%  { opacity: 1 }
+                100% { top: -12px; opacity: 0 }
+            }
         </style>
         <div class="fade-in" style="max-width:460px;margin:20px auto">
 
-            <!-- BOX 1: サンプ -->
-            <div style="border:1px solid #58a6ff;background:#0a1929;border-radius:10px;padding:14px 18px">
-                <div style="font-size:.68em;text-transform:uppercase;letter-spacing:.06em;color:#58a6ff;font-weight:700;margin-bottom:10px">サンプ（処理の主舞台）</div>
-                <div style="font-size:.86em;color:#c9d1d9;line-height:2">
-                    🧪 炭素源エキス投入<br>
-                    🦠 バクテリア爆増・NH₄⁺を直接同化<br>
-                    ⬛ 菌体バイオマスが蓄積<br>
-                    🐛 ベントスが菌体を捕食・増殖
-                </div>
-            </div>
-
-            <!-- CONNECTOR 1: ポンプ → メインタンク（緑） -->
-            <div style="position:relative;height:68px;display:flex;align-items:center;justify-content:center">
-                <div style="position:absolute;left:50%;top:0;bottom:0;width:2px;background:#21262d;transform:translateX(-50%);overflow:hidden">
-                    <div style="width:10px;height:10px;border-radius:50%;background:#3fb950;position:absolute;left:50%;transform:translateX(-50%);top:-12px;animation:vdot-dn 1.5s linear infinite;animation-delay:0s"></div>
-                    <div style="width:10px;height:10px;border-radius:50%;background:#3fb950;position:absolute;left:50%;transform:translateX(-50%);top:-12px;animation:vdot-dn 1.5s linear infinite;animation-delay:.75s"></div>
-                </div>
-                <div style="background:#0d1117;border:1px solid #3fb950;border-radius:20px;padding:5px 16px;position:relative;z-index:1;font-size:.73em;color:#3fb950;white-space:nowrap">
-                    💧 給水ポンプ（🐛 ベントスを含む）▼
-                </div>
-            </div>
-
-            <!-- BOX 2: メインタンク -->
+            <!-- BOX 1: メインタンク（上＝物理的な高い位置） -->
             <div style="border:1px solid #3fb950;background:#0a1f10;border-radius:10px;padding:14px 18px">
                 <div style="font-size:.68em;text-transform:uppercase;letter-spacing:.06em;color:#3fb950;font-weight:700;margin-bottom:10px">メインタンク（展示）</div>
                 <div style="font-size:.86em;color:#c9d1d9;line-height:2">
@@ -2118,21 +2102,46 @@
                 </div>
             </div>
 
-            <!-- CONNECTOR 2: オーバーフロー → サンプ（青） -->
-            <div style="position:relative;height:68px;display:flex;align-items:center;justify-content:center">
-                <div style="position:absolute;left:50%;top:0;bottom:0;width:2px;background:#21262d;transform:translateX(-50%);overflow:hidden">
-                    <div style="width:10px;height:10px;border-radius:50%;background:#58a6ff;position:absolute;left:50%;transform:translateX(-50%);top:-12px;animation:vdot-dn 1.5s linear infinite;animation-delay:.3s"></div>
-                    <div style="width:10px;height:10px;border-radius:50%;background:#58a6ff;position:absolute;left:50%;transform:translateX(-50%);top:-12px;animation:vdot-dn 1.5s linear infinite;animation-delay:1.05s"></div>
+            <!-- CONNECTOR: 双方向フロー（左=落水・右=給水） -->
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;height:100px;margin:0">
+
+                <!-- 左: オーバーフロー落水（青・下向き） -->
+                <div style="display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 0">
+                    <div style="font-size:.68em;color:#58a6ff;text-align:center;line-height:1.4">
+                        ⬇ オーバーフロー落水<br>
+                        <span style="color:#484f58;font-size:.9em">排泄物・残餌含む水</span>
+                    </div>
+                    <div style="flex:1;width:2px;background:#21262d;position:relative;overflow:hidden;border-radius:2px">
+                        <div style="width:10px;height:10px;border-radius:50%;background:#58a6ff;position:absolute;left:50%;transform:translateX(-50%);top:-12px;animation:vdot-dn 1.5s linear infinite;animation-delay:0s"></div>
+                        <div style="width:10px;height:10px;border-radius:50%;background:#58a6ff;position:absolute;left:50%;transform:translateX(-50%);top:-12px;animation:vdot-dn 1.5s linear infinite;animation-delay:.75s"></div>
+                    </div>
                 </div>
-                <div style="background:#0d1117;border:1px solid #58a6ff;border-radius:20px;padding:5px 16px;position:relative;z-index:1;font-size:.73em;color:#58a6ff;white-space:nowrap">
-                    🌊 オーバーフロー落水 ▼
+
+                <!-- 右: 給水ポンプ（緑・上向き） -->
+                <div style="display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 0">
+                    <div style="font-size:.68em;color:#3fb950;text-align:center;line-height:1.4">
+                        ⬆ 給水ポンプ<br>
+                        <span style="color:#484f58;font-size:.9em">処理済み水＋ベントス</span>
+                    </div>
+                    <div style="flex:1;width:2px;background:#21262d;position:relative;overflow:hidden;border-radius:2px">
+                        <div style="width:10px;height:10px;border-radius:50%;background:#3fb950;position:absolute;left:50%;transform:translateX(-50%);top:calc(100% + 12px);animation:vdot-up 1.5s linear infinite;animation-delay:0s"></div>
+                        <div style="width:10px;height:10px;border-radius:50%;background:#3fb950;position:absolute;left:50%;transform:translateX(-50%);top:calc(100% + 12px);animation:vdot-up 1.5s linear infinite;animation-delay:.75s"></div>
+                    </div>
                 </div>
             </div>
 
-            <!-- ループ戻り表示 -->
-            <div style="text-align:center;background:#161b22;border:1px solid #30363d;border-radius:8px;padding:8px 16px;font-size:.78em;color:#8b949e">
-                ↩ サンプへ戻り、循環を繰り返す
+            <!-- BOX 2: サンプ（下＝物理的な低い位置） -->
+            <div style="border:1px solid #58a6ff;background:#0a1929;border-radius:10px;padding:14px 18px">
+                <div style="font-size:.68em;text-transform:uppercase;letter-spacing:.06em;color:#58a6ff;font-weight:700;margin-bottom:10px">サンプ（処理の主舞台）</div>
+                <div style="font-size:.86em;color:#c9d1d9;line-height:2">
+                    🧪 炭素源エキス投入<br>
+                    🦠 バクテリア爆増・NH₄⁺を直接同化<br>
+                    ⬛ 菌体バイオマスが蓄積<br>
+                    🐛 ベントスが菌体を捕食・増殖
+                </div>
             </div>
+
+            <p style="text-align:center;margin:12px 0 0;font-size:.78em;color:#8b949e">この循環が自律して回り続けることで、換水が不要になる</p>
 
         </div>
 
