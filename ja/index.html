@@ -1747,86 +1747,88 @@
             <div class="hero-overlay"></div>
             <div class="hero-content">
                 <div class="hero-badge">🧬 ホロビオントアクアリウム理論</div>
-                <p style="margin:8px 0 0;color:#8b949e;font-size:.82em;font-style:italic">「自然の池は換水しない。じゃあ俺もしない。以上。」</p>
+                <p style="margin:8px 0 0;color:#8b949e;font-size:.82em;font-style:italic">炭素同化と食物連鎖による淡水水槽の窒素循環理論</p>
             </div>
         </div>
-        <h1>淡水水槽を「換水ゼロ」にした話——炭素源×ベントスで作る自律型生態系アクアリウム</h1>
-        <p><em>無換水・無給餌・CO₂無添加のオーバーフロー式水草水槽を1年間維持した記録と理論</em></p>
+        <h1>ホロビオントアクアリウム理論——従属栄養細菌の炭素同化と食物連鎖による淡水水槽の窒素循環</h1>
+        <p><em>淡水オーバーフロー水槽における無換水・無給餌・CO₂無添加の1年間維持記録と理論的考察</em></p>
 
         <hr>
 
+        <!-- 概要 -->
         <div class="holo-summary fade-in">
-            <p style="margin:0 0 10px;font-weight:bold;color:#79c0ff">📋 この記事でわかること</p>
-            <ul>
-                <li>淡水水槽で「換水なし」が難しい本当の理由</li>
-                <li>従属栄養細菌によるアンモニア直接同化とベントスループの仕組み</li>
-                <li>スーパーとホムセンで揃う炭素源エキスのレシピ</li>
-                <li>白濁を乗り越える1ヶ月の立ち上げ手順</li>
-                <li>1年間・pH 6.85を維持した実際のデータ</li>
+            <p style="margin:0 0 10px;font-weight:bold;color:#79c0ff">📄 概要</p>
+            <p style="margin:0;font-size:.92em;line-height:1.8">
+                本稿では、従属栄養細菌による<strong>アンモニアの直接同化</strong>と、生成されたバイオマスを<strong>デトリタス食性生物に捕食させて肉食魚に供給する食物連鎖</strong>を組み合わせることで、淡水水槽における窒素循環を硝化サイクルに依存せずに実現する理論（ホロビオントアクアリウム理論）を提案する。本理論に基づき、オーバーフロー式水草水槽を換水ゼロ・給餌ゼロ・CO₂添加ゼロで1年以上にわたり安定維持した実証結果を報告する。
+            </p>
+        </div>
+
+        <!-- 前提条件 -->
+        <div class="holo-card fade-in" style="border-left:4px solid #d29922">
+            <span class="holo-label" style="color:#d29922">⚠ 前提条件</span>
+            <ul style="margin:4px 0 0;padding-left:20px;font-size:.88em;line-height:1.9">
+                <li><strong>オーバーフロー式水槽</strong>が必須（好気性細菌の酸素要求量を曝気で満たすため）</li>
+                <li>立ち上げ時に約1ヶ月間のバクテリアブルーム（白濁）が発生する</li>
+                <li>中〜上級者のアクアリスト向け（原理の理解と経過観察の能力が必要）</li>
             </ul>
-            <nav class="toc fade-in">
-                <p style="margin:0 0 10px;font-weight:bold;color:#58a6ff;font-size:.95em">📑 目次</p>
-                <div class="toc-part-label toc-part-theory">Part 1 — 理論編</div>
-                <ol class="toc-list">
-                    <li><a href="#sec-ntree-ja">水槽の窒素はどこへ行くか（N収支系統図）</a></li>
-                    <li><a href="#sec-compare-ja">各窒素処理アプローチの比較</a></li>
-                    <li><a href="#sec-how-ja">ホロビオント式の原理</a></li>
-                </ol>
-                <div class="toc-part-label toc-part-practice">Part 2 — 実践編</div>
-                <ol class="toc-list" start="4">
-                    <li><a href="#sec-overflow-ja">設備要件（なぜオーバーフローか）</a></li>
-                    <li><a href="#sec-recipe-ja">炭素源エキスのレシピ</a></li>
-                    <li><a href="#sec-setup-ja">立ち上げガイド（約1ヶ月）</a></li>
-                    <li><a href="#sec-data-ja">実測データ</a></li>
-                    <li><a href="#sec-not-for-ja">注意事項</a></li>
-                    <li><a href="#sec-cost-ja">費用と入手性</a></li>
-                    <li><a href="#sec-conclusion-ja">おわりに</a></li>
-                </ol>
-            </nav>
         </div>
+
+        <!-- 目次 -->
+        <nav class="toc fade-in">
+            <p style="margin:0 0 10px;font-weight:bold;color:#58a6ff;font-size:.95em">📑 目次</p>
+            <div class="toc-part-label toc-part-theory">Part 1 — 理論</div>
+            <ol class="toc-list">
+                <li><a href="#sec-nitrogen">水槽における窒素問題</a></li>
+                <li><a href="#sec-assimilation">従属栄養細菌によるアンモニア直接同化</a></li>
+                <li><a href="#sec-foodchain">デトリタス食性生物による窒素循環</a></li>
+                <li><a href="#sec-consequences">理論から導出される帰結</a></li>
+            </ol>
+            <div class="toc-part-label toc-part-practice">Part 2 — 構築可能な環境</div>
+            <ol class="toc-list" start="5">
+                <li><a href="#sec-configurations">構成の自由度</a></li>
+            </ol>
+            <div class="toc-part-label" style="color:#d29922">Part 3 — 構築方法</div>
+            <ol class="toc-list" start="6">
+                <li><a href="#sec-design">システム設計</a></li>
+                <li><a href="#sec-recipe">炭素源エキスのレシピ</a></li>
+                <li><a href="#sec-setup">立ち上げ手順</a></li>
+            </ol>
+            <div class="toc-part-label" style="color:#8957e5">Part 4 — 実際の状況</div>
+            <ol class="toc-list" start="9">
+                <li><a href="#sec-data">実測データと観察結果</a></li>
+            </ol>
+            <div class="toc-part-label" style="color:#f85149">Part 5 — 考察</div>
+            <ol class="toc-list" start="10">
+                <li><a href="#sec-discussion">考察と展望</a></li>
+            </ol>
+        </nav>
 
         <hr>
 
-        <h2>はじめに</h2>
-        <p>まず、この記事を読んで最初に思うことを代わりに言っておこう。</p>
-        <div class="holo-blockquote">
-            <p>「魚飼ってんだから、換水くらいしろよ」</p>
-        </div>
-        <p>ごもっともだ。ただ、正直に言うと面倒なのだ。</p>
-        <p>週に一度バケツを持ち出して、水抜いて、カルキ抜いて、温度合わせて、ゆっくり足して——それを何年も続けるのは純粋に手間がかかる。大型水槽ともなれば腰も痛くなる。</p>
-        <p>だから考えた。「換水しなくていい仕組みを作ればいいのでは？」と。</p>
-        <p>その答えとして辿り着いたのが、この記事で紹介するシステムだ。炭素源の投入と底生生物（ベントス）の食物連鎖を組み合わせることで、無換水・無給餌・CO₂無添加でのオーバーフロー式水草水槽を1年以上にわたって安定稼働させた。その記録と理論的背景をまとめる。
-        </p>
-        <p>便宜上このシステムを「ホロビオントアクアリウム」と呼ぶ。生物学の概念・Holobiont（ホロビオント）——宿主と共生微生物群全体を一つの超個体として捉える思想——になぞらえた名称だ。</p>
-        <p>核心のメカニズムは、従来の「硝化サイクル→脱窒」ではなく、<strong>従属栄養細菌によるアンモニアの直接同化</strong>である。大量の炭素源によって爆増した従属栄養細菌が、硝化菌より先にNH₄⁺を猛スピードで消費するため、硝化サイクル自体がバイパスされる。結果として硝酸塩の蓄積も、酸化によるpH低下も起きず、pHが中性付近で完全にロックされる究極の動的均衡状態を生み出す。</p>
-
-        <hr>
+        <!-- 導入 -->
+        <h2>導入</h2>
+        <p>淡水アクアリウムにおいて、定期的な換水は硝酸塩の蓄積とpH低下を抑制するための標準的な手法である。しかし、大型水槽では換水作業が大きな維持管理コストとなり、趣味としての継続を困難にする要因となりうる。</p>
+        <p>本稿で提案するホロビオントアクアリウム理論は、炭素源の投入により従属栄養細菌にアンモニアを直接同化させ、生成されたバイオマスをデトリタス食性生物が捕食し、それをさらに肉食魚が捕食する——という食物連鎖を通じて、水槽内の窒素を循環させるアプローチである。</p>
+        <p>Holobiont（ホロビオント）とは、宿主と共生微生物群全体を一つの超個体として捉える生物学の概念であり、本システムの設計思想を表す名称として採用した。</p>
 
         <div class="photo-wrap fade-in">
             <img src="../photos/tank_overview.jpg" alt="ホロビオントアクアリウム メインタンク全景 pH 6.87" loading="lazy">
-            <div class="photo-caption">📸 実際のメインタンク — pH モニターが 6.87 を表示。換水ゼロで1年以上維持。焼赤玉土底床にバリスネリアとアズレアが自然繁茂。</div>
+            <div class="photo-caption">📸 本理論に基づき構築したメインタンク — pHモニターが6.87を表示。焼赤玉土底床にバリスネリアとアズレアが自然繁茂。</div>
         </div>
-        <h2>対象読者</h2>
-        <ul>
-            <li>オーバーフロー式水槽を持っている、または導入を検討している方</li>
-            <li>換水の手間に限界を感じている中〜上級者のアクアリスト</li>
-            <li>生態系的アプローチに知的な関心を持つ方</li>
-        </ul>
-        <p>初心者には推奨しない。必要な設備のハードルが高く、立ち上げ時に1ヶ月間の白濁に耐える知識と胆力が求められる。</p>
 
         <hr>
 
-        <!-- ===== Part 1：理論編 ===== -->
+        <!-- ===== Part 1：理論 ===== -->
         <div class="part-header fade-in" id="part-theory">
             <div><span class="part-label part-label-theory">Part 1</span></div>
-            <div class="part-title">理論編 — 水槽の窒素はどこへ行くか</div>
-            <div class="part-subtitle">各手法を客観的に分類し、ホロビオント式のメカニズムを解説する</div>
+            <div class="part-title">理論 — 窒素循環の原理</div>
+            <div class="part-subtitle">アクアリウムにおける窒素管理の体系的分類と、本理論のメカニズムを解説する</div>
         </div>
 
-        <h2 id="sec-why-ja">淡水の「無換水」、なぜ難しいのか</h2>
+        <h2 id="sec-nitrogen">1. 水槽における窒素問題</h2>
 
-        <h3 id="sec-ntree-ja">水槽の窒素はどこへ行くか</h3>
-        <p style="font-size:.88em;color:#8b949e">N総量収支に基づくアクアリウム窒素管理の全体像。各手法は「窒素を系外に排出するか」「系内で循環させるか」の一軸で分類される。</p>
+        <h3>窒素管理手法の分類</h3>
+        <p>アクアリウムで発生するアンモニア（NH₄⁺）の処理方法は、「窒素を系外に排出するか」「系内で循環させるか」の一軸で体系的に分類できる。以下の系統図は、各手法の位置づけを示す。</p>
 
         <div class="ntree-wrap fade-in">
             <!-- ルートノード -->
@@ -1996,13 +1998,80 @@
             </div>
         </div>
 
-        <h3 id="sec-compare-ja">各窒素処理アプローチの比較</h3>
+        <h3 id="sec-compare-ja">淡水の構造的制約</h3>
+        <p>海水アクアリウムでは、ウォッカ法（炭素源の投入）で増殖した菌体バイオマスをプロテインスキマーで系外排出できる。しかし、淡水では表面張力の違いによりスキマーが機能しない。この構造的制約が、淡水での炭素同化アプローチを困難にしてきた。</p>
+        <div class="holo-table-wrap fade-in">
+            <table class="holo-table">
+                <tr>
+                    <th>比較項目</th>
+                    <th>海水（ベルリン式＋ウォッカ法）</th>
+                    <th>淡水（本理論）</th>
+                </tr>
+                <tr>
+                    <td data-label="比較項目">菌体バイオマスの処理</td>
+                    <td data-label="海水">プロテインスキマーで系外排出</td>
+                    <td data-label="淡水">デトリタス食性生物による捕食→食物連鎖</td>
+                </tr>
+                <tr>
+                    <td data-label="比較項目">スキマーの使用</td>
+                    <td data-label="海水">可</td>
+                    <td data-label="淡水">不可（淡水では泡立ちが発生しない）</td>
+                </tr>
+                <tr>
+                    <td data-label="比較項目">窒素の最終処理</td>
+                    <td data-label="海水">系外排出</td>
+                    <td data-label="淡水">食物連鎖内で循環</td>
+                </tr>
+            </table>
+        </div>
 
-        <!-- 概念図グリッド -->
+        <hr>
 
+        <h2 id="sec-assimilation">2. 従属栄養細菌によるアンモニア直接同化</h2>
 
+        <h3>C:N比と同化条件</h3>
+        <p>従属栄養細菌が窒素をどのように処理するかは、環境中の<strong>C:N比（炭素と窒素の比率）</strong>に大きく依存する。</p>
 
+        <div class="holo-card fade-in" style="border-left:4px solid #58a6ff">
+            <span class="holo-label">微生物学的背景</span>
+            <ul style="margin:4px 0 0;padding-left:20px;font-size:.88em;line-height:2">
+                <li>C:N比が低い環境（通常の水槽）→ アンモニアは余剰となり、硝化菌による酸化的処理（NH₄⁺ → NO₂⁻ → NO₃⁻）が進行</li>
+                <li>C:N比が高い環境（炭素源投入時、目安 C:N > 約20）→ 従属栄養細菌が炭素源をエネルギーとして<strong>アンモニアを直接、自身の細胞タンパクに同化</strong></li>
+            </ul>
+        </div>
 
+        <p>すなわち、炭素源を投入してC:N比を十分に高めることで、アンモニアの処理経路を硝化（酸化）から同化（菌体取り込み）へ切り替えることが可能となる。</p>
+
+        <h3>増殖速度の差——なぜ硝化サイクルがバイパスされるか</h3>
+        <p>この経路切り替えが成立するもう一つの条件は、従属栄養細菌と硝化菌の増殖速度差にある。</p>
+
+        <div class="holo-table-wrap fade-in">
+            <table class="holo-table">
+                <tr>
+                    <th>細菌群</th>
+                    <th>世代時間</th>
+                    <th>NH₄⁺処理方式</th>
+                    <th>副産物</th>
+                </tr>
+                <tr>
+                    <td data-label="細菌群">従属栄養細菌</td>
+                    <td data-label="世代時間">約20分〜数時間</td>
+                    <td data-label="NH₄⁺処理方式">同化（菌体タンパクに取り込む）</td>
+                    <td data-label="副産物">CO₂、菌体バイオマス</td>
+                </tr>
+                <tr>
+                    <td data-label="細菌群">硝化菌（Nitrosomonas等）</td>
+                    <td data-label="世代時間">約12〜24時間</td>
+                    <td data-label="NH₄⁺処理方式">酸化（NH₄⁺ → NO₂⁻ → NO₃⁻）</td>
+                    <td data-label="副産物">H⁺（→ pH低下）、NO₃⁻</td>
+                </tr>
+            </table>
+        </div>
+
+        <p>十分な炭素源が存在する条件下では、従属栄養細菌が硝化菌より桁違いに速く増殖し、利用可能なアンモニアを先に消費する。結果として、硝化サイクル（NH₄⁺ → NO₂⁻ → NO₃⁻）は事実上バイパスされる。</p>
+
+        <!-- 硝化バイパス図（既存のnc-wrap を維持） -->
+        <h3>硝化バイパスの模式図</h3>
         <div class="approach-grid fade-in">
             <!-- ADA式 -->
             <div class="approach-card">
@@ -2151,108 +2220,8 @@
         </div>
 
 
-        <div class="holo-table-wrap fade-in">
-            <table class="holo-table">
-                <tr>
-                    <th>アプローチ</th>
-                    <th>原理</th>
-                    <th>メリット</th>
-                    <th>デメリット</th>
-                </tr>
-                <tr>
-                    <td data-label="アプローチ">高密植水草水槽（ADA式等）</td>
-                    <td data-label="原理">水草が硝酸塩・リン酸を吸収</td>
-                    <td data-label="メリット">景観が美しい</td>
-                    <td data-label="デメリット">CO₂添加必須・トリミング手間・崩壊リスク</td>
-                </tr>
-                <tr>
-                    <td data-label="アプローチ">DSB（嫌気砂床）</td>
-                    <td data-label="原理">嫌気性細菌が硝酸塩を窒素ガスに還元</td>
-                    <td data-label="メリット">硝酸塩を根本除去</td>
-                    <td data-label="デメリット">崩壊時に硫化水素発生・淡水での実績薄</td>
-                </tr>
-                <tr>
-                    <td data-label="アプローチ">外部脱窒炉</td>
-                    <td data-label="原理">嫌気区画で脱窒を強制</td>
-                    <td data-label="メリット">制御しやすい</td>
-                    <td data-label="デメリット">装置複雑・詰まりリスク・維持コスト高</td>
-                </tr>
-                <tr>
-                    <td data-label="アプローチ">本システム（従属栄養のアンモニア直同化）</td>
-                    <td data-label="原理">従属栄養バクテリアがアンモニアを直接タンパク質に取り込み、ベントスが捕食して高次バイオマスに変換（無毒化）</td>
-                    <td data-label="メリット">硝化サイクルバイパス・pHロック・自律完結</td>
-                    <td data-label="デメリット">設備ハードル高・初期白濁の許容必須・初心者不向き</td>
-                </tr>
-            </table>
-        </div>
 
-        <h3>海水では成立していた手法が、淡水では使えない理由</h3>
-        <div class="holo-table-wrap fade-in">
-            <table class="holo-table">
-                <tr>
-                    <th>比較項目</th>
-                    <th>海水（ベルリン式＋ウォッカ法）</th>
-                    <th>淡水（本システム）</th>
-                </tr>
-                <tr>
-                    <td data-label="比較項目">有機物の最終除去手段</td>
-                    <td data-label="海水（ベルリン式＋ウォッカ法）">プロテインスキマー（泡として系外排出）</td>
-                    <td data-label="淡水（本システム）">ベントスによる捕食（食物連鎖で無毒化循環＋水草トリミングで一部系外排出）</td>
-                </tr>
-                <tr>
-                    <td data-label="比較項目">スキマーの使用可否</td>
-                    <td data-label="海水（ベルリン式＋ウォッカ法）">使用可</td>
-                    <td data-label="淡水（本システム）">淡水では泡立ちが起きない（表面張力の違い）</td>
-                </tr>
-                <tr>
-                    <td data-label="比較項目">適用水域</td>
-                    <td data-label="海水（ベルリン式＋ウォッカ法）">海水のみ</td>
-                    <td data-label="淡水（本システム）">淡水で実現</td>
-                </tr>
-            </table>
-        </div>
-        <p>プロテインスキマーは淡水では機能しない。これが「淡水では好気性炭素同化アプローチは難しい」と考えられてきた最大の理由であり、本システムはこの壁をベントスの食物連鎖で突破した。</p>
-
-        <h3>なぜ嫌気性ではなく好気性を選んだか</h3>
-        <div class="holo-card fade-in">
-            <span class="holo-label">Key Point</span>
-            <p style="margin:0">好気性アプローチはすべてが<strong>目で見て確認・調整できる</strong>。嫌気性アプローチはブラックボックスで、崩壊してから気づくことが多い。</p>
-        </div>
-        <div class="holo-table-wrap fade-in">
-            <table class="holo-table">
-                <tr>
-                    <th>状況</th>
-                    <th>観察できるサイン</th>
-                    <th>対処法</th>
-                </tr>
-                <tr>
-                    <td data-label="状況">ヘドロ除去が追いつかない</td>
-                    <td data-label="観察できるサイン">サンプのヘドロが増える</td>
-                    <td data-label="対処法">炭素源投入量を減らす・手動で吸出す</td>
-                </tr>
-                <tr>
-                    <td data-label="状況">ベントスが増えすぎている</td>
-                    <td data-label="観察できるサイン">サンプが過密になる</td>
-                    <td data-label="対処法">魚にもっと食べさせる・一部を間引く</td>
-                </tr>
-                <tr>
-                    <td data-label="状況">酸素が不足している</td>
-                    <td data-label="観察できるサイン">白濁に腐臭が混じる</td>
-                    <td data-label="対処法">エアレーション追加・ポンプを強化する</td>
-                </tr>
-                <tr>
-                    <td data-label="状況">バランスが取れている</td>
-                    <td data-label="観察できるサイン">水がクリアで臭いがない</td>
-                    <td data-label="対処法">何もしなくてよい</td>
-                </tr>
-            </table>
-        </div>
-
-        <hr>
-
-        <h2 id="sec-how-ja">このシステムの仕組み</h2>
-
-        <h3>なぜ硝化サイクルが起動しないか——NH₄⁺の直接同化</h3>
+        <p>以下の図は、従来の硝化サイクルと本理論の同化経路を対比的に示したものである。</p>
 
         <div class="nc-wrap fade-in">
             <div class="nc-node nc-node-base" style="animation-delay:0s">
@@ -2322,12 +2291,44 @@
             </div>
         </div>
 
-        <p>硝化サイクル——アンモニアを亜硝酸塩、さらに硝酸塩へと変換するプロセス——はアクアリウムの絶対的な常識だった。問題はその先だ。硝酸塩は蓄積し続け、さらに酸化の過程で強力なpH低下を引き起こす。従来は換水で薄めるしかなかった。<br>
-            本システムが介入するのは、「一番最初の一手」である。好気性の従属栄養バクテリアは、炭素源をエネルギーにして、一番効率的な窒素源である**アンモニアを直接、自身の細胞内に取り込む**。硝化菌よりも圧倒的に速いため硝化サイクル自体がスキップされ、アンモニアが「バクテリアの体」に変換される。あとはそれをベントスに食わせれば無毒化され、酸化によるpH低下（酸欠化）も起きない。
-        </p>
 
-        <h3>ベントスループと物質循環</h3>
-        <p>本システムの核心は、サンプとメインタンクの間を物質が循環し続ける「ベントスループ」にある。</p>
+        <hr>
+
+        <h2 id="sec-foodchain">3. デトリタス食性生物による窒素循環</h2>
+
+        <h3>理論原理</h3>
+        <p>前節で述べた通り、従属栄養細菌はアンモニアを菌体バイオマスに変換する。しかし、これだけではバイオマスが水槽内に蓄積し続ける。本理論の第二の柱は、このバイオマスを<strong>デトリタス食性生物に捕食させ、さらにそのデトリタス食性生物をメインタンクの肉食魚に捕食させる</strong>ことで、窒素を食物連鎖内で循環させることにある。</p>
+
+        <p>この理論において、デトリタス食性生物の種類は原理上問わない。イトミミズ、ヨコエビ等の微小なベントスでも、ドジョウのような大型の底生魚でも、理論的には同じ役割を果たす。</p>
+
+        <h3>循環の手段——フルオートと手動</h3>
+        <p>デトリタス食性生物をメインタンクに戻す方法は、実装上の選択肢となる。</p>
+        <div class="holo-table-wrap fade-in">
+            <table class="holo-table">
+                <tr>
+                    <th>方式</th>
+                    <th>デトリタス食性生物</th>
+                    <th>メインタンクへの移送</th>
+                    <th>捕食者</th>
+                </tr>
+                <tr>
+                    <td data-label="方式"><strong>フルオート</strong></td>
+                    <td data-label="デトリタス食性生物">イトミミズ・ヨコエビ等（微小）</td>
+                    <td data-label="メインタンクへの移送">ポンプを通過して自動供給</td>
+                    <td data-label="捕食者">小〜中型魚</td>
+                </tr>
+                <tr>
+                    <td data-label="方式">手動 / 大型ポンプ</td>
+                    <td data-label="デトリタス食性生物">ドジョウ等（大型）</td>
+                    <td data-label="メインタンクへの移送">人の手で移送 or 大型ポンプ</td>
+                    <td data-label="捕食者">大型肉食魚</td>
+                </tr>
+            </table>
+        </div>
+        <p>本稿で報告するシステムでは、家庭用ポンプの現実的なサイズを考慮し、微小なベントス（イトミミズ・ヨコエビ等）によるフルオート方式を採用した。</p>
+
+        <h3>物質循環の模式図</h3>
+        <p>以下の図は、サンプとメインタンクの間で物質が循環する「ベントスループ」の全体像を示す。</p>
 
         <!-- ベントスループ循環図 -->
         <div class="bl-wrap fade-in">
@@ -2379,59 +2380,45 @@
             <p style="text-align:center;margin:10px 0 0;font-size:.78em;color:#8b949e">この循環が自律して回り続けることで、換水が不要になる</p>
         </div>
 
-        <h3>一般的なサンプとの役割の違い——「濾過槽」ではなく「代謝槽」</h3>
-        <div class="holo-table-wrap fade-in">
-            <table class="holo-table">
-                <tr>
-                    <th>項目</th>
-                    <th>一般的なサンプ</th>
-                    <th>本システムのサンプ</th>
-                </tr>
-                <tr>
-                    <td data-label="項目">主な役割</td>
-                    <td data-label="一般的なサンプ">濾過槽（ろ材・バクテリアで有機物を分解・毒性を変換）</td>
-                    <td data-label="本システムのサンプ"><strong>代謝槽</strong>（物質を変換して食物連鎖に組み込む生態系の心臓部）</td>
-                </tr>
-                <tr>
-                    <td data-label="項目">生物</td>
-                    <td data-label="一般的なサンプ">バクテリア中心</td>
-                    <td data-label="本システムのサンプ">バクテリア＋ベントス（生物生産）</td>
-                </tr>
-                <tr>
-                    <td data-label="項目">メインタンクとの関係</td>
-                    <td data-label="一般的なサンプ">補助的な処理槽</td>
-                    <td data-label="本システムのサンプ">実質的なメイン（生態系の心臓部）</td>
-                </tr>
-                <tr>
-                    <td data-label="項目">出力</td>
-                    <td data-label="一般的なサンプ">浄化された水</td>
-                    <td data-label="本システムのサンプ">浄化された水＋生きた餌（ベントス）</td>
-                </tr>
-            </table>
-        </div>
+        <hr>
 
-        <h3>副次的に達成される「三つの無」</h3>
+        <h2 id="sec-consequences">4. 理論から導出される帰結</h2>
+        <p>上記のメカニズム——炭素同化によるアンモニア直接同化＋デトリタス食性生物による食物連鎖——から、以下の帰結が理論的に導出される。</p>
+
+
 
         <div class="zero-grid">
             <div class="zero-card fade-in fade-in-delay-1">
                 <div class="zero-icon">🍽️</div>
-                <div class="zero-title">① 無給餌</div>
-                <div class="zero-body">サンプで増殖したベントスが給水ポンプを通じて常時メインタンクへ供給される。初期はベントスが安定するまで通常通り給餌すること。</div>
+                <div class="zero-title">帰結①：無給餌</div>
+                <div class="zero-body">サンプで増殖したデトリタス食性生物がメインタンクの魚の餌となる。フルオート方式では、ポンプを通じて常時自動供給される。</div>
             </div>
             <div class="zero-card fade-in fade-in-delay-2">
                 <div class="zero-icon">💨</div>
-                <div class="zero-title">② CO₂無添加</div>
-                <div class="zero-body">爆増した好気性バクテリアが常時大量のCO₂を産生。落水によるガス抜けを上回り、水草の光合成を賄う。オーバーフロー式でも水草が育つ。</div>
+                <div class="zero-title">帰結②：CO₂無添加</div>
+                <div class="zero-body">好気性従属栄養細菌の代謝副産物としてCO₂が常時産生される。この量はオーバーフロー落水によるガス抜けを上回り、水草の光合成に十分なCO₂を供給しうる。</div>
             </div>
             <div class="zero-card fade-in fade-in-delay-3">
                 <div class="zero-icon">♾️</div>
-                <div class="zero-title">③ リセット不要</div>
-                <div class="zero-body">ベントスが底床を撹拌し続けるため、底床が嫌気化（硫化水素発生）しない。理論上、水槽のリセットが不要になる。</div>
+                <div class="zero-title">帰結③：底床非嫌気化</div>
+                <div class="zero-body">デトリタス食性生物（ベントス等）が底床を物理的に撹拌し続けるため、底床の嫌気化（硫化水素発生）が抑制される。リセットの必要性が低減する。</div>
             </div>
         </div>
 
-        <h3 id="sec-phlock-ja">pHロックの普遍性——底床が決める安定点</h3>
-        <p style="font-size:.88em;color:#8b949e">本システムのpHロックは「中性付近でのみ成立する」わけではない。硝化サイクルがバイパスされることで酸の生成が停止し、pHは<strong style="color:#e6edf3">底床素材が決める化学的平衡点</strong>で安定する。</p>
+        <h3 id="sec-phlock-ja">帰結④：pHロック</h3>
+        <p>本理論の特筆すべき帰結として、<strong>pHロック</strong>現象がある。そのメカニズムは以下の因果連鎖で説明される。</p>
+
+        <div class="holo-card fade-in" style="border-left:4px solid #58a6ff">
+            <span class="holo-label">pHロックの因果連鎖</span>
+            <p style="margin:4px 0 0;font-size:.88em;line-height:2">
+                ① 炭素源投入 → C:N比上昇<br>
+                ② 従属栄養細菌がNH₄⁺を直接同化 → <strong>硝化が非進行</strong><br>
+                ③ 硝酸（HNO₃）が生成されない → <strong>pH低下の原因が消失</strong><br>
+                ④ pHは底床素材の緩衝能が決める化学平衡点で安定
+            </p>
+        </div>
+
+        <p>重要な点として、<strong>底床はシステムの前提条件ではなく、pHの平衡点を決めるパラメータ</strong>である。サンプに多孔質素材（バクテリアの定着面）さえあれば本理論は機能し、メインタンクはベアタンクでも理論上成立する。</p>
 
         <div class="fade-in" style="max-width:480px;margin:16px auto;background:#0d1117;border:1px solid #30363d;border-radius:10px;padding:16px 12px">
             <div style="text-align:center;font-size:.72em;color:#8b949e;letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px">底床素材と安定pH値の関係</div>
@@ -2489,14 +2476,73 @@
 
         <hr>
 
-        <!-- ===== Part 2：実践編 ===== -->
-        <div class="part-header fade-in" id="part-practice">
+        <!-- ===== Part 2：構築可能な環境 ===== -->
+        <div class="part-header fade-in" id="part-configurations">
             <div><span class="part-label part-label-practice">Part 2</span></div>
-            <div class="part-title">実践編 — どうやるか</div>
-            <div class="part-subtitle">設備・レシピ・手順・実測データ</div>
+            <div class="part-title">構築可能な環境 — パラメータの自由度</div>
+            <div class="part-subtitle">本理論が適用可能な構成とその選択肢</div>
         </div>
 
-        <h2 id="sec-overflow-ja">なぜオーバーフロー式でなければならないか</h2>
+        <h2 id="sec-configurations">5. 構成の自由度</h2>
+        <p>本理論が機能するための必須条件は限定的であり、その他の要素は自由に選択できる。</p>
+
+        <div class="holo-card fade-in" style="border-left:4px solid #f85149">
+            <span class="holo-label" style="color:#f85149">必須条件</span>
+            <ul style="margin:4px 0 0;padding-left:20px;font-size:.88em;line-height:1.9">
+                <li><strong>オーバーフロー式</strong>（曝気による酸素供給、大容量サンプ）</li>
+                <li><strong>サンプ内の多孔質素材</strong>（バクテリアの定着面）</li>
+                <li><strong>炭素源の定期投入</strong>（C:N比の維持）</li>
+                <li><strong>デトリタス食性生物</strong>（バイオマスの捕食者）</li>
+            </ul>
+        </div>
+
+        <div class="holo-table-wrap fade-in">
+            <table class="holo-table">
+                <tr>
+                    <th>パラメータ</th>
+                    <th>選択肢</th>
+                    <th>影響</th>
+                </tr>
+                <tr>
+                    <td data-label="パラメータ">底床</td>
+                    <td data-label="選択肢">焼赤玉土、ソイル、サンゴ砂、ベアタンク</td>
+                    <td data-label="影響">pHロックの平衡点を決定</td>
+                </tr>
+                <tr>
+                    <td data-label="パラメータ">デトリタス食性生物</td>
+                    <td data-label="選択肢">イトミミズ、ヨコエビ、ドジョウ等</td>
+                    <td data-label="影響">サイズによりフルオート可否が決まる</td>
+                </tr>
+                <tr>
+                    <td data-label="パラメータ">循環方式</td>
+                    <td data-label="選択肢">フルオート / 手動 / 大型ポンプ</td>
+                    <td data-label="影響">維持管理の手間</td>
+                </tr>
+                <tr>
+                    <td data-label="パラメータ">炭素源</td>
+                    <td data-label="選択肢">ウォッカ、米酒、砂糖等</td>
+                    <td data-label="影響">分解速度の違い</td>
+                </tr>
+                <tr>
+                    <td data-label="パラメータ">メインタンク</td>
+                    <td data-label="選択肢">水草水槽 / ベアタンク / 大型水槽</td>
+                    <td data-label="影響">理論上はいずれでも適用可能</td>
+                </tr>
+            </table>
+        </div>
+
+
+        <hr>
+
+        <!-- ===== Part 3：構築方法 ===== -->
+        <div class="part-header fade-in" id="part-build">
+            <div><span class="part-label" style="border-color:#d29922;color:#d29922">Part 3</span></div>
+            <div class="part-title">構築方法 — 著者の実装例</div>
+            <div class="part-subtitle">以下は著者が実際に採用した構成・レシピ・手順である</div>
+        </div>
+
+        <h2 id="sec-design">6. システム設計</h2>
+        <h3>オーバーフロー式が必要な理由</h3>
         <div class="holo-table-wrap fade-in">
             <table class="holo-table">
                 <tr>
@@ -2537,11 +2583,11 @@
                 </tr>
             </table>
         </div>
-        <p>バクテリアが爆増するこのシステムは、酸素要求量が通常の水槽と比較にならないほど高い。ヘドロを「詰まらせず流す」設計と合わせて、オーバーフロー式が唯一無二の選択肢だ。</p>
+        <p>本システムでは従属栄養細菌の大量増殖により酸素要求量が通常の水槽より著しく高くなる。また、生成されるバイオマス（ヘドロ）をサンプへ確実に輸送できる構造が必要であることから、オーバーフロー式が必須の設計となる。</p>
 
         <hr>
 
-        <h2 id="sec-recipe-ja">炭素源エキスのレシピ</h2>
+        <h2 id="sec-recipe">炭素源エキスのレシピ</h2>
 
         <h3>ベース液</h3>
 
@@ -2598,11 +2644,11 @@
             <strong>⚠️ 注意</strong><br>
             バナナは必ず可食部（果肉）のみ使用すること。皮には農薬が残留している場合があり、エキスに溶け出してエビ類が全滅する危険がある。
         </div>
-        <p>サンプへポンプ1プッシュを毎日投入する。ドーシングポンプで完全自動化も可能。常温保存でいい——ウォッカのアルコールが防腐剤として機能する。</p>
+        <p>本エキスをサンプへ定量（目安：ポンプ1プッシュ）を毎日投入する。ドーシングポンプによる完全自動化も可能。ウォッカのアルコールが防腐剤として機能するため、常温保存が可能である。</p>
 
         <hr>
 
-        <h2>立ち上げ手順（約1ヶ月）</h2>
+        <h2 id="sec-setup">立ち上げ手順（約1ヶ月）</h2>
 
         <div class="step-wrap fade-in">
             <div class="step-item">
@@ -2626,8 +2672,8 @@
                 <div class="step-body">
                     水を入れてオーバーフローを空回し。ゴーストフィーディング（餌を少量投入してアンモニア源を供給）と炭素源エキス投入を開始する。数日以内に白濁が始まる。
                     <div class="holo-warn-red" style="margin-top:10px">
-                        <strong>🚫 絶対にやってはいけないこと</strong><br>
-                        <strong>換水</strong>・<strong>白濁除去剤の使用</strong><br>白濁はバクテリアブルームであり「成功の証」だ。介入すれば立ち上げがゼロに戻る。
+                        <strong>🚫 立ち上げ期間の禁止事項</strong><br>
+                        <strong>換水</strong>・<strong>白濁除去剤の使用</strong><br>白濁はバクテリアブルームであり、系が正常に進行していることを示す。介入すると従属栄養細菌のコロニー形成が初期化される。
                     </div>
                 </div>
             </div>
@@ -2635,7 +2681,7 @@
                 <div class="step-num">4</div>
                 <div class="step-title">1ヶ月継続 → 突然のクリア化</div>
                 <div class="step-body">
-                    白濁したまま毎日投入を継続。約1ヶ月後、ある日突然水がクリアになる。生態系が臨界点を超えた合図だ。理論上、十分な酸素と炭素源さえあれば従属栄養細菌がアンモニア同化を行うため、この段階から生体投入すら可能となる（即日立ち上げ）。
+                    白濁したまま毎日投入を継続する。約1ヶ月後、水が急速に透明化することが観察される。これはバクテリアのフロック形成と底床への定着が完了し、系が安定状態に移行した指標である。理論上、十分な酸素と炭素源が確保された時点で従属栄養細菌によるアンモニア同化が成立するため、この段階から生体投入が可能となる。
                     <div class="holo-tip" style="margin-top:10px">
                         <span class="holo-label">🔧 トラブルシューティング</span>
                         <strong>腐臭がしたら</strong>：嫌気性分解が起きている——酸素不足のサイン。緊急エアレーション追加、ポンプを強化すること。
@@ -2690,20 +2736,27 @@
 
         <hr>
 
-        <h2>実際の水槽データ</h2>
+        <!-- ===== Part 4：実際の状況 ===== -->
+        <div class="part-header fade-in" id="part-results">
+            <div><span class="part-label" style="border-color:#8957e5;color:#8957e5">Part 4</span></div>
+            <div class="part-title">実際の状況 — 観察結果と実測データ</div>
+            <div class="part-subtitle">著者の水槽における1年間の運用記録</div>
+        </div>
 
+        <h2 id="sec-data">9. 実測データと観察結果</h2>
+
+        <h3>pH安定性</h3>
         <!-- pHカウンターアニメーション -->
         <div class="ph-counter-wrap fade-in">
             <div class="ph-value"><span id="ph-count">0.00</span><span class="ph-unit">pH</span></div>
-            <div class="ph-label">1年間継続して維持 / 動的均衡によるpHロックの証明</div>
+            <div class="ph-label">1年間継続して維持</div>
             <div class="ph-bar-wrap">
                 <div class="ph-bar" id="ph-bar"></div>
             </div>
             <div class="ph-bar-labels"><span>酸性（pH4）</span><span>中性（pH7）</span><span>アルカリ（pH9）</span></div>
         </div>
 
-        <p>pH
-            6.85の驚異的な安定は、このシステムの「硝化サイクルバイパス理論」を裏付ける最大の証左である。通常の無換水水槽では硝化細菌のアンモニア酸化に伴う水素イオン放出によって酸性化（pH低下）が避けられないが、本システムでは従属栄養細菌がアンモニアを直接消費するため酸化プロセスが起きず、H⁺が放出されない。換水して調整するから安定するのではなく、「何もしないから理論的な力学によってピタリと安定（ロック）する」究極の状態である。
+        <p>pH 6.85が1年間にわたり安定的に維持されている。この結果は、硝化プロセスが事実上バイパスされていること——すなわち、硝酸によるpH低下が発生していないこと——を示唆するデータである。焼赤玉土の緩衝平衡点と一致しており、Part 1 セクション4の「pHロック」仮説を支持する観察結果といえる。
         </p>
 
         <div class="holo-table-wrap fade-in">
@@ -2807,9 +2860,41 @@
         </div>
         <p>維持管理は実質的に「1プッシュと眺めること」に収束する。</p>
 
+        <h3>トラブルシューティング</h3>
+        <p style="font-size:.88em;color:#8b949e">好気性アプローチの利点は、異常が目で見て確認できること。以下のサインが見られたら対処する。</p>
+        <div class="holo-table-wrap fade-in">
+            <table class="holo-table">
+                <tr>
+                    <th>状況</th>
+                    <th>観察できるサイン</th>
+                    <th>対処法</th>
+                </tr>
+                <tr>
+                    <td data-label="状況">ヘドロ除去が追いつかない</td>
+                    <td data-label="観察できるサイン">サンプのヘドロが増える</td>
+                    <td data-label="対処法">炭素源投入量を減らす・手動で吸出す</td>
+                </tr>
+                <tr>
+                    <td data-label="状況">ベントスが増えすぎている</td>
+                    <td data-label="観察できるサイン">サンプが過密になる</td>
+                    <td data-label="対処法">魚にもっと食べさせる・一部を間引く</td>
+                </tr>
+                <tr>
+                    <td data-label="状況">酸素が不足している</td>
+                    <td data-label="観察できるサイン">白濁に腐臭が混じる</td>
+                    <td data-label="対処法">エアレーション追加・ポンプを強化する</td>
+                </tr>
+                <tr>
+                    <td data-label="状況">バランスが取れている</td>
+                    <td data-label="観察できるサイン">水がクリアで臭いがない</td>
+                    <td data-label="対処法">何もしなくてよい</td>
+                </tr>
+            </table>
+        </div>
+
         <hr>
 
-        <h2>向かない人・やってはいけないこと</h2>
+        <h2 id="sec-constraints">適用条件と制約</h2>
 
         <details class="holo-details fade-in">
             <summary>必須条件</summary>
@@ -2843,7 +2928,7 @@
 
         <hr>
 
-        <h2>コストと入手性</h2>
+        <h2 id="sec-cost">コストと入手性</h2>
         <div class="holo-table-wrap fade-in">
             <table class="holo-table">
                 <tr>
@@ -2882,10 +2967,17 @@
 
         <hr>
 
-        <h2>大型水槽ほど真価を発揮する</h2>
-        <p>大型水槽の水換えは圧倒的に重労働だ。100L・200L・300Lを超える水槽の換水作業は、それだけで趣味の継続を断念させるほどの負担になりうる。本システムはその水換えをゼロにする。</p>
-        <p>水量が増えるほど水質バッファが大きく変動が起きにくい。バクテリアとベントスの生息域が広がりシステムが安定する。換水を前提とした水槽管理では「大型化するほど維持が大変」なのが常識だが、このシステムではその関係が逆転する。
-        </p>
+        <!-- ===== Part 5：考察 ===== -->
+        <div class="part-header fade-in" id="part-discussion">
+            <div><span class="part-label" style="border-color:#f85149;color:#f85149">Part 5</span></div>
+            <div class="part-title">考察 — 限界と展望</div>
+            <div class="part-subtitle">未検証事項・今後の可能性・本理論の位置づけ</div>
+        </div>
+
+        <h2 id="sec-discussion">10. 考察と展望</h2>
+
+        <h3>大型水槽への適用可能性</h3>
+        <p>大型水槽では水量が増えるほど水質バッファが大きくなり、変動が起きにくい。バクテリアとデトリタス食性生物の生息域が広がることでシステムの安定性が向上すると考えられる。従来の換水前提の管理では「大型化するほど維持が困難」であるが、本理論ではその関係が逆転する可能性がある。</p>
 
         <hr>
 
@@ -2925,27 +3017,28 @@
 
         <hr>
 
-        <h2 id="sec-conclusion-ja">おわりに</h2>
-        <p>本システムの発想の原点は、2chの「砂糖添加水槽」スレッドだった。「白濁する」「酸欠になる」「危険」という失敗談を見て、逆に問いを立てた。</p>
-        <div class="holo-blockquote">
-            <p>「なぜ失敗するのか？ 構造的に成功させるにはどうすればよいか？」</p>
-        </div>
+        <h3>限界と未検証事項</h3>
         <ul>
-            <li>白濁するのは問題ではなく、バクテリアが爆増しているサインだ</li>
-            <li>酸欠はオーバーフローの落水曝気で解決できる</li>
-            <li>単一炭素源の弱さは複数種の組み合わせで補える</li>
-            <li>増えたバクテリアのヘドロはベントスに食わせれば良い</li>
+            <li>本稿の実証は1系統のみであり、再現性の検証は今後の課題である</li>
+            <li>底床素材の違いによるpHロックへの影響は理論上の予測であり、ソイルやサンゴ砂での実証は行っていない</li>
+            <li>ドジョウ等の大型デトリタス食性生物での運用例はない</li>
+            <li>水草レイアウト水槽（ADA式等）への応用は未検証だが、理論上は適用可能と考えられる</li>
         </ul>
-        <p>Holobiont——宿主と共生微生物の総体を一つの超個体として見る視点——は後から知った概念だが、このシステムの設計思想を的確に表す言葉だと感じた。水槽は魚を飼うための容器ではなく、魚・バクテリア・ベントス・水草が一体となって動く、一つの生命体なのだ。
-        </p>
-        <p>もう一つ。私は美しい水草レイアウト水槽を作る才能がない。だからこの記事の水草はアズレアとバリスネリアの二種だけになっている。しかしおそらく、このシステムはADA式のような美しい水草水槽にも応用できるはずだと考えている。誰かが試してくれたら、ぜひ結果を教えてほしい。
-        </p>
+
+        <h2 id="sec-conclusion-ja">まとめ</h2>
+        <p>本稿では、従属栄養細菌によるアンモニアの炭素同化と、デトリタス食性生物を介した食物連鎖による窒素循環を組み合わせることで、淡水水槽における換水不要のシステムを実現する理論（ホロビオントアクアリウム理論）を提案し、その1年間の実証結果を報告した。</p>
+        <p>本理論の核心は以下の2点である：</p>
+        <ol style="line-height:1.9">
+            <li>炭素源投入によるC:N比の上昇 → 従属栄養細菌によるアンモニア直接同化 → 硝化バイパス</li>
+            <li>バイオマスをデトリタス食性生物が捕食 → メインタンクの肉食魚が捕食 → 窒素が食物連鎖内で循環</li>
+        </ol>
+        <p>この理論は、デトリタス食性生物の種類、底床素材、循環方式といったパラメータから独立しており、様々な環境への適用可能性を持つと考えられる。今後の検証とフィードバックを期待する。</p>
 
         <div class="ph-counter-wrap fade-in" style="padding:16px 24px">
             <p style="margin:0;color:#8b949e;font-size:.95em;letter-spacing:.08em;text-align:center">pH 6.85
                 &nbsp;|&nbsp;
-                水換えなし &nbsp;|&nbsp; 給餌なし &nbsp;|&nbsp; CO₂添加なし</p>
-            <p style="margin:8px 0 0;color:#484f58;font-size:.82em;text-align:center">それでも水槽は今日も静かに、自律して動いている。</p>
+                換水ゼロ &nbsp;|&nbsp; 給餌ゼロ &nbsp;|&nbsp; CO₂添加ゼロ</p>
+            <p style="margin:8px 0 0;color:#484f58;font-size:.82em;text-align:center">1年間安定稼働中</p>
         </div>
 
         <hr>
