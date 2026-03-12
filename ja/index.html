@@ -797,9 +797,9 @@
             margin: 16px 0
         }
 
-        @media(min-width:500px) {
+        @media(min-width:600px) {
             .zero-grid {
-                grid-template-columns: repeat(3, 1fr)
+                grid-template-columns: repeat(2, 1fr)
             }
         }
 
@@ -1437,6 +1437,13 @@
             color: #0d1117;
         }
 
+        /* ===== モバイル：こんな人カードを1列化 ===== */
+        @media(max-width:500px) {
+            .recommend-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
+
 
         /* ===== Photo Gallery ===== */
         .photo-wrap {
@@ -1779,11 +1786,6 @@
             <a href="../" class="lang-btn">🇬🇧 EN</a>
             <span class="lang-btn active">🇯🇵 日本語</span>
         </div>
-    <div class="holo-body">
-        <div class="lang-switch">
-            <a href="../" class="lang-btn">🇬🇧 EN</a>
-            <span class="lang-btn active">🇯🇵 日本語</span>
-        </div>
 
         <!-- Hero Banner -->
         <div class="hero-banner fade-in" style="height:240px">
@@ -1799,7 +1801,7 @@
         <p style="color:#8b949e;margin-top:0">従属栄養細菌の炭素同化と食物連鎖による淡水水槽の自律的窒素循環</p>
 
         <!-- 4つの達成事項 -->
-        <div class="zero-grid fade-in" style="margin:24px 0;grid-template-columns:repeat(2,1fr)">
+        <div class="zero-grid fade-in" style="margin:24px 0">
             <div class="zero-card">
                 <div class="zero-icon">💧</div>
                 <div class="zero-title">換水ゼロ</div>
@@ -1840,7 +1842,7 @@
         </div>
 
         <!-- こんな人へ -->
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 24px" class="fade-in">
+        <div class="fade-in recommend-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 24px">
             <div class="holo-card" style="border-left:3px solid #3fb950">
                 <span class="holo-label" style="color:#3fb950">✅ こんな人におすすめ</span>
                 <ul style="margin:4px 0 0;padding-left:18px;font-size:.85em;line-height:1.9">
