@@ -1840,6 +1840,124 @@
             </table>
         </div>
 
+        <h3>底床素材の選択</h3>
+        <p>底床素材はpHロックの平衡点を決定するパラメータである。本理論においてバクテリアの主要定着面はサンプ内の多孔質素材であるため、底床はpHの基準値を設定する役割として機能する。</p>
+        <div class="holo-table-wrap fade-in">
+            <table class="holo-table">
+                <tr>
+                    <th>底床素材</th>
+                    <th>安定pH</th>
+                    <th>特性</th>
+                    <th>向く生体</th>
+                </tr>
+                <tr>
+                    <td data-label="底床素材">🪨 焼赤玉土</td>
+                    <td data-label="安定pH">pH 6.7〜6.9</td>
+                    <td data-label="特性">弱酸性・多孔質でバクテリア定着も良好。長期維持可能</td>
+                    <td data-label="向く生体">コリドラス・テトラ・エンゼル等</td>
+                </tr>
+                <tr>
+                    <td data-label="底床素材">🟤 ソイル</td>
+                    <td data-label="安定pH">pH 5.5〜6.5</td>
+                    <td data-label="特性">弱酸性・景観性高い。ただし数年で崩壊し交換が必要</td>
+                    <td data-label="向く生体">弱酸性を好む熱帯魚全般</td>
+                </tr>
+                <tr>
+                    <td data-label="底床素材">⬜ 大磯砂</td>
+                    <td data-label="安定pH">pH 7.0前後</td>
+                    <td data-label="特性">中性・安定・長期使用可能。貝殻が多いと若干アルカリに傾く</td>
+                    <td data-label="向く生体">金魚・メダカ・中性〜弱アルカリを好む魚全般</td>
+                </tr>
+                <tr>
+                    <td data-label="底床素材">🐚 サンゴ砂</td>
+                    <td data-label="安定pH">pH 8.0〜8.4</td>
+                    <td data-label="特性">強アルカリ性。炭酸カルシウムの溶出でpHを持続的に押し上げる</td>
+                    <td data-label="向く生体">アフリカンシクリッド・汽水魚等</td>
+                </tr>
+                <tr>
+                    <td data-label="底床素材">— ベアタンク</td>
+                    <td data-label="安定pH">pH 7.0前後</td>
+                    <td data-label="特性">底床なし。pH平衡はサンプ素材に依存。メンテナンスが容易</td>
+                    <td data-label="向く生体">大型肉食魚・訓練目的等</td>
+                </tr>
+            </table>
+        </div>
+        <div class="holo-warn-yellow fade-in">
+            <strong>⚠ ソイルの注意点：</strong>ソイルは数年で崩壊するため、底床交換時にシステムのリセットが必要になる可能性がある。長期維持を目的とする場合は、焼赤玉土や大磯砂など交換不要の素材が適している。
+        </div>
+
+        <h3>炭素源の種類と特性</h3>
+        <p>炭素源はバクテリアのエネルギー源であり、分解速度の違いが即効性とリスクに影響する。単純な分子構造を持つ炭素源ほど急速に分解されバクテリアが増殖しやすいが、投入量の過多は酸素欠乏を引き起こすリスクがある。</p>
+        <div class="recipe-wrap fade-in">
+            <div class="recipe-grid">
+                <div class="recipe-card-item recipe-fast">
+                    <div class="recipe-emoji">🍶</div>
+                    <div class="recipe-name">ウォッカ</div>
+                    <div class="recipe-component">エタノール → 酢酸 → TCA回路</div>
+                    <span class="recipe-speed speed-fast">高速分解</span>
+                </div>
+                <div class="recipe-card-item recipe-mid">
+                    <div class="recipe-emoji">🍚</div>
+                    <div class="recipe-name">米酢 / 酢酸</div>
+                    <div class="recipe-component">酢酸として直接供給</div>
+                    <span class="recipe-speed speed-mid">中速分解</span>
+                </div>
+                <div class="recipe-card-item recipe-slow">
+                    <div class="recipe-emoji">🍬</div>
+                    <div class="recipe-name">砂糖 / 糖蜜</div>
+                    <div class="recipe-component">スクロース → 単糖へ加水分解</div>
+                    <span class="recipe-speed speed-slow">低速分解</span>
+                </div>
+            </div>
+        </div>
+        <p>本理論では複数の炭素源を混合した「炭素源エキス」を使用する。急激なバクテリア増殖と酸素消費のリスクを緩和しながら、安定した継続供給を実現するためである。具体的なレシピはPart 3で解説する。</p>
+
+        <h3>ベントスの選択とフルオート方式の条件</h3>
+        <p>デトリタス食性生物（ベントス）の選択は、循環方式の自動化度合に直接影響する。フルオート方式では、ベントスが給水ポンプのインペラーを通過できるサイズであることが条件となる。</p>
+        <div class="holo-table-wrap fade-in">
+            <table class="holo-table">
+                <tr>
+                    <th>ベントス</th>
+                    <th>体サイズ</th>
+                    <th>循環方式</th>
+                    <th>特性</th>
+                </tr>
+                <tr>
+                    <td data-label="ベントス">🪱 イトミミズ</td>
+                    <td data-label="体サイズ">直径 〜2mm</td>
+                    <td data-label="循環方式"><strong>フルオート</strong>（ポンプ通過可）</td>
+                    <td data-label="特性">増殖速度が速く安定供給しやすい。魚の嗜好性も高い</td>
+                </tr>
+                <tr>
+                    <td data-label="ベントス">🦐 ヨコエビ</td>
+                    <td data-label="体サイズ">2〜10mm</td>
+                    <td data-label="循環方式"><strong>フルオート</strong>（稚エビはポンプ通過可）</td>
+                    <td data-label="特性">底床撹拌効果も高い。多くの魚が好んで捕食</td>
+                </tr>
+                <tr>
+                    <td data-label="ベントス">🐟 ドジョウ</td>
+                    <td data-label="体サイズ">5〜15cm</td>
+                    <td data-label="循環方式">手動 または 大型ポンプ</td>
+                    <td data-label="特性">底床撹拌力が強い。大型肉食魚向けの餌として最適</td>
+                </tr>
+            </table>
+        </div>
+        <div class="holo-tip fade-in">
+            <span class="holo-label">フルオート方式の判断基準</span>
+            ポンプのインペラークリアランスが概ね3mm以上であれば、イトミミズや稚ヨコエビの通過が可能なことが多い。ただし、使用するポンプの仕様を事前に確認することを推奨する。
+        </div>
+
+        <h3>適用しにくい構成</h3>
+        <p>本理論は適用範囲が広いが、以下の構成では必須条件（十分な酸素供給・大容量サンプ）が成立しにくく、適用が困難である。</p>
+        <div class="holo-warn-red fade-in">
+            <strong>❌ 上部フィルター単体：</strong>サンプに相当する大容量の処理槽を持たないため、バクテリアバイオマスの蓄積とベントス増殖に必要な空間が確保できない。
+        </div>
+        <div class="holo-warn-red fade-in">
+            <strong>❌ 外部フィルター単体：</strong>密閉構造のため内部の酸素供給が不十分。好気性の従属栄養細菌の増殖条件を長期維持できない。
+        </div>
+        <div class="holo-warn-yellow fade-in">
+            <strong>⚠ 30L未満の小型水槽：</strong>技術的には不可能ではないが、バイオロードと炭素源量の管理が極めてシビアになる。十分な経験を積んでから挑戦することを推奨する。
+        </div>
 
         <hr>
         <nav class="page-nav-bottom">
