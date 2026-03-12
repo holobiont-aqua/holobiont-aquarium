@@ -1842,50 +1842,84 @@
 
         <h3>底床素材の選択</h3>
         <p>底床素材はpHロックの平衡点を決定するパラメータである。本理論においてバクテリアの主要定着面はサンプ内の多孔質素材であるため、底床はpHの基準値を設定する役割として機能する。</p>
-        <div class="holo-table-wrap fade-in">
-            <table class="holo-table">
-                <tr>
-                    <th>底床素材</th>
-                    <th>安定pH</th>
-                    <th>特性</th>
-                    <th>向く生体</th>
-                </tr>
-                <tr>
-                    <td data-label="底床素材" style="text-align:center">焼赤玉土<br><img src="../photos/substrate_akadama.png" alt="焼赤玉土" style="width:100%;max-width:110px;height:70px;object-fit:cover;border-radius:6px;display:block;margin:4px auto 0;"></td>
-                    <td data-label="安定pH">pH 6.7〜6.9</td>
-                    <td data-label="特性">弱酸性・多孔質でバクテリア定着も良好。長期維持可能</td>
-                    <td data-label="向く生体">テトラ・エンゼル等の弱酸性魚全般</td>
-                </tr>
-                <tr>
-                    <td data-label="底床素材" style="text-align:center">焼赤玉土 ＋ ピートモス<br><img src="../photos/substrate_akadama_peat.png" alt="焼赤玉土+ピートモス" style="width:100%;max-width:110px;height:70px;object-fit:cover;border-radius:6px;display:block;margin:4px auto 0;"></td>
-                    <td data-label="安定pH">pH 5.5〜6.5</td>
-                    <td data-label="特性">ピートモスのタンニン酸・フルボ酸が溶出しpHを押し下げる。崩壊せず長期維持可能</td>
-                    <td data-label="向く生体">チョコレートグラミー・アピスト等の超軟水・弱酸性種</td>
-                </tr>
+        <div class="fade-in" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px;margin:16px 0">
 
-                <tr>
-                    <td data-label="底床素材" style="text-align:center">大磯砂<br><img src="../photos/substrate_oiso.png" alt="大磯砂" style="width:100%;max-width:110px;height:70px;object-fit:cover;border-radius:6px;display:block;margin:4px auto 0;"></td>
-                    <td data-label="安定pH">pH 7.0前後</td>
-                    <td data-label="特性">中性・安定・長期使用可能。貝殻が多いと若干アルカリに傾く</td>
-                    <td data-label="向く生体">金魚・メダカ・中性〜弱アルカリを好む魚全般</td>
-                </tr>
-                <tr>
-                    <td data-label="底床素材" style="text-align:center">サンゴ砂<br><img src="../photos/substrate_coral_sand.png" alt="サンゴ砂" style="width:100%;max-width:110px;height:70px;object-fit:cover;border-radius:6px;display:block;margin:4px auto 0;"></td>
-                    <td data-label="安定pH">pH 8.0〜8.4</td>
-                    <td data-label="特性">強アルカリ性。炭酸カルシウムの溶出でpHを持続的に押し上げる</td>
-                    <td data-label="向く生体">海水魚・アフリカンシクリッド・汽水魚等</td>
-                </tr>
-                <tr>
-                    <td data-label="底床素材" style="text-align:center">ベアタンク<br><img src="../photos/substrate_bare_tank.png" alt="ベアタンク" style="width:100%;max-width:110px;height:70px;object-fit:cover;border-radius:6px;display:block;margin:4px auto 0;"></td>
-                    <td data-label="安定pH">pH 7.0前後</td>
-                    <td data-label="特性">底床なし。pH平衡はサンプ素材に依存。メンテナンスが容易</td>
-                    <td data-label="向く生体">大型肉食魚・訓練目的等</td>
-                </tr>
-            </table>
-        </div>
+            <!-- 焼赤玉土 -->
+            <div style="background:#161b22;border:1px solid #30363d;border-radius:10px;overflow:hidden">
+                <div style="position:relative">
+                    <img src="../photos/substrate_akadama.png" alt="焼赤玉土" style="width:100%;height:100px;object-fit:cover;display:block">
+                    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.85));padding:6px 10px 4px">
+                        <div style="font-size:.82em;font-weight:700;color:#fff">焼赤玉土</div>
+                    </div>
+                </div>
+                <div style="padding:10px 12px">
+                    <span style="display:inline-block;background:#0d2440;border:1px solid #58a6ff;color:#58a6ff;font-size:.72em;font-weight:700;border-radius:4px;padding:2px 8px;margin-bottom:6px">pH 6.7〜6.9</span>
+                    <div style="font-size:.78em;color:#c9d1d9;line-height:1.6;margin-bottom:6px">弱酸性・多孔質でバクテリア定着も良好。長期維持可能</div>
+                    <div style="font-size:.72em;color:#8b949e">🐟 テトラ・エンゼル等の弱酸性魚全般</div>
+                </div>
+            </div>
 
+            <!-- 焼赤玉土+ピートモス -->
+            <div style="background:#161b22;border:1px solid #30363d;border-radius:10px;overflow:hidden">
+                <div style="position:relative">
+                    <img src="../photos/substrate_akadama_peat.png" alt="焼赤玉土+ピートモス" style="width:100%;height:100px;object-fit:cover;display:block">
+                    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.85));padding:6px 10px 4px">
+                        <div style="font-size:.82em;font-weight:700;color:#fff">焼赤玉土 ＋ ピートモス</div>
+                    </div>
+                </div>
+                <div style="padding:10px 12px">
+                    <span style="display:inline-block;background:#1a1400;border:1px solid #d29922;color:#d29922;font-size:.72em;font-weight:700;border-radius:4px;padding:2px 8px;margin-bottom:6px">pH 5.5〜6.5</span>
+                    <div style="font-size:.78em;color:#c9d1d9;line-height:1.6;margin-bottom:6px">ピートモスのタンニン酸・フルボ酸が溶出しpHを押し下げる。崩壊せず長期維持可能</div>
+                    <div style="font-size:.72em;color:#8b949e">🐟 チョコレートグラミー・アピスト等の超軟水・弱酸性種</div>
+                </div>
+            </div>
 
-        <h3>炭素源の種類と特性</h3>
+            <!-- 大磯砂 -->
+            <div style="background:#161b22;border:1px solid #30363d;border-radius:10px;overflow:hidden">
+                <div style="position:relative">
+                    <img src="../photos/substrate_oiso.png" alt="大磯砂" style="width:100%;height:100px;object-fit:cover;display:block">
+                    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.85));padding:6px 10px 4px">
+                        <div style="font-size:.82em;font-weight:700;color:#fff">大磯砂</div>
+                    </div>
+                </div>
+                <div style="padding:10px 12px">
+                    <span style="display:inline-block;background:#1a1a1a;border:1px solid #8b949e;color:#8b949e;font-size:.72em;font-weight:700;border-radius:4px;padding:2px 8px;margin-bottom:6px">pH 7.0前後</span>
+                    <div style="font-size:.78em;color:#c9d1d9;line-height:1.6;margin-bottom:6px">中性・安定・長期使用可能。貝殻が多いと若干アルカリに傾く</div>
+                    <div style="font-size:.72em;color:#8b949e">🐟 金魚・メダカ・中性〜弱アルカリを好む魚全般</div>
+                </div>
+            </div>
+
+            <!-- サンゴ砂 -->
+            <div style="background:#161b22;border:1px solid #30363d;border-radius:10px;overflow:hidden">
+                <div style="position:relative">
+                    <img src="../photos/substrate_coral_sand.png" alt="サンゴ砂" style="width:100%;height:100px;object-fit:cover;display:block">
+                    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.85));padding:6px 10px 4px">
+                        <div style="font-size:.82em;font-weight:700;color:#fff">サンゴ砂</div>
+                    </div>
+                </div>
+                <div style="padding:10px 12px">
+                    <span style="display:inline-block;background:#0a2a14;border:1px solid #3fb950;color:#3fb950;font-size:.72em;font-weight:700;border-radius:4px;padding:2px 8px;margin-bottom:6px">pH 8.0〜8.4</span>
+                    <div style="font-size:.78em;color:#c9d1d9;line-height:1.6;margin-bottom:6px">強アルカリ性。炭酸カルシウムの溶出でpHを持続的に押し上げる</div>
+                    <div style="font-size:.72em;color:#8b949e">🐟 海水魚・アフリカンシクリッド・汽水魚等</div>
+                </div>
+            </div>
+
+            <!-- ベアタンク -->
+            <div style="background:#161b22;border:1px solid #30363d;border-radius:10px;overflow:hidden">
+                <div style="position:relative">
+                    <img src="../photos/substrate_bare_tank.png" alt="ベアタンク" style="width:100%;height:100px;object-fit:cover;display:block">
+                    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.85));padding:6px 10px 4px">
+                        <div style="font-size:.82em;font-weight:700;color:#fff">ベアタンク</div>
+                    </div>
+                </div>
+                <div style="padding:10px 12px">
+                    <span style="display:inline-block;background:#1a1a1a;border:1px solid #8b949e;color:#8b949e;font-size:.72em;font-weight:700;border-radius:4px;padding:2px 8px;margin-bottom:6px">pH 7.0前後</span>
+                    <div style="font-size:.78em;color:#c9d1d9;line-height:1.6;margin-bottom:6px">底床なし。pH平衡はサンプ素材に依存。メンテナンスが容易</div>
+                    <div style="font-size:.72em;color:#8b949e">🐟 大型肉食魚・訓練目的等</div>
+                </div>
+            </div>
+
+        </div>        <h3>炭素源の種類と特性</h3>
         <p>炭素源はバクテリアのエネルギー源であり、分解速度の違いが即効性に影響する。過剰に投入された場合、バクテリアの代謝によりCO₂として系外に放散されるため、多少の超過は致命的になりにくい。ただし、急激な炭素投入は短期的にバクテリアが爆増し溶存酸素を急低下させることがあるため、入れすぎには注意が必要である。</p>
         <div class="recipe-wrap fade-in">
             <div class="recipe-grid">
