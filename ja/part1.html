@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Part 1 — 理論：窒素循環の原理 | ホロビオントアクアリウム理論</title>
+    <title>第１章 — 理論：窒素循環の原理 | ホロビオントアクアリウム理論</title>
     <meta name="description" content="水槽における窒素問題の体系的分類、従属栄養細菌によるアンモニア直接同化、デトリタス食性生物による窒素循環、pHロック帰結の解説。">
     <meta name="keywords" content="無換水,換水ゼロ,水換え不要,アクアリウム,炭素源,ウォッカ法,ベントス,硝酸塩除去,オーバーフロー水槽,水草水槽,大型水槽,自律型生態系,ホロビオント">
-    <meta property="og:title" content="Part 1 — 理論：窒素循環の原理 | ホロビオントアクアリウム理論">
+    <meta property="og:title" content="第１章 — 理論：窒素循環の原理 | ホロビオントアクアリウム理論">
     <meta property="og:description" content="水槽における窒素問題の体系的分類、従属栄養細菌によるアンモニア直接同化、デトリタス食性生物による窒素循環、pHロック帰結の解説。">
     <meta property="og:image" content="https://holobiont-aqua.github.io/holobiont-aquarium/photos/tank_overview.jpg">
     <meta property="og:type" content="article">
@@ -26,7 +26,16 @@
     </script>
 </head>
 
-<body style="margin:0;padding:0;background:#0d1117;font-family:'Inter',sans-serif;">
+<body style="margin:0;padding:0;background:#ffffff;font-family:'Inter',sans-serif;">
+    <header class="ibee-header"><div class="ibee-header-inner"><a href="../ibee_top.html" class="ibee-header-brand"><img src="../photos/ibee_logo.png" alt="IBEE" class="ibee-header-logo" width="40" height="40" style="height:40px;width:auto"><div><div class="ibee-header-title">生物環境技術研究会</div><div class="ibee-header-subtitle">Institute of Biological Environmental Engineering</div></div></a></div></header>
+    <nav class="ibee-nav"><div class="ibee-nav-inner">
+        <a href="index.html">概要</a>
+        <a href="part1.html" class="active">第１章 理論</a>
+        <a href="part2.html">第２章 環境構築</a>
+        <a href="part3.html">第３章 構築方法</a>
+        <a href="part4.html">第４章 実測</a>
+        <a href="part5.html">第５章 考察</a>
+    </div></nav>
 
     <style>
         /* ===== 基本 ===== */
@@ -37,9 +46,9 @@
         .holo-body {
             font-size: 16px;
             line-height: 1.85;
-            color: #c9d1d9;
+            color: #333333;
             word-break: break-word;
-            background: #0d1117;
+            background: #ffffff;
             max-width: 800px;
             margin: 0 auto;
             padding: 20px
@@ -47,9 +56,9 @@
 
         /* ===== ボックス類 ===== */
         .holo-summary {
-            background: #0d1117;
-            border: 1px solid #30363d;
-            border-left: 4px solid #58a6ff;
+            background: #ffffff;
+            border: 1px solid #d0d7de;
+            border-left: 4px solid #003366;
             border-radius: 8px;
             padding: 16px 18px;
             margin: 20px 0
@@ -62,21 +71,21 @@
         }
 
         .holo-card {
-            background: #161b22;
-            border: 1px solid #30363d;
+            background: #f5f7fa;
+            border: 1px solid #d0d7de;
             border-radius: 8px;
             padding: 14px 16px;
             margin: 10px 0
         }
 
         .holo-card-green {
-            border-left: 3px solid #3fb950
+            border-left: 3px solid #1a7f37
         }
 
         .holo-warn-red {
-            background: #1c0a0a;
-            border: 1px solid #f85149;
-            border-left: 4px solid #f85149;
+            background: #fef2f2;
+            border: 1px solid #cf222e;
+            border-left: 4px solid #cf222e;
             border-radius: 8px;
             padding: 14px 16px;
             margin: 14px 0;
@@ -84,26 +93,26 @@
         }
 
         .holo-warn-yellow {
-            background: #1c1409;
-            border: 1px solid #d29922;
-            border-left: 4px solid #d29922;
+            background: #fffbeb;
+            border: 1px solid #9a6700;
+            border-left: 4px solid #9a6700;
             border-radius: 8px;
             padding: 14px 16px;
             margin: 14px 0
         }
 
         .holo-warn-purple {
-            background: #160d20;
-            border: 1px solid #8957e5;
-            border-left: 4px solid #8957e5;
+            background: #faf5ff;
+            border: 1px solid #7c3aed;
+            border-left: 4px solid #7c3aed;
             border-radius: 8px;
             padding: 14px 16px;
             margin: 14px 0
         }
 
         .holo-tip {
-            background: #161b22;
-            border: 1px solid #30363d;
+            background: #f5f7fa;
+            border: 1px solid #d0d7de;
             border-radius: 8px;
             padding: 14px 16px;
             margin: 14px 0
@@ -112,7 +121,7 @@
         .holo-blockquote {
             border-left: 3px solid #3d444d;
             padding: 4px 16px;
-            color: #8b949e;
+            color: #666666;
             margin: 16px 0;
             font-style: italic
         }
@@ -121,7 +130,7 @@
             font-size: .78em;
             text-transform: uppercase;
             letter-spacing: .07em;
-            color: #8b949e;
+            color: #666666;
             margin: 0 0 6px;
             display: block
         }
@@ -138,12 +147,12 @@
         }
 
         .holo-table th {
-            background: #161b22;
-            color: #8b949e;
+            background: #f5f7fa;
+            color: #666666;
             font-weight: 500;
             text-align: left;
             padding: 9px 12px;
-            border: 1px solid #30363d;
+            border: 1px solid #d0d7de;
             font-size: .8em;
             text-transform: uppercase;
             letter-spacing: .03em
@@ -151,14 +160,14 @@
 
         .holo-table td {
             padding: 9px 12px;
-            border: 1px solid #21262d;
-            color: #c9d1d9;
+            border: 1px solid #d0d7de;
+            color: #333333;
             vertical-align: top;
             line-height: 1.6
         }
 
         .holo-table tr:nth-child(even) td {
-            background: #0d1117
+            background: #ffffff
         }
 
         /* モバイル：行をカード化 */
@@ -181,8 +190,8 @@
             }
 
             .holo-table tr {
-                background: #161b22;
-                border: 1px solid #30363d;
+                background: #f5f7fa;
+                border: 1px solid #d0d7de;
                 border-radius: 8px;
                 margin-bottom: 10px;
                 overflow: hidden
@@ -194,7 +203,7 @@
 
             .holo-table td {
                 border: none;
-                border-bottom: 1px solid #21262d;
+                border-bottom: 1px solid #d0d7de;
                 padding: 8px 14px
             }
 
@@ -206,7 +215,7 @@
                 content: attr(data-label);
                 display: block;
                 font-size: .7em;
-                color: #58a6ff;
+                color: #003366;
                 text-transform: uppercase;
                 letter-spacing: .05em;
                 margin-bottom: 3px;
@@ -229,8 +238,8 @@
 
         /* ===== コードブロック ===== */
         .holo-pre {
-            background: #161b22;
-            border: 1px solid #30363d;
+            background: #f5f7fa;
+            border: 1px solid #d0d7de;
             border-radius: 8px;
             padding: 14px;
             overflow-x: auto;
@@ -238,7 +247,7 @@
             line-height: 1.7;
             font-size: .82em;
             white-space: pre;
-            color: #c9d1d9
+            color: #333333
         }
 
         /* ===== PC ===== */
@@ -314,7 +323,7 @@
             }
 
             50% {
-                box-shadow: 0 0 0 8px rgba(88, 166, 255, .15)
+                box-shadow: 0 0 0 8px rgba(0, 51, 102, .15)
             }
         }
 
@@ -334,44 +343,44 @@
         }
 
         .nc-node-base {
-            background: #161b22;
-            border: 1px solid #30363d
+            background: #f5f7fa;
+            border: 1px solid #d0d7de
         }
 
         .nc-node-danger {
-            background: #2d1010;
-            border: 1px solid #f85149
+            background: #fce8e8;
+            border: 1px solid #cf222e
         }
 
         .nc-node-warn {
             background: #2d1f08;
-            border: 1px solid #d29922
+            border: 1px solid #9a6700
         }
 
         .nc-node-acc {
-            background: #16200a;
-            border: 1px solid #7ee787
+            background: #f0fdf4;
+            border: 1px solid #1a7f37
         }
 
         .nc-node-sys {
-            background: #0d2440;
-            border: 1px solid #58a6ff;
+            background: #eff6ff;
+            border: 1px solid #003366;
             animation: nc-pulse 2s infinite, nc-fadein .5s ease both
         }
 
         .nc-node-out {
-            background: #0a2a14;
-            border: 1px solid #3fb950
+            background: #f0fdf4;
+            border: 1px solid #1a7f37
         }
 
         .nc-name {
-            color: #e6edf3;
+            color: #333333;
             font-weight: bold;
             font-size: .88em
         }
 
         .nc-sub {
-            color: #8b949e;
+            color: #666666;
             font-size: .74em;
             margin-top: 2px
         }
@@ -387,20 +396,20 @@
 
         .nc-badge-red {
             background: #3d0f0f;
-            color: #f85149;
-            border: 1px solid #f85149
+            color: #cf222e;
+            border: 1px solid #cf222e
         }
 
         .nc-badge-ora {
-            background: #2d1a06;
-            color: #d29922;
-            border: 1px solid #d29922
+            background: #fffbeb;
+            color: #9a6700;
+            border: 1px solid #9a6700
         }
 
         .nc-badge-yel {
             background: #1a2a0a;
-            color: #7ee787;
-            border: 1px solid #7ee787
+            color: #1a7f37;
+            border: 1px solid #1a7f37
         }
 
         .nc-conn {
@@ -417,7 +426,7 @@
             top: 0;
             bottom: 0;
             width: 2px;
-            background: #21262d;
+            background: #d0d7de;
             transform: translateX(-50%)
         }
 
@@ -425,7 +434,7 @@
             width: 8px;
             height: 8px;
             border-radius: 50%;
-            background: #58a6ff;
+            background: #003366;
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
@@ -433,16 +442,16 @@
         }
 
         .nc-dot-green {
-            background: #3fb950
+            background: #1a7f37
         }
 
         .nc-lbl {
-            background: #0d1117;
-            color: #8b949e;
+            background: #ffffff;
+            color: #666666;
             font-size: .72em;
             padding: 3px 10px;
             border-radius: 4px;
-            border: 1px solid #21262d;
+            border: 1px solid #d0d7de;
             position: relative;
             z-index: 1
         }
@@ -455,14 +464,14 @@
             border: 1px dashed #3d444d;
             border-radius: 8px;
             text-align: center;
-            color: #484f58;
+            color: #888888;
             font-size: .8em;
             text-decoration: line-through
         }
 
         .nc-label-sys {
             text-align: center;
-            color: #58a6ff;
+            color: #003366;
             font-size: .72em;
             letter-spacing: .1em;
             text-transform: uppercase;
@@ -503,25 +512,25 @@
         }
 
         .bl-box {
-            background: #161b22;
-            border: 1px solid #30363d;
+            background: #f5f7fa;
+            border: 1px solid #d0d7de;
             border-radius: 8px;
             padding: 10px 12px;
             font-size: .82em;
-            color: #c9d1d9;
+            color: #333333;
             text-align: center;
             width: 100%;
             line-height: 1.5
         }
 
         .bl-box-sump {
-            border-color: #58a6ff;
-            background: #0a1929
+            border-color: #003366;
+            background: #eff6ff
         }
 
         .bl-box-main {
-            border-color: #3fb950;
-            background: #0a1f10
+            border-color: #1a7f37;
+            background: #f0fdf4
         }
 
         .bl-box-label {
@@ -532,11 +541,11 @@
         }
 
         .bl-box-sump .bl-box-label {
-            color: #58a6ff
+            color: #003366
         }
 
         .bl-box-main .bl-box-label {
-            color: #3fb950
+            color: #1a7f37
         }
 
         .bl-arrow-v {
@@ -551,16 +560,16 @@
         .bl-arrow-line {
             width: 2px;
             flex: 1;
-            background: linear-gradient(to bottom, #21262d, #21262d)
+            background: linear-gradient(to bottom, #d0d7de, #d0d7de)
         }
 
         .bl-arrow-label {
             font-size: .68em;
-            color: #8b949e;
+            color: #666666;
             text-align: center;
             padding: 2px 6px;
-            background: #0d1117;
-            border: 1px solid #21262d;
+            background: #ffffff;
+            border: 1px solid #d0d7de;
             border-radius: 4px;
             position: relative;
             z-index: 1;
@@ -598,11 +607,11 @@
         }
 
         .bl-dot-blue {
-            background: #58a6ff
+            background: #003366
         }
 
         .bl-dot-green {
-            background: #3fb950
+            background: #1a7f37
         }
 
         .bl-arrow-h-wrap {
@@ -623,7 +632,7 @@
         .bl-arrow-h-line {
             width: 2px;
             height: 80px;
-            background: #21262d;
+            background: #d0d7de;
             position: relative;
             overflow: hidden
         }
@@ -659,18 +668,18 @@
         }
 
         .bl-h-dot-down {
-            background: #58a6ff;
+            background: #003366;
             animation-delay: 0s
         }
 
         .bl-h-dot-up {
-            background: #3fb950;
+            background: #1a7f37;
             animation-delay: 1s
         }
 
         .bl-arrow-h-label {
             font-size: .65em;
-            color: #8b949e;
+            color: #666666;
             text-align: center;
             writing-mode: horizontal-tb
         }
@@ -689,7 +698,7 @@
             top: 0;
             bottom: 0;
             width: 2px;
-            background: linear-gradient(to bottom, #58a6ff, #3fb950)
+            background: linear-gradient(to bottom, #003366, #1a7f37)
         }
 
         .step-item {
@@ -708,41 +717,41 @@
             width: 28px;
             height: 28px;
             border-radius: 50%;
-            background: #0d1117;
-            border: 2px solid #58a6ff;
+            background: #ffffff;
+            border: 2px solid #003366;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: .75em;
             font-weight: bold;
-            color: #58a6ff;
+            color: #003366;
             z-index: 1;
             flex-shrink: 0
         }
 
         .step-item:last-child .step-num {
-            border-color: #3fb950;
-            color: #3fb950
+            border-color: #1a7f37;
+            color: #1a7f37
         }
 
         .step-title {
             font-weight: bold;
-            color: #e6edf3;
+            color: #333333;
             margin: 4px 0 8px;
             font-size: .95em;
             padding-top: 3px
         }
 
         .step-body {
-            color: #c9d1d9;
+            color: #333333;
             font-size: .9em;
             line-height: 1.75
         }
 
         /* ===== pHカウンター ===== */
         .ph-counter-wrap {
-            background: #0d1117;
-            border: 1px solid #30363d;
+            background: #ffffff;
+            border: 1px solid #d0d7de;
             border-radius: 12px;
             padding: 24px 16px;
             margin: 20px 0;
@@ -752,7 +761,7 @@
         .ph-value {
             font-size: 3.5em;
             font-weight: bold;
-            color: #58a6ff;
+            color: #003366;
             letter-spacing: .05em;
             line-height: 1;
             font-variant-numeric: tabular-nums
@@ -760,18 +769,18 @@
 
         .ph-unit {
             font-size: 1.2em;
-            color: #8b949e;
+            color: #666666;
             margin-left: 4px
         }
 
         .ph-label {
-            color: #8b949e;
+            color: #666666;
             font-size: .88em;
             margin-top: 8px
         }
 
         .ph-bar-wrap {
-            background: #161b22;
+            background: #f5f7fa;
             border-radius: 8px;
             height: 8px;
             margin: 16px 0 8px;
@@ -780,7 +789,7 @@
 
         .ph-bar {
             height: 100%;
-            background: linear-gradient(to right, #f85149, #d29922, #58a6ff, #3fb950);
+            background: linear-gradient(to right, #cf222e, #9a6700, #003366, #1a7f37);
             width: 0;
             border-radius: 8px;
             transition: width 1.5s ease
@@ -794,7 +803,7 @@
             display: flex;
             justify-content: space-between;
             font-size: .7em;
-            color: #484f58
+            color: #888888
         }
 
         /* ===== 「三つの無」カード ===== */
@@ -812,8 +821,8 @@
         }
 
         .zero-card {
-            background: #0a1929;
-            border: 1px solid #30363d;
+            background: #eff6ff;
+            border: 1px solid #d0d7de;
             border-radius: 10px;
             padding: 16px;
             text-align: center
@@ -826,14 +835,14 @@
 
         .zero-title {
             font-weight: bold;
-            color: #58a6ff;
+            color: #003366;
             font-size: .92em;
             margin-bottom: 6px
         }
 
         .zero-body {
             font-size: .82em;
-            color: #8b949e;
+            color: #666666;
             line-height: 1.6;
             text-align: left
         }
@@ -853,8 +862,8 @@
         }
 
         .maint-card {
-            background: #161b22;
-            border: 1px solid #30363d;
+            background: #f5f7fa;
+            border: 1px solid #d0d7de;
             border-radius: 8px;
             padding: 12px 14px;
             display: flex;
@@ -873,27 +882,27 @@
         }
 
         .maint-freq-daily {
-            background: #0d2440;
-            color: #58a6ff;
-            border: 1px solid #58a6ff
+            background: #eff6ff;
+            color: #003366;
+            border: 1px solid #003366
         }
 
         .maint-freq-any {
-            background: #0a2a14;
-            color: #3fb950;
-            border: 1px solid #3fb950
+            background: #f0fdf4;
+            color: #1a7f37;
+            border: 1px solid #1a7f37
         }
 
         .maint-text {
-            color: #c9d1d9;
+            color: #333333;
             font-size: .85em;
             line-height: 1.5
         }
 
         /* ===== faq：スマホ向けアコーディオン ===== */
         details.holo-details {
-            background: #161b22;
-            border: 1px solid #30363d;
+            background: #f5f7fa;
+            border: 1px solid #d0d7de;
             border-radius: 8px;
             margin: 8px 0;
             overflow: hidden
@@ -902,7 +911,7 @@
         details.holo-details summary {
             padding: 12px 16px;
             cursor: pointer;
-            color: #e6edf3;
+            color: #333333;
             font-weight: bold;
             font-size: .9em;
             list-style: none;
@@ -914,7 +923,7 @@
 
         details.holo-details summary::after {
             content: '＋';
-            color: #8b949e;
+            color: #666666;
             font-size: 1.1em;
             flex-shrink: 0
         }
@@ -925,7 +934,7 @@
 
         details.holo-details .details-body {
             padding: 0 16px 14px;
-            color: #c9d1d9;
+            color: #333333;
             font-size: .88em;
             line-height: 1.75
         }
@@ -945,15 +954,15 @@
         }
 
         .approach-card {
-            background: #161b22;
-            border: 1px solid #30363d;
+            background: #f5f7fa;
+            border: 1px solid #d0d7de;
             border-radius: 10px;
             overflow: hidden;
             transition: border-color .2s
         }
 
         .approach-card:hover {
-            border-color: #58a6ff
+            border-color: #003366
         }
 
         .approach-card-body {
@@ -963,13 +972,13 @@
         .approach-card-title {
             font-weight: bold;
             font-size: .88em;
-            color: #e6edf3;
+            color: #333333;
             margin: 0 0 4px
         }
 
         .approach-card-desc {
             font-size: .78em;
-            color: #8b949e;
+            color: #666666;
             line-height: 1.5;
             margin: 0
         }
@@ -983,34 +992,34 @@
         }
 
         .badge-green {
-            background: #0a2a14;
-            color: #3fb950;
-            border: 1px solid #3fb950
+            background: #f0fdf4;
+            color: #1a7f37;
+            border: 1px solid #1a7f37
         }
 
         .badge-yellow {
-            background: #1c1409;
-            color: #d29922;
-            border: 1px solid #d29922
+            background: #fffbeb;
+            color: #9a6700;
+            border: 1px solid #9a6700
         }
 
         .badge-red {
-            background: #1c0a0a;
-            color: #f85149;
-            border: 1px solid #f85149
+            background: #fef2f2;
+            color: #cf222e;
+            border: 1px solid #cf222e
         }
 
         .badge-blue {
-            background: #0d2440;
-            color: #58a6ff;
-            border: 1px solid #58a6ff
+            background: #eff6ff;
+            color: #003366;
+            border: 1px solid #003366
         }
 
 
         .ap-svg {
             width: 100%;
             display: block;
-            background: #0d1117;
+            background: #ffffff;
             border-radius: 8px 8px 0 0
         }
 
@@ -1082,8 +1091,8 @@
         }
 
         .recipe-card-item {
-            background: #161b22;
-            border: 1px solid #30363d;
+            background: #f5f7fa;
+            border: 1px solid #d0d7de;
             border-radius: 10px;
             padding: 14px 12px;
             text-align: center;
@@ -1101,15 +1110,15 @@
         }
 
         .recipe-fast::before {
-            background: linear-gradient(to right, #f85149, #d29922)
+            background: linear-gradient(to right, #cf222e, #9a6700)
         }
 
         .recipe-mid::before {
-            background: #d29922
+            background: #9a6700
         }
 
         .recipe-slow::before {
-            background: #3fb950
+            background: #1a7f37
         }
 
         .recipe-emoji {
@@ -1119,7 +1128,7 @@
 
         .recipe-name {
             font-weight: bold;
-            color: #e6edf3;
+            color: #333333;
             font-size: .9em;
             margin-bottom: 4px
         }
@@ -1127,13 +1136,13 @@
         .recipe-amount {
             font-size: 1.3em;
             font-weight: bold;
-            color: #58a6ff;
+            color: #003366;
             margin-bottom: 4px
         }
 
         .recipe-component {
             font-size: .72em;
-            color: #8b949e;
+            color: #666666;
             margin-bottom: 6px
         }
 
@@ -1145,21 +1154,21 @@
         }
 
         .speed-fast {
-            background: #2d0e0e;
-            color: #f85149;
-            border: 1px solid #f85149
+            background: #fef2f2;
+            color: #cf222e;
+            border: 1px solid #cf222e
         }
 
         .speed-mid {
-            background: #2d1a06;
-            color: #d29922;
-            border: 1px solid #d29922
+            background: #fffbeb;
+            color: #9a6700;
+            border: 1px solid #9a6700
         }
 
         .speed-slow {
-            background: #0a2a14;
-            color: #3fb950;
-            border: 1px solid #3fb950
+            background: #f0fdf4;
+            color: #1a7f37;
+            border: 1px solid #1a7f37
         }
 
         .recipe-mineral-grid {
@@ -1175,8 +1184,8 @@
         }
 
         .recipe-mineral-item {
-            background: #161b22;
-            border: 1px solid #30363d;
+            background: #f5f7fa;
+            border: 1px solid #d0d7de;
             border-radius: 8px;
             padding: 10px;
             text-align: center
@@ -1190,12 +1199,12 @@
         .recipe-mineral-name {
             font-size: .78em;
             font-weight: bold;
-            color: #e6edf3
+            color: #333333
         }
 
         .recipe-mineral-note {
             font-size: .68em;
-            color: #8b949e;
+            color: #666666;
             margin-top: 2px
         }
 
@@ -1203,15 +1212,15 @@
             font-size: .75em;
             text-transform: uppercase;
             letter-spacing: .06em;
-            color: #8b949e;
+            color: #666666;
             margin: 14px 0 8px;
             padding-left: 2px
         }
 
 
         .wq-graph {
-            background: #0d1117;
-            border: 1px solid #30363d;
+            background: #ffffff;
+            border: 1px solid #d0d7de;
             border-radius: 10px;
             padding: 14px;
             margin-top: 14px
@@ -1219,7 +1228,7 @@
 
         .wq-title {
             font-size: .75em;
-            color: #8b949e;
+            color: #666666;
             text-transform: uppercase;
             letter-spacing: .06em;
             margin-bottom: 10px;
@@ -1229,7 +1238,7 @@
         .wq-chart {
             position: relative;
             height: 140px;
-            background: linear-gradient(to bottom, rgba(88, 166, 255, .05), transparent);
+            background: linear-gradient(to bottom, rgba(0, 51, 102, .05), transparent);
             border-radius: 6px;
             overflow: hidden
         }
@@ -1240,7 +1249,7 @@
             left: 0;
             right: 0;
             height: 100%;
-            background: linear-gradient(to right, transparent 0%, rgba(139, 148, 158, .15) 3%, rgba(139, 148, 158, .4) 8%, rgba(248, 81, 73, .35) 15%, rgba(248, 81, 73, .5) 25%, rgba(248, 81, 73, .45) 35%, rgba(210, 153, 34, .3) 50%, rgba(210, 153, 34, .2) 60%, rgba(63, 185, 80, .15) 72%, rgba(63, 185, 80, .08) 80%, rgba(88, 166, 255, .12) 100%);
+            background: linear-gradient(to right, transparent 0%, rgba(139, 148, 158, .25) 3%, rgba(139, 148, 158, .5) 8%, rgba(248, 81, 73, .35) 15%, rgba(248, 81, 73, .5) 25%, rgba(248, 81, 73, .45) 35%, rgba(210, 153, 34, .3) 50%, rgba(210, 153, 34, .2) 60%, rgba(63, 185, 80, .15) 72%, rgba(63, 185, 80, .08) 80%, rgba(88, 166, 255, .12) 100%);
             clip-path: polygon(0% 95%, 3% 80%, 8% 45%, 15% 20%, 22% 12%, 30% 15%, 40% 18%, 50% 25%, 60% 40%, 70% 70%, 75% 88%, 80% 93%, 85% 95%, 100% 95%, 100% 100%, 0% 100%)
         }
 
@@ -1272,13 +1281,13 @@
             justify-content: space-between;
             margin-top: 6px;
             font-size: .65em;
-            color: #484f58
+            color: #888888
         }
 
         .wq-event {
             position: absolute;
             font-size: .65em;
-            color: #c9d1d9;
+            color: #333333;
             text-align: center;
             white-space: nowrap
         }
@@ -1298,7 +1307,7 @@
 
         .pyramid-title {
             font-size: .8em;
-            color: #8b949e;
+            color: #666666;
             text-transform: uppercase;
             letter-spacing: .08em;
             margin-bottom: 16px
@@ -1327,26 +1336,26 @@
         }
 
         .pyramid-t1 {
-            background: linear-gradient(135deg, #1a0a0a, #2d1010);
-            border: 1px solid #f85149;
+            background: linear-gradient(135deg, #fef2f2, #fce8e8);
+            border: 1px solid #cf222e;
             max-width: 50%
         }
 
         .pyramid-t2 {
-            background: linear-gradient(135deg, #0a1929, #0d2440);
-            border: 1px solid #58a6ff;
+            background: linear-gradient(135deg, #eff6ff, #eff6ff);
+            border: 1px solid #003366;
             max-width: 65%
         }
 
         .pyramid-t3 {
-            background: linear-gradient(135deg, #0a2a14, #16200a);
-            border: 1px solid #3fb950;
+            background: linear-gradient(135deg, #f0fdf4, #f0fdf4);
+            border: 1px solid #1a7f37;
             max-width: 80%
         }
 
         .pyramid-t4 {
-            background: linear-gradient(135deg, #161b22, #21262d);
-            border: 1px solid #30363d;
+            background: linear-gradient(135deg, #f5f7fa, #d0d7de);
+            border: 1px solid #d0d7de;
             max-width: 95%
         }
 
@@ -1357,25 +1366,25 @@
 
         .pyramid-name {
             font-weight: bold;
-            color: #e6edf3;
+            color: #333333;
             font-size: .88em
         }
 
         .pyramid-desc {
             font-size: .7em;
-            color: #8b949e;
+            color: #666666;
             margin-top: 2px
         }
 
         .pyramid-arrow {
-            color: #30363d;
+            color: #d0d7de;
             font-size: 1.2em;
             line-height: 1
         }
 
         .pyramid-label {
             font-size: .65em;
-            color: #8b949e;
+            color: #666666;
             letter-spacing: .05em;
             margin-top: 12px
         }
@@ -1385,9 +1394,9 @@
             font-size: .72em;
             padding: 4px 14px;
             border-radius: 20px;
-            background: #0d2440;
-            color: #58a6ff;
-            border: 1px solid rgba(88, 166, 255, .3);
+            background: #eff6ff;
+            color: #003366;
+            border: 1px solid rgba(0, 51, 102, .3);
             margin-top: 10px;
             letter-spacing: .05em
         }
@@ -1403,8 +1412,8 @@
             gap: 0;
             border-radius: 20px;
             overflow: hidden;
-            border: 1px solid #30363d;
-            background: rgba(13, 17, 23, .92);
+            border: 1px solid #d0d7de;
+            background: rgba(255, 255, 255, .95);
             backdrop-filter: blur(8px);
             font-size: .78em;
             transition: opacity .4s, transform .4s;
@@ -1430,19 +1439,19 @@
 
         .lang-btn {
             padding: 6px 14px;
-            color: #8b949e;
+            color: #666666;
             text-decoration: none;
             transition: all .2s;
             font-weight: 600;
         }
 
         .lang-btn:hover {
-            color: #e6edf3
+            color: #333333
         }
 
         .lang-btn.active {
-            background: #58a6ff;
-            color: #0d1117;
+            background: #003366;
+            color: #ffffff;
         }
 
 
@@ -1451,7 +1460,7 @@
             margin: 20px 0;
             border-radius: 10px;
             overflow: hidden;
-            border: 1px solid #21262d;
+            border: 1px solid #d0d7de;
         }
 
         .photo-wrap img {
@@ -1459,15 +1468,15 @@
             max-height: 400px;
             object-fit: contain;
             display: block;
-            background: #0a0e14;
+            background: #f5f7fa;
         }
 
         .photo-caption {
             padding: 10px 14px;
             font-size: .8em;
-            color: #8b949e;
-            background: #161b22;
-            border-top: 1px solid #21262d;
+            color: #666666;
+            background: #f5f7fa;
+            border-top: 1px solid #d0d7de;
         }
 
         .photo-grid {
@@ -1490,13 +1499,13 @@
             border-radius: 12px;
             overflow: hidden;
             margin-bottom: 24px;
-            background: linear-gradient(rgba(10, 22, 40, .7), rgba(13, 17, 23, .9)), url('../photos/tank_overview.jpg') center/cover no-repeat;
+            background: linear-gradient(rgba(0, 51, 102, .6), rgba(0, 34, 68, .85)), url('../photos/tank_overview.jpg') center/cover no-repeat;
         }
 
         .hero-overlay {
             position: absolute;
             inset: 0;
-            background: linear-gradient(180deg, transparent 50%, #0d1117 100%);
+            background: linear-gradient(180deg, transparent 50%, #ffffff 100%);
         }
 
         .hero-content {
@@ -1511,17 +1520,17 @@
             font-size: .82em;
             padding: 6px 16px;
             border-radius: 20px;
-            background: rgba(88, 166, 255, .15);
-            color: #58a6ff;
-            border: 1px solid rgba(88, 166, 255, .3);
+            background: rgba(0, 51, 102, .15);
+            color: #003366;
+            border: 1px solid rgba(0, 51, 102, .3);
             letter-spacing: .08em;
             font-weight: 600;
         }
 
         /* ===== Table of Contents ===== */
         .toc {
-            background: #161b22;
-            border: 1px solid #21262d;
+            background: #f5f7fa;
+            border: 1px solid #d0d7de;
             border-radius: 8px;
             padding: 16px 20px;
             margin: 16px 0;
@@ -1539,13 +1548,13 @@
         }
 
         .toc-list a {
-            color: #8b949e;
+            color: #666666;
             text-decoration: none;
             transition: color .2s;
         }
 
         .toc-list a:hover {
-            color: #58a6ff;
+            color: #003366;
         }
 
         html {
@@ -1555,26 +1564,26 @@
         /* ===== N収支系統図（インタラクティブ版） ===== */
         .ntree-wrap { margin: 20px 0 }
         .ntree-root {
-            background: #161b22; border: 1px solid #30363d; border-radius: 10px;
+            background: #f5f7fa; border: 1px solid #d0d7de; border-radius: 10px;
             padding: 12px; text-align: center; margin-bottom: 4px;
         }
-        .ntree-root-title { font-weight: 700; font-size: .88em; color: #e6edf3 }
-        .ntree-root-sub { font-size: .7em; color: #8b949e; margin-top: 2px }
-        .ntree-vline { width: 2px; height: 12px; background: #30363d; margin: 0 auto }
+        .ntree-root-title { font-weight: 700; font-size: .88em; color: #333333 }
+        .ntree-root-sub { font-size: .7em; color: #666666; margin-top: 2px }
+        .ntree-vline { width: 2px; height: 12px; background: #d0d7de; margin: 0 auto }
         .ntree-fork {
             display: flex; align-items: flex-start; justify-content: center;
             height: 20px; position: relative;
         }
         .ntree-fork::before {
             content: ''; position: absolute; top: 0; left: 50%;
-            width: 2px; height: 10px; background: #30363d; transform: translateX(-50%);
+            width: 2px; height: 10px; background: #d0d7de; transform: translateX(-50%);
         }
         .ntree-fork::after {
             content: ''; position: absolute; top: 10px;
-            left: 25%; right: 25%; height: 2px; background: #30363d;
+            left: 25%; right: 25%; height: 2px; background: #d0d7de;
         }
         .ntree-fork-arm {
-            position: absolute; top: 10px; width: 2px; height: 10px; background: #30363d;
+            position: absolute; top: 10px; width: 2px; height: 10px; background: #d0d7de;
         }
         .ntree-fork-arm-l { left: 25%; transform: translateX(-50%) }
         .ntree-fork-arm-r { right: 25%; transform: translateX(50%) }
@@ -1583,16 +1592,16 @@
         .ntree-bh {
             width: 100%; border-radius: 8px; padding: 10px 8px; text-align: center;
         }
-        .ntree-bh-export { background: linear-gradient(135deg,#1a0a0a,#1c1409); border: 1px solid #d29922 }
-        .ntree-bh-cycle { background: linear-gradient(135deg,#0a1929,#0a2a14); border: 1px solid #58a6ff }
+        .ntree-bh-export { background: linear-gradient(135deg,#fef2f2,#fffbeb); border: 1px solid #9a6700 }
+        .ntree-bh-cycle { background: linear-gradient(135deg,#eff6ff,#f0fdf4); border: 1px solid #003366 }
         .ntree-bl { font-size: .68em; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 2px }
-        .ntree-bl-export { color: #d29922 }
-        .ntree-bl-cycle { color: #58a6ff }
-        .ntree-bt { font-weight: 700; font-size: .82em; color: #e6edf3 }
-        .ntree-bd { font-size: .65em; color: #8b949e; margin-top: 2px }
-        .ntree-vline-sm { width: 0; height: 10px; border-left: 2px dashed #30363d; margin: 0 auto }
+        .ntree-bl-export { color: #9a6700 }
+        .ntree-bl-cycle { color: #003366 }
+        .ntree-bt { font-weight: 700; font-size: .82em; color: #333333 }
+        .ntree-bd { font-size: .65em; color: #666666; margin-top: 2px }
+        .ntree-vline-sm { width: 0; height: 10px; border-left: 2px dashed #d0d7de; margin: 0 auto }
         .ntree-sub-label {
-            font-size: .75em; color: #6e7681; text-align: center;
+            font-size: .75em; color: #888888; text-align: center;
             padding: 3px 0 2px; letter-spacing: .03em; font-weight: 600;
         }
         /* リーフカード */
@@ -1602,53 +1611,53 @@
             -webkit-tap-highlight-color: transparent;
         }
         .ntree-lc:active { transform: scale(.98) }
-        .ntree-lc-phys { background: #161b22; border: 1px solid #30363d }
-        .ntree-lc-gas { background: #1c1409; border: 1px solid #d29922 }
-        .ntree-lc-bio { background: #16200a; border: 1px solid #7ee787 }
-        .ntree-lc-cycle { background: #0d2440; border: 1px solid #58a6ff }
+        .ntree-lc-phys { background: #f5f7fa; border: 1px solid #d0d7de }
+        .ntree-lc-gas { background: #fffbeb; border: 1px solid #9a6700 }
+        .ntree-lc-bio { background: #f0fdf4; border: 1px solid #1a7f37 }
+        .ntree-lc-cycle { background: #eff6ff; border: 1px solid #003366 }
         .ntree-lc-holo {
-            background: #0d2440; border: 2px solid #58a6ff;
+            background: #eff6ff; border: 2px solid #003366;
             animation: nc-pulse 2.5s ease infinite;
         }
-        .ntree-lc-romance { background: #160d20; border: 1px solid #8957e5; opacity: .7 }
-        .ntree-ln { font-weight: 600; font-size: .78em; color: #e6edf3 }
-        .ntree-ld { font-size: .65em; color: #8b949e; margin-top: 2px; line-height: 1.4 }
+        .ntree-lc-romance { background: #faf5ff; border: 1px solid #7c3aed; opacity: .7 }
+        .ntree-ln { font-weight: 600; font-size: .78em; color: #333333 }
+        .ntree-ld { font-size: .65em; color: #666666; margin-top: 2px; line-height: 1.4 }
         .ntree-lb {
             display: inline-block; font-size: .6em; padding: 1px 6px;
             border-radius: 4px; margin-top: 4px;
         }
-        .ntree-lb-phys { background: #21262d; color: #8b949e; border: 1px solid #30363d }
-        .ntree-lb-gas { background: #2d1a06; color: #d29922; border: 1px solid #d29922 }
-        .ntree-lb-bio { background: #0a2a14; color: #7ee787; border: 1px solid #7ee787 }
-        .ntree-lb-cycle { background: #0d2440; color: #58a6ff; border: 1px solid #58a6ff }
-        .ntree-lb-romance { background: #1a0d2e; color: #8957e5; border: 1px solid #8957e5 }
+        .ntree-lb-phys { background: #d0d7de; color: #666666; border: 1px solid #d0d7de }
+        .ntree-lb-gas { background: #fffbeb; color: #9a6700; border: 1px solid #9a6700 }
+        .ntree-lb-bio { background: #f0fdf4; color: #1a7f37; border: 1px solid #1a7f37 }
+        .ntree-lb-cycle { background: #eff6ff; color: #003366; border: 1px solid #003366 }
+        .ntree-lb-romance { background: #faf5ff; color: #7c3aed; border: 1px solid #7c3aed }
         /* 展開パネル */
         .ntree-detail {
             max-height: 0; overflow: hidden; transition: max-height .3s ease;
         }
         .ntree-lc.open .ntree-detail { max-height: 200px }
         .ntree-detail-inner {
-            padding: 6px 0 0; border-top: 1px solid rgba(255,255,255,.08); margin-top: 6px;
+            padding: 6px 0 0; border-top: 1px solid rgba(0,0,0,.05); margin-top: 6px;
         }
         .ntree-dr {
             display: flex; justify-content: space-between; font-size: .62em; padding: 2px 0;
         }
-        .ntree-dr-l { color: #8b949e }
+        .ntree-dr-l { color: #666666 }
         .ntree-dr-v { font-weight: 600 }
-        .ntree-dr-pro { color: #3fb950 }
-        .ntree-dr-con { color: #f85149 }
+        .ntree-dr-pro { color: #1a7f37 }
+        .ntree-dr-con { color: #cf222e }
         .ntree-tap-hint {
-            text-align: center; font-size: .65em; color: #484f58; margin: 10px 0 16px;
+            text-align: center; font-size: .65em; color: #888888; margin: 10px 0 16px;
         }
         /* 硝化注記 */
         .ntree-nitri-note {
-            background: #0d1117; border: 1px solid #58a6ff40; border-radius: 8px;
+            background: #ffffff; border: 1px solid #00336640; border-radius: 8px;
             padding: 14px 16px; margin: 20px auto 0; max-width: 480px; text-align: left;
         }
         .ntree-nitri-title {
-            font-size: .8em; color: #8b949e; font-weight: 600; margin-bottom: 6px;
+            font-size: .8em; color: #666666; font-weight: 600; margin-bottom: 6px;
         }
-        .ntree-nitri-body { font-size: .78em; color: #6e7681; line-height: 1.7 }
+        .ntree-nitri-body { font-size: .78em; color: #888888; line-height: 1.7 }
         /* モバイル：縦スタック */
         @media(max-width:600px) {
             .ntree-branch { flex-direction: column; gap: 12px }
@@ -1669,23 +1678,23 @@
             margin-bottom: 8px;
         }
         .part-label-theory {
-            background: #0d2440;
-            color: #58a6ff;
-            border: 1px solid #58a6ff;
+            background: #eff6ff;
+            color: #003366;
+            border: 1px solid #003366;
         }
         .part-label-practice {
-            background: #1c2d0a;
-            color: #3fb950;
-            border: 1px solid #3fb950;
+            background: #f0fdf4;
+            color: #1a7f37;
+            border: 1px solid #1a7f37;
         }
         .part-title {
             font-size: 1.3em;
             font-weight: 700;
-            color: #e6edf3;
+            color: #333333;
         }
         .part-subtitle {
             font-size: .78em;
-            color: #8b949e;
+            color: #666666;
             margin-top: 4px;
         }
         /* TOC ネスト */
@@ -1696,8 +1705,8 @@
             margin: 10px 0 4px;
             padding-left: 0;
         }
-        .toc-part-theory { color: #58a6ff }
-        .toc-part-practice { color: #3fb950 }
+        .toc-part-theory { color: #003366 }
+        .toc-part-practice { color: #1a7f37 }
 
         /* ===== ページナビゲーション ===== */
         .page-nav {
@@ -1706,7 +1715,7 @@
             gap: 8px;
             padding: 10px 0;
             margin: 0 0 20px;
-            border-bottom: 1px solid #21262d;
+            border-bottom: 1px solid #d0d7de;
             flex-wrap: wrap;
         }
         .page-nav-bottom {
@@ -1715,23 +1724,23 @@
             gap: 8px;
             padding: 16px 0 0;
             margin: 32px 0 0;
-            border-top: 1px solid #21262d;
+            border-top: 1px solid #d0d7de;
             flex-wrap: wrap;
         }
         .page-nav-btn {
-            color: #8b949e;
+            color: #666666;
             text-decoration: none;
             font-size: .83em;
             padding: 6px 14px;
             border-radius: 6px;
-            border: 1px solid #30363d;
-            background: #161b22;
+            border: 1px solid #d0d7de;
+            background: #f5f7fa;
             transition: all .2s;
             white-space: nowrap;
         }
         .page-nav-btn:hover {
-            color: #e6edf3;
-            border-color: #58a6ff;
+            color: #333333;
+            border-color: #003366;
         }
         .page-nav-spacer { flex: 1; min-width: 8px; }
 
@@ -1739,39 +1748,40 @@
         .compare-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:18px 0 }
         .compare-box { border-radius:10px; padding:14px 16px; font-size:.85em; line-height:1.85 }
         .compare-box-label { font-size:.65em; text-transform:uppercase; letter-spacing:.07em; font-weight:700; margin-bottom:8px; padding-bottom:6px; border-bottom:1px solid; display:block }
-        .compare-bad  { border:1px solid #f85149; background:#1c0a0a }
-        .compare-good { border:1px solid #3fb950; background:#0a1f10 }
-        .compare-bad  .compare-box-label { color:#f85149; border-color:#f85149 }
-        .compare-good .compare-box-label { color:#3fb950; border-color:#3fb950 }
-        .compare-step { color:#c9d1d9; font-size:.85em; padding:2px 0 }
+        .compare-bad  { border:1px solid #cf222e; background:#fef2f2 }
+        .compare-good { border:1px solid #1a7f37; background:#f0fdf4 }
+        .compare-bad  .compare-box-label { color:#cf222e; border-color:#cf222e }
+        .compare-good .compare-box-label { color:#1a7f37; border-color:#1a7f37 }
+        .compare-step { color:#333333; font-size:.85em; padding:2px 0 }
         .compare-result { margin-top:8px; padding:6px 10px; border-radius:6px; font-size:.8em; font-weight:600 }
-        .compare-bad  .compare-result { background:#2d1117; color:#f85149 }
-        .compare-good .compare-result { background:#0d2117; color:#3fb950 }
+        .compare-bad  .compare-result { background:#fef2f2; color:#cf222e }
+        .compare-good .compare-result { background:#f0fdf4; color:#1a7f37 }
 
         /* ===== C:N比ゲージ ===== */
-        .cn-gauge { margin:18px 0; background:#161b22; border:1px solid #30363d; border-radius:10px; padding:14px 16px }
+        .cn-gauge { margin:18px 0; background:#f5f7fa; border:1px solid #d0d7de; border-radius:10px; padding:14px 16px }
         .cn-bar-wrap { display:flex; width:100%; height:36px; border-radius:6px; overflow:hidden; margin:8px 0 }
         .cn-zone { display:flex; align-items:center; justify-content:center; font-size:.7em; font-weight:600; text-align:center; padding:0 6px }
-        .cn-zone-low  { flex:2.5; background:#1c2b3a; color:#58a6ff }
-        .cn-zone-mid  { flex:0.6; background:#21262d; color:#8b949e; font-size:.6em; white-space:nowrap }
-        .cn-zone-high { flex:2.5; background:#0a1f10; color:#3fb950 }
+        .cn-zone-low  { flex:2.5; background:#dbeafe; color:#003366 }
+        .cn-zone-mid  { flex:0.6; background:#d0d7de; color:#666666; font-size:.6em; white-space:nowrap }
+        .cn-zone-high { flex:2.5; background:#f0fdf4; color:#1a7f37 }
 
         /* ===== Benthos 2列カード ===== */
         .benthos-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:14px 0 }
-        .benthos-card { border-radius:10px; padding:14px 16px; font-size:.85em; color:#c9d1d9; line-height:1.7 }
+        .benthos-card { border-radius:10px; padding:14px 16px; font-size:.85em; color:#333333; line-height:1.7 }
         .benthos-tag  { font-size:.65em; text-transform:uppercase; letter-spacing:.06em; font-weight:700; margin-bottom:10px; display:block }
-        .benthos-auto { border:1px solid #3fb950; background:#0a1f10 }
-        .benthos-auto .benthos-tag { color:#3fb950 }
-        .benthos-manual { border:1px solid #8b949e; background:#161b22 }
-        .benthos-manual .benthos-tag { color:#8b949e }
+        .benthos-auto { border:1px solid #1a7f37; background:#f0fdf4 }
+        .benthos-auto .benthos-tag { color:#1a7f37 }
+        .benthos-manual { border:1px solid #666666; background:#f5f7fa }
+        .benthos-manual .benthos-tag { color:#666666 }
         .benthos-row { display:flex; gap:6px; margin:3px 0; font-size:.88em }
-        .benthos-key { color:#8b949e; font-size:.78em; min-width:58px; flex-shrink:0 }
+        .benthos-key { color:#666666; font-size:.78em; min-width:58px; flex-shrink:0 }
 
         @media(max-width:480px) {
             .compare-grid, .benthos-grid { grid-template-columns:1fr }
         }
 
     </style>
+    <link rel="stylesheet" href="../ibee.css">
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -1820,22 +1830,22 @@
 
     <div class="holo-body">
         <div class="lang-switch">
-            <a href="../" class="lang-btn">🇬🇧 EN</a>
-            <span class="lang-btn active">🇯🇵 日本語</span>
+            <a href="../" class="lang-btn">EN</a>
+            <span class="lang-btn active">日本語</span>
         </div>
         <nav class="page-nav">
-            <a href="index.html" class="page-nav-btn">📑 目次</a>
+            <a href="index.html" class="page-nav-btn">目次</a>
             <div class="page-nav-spacer"></div>
-            <a href="part2.html" class="page-nav-btn">Part 2 構築可能な環境 ▶</a>
+            <a href="part2.html" class="page-nav-btn">第２章 構築可能な環境 →</a>
         </nav>
-        <!-- ===== Part 1：理論 ===== -->
+        <!-- ===== 第１章：理論 ===== -->
         <div class="part-header fade-in" id="part-theory">
-            <div><span class="part-label part-label-theory">Part 1</span></div>
+            <div><span class="part-label part-label-theory">第１章</span></div>
             <div class="part-title">理論 — 窒素循環の原理</div>
             <div class="part-subtitle">アクアリウムにおける窒素管理の体系的分類と、本理論のメカニズムを解説する</div>
         </div>
 
-        <h2 id="sec-nitrogen">1. 水槽における窒素問題</h2>
+        <h2 id="sec-nitrogen">1.1 水槽における窒素問題</h2>
 
         <h3>窒素管理手法の分類</h3>
         <p>アクアリウムで発生するアンモニア（NH₄⁺）の処理方法は、「窒素を系外に排出するか」「系内で循環させるか」の一軸で体系的に分類できる。以下の系統図は、各手法の位置づけを示す。</p>
@@ -1843,7 +1853,7 @@
         <div class="ntree-wrap fade-in">
             <!-- ルートノード -->
             <div class="ntree-root">
-                <div class="ntree-root-title">🐟 魚の排泄 → NH₄⁺（アンモニア）発生</div>
+                <div class="ntree-root-title"> 魚の排泄 → NH₄⁺（アンモニア）発生</div>
                 <div class="ntree-root-sub">各手法は最終的に窒素をどう処理するかで分類される</div>
             </div>
 
@@ -1867,7 +1877,7 @@
                     <div class="ntree-sub-label">物理・化学的</div>
 
                     <div class="ntree-lc ntree-lc-phys fade-in" onclick="this.classList.toggle('open')">
-                        <div class="ntree-ln">💧 換水</div>
+                        <div class="ntree-ln">換水</div>
                         <div class="ntree-ld">水ごと物理排出</div>
                         <span class="ntree-lb ntree-lb-phys">物理的</span>
                         <div class="ntree-detail"><div class="ntree-detail-inner">
@@ -1877,7 +1887,7 @@
                     </div>
 
                     <div class="ntree-lc ntree-lc-phys fade-in" onclick="this.classList.toggle('open')">
-                        <div class="ntree-ln">🧱 吸着材</div>
+                        <div class="ntree-ln">吸着材</div>
                         <div class="ntree-ld">ゼオライト等に吸着→交換</div>
                         <span class="ntree-lb ntree-lb-phys">化学的</span>
                         <div class="ntree-detail"><div class="ntree-detail-inner">
@@ -1887,7 +1897,7 @@
                     </div>
 
                     <div class="ntree-lc ntree-lc-phys fade-in" onclick="this.classList.toggle('open')">
-                        <div class="ntree-ln">🫧 プロテインスキマー</div>
+                        <div class="ntree-ln">プロテインスキマー</div>
                         <div class="ntree-ld">気泡で有機物を系外排出（海水）</div>
                         <span class="ntree-lb ntree-lb-phys">物理化学的</span>
                         <div class="ntree-detail"><div class="ntree-detail-inner">
@@ -1900,7 +1910,7 @@
                     <div class="ntree-sub-label">生物的 → ガス化</div>
 
                     <div class="ntree-lc ntree-lc-gas fade-in" onclick="this.classList.toggle('open')">
-                        <div class="ntree-ln">💨 嫌気脱窒</div>
+                        <div class="ntree-ln"> 嫌気脱窒</div>
                         <div class="ntree-ld">NO₃⁻ → N₂ガスとして大気へ放出</div>
                         <span class="ntree-lb ntree-lb-gas">DSB・脱窒炉</span>
                         <div class="ntree-detail"><div class="ntree-detail-inner">
@@ -1913,7 +1923,7 @@
                     <div class="ntree-sub-label">生物的 → バイオマス化</div>
 
                     <div class="ntree-lc ntree-lc-bio fade-in" onclick="this.classList.toggle('open')">
-                        <div class="ntree-ln">🌿 水草吸収</div>
+                        <div class="ntree-ln">水草吸収</div>
                         <div class="ntree-ld">植物が窒素を同化→トリミングで排出</div>
                         <span class="ntree-lb ntree-lb-bio">ADA式・Walstad式</span>
                         <div class="ntree-detail"><div class="ntree-detail-inner">
@@ -1923,7 +1933,7 @@
                     </div>
 
                     <div class="ntree-lc ntree-lc-bio fade-in" onclick="this.classList.toggle('open')">
-                        <div class="ntree-ln">🦠 菌体排出</div>
+                        <div class="ntree-ln"> 菌体排出</div>
                         <div class="ntree-ld">バクテリアを増やし→スキマー等で排出</div>
                         <span class="ntree-lb ntree-lb-bio">バイオペレット等</span>
                         <div class="ntree-detail"><div class="ntree-detail-inner">
@@ -1945,7 +1955,7 @@
                     <div class="ntree-sub-label">光独立栄養（光＋CO₂）</div>
 
                     <div class="ntree-lc ntree-lc-cycle fade-in" onclick="this.classList.toggle('open')">
-                        <div class="ntree-ln">☀️ グリーンウォーター式</div>
+                        <div class="ntree-ln">グリーンウォーター式</div>
                         <div class="ntree-ld">藻類が光でNH₄⁺を同化→食物連鎖</div>
                         <span class="ntree-lb ntree-lb-cycle">屋外・低負荷</span>
                         <div class="ntree-detail"><div class="ntree-detail-inner">
@@ -1958,7 +1968,7 @@
                     <div class="ntree-sub-label">光従属栄養（光＋有機物）</div>
 
                     <div class="ntree-lc ntree-lc-cycle fade-in" onclick="this.classList.toggle('open')">
-                        <div class="ntree-ln">🔴 PNSB（紅色非硫黄細菌）</div>
+                        <div class="ntree-ln">PNSB（紅色非硫黄細菌）</div>
                         <div class="ntree-ld">光＋有機物でNH₄⁺を同化</div>
                         <span class="ntree-lb ntree-lb-cycle">嫌気＋光で機能</span>
                         <div class="ntree-detail"><div class="ntree-detail-inner">
@@ -1971,7 +1981,7 @@
                     <div class="ntree-sub-label">従属栄養（有機炭素）</div>
 
                     <div class="ntree-lc ntree-lc-holo fade-in" onclick="this.classList.toggle('open')">
-                        <div class="ntree-ln">🧪 ホロビオント式</div>
+                        <div class="ntree-ln">ホロビオント式</div>
                         <div class="ntree-ld">従属栄養細菌がNH₄⁺を直接同化<br>ベントスが捕食→食物連鎖循環</div>
                         <span class="ntree-lb ntree-lb-cycle">室内・高負荷・実用</span>
                         <div class="ntree-detail"><div class="ntree-detail-inner">
@@ -1984,7 +1994,7 @@
                     <div class="ntree-sub-label">化学独立栄養（H₂S等）</div>
 
                     <div class="ntree-lc ntree-lc-romance fade-in" onclick="this.classList.toggle('open')">
-                        <div class="ntree-ln">⚗️ 硫黄駆動型</div>
+                        <div class="ntree-ln">硫黄駆動型</div>
                         <div class="ntree-ld">無機物酸化で窒素を同化</div>
                         <span class="ntree-lb ntree-lb-romance">理論上・未実用</span>
                         <div class="ntree-detail"><div class="ntree-detail-inner">
@@ -1995,14 +2005,14 @@
                 </div>
             </div>
 
-            <p class="ntree-tap-hint">各カードをタップすると詳細を表示</p>
+            <p class="ntree-tap-hint">各項目を選択すると詳細を展開</p>
 
             <!-- 硝化サイクル注記 -->
             <div class="ntree-nitri-note fade-in">
-                <div class="ntree-nitri-title">📌 硝化サイクル（NH₄⁺ → NO₂⁻ → NO₃⁻）について</div>
+                <div class="ntree-nitri-title">※ 硝化サイクル（NH₄⁺ → NO₂⁻ → NO₃⁻）について</div>
                 <div class="ntree-nitri-body">
                     硝化サイクルはアクアリウムの根幹であり、猛毒のアンモニアを無毒に近い硝酸塩へ変換することで生体を保護する。<br>
-                    ただし、<strong style="color:#8b949e">窒素の形態を変えるのみで系内の総窒素量は変化しない</strong>。このため、系統図における「排出」には含まれない。
+                    ただし、<strong style="color:#666666">窒素の形態を変えるのみで系内の総窒素量は変化しない</strong>。このため、系統図における「排出」には含まれない。
                 </div>
             </div>
         </div>
@@ -2011,12 +2021,13 @@
 
         <hr>
 
-        <h2 id="sec-assimilation">2. 従属栄養細菌によるアンモニア直接同化</h2>
+        <h2 id="sec-assimilation">1.2 従属栄養細菌によるアンモニア直接同化</h2>
+        <p>通常の水槽で起きる硝化経路と、本理論が提案する炭素同化経路の違いを以下に示す。</p>
 
         <!-- Before/After 比較カード -->
         <div class="compare-grid fade-in">
             <div class="compare-box compare-bad">
-                <span class="compare-box-label">❌ 通常の水槽（硝化経路）</span>
+                <span class="compare-box-label">× 通常の水槽（硝化経路）</span>
                 <div class="compare-step">NH₄⁺（アンモニア）</div>
                 <div class="compare-step">↓ 硝化菌（<em>Nitrosomonas</em>）</div>
                 <div class="compare-step">NO₂⁻ → NO₃⁻</div>
@@ -2025,7 +2036,7 @@
                 <div class="compare-result">→ 定期換水が必要</div>
             </div>
             <div class="compare-box compare-good">
-                <span class="compare-box-label">✅ ホロビオント式（炭素同化）</span>
+                <span class="compare-box-label">◎ ホロビオント式（炭素同化）</span>
                 <div class="compare-step">NH₄⁺ ＋ 炭素源</div>
                 <div class="compare-step">↓ 従属栄養細菌（C:N比 ＞ 20）</div>
                 <div class="compare-step"><strong>菌体タンパクに直接取り込み</strong></div>
@@ -2035,18 +2046,18 @@
             </div>
         </div>
 
-        <h3>C:N比と同化条件</h3>
+        <h3>1.2.1 C:N比と同化条件</h3>
         <p>従属栄養細菌がどちらの経路で動作するかは、環境中の<strong>C:N比（炭素と窒素の比率）</strong>が決定する。</p>
 
         <!-- C:N比ゲージ -->
         <div class="cn-gauge fade-in">
-            <div style="font-size:.72em;text-transform:uppercase;letter-spacing:.06em;color:#8b949e;margin-bottom:4px">C:N比と細菌の動作モード</div>
+            <div style="font-size:.72em;text-transform:uppercase;letter-spacing:.06em;color:#666666;margin-bottom:4px">C:N比と細菌の動作モード</div>
             <div class="cn-bar-wrap">
                 <div class="cn-zone cn-zone-low">🔵 硝化モード<br>C:N ＜ 20</div>
                 <div class="cn-zone cn-zone-mid">─ 閾値 ─</div>
                 <div class="cn-zone cn-zone-high">🟢 同化モード<br>C:N ＞ 20</div>
             </div>
-            <div style="display:flex;font-size:.7em;color:#6e7681">
+            <div style="display:flex;font-size:.7em;color:#888888">
                 <span style="flex:2.5;text-align:center">NH₄⁺ → NO₃⁻（H⁺放出）</span>
                 <span style="flex:0.6"></span>
                 <span style="flex:2.5;text-align:center">NH₄⁺ → 菌体タンパク</span>
@@ -2055,7 +2066,7 @@
 
         <p>すなわち、炭素源を投入してC:N比を十分に高めることで、アンモニアの処理経路を硝化（酸化）から同化（菌体取り込み）へ切り替えることが可能となる。</p>
 
-        <h3>増殖速度の差——なぜ硝化サイクルがバイパスされるか</h3>
+        <h3>1.2.2 増殖速度の差——なぜ硝化サイクルがバイパスされるか</h3>
         <p>この経路切り替えが成立するもう一つの条件は、従属栄養細菌と硝化菌の増殖速度差にある。</p>
 
         <div class="holo-table-wrap fade-in">
@@ -2084,50 +2095,50 @@
         <p>十分な炭素源が存在する条件下では、従属栄養細菌が硝化菌より桁違いに速く増殖し、利用可能なアンモニアを先に消費する。結果として、硝化サイクル（NH₄⁺ → NO₂⁻ → NO₃⁻）は事実上バイパスされる。</p>
 
         <div class="holo-warn-yellow fade-in">
-            <strong>⚠ 速度論的な前提：</strong> 従属栄養細菌の増殖速度は硝化細菌より速い。十分な炭素源（C:N比 ≧ 5〜10 程度）が維持されている限り、アンモニアは硝化される前に同化される。この競合関係が成立することが本理論の中心的仮定である。
+            <strong>※ 速度論的な前提：</strong> 従属栄養細菌の増殖速度は硝化細菌より速い。十分な炭素源（C:N比 ≧ 5〜10 程度）が維持されている限り、アンモニアは硝化される前に同化される。この競合関係が成立することが本理論の中心的仮定である。
         </div>
 
-        <div class="holo-card fade-in" style="border-left:4px solid #3fb950;margin:20px 0">
+        <div class="holo-card fade-in" style="border-left:4px solid #1a7f37;margin:20px 0">
             <span class="holo-label">直接同化のフロー（まとめ）</span>
             <div style="display:flex;flex-direction:column;gap:6px;margin-top:8px;font-size:.88em">
                 <div style="display:flex;align-items:center;gap:10px">
-                    <span style="background:#2d1010;border:1px solid #f85149;border-radius:6px;padding:4px 10px;color:#f85149;white-space:nowrap">NH₄⁺（魚の排泄）</span>
-                    <span style="color:#30363d">→</span>
-                    <span style="color:#8b949e;font-size:.85em">炭素源を加えることでC:N比が上昇</span>
+                    <span style="background:#fce8e8;border:1px solid #cf222e;border-radius:6px;padding:4px 10px;color:#cf222e;white-space:nowrap">NH₄⁺（魚の排泄）</span>
+                    <span style="color:#d0d7de">→</span>
+                    <span style="color:#666666;font-size:.85em">炭素源を加えることでC:N比が上昇</span>
                 </div>
                 <div style="display:flex;align-items:center;gap:10px">
-                    <span style="background:#0d2440;border:1px solid #58a6ff;border-radius:6px;padding:4px 10px;color:#58a6ff;white-space:nowrap">従属栄養細菌が増殖</span>
-                    <span style="color:#30363d">→</span>
-                    <span style="color:#8b949e;font-size:.85em">NH₄⁺を窒素源として菌体タンパクに同化（酸化しない）</span>
+                    <span style="background:#eff6ff;border:1px solid #003366;border-radius:6px;padding:4px 10px;color:#003366;white-space:nowrap">従属栄養細菌が増殖</span>
+                    <span style="color:#d0d7de">→</span>
+                    <span style="color:#666666;font-size:.85em">NH₄⁺を窒素源として菌体タンパクに同化（酸化しない）</span>
                 </div>
                 <div style="display:flex;align-items:center;gap:10px">
-                    <span style="background:#0a2a14;border:1px solid #3fb950;border-radius:6px;padding:4px 10px;color:#3fb950;white-space:nowrap">H⁺放出ゼロ</span>
-                    <span style="color:#30363d">→</span>
-                    <span style="color:#8b949e;font-size:.85em">pH低下の原因が消失 → pHが底床の化学平衡点で安定（pHロック）</span>
+                    <span style="background:#f0fdf4;border:1px solid #1a7f37;border-radius:6px;padding:4px 10px;color:#1a7f37;white-space:nowrap">H⁺放出ゼロ</span>
+                    <span style="color:#d0d7de">→</span>
+                    <span style="color:#666666;font-size:.85em">pH低下の原因が消失 → pHが底床の化学平衡点で安定（pHロック）</span>
                 </div>
             </div>
         </div>
 
         <hr>
 
-        <h2 id="sec-foodchain">3. デトリタス食性生物による窒素循環</h2>
+        <h2 id="sec-foodchain">1.3 デトリタス食性生物による窒素循環</h2>
 
-        <h3>理論原理</h3>
+        <h3>1.3.1 理論原理</h3>
         <p>本節では、底生のデトリタス食性生物を総称して<strong>ベントス</strong>と呼ぶ。イトミミズ・ヨコエビ・ドジョウなどがこれに該当し、微小種・大型種を問わず理論的には同じ役割を果たす。</p>
         <p>前節で述べた通り、従属栄養細菌はアンモニアを菌体バイオマスに変換する。しかし、これだけではバイオマスが水槽内に蓄積し続ける。本理論の第二の柱は、このバイオマスを<strong>ベントスに捕食させ、さらにそのベントスをメインタンクの魚に捕食させる</strong>ことで、窒素を食物連鎖内で循環させることにある。</p>
 
-        <h3>循環の手段——フルオートと手動</h3>
+        <h3>1.3.2 循環の手段——フルオートと手動</h3>
         <p>ベントスをメインタンクに戻す方法は、実装上の選択肢となる。</p>
         <div class="benthos-grid fade-in">
             <div class="benthos-card benthos-auto">
-                <span class="benthos-tag">⚡ フルオート方式</span>
+                <span class="benthos-tag">■ フルオート方式</span>
                 <div class="benthos-row"><span class="benthos-key">ベントス</span>イトミミズ・ヨコエビ等（微小種）</div>
                 <div class="benthos-row"><span class="benthos-key">移送</span>給水ポンプで常時自動供給</div>
                 <div class="benthos-row"><span class="benthos-key">捕食者</span>小〜中型魚</div>
                 <div class="benthos-row"><span class="benthos-key">特徴</span>人手不要・24時間ループ稼働</div>
             </div>
             <div class="benthos-card benthos-manual">
-                <span class="benthos-tag">🤲 手動 / 大型ポンプ方式</span>
+                <span class="benthos-tag">■ 手動 / 大型ポンプ方式</span>
                 <div class="benthos-row"><span class="benthos-key">ベントス</span>ドジョウ等（大型種）</div>
                 <div class="benthos-row"><span class="benthos-key">移送</span>人の手で移送 or 大型ポンプ</div>
                 <div class="benthos-row"><span class="benthos-key">捕食者</span>大型肉食魚</div>
@@ -2136,7 +2147,8 @@
         </div>
         <p>本稿で報告するシステムでは、家庭用ポンプの現実的なサイズを考慮し、微小なベントス（イトミミズ・ヨコエビ等）によるフルオート方式を採用した。</p>
 
-        <h3>物質循環の模式図</h3>
+        <h3>1.3.3 物質循環の模式図</h3>
+        <p>メインタンクとサンプの間で物質が循環する全体像を以下の模式図に示す。</p>
 
         <!-- 物質循環図（V3: メイン上・サンプ下・双方向コネクター） -->
         <style>
@@ -2153,16 +2165,17 @@
                 100% { top: -12px; opacity: 0 }
             }
         </style>
+    <link rel="stylesheet" href="../ibee.css">
         <div class="fade-in" style="max-width:460px;margin:20px auto">
 
             <!-- BOX 1: メインタンク（上＝物理的な高い位置） -->
-            <div style="border:1px solid #3fb950;background:#0a1f10;border-radius:10px;padding:14px 18px">
-                <div style="font-size:.68em;text-transform:uppercase;letter-spacing:.06em;color:#3fb950;font-weight:700;margin-bottom:10px">メインタンク（展示）</div>
-                <div style="font-size:.86em;color:#c9d1d9;line-height:2">
-                    🐟 魚がベントスを捕食<br>
-                    💚 魚が成長<br>
-                    💩 排泄物・残餌が発生<br>
-                    🌊 オーバーフローでサンプへ落水
+            <div style="border:1px solid #1a7f37;background:#f0fdf4;border-radius:10px;padding:14px 18px">
+                <div style="font-size:.68em;text-transform:uppercase;letter-spacing:.06em;color:#1a7f37;font-weight:700;margin-bottom:10px">メインタンク（展示）</div>
+                <div style="font-size:.86em;color:#333333;line-height:2">
+                     魚がベントスを捕食<br>
+                    魚が成長<br>
+                    排泄物・残餌が発生<br>
+                    オーバーフローでサンプへ落水
                 </div>
             </div>
 
@@ -2171,80 +2184,80 @@
 
                 <!-- 左: オーバーフロー落水（青・下向き） -->
                 <div style="display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 0">
-                    <div style="font-size:.68em;color:#58a6ff;text-align:center;line-height:1.4">
-                        ⬇ オーバーフロー落水<br>
-                        <span style="color:#484f58;font-size:.9em">排泄物・残餌含む水</span>
+                    <div style="font-size:.68em;color:#003366;text-align:center;line-height:1.4">
+                        ▼ オーバーフロー落水<br>
+                        <span style="color:#888888;font-size:.9em">排泄物・残餌含む水</span>
                     </div>
-                    <div style="flex:1;width:2px;background:#21262d;position:relative;overflow:hidden;border-radius:2px">
-                        <div style="width:10px;height:10px;border-radius:50%;background:#58a6ff;position:absolute;left:50%;transform:translateX(-50%);top:-12px;animation:vdot-dn 1.5s linear infinite;animation-delay:0s"></div>
-                        <div style="width:10px;height:10px;border-radius:50%;background:#58a6ff;position:absolute;left:50%;transform:translateX(-50%);top:-12px;animation:vdot-dn 1.5s linear infinite;animation-delay:.75s"></div>
+                    <div style="flex:1;width:2px;background:#d0d7de;position:relative;overflow:hidden;border-radius:2px">
+                        <div style="width:10px;height:10px;border-radius:50%;background:#003366;position:absolute;left:50%;transform:translateX(-50%);top:-12px;animation:vdot-dn 1.5s linear infinite;animation-delay:0s"></div>
+                        <div style="width:10px;height:10px;border-radius:50%;background:#003366;position:absolute;left:50%;transform:translateX(-50%);top:-12px;animation:vdot-dn 1.5s linear infinite;animation-delay:.75s"></div>
                     </div>
                 </div>
 
                 <!-- 右: 給水ポンプ（緑・上向き） -->
                 <div style="display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 0">
-                    <div style="font-size:.68em;color:#3fb950;text-align:center;line-height:1.4">
-                        ⬆ 給水ポンプ<br>
-                        <span style="color:#484f58;font-size:.9em">処理済み水＋ベントス</span>
+                    <div style="font-size:.68em;color:#1a7f37;text-align:center;line-height:1.4">
+                        ▲ 給水ポンプ<br>
+                        <span style="color:#888888;font-size:.9em">処理済み水＋ベントス</span>
                     </div>
-                    <div style="flex:1;width:2px;background:#21262d;position:relative;overflow:hidden;border-radius:2px">
-                        <div style="width:10px;height:10px;border-radius:50%;background:#3fb950;position:absolute;left:50%;transform:translateX(-50%);top:calc(100% + 12px);animation:vdot-up 1.5s linear infinite;animation-delay:0s"></div>
-                        <div style="width:10px;height:10px;border-radius:50%;background:#3fb950;position:absolute;left:50%;transform:translateX(-50%);top:calc(100% + 12px);animation:vdot-up 1.5s linear infinite;animation-delay:.75s"></div>
+                    <div style="flex:1;width:2px;background:#d0d7de;position:relative;overflow:hidden;border-radius:2px">
+                        <div style="width:10px;height:10px;border-radius:50%;background:#1a7f37;position:absolute;left:50%;transform:translateX(-50%);top:calc(100% + 12px);animation:vdot-up 1.5s linear infinite;animation-delay:0s"></div>
+                        <div style="width:10px;height:10px;border-radius:50%;background:#1a7f37;position:absolute;left:50%;transform:translateX(-50%);top:calc(100% + 12px);animation:vdot-up 1.5s linear infinite;animation-delay:.75s"></div>
                     </div>
                 </div>
             </div>
 
             <!-- 外部投入: 炭素源（ループ外） -->
             <div style="display:flex;align-items:center;gap:8px;margin:0 0 4px 12px">
-                <span style="font-size:.7em;color:#e3b341;background:#1a1400;border:1px solid #e3b341;border-radius:4px;padding:3px 10px;white-space:nowrap">
-                    📦 炭素源エキス（飼育者が定期投入）
+                <span style="font-size:.7em;color:#9a6700;background:#fffbeb;border:1px solid #9a6700;border-radius:4px;padding:3px 10px;white-space:nowrap">
+                    ■ 炭素源エキス（飼育者が定期投入）
                 </span>
-                <span style="color:#e3b341;font-size:.85em">↓</span>
+                <span style="color:#9a6700;font-size:.85em">↓</span>
             </div>
 
             <!-- BOX 2: サンプ（下＝物理的な低い位置） -->
-            <div style="border:1px solid #58a6ff;background:#0a1929;border-radius:10px;padding:14px 18px">
-                <div style="font-size:.68em;text-transform:uppercase;letter-spacing:.06em;color:#58a6ff;font-weight:700;margin-bottom:10px">サンプ（処理の主舞台）</div>
-                <div style="font-size:.86em;color:#c9d1d9;line-height:2">
-                    🦠 バクテリア爆増・NH₄⁺を直接同化<br>
-                    ⬛ 菌体バイオマスが蓄積<br>
-                    🐛 ベントスが菌体を捕食・増殖
+            <div style="border:1px solid #003366;background:#eff6ff;border-radius:10px;padding:14px 18px">
+                <div style="font-size:.68em;text-transform:uppercase;letter-spacing:.06em;color:#003366;font-weight:700;margin-bottom:10px">サンプ（処理の主舞台）</div>
+                <div style="font-size:.86em;color:#333333;line-height:2">
+                     細菌が急速に増殖・NH₄⁺を直接同化<br>
+                    菌体バイオマスが蓄積<br>
+                     ベントスが菌体を捕食・増殖
                 </div>
             </div>
 
-            <p style="text-align:center;margin:12px 0 0;font-size:.78em;color:#8b949e">この循環が自律して回り続けることで、換水が不要になる</p>
+            <p style="text-align:center;margin:12px 0 0;font-size:.78em;color:#666666">この循環が自律して回り続けることで、換水が不要になる</p>
 
         </div>
 
         <hr>
 
-        <h2 id="sec-consequences">4. 理論から導出される帰結</h2>
+        <h2 id="sec-consequences">1.4 理論から導出される帰結</h2>
         <p>上記のメカニズム——炭素同化によるアンモニア直接同化＋デトリタス食性生物による食物連鎖——から、以下の帰結が理論的に導出される。</p>
 
 
 
         <div class="zero-grid">
             <div class="zero-card fade-in fade-in-delay-1">
-                <div class="zero-icon">🍽️</div>
+                <div class="zero-icon"></div>
                 <div class="zero-title">帰結①：無給餌</div>
                 <div class="zero-body">サンプで増殖したデトリタス食性生物がメインタンクの魚の餌となる。フルオート方式では、ポンプを通じて常時自動供給される。</div>
             </div>
             <div class="zero-card fade-in fade-in-delay-2">
-                <div class="zero-icon">💨</div>
+                <div class="zero-icon"></div>
                 <div class="zero-title">帰結②：CO₂無添加</div>
                 <div class="zero-body">好気性従属栄養細菌の代謝副産物としてCO₂が常時産生される。この量はオーバーフロー落水によるガス抜けを上回り、水草の光合成に十分なCO₂を供給しうる。</div>
             </div>
             <div class="zero-card fade-in fade-in-delay-3">
-                <div class="zero-icon">♾️</div>
+                <div class="zero-icon"></div>
                 <div class="zero-title">帰結③：底床非嫌気化</div>
                 <div class="zero-body">デトリタス食性生物（ベントス等）が底床を物理的に撹拌し続けるため、底床の嫌気化（硫化水素発生）が抑制される。リセットの必要性が低減する。</div>
             </div>
         </div>
 
-        <h3 id="sec-phlock-ja">帰結④：pHロック</h3>
+        <h3 id="sec-phlock-ja">pHロック</h3>
         <p>本理論の特筆すべき帰結として、<strong>pHロック</strong>現象がある。そのメカニズムは以下の因果連鎖で説明される。</p>
 
-        <div class="holo-card fade-in" style="border-left:4px solid #58a6ff">
+        <div class="holo-card fade-in" style="border-left:4px solid #003366">
             <span class="holo-label">pHロックの因果連鎖</span>
             <p style="margin:4px 0 0;font-size:.88em;line-height:2">
                 ① 炭素源投入 → C:N比上昇<br>
@@ -2256,47 +2269,47 @@
 
         <p>重要な点として、<strong>底床はシステムの前提条件ではなく、pHの平衡点を決めるパラメータ</strong>である。サンプに多孔質素材（バクテリアの定着面）さえあれば本理論は機能し、メインタンクはベアタンクでも理論上成立する。</p>
 
-        <div class="fade-in" style="max-width:480px;margin:16px auto;background:#0d1117;border:1px solid #30363d;border-radius:10px;padding:16px 12px">
-            <div style="text-align:center;font-size:.72em;color:#8b949e;letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px">底床素材と安定pH値の関係</div>
+        <div class="fade-in" style="max-width:480px;margin:16px auto;background:#ffffff;border:1px solid #d0d7de;border-radius:10px;padding:16px 12px">
+            <div style="text-align:center;font-size:.72em;color:#666666;letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px">底床素材と安定pH値の関係</div>
 
             <!-- 焼赤玉土+ピートモス（強酸性） -->
-            <div class="fade-in" style="display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid #21262d">
-                <div style="min-width:120px;font-size:.78em;color:#c9d1d9;font-weight:600">焼赤玉土+ピートモス</div>
-                <div style="flex:1;height:6px;background:#161b22;border-radius:3px;position:relative">
-                    <div style="position:absolute;left:30%;width:3px;height:12px;top:-3px;background:#d29922;border-radius:2px"></div>
+            <div class="fade-in" style="display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid #d0d7de">
+                <div style="min-width:120px;font-size:.78em;color:#333333;font-weight:600">焼赤玉土+ピートモス</div>
+                <div style="flex:1;height:6px;background:#f5f7fa;border-radius:3px;position:relative">
+                    <div style="position:absolute;left:30%;width:3px;height:12px;top:-3px;background:#9a6700;border-radius:2px"></div>
                 </div>
-                <div style="min-width:70px;text-align:right;font-size:.82em;font-weight:700;color:#d29922">pH 5.5〜6.5</div>
+                <div style="min-width:70px;text-align:right;font-size:.82em;font-weight:700;color:#9a6700">pH 5.5〜6.5</div>
             </div>
 
             <!-- 焼赤玉土 -->
-            <div class="fade-in" style="display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid #21262d">
-                <div style="min-width:120px;font-size:.78em;color:#c9d1d9;font-weight:600">焼赤玉土</div>
-                <div style="flex:1;height:6px;background:#161b22;border-radius:3px;position:relative">
-                    <div style="position:absolute;left:48.5%;width:3px;height:12px;top:-3px;background:#58a6ff;border-radius:2px"></div>
+            <div class="fade-in" style="display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid #d0d7de">
+                <div style="min-width:120px;font-size:.78em;color:#333333;font-weight:600">焼赤玉土</div>
+                <div style="flex:1;height:6px;background:#f5f7fa;border-radius:3px;position:relative">
+                    <div style="position:absolute;left:48.5%;width:3px;height:12px;top:-3px;background:#003366;border-radius:2px"></div>
                 </div>
-                <div style="min-width:70px;text-align:right;font-size:.82em;font-weight:700;color:#58a6ff">pH 6.85</div>
+                <div style="min-width:70px;text-align:right;font-size:.82em;font-weight:700;color:#003366">pH 6.85</div>
             </div>
 
             <!-- 大磯砂（中性） -->
-            <div class="fade-in" style="display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid #21262d">
-                <div style="min-width:120px;font-size:.78em;color:#c9d1d9;font-weight:600">大磯砂</div>
-                <div style="flex:1;height:6px;background:#161b22;border-radius:3px;position:relative">
-                    <div style="position:absolute;left:50%;width:3px;height:12px;top:-3px;background:#8b949e;border-radius:2px"></div>
+            <div class="fade-in" style="display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid #d0d7de">
+                <div style="min-width:120px;font-size:.78em;color:#333333;font-weight:600">大磯砂</div>
+                <div style="flex:1;height:6px;background:#f5f7fa;border-radius:3px;position:relative">
+                    <div style="position:absolute;left:50%;width:3px;height:12px;top:-3px;background:#666666;border-radius:2px"></div>
                 </div>
-                <div style="min-width:70px;text-align:right;font-size:.82em;font-weight:700;color:#8b949e">pH 7.0</div>
+                <div style="min-width:70px;text-align:right;font-size:.82em;font-weight:700;color:#666666">pH 7.0</div>
             </div>
 
             <!-- サンゴ砂（アルカリ性） -->
             <div class="fade-in" style="display:flex;align-items:center;gap:8px;padding:6px 0">
-                <div style="min-width:120px;font-size:.78em;color:#c9d1d9;font-weight:600">サンゴ砂</div>
-                <div style="flex:1;height:6px;background:#161b22;border-radius:3px;position:relative">
-                    <div style="position:absolute;left:80%;width:3px;height:12px;top:-3px;background:#3fb950;border-radius:2px"></div>
+                <div style="min-width:120px;font-size:.78em;color:#333333;font-weight:600">サンゴ砂</div>
+                <div style="flex:1;height:6px;background:#f5f7fa;border-radius:3px;position:relative">
+                    <div style="position:absolute;left:80%;width:3px;height:12px;top:-3px;background:#1a7f37;border-radius:2px"></div>
                 </div>
-                <div style="min-width:70px;text-align:right;font-size:.82em;font-weight:700;color:#3fb950">pH 8.0〜8.4</div>
+                <div style="min-width:70px;text-align:right;font-size:.82em;font-weight:700;color:#1a7f37">pH 8.0〜8.4</div>
             </div>
 
             <!-- 軸ラベル -->
-            <div style="display:flex;justify-content:space-between;font-size:.6em;color:#484f58;margin-top:6px;padding:0 2px">
+            <div style="display:flex;justify-content:space-between;font-size:.6em;color:#888888;margin-top:6px;padding:0 2px">
                 <span>酸性 4.0</span><span>中性 7.0</span><span>アルカリ性 9.0</span>
             </div>
         </div>
@@ -2304,12 +2317,13 @@
 
         <hr>
         <nav class="page-nav-bottom">
-            <a href="index.html" class="page-nav-btn">📑 目次</a>
+            <a href="index.html" class="page-nav-btn">目次</a>
             <div class="page-nav-spacer"></div>
-            <a href="part2.html" class="page-nav-btn">Part 2 構築可能な環境 ▶</a>
+            <a href="part2.html" class="page-nav-btn">第２章 構築可能な環境 →</a>
         </nav>
 
     </div>
+    <footer class="ibee-footer"><div class="ibee-footer-inner"><div class="ibee-footer-org">生物環境技術研究会</div><div class="ibee-footer-en">Institute of Biological Environmental Engineering</div><div class="ibee-footer-since">Since. 1999</div><div class="ibee-footer-cite"><div class="ibee-footer-cite-label">推奨引用形式</div>生物環境技術研究会 (2026). ホロビオントアクアリウム理論. Retrieved from https://holobiont-aqua.github.io/holobiont-aquarium/ja/</div><div class="ibee-footer-note">※本サイトは個人が運営する技術情報サイトです</div></div></footer>
 </body>
 
 </html>
