@@ -240,9 +240,51 @@
             border-bottom: 1px solid var(--ibee-border-light);
             color: var(--ibee-text);
         }
+
+        /* ===== Language Switcher ===== */
+        .lang-switch {
+            position: fixed;
+            top: 16px;
+            right: 16px;
+            z-index: 9999;
+            display: flex;
+            gap: 0;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid #d0d7de;
+            background: rgba(255, 255, 255, .95);
+            backdrop-filter: blur(8px);
+            font-size: .78em;
+            transition: opacity .4s, transform .4s;
+        }
+        .lang-switch.hidden {
+            opacity: 0;
+            transform: translateY(-20px);
+            pointer-events: none;
+        }
+        @media (max-width:600px) {
+            .lang-switch { top: 8px; right: 8px; font-size: .7em }
+            .lang-btn { padding: 5px 10px }
+        }
+        .lang-btn {
+            padding: 6px 14px;
+            color: #666666;
+            text-decoration: none;
+            transition: all .2s;
+            font-weight: 600;
+        }
+        .lang-btn:hover { color: #333333 }
+        .lang-btn.active {
+            background: #003366;
+            color: #ffffff;
+        }
     </style>
 </head>
 <body>
+    <div class="lang-switch">
+        <span class="lang-btn active">EN</span>
+        <a href="../ibee_top.html" class="lang-btn">日本語</a>
+    </div>
     <header class="ibee-header">
         <div class="ibee-header-inner">
             <a href="ibee_top.html" class="ibee-header-brand">
@@ -259,8 +301,7 @@
             <a href="ibee_top.html" class="active">Home</a>
             <a href="#reports">Reports</a>
             <a href="#about">About</a>
-            <span style="flex:1"></span>
-            <a href="../ibee_top.html" style="font-size:.82em;padding:4px 12px;border:1px solid var(--ibee-border);border-radius:14px;color:var(--ibee-text-light);text-decoration:none;transition:all .2s" onmouseover="this.style.borderColor='var(--ibee-navy)';this.style.color='var(--ibee-navy)'" onmouseout="this.style.borderColor='var(--ibee-border)';this.style.color='var(--ibee-text-light)'">🌐 日本語</a>
+
         </div>
     </nav>
 
@@ -336,5 +377,18 @@
             <div class="ibee-footer-note">* This site is operated by an individual as a technical information resource</div>
         </div>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const langSw = document.querySelector('.lang-switch');
+            if (langSw) {
+                let hideTimer;
+                const showSwitch = () => { langSw.classList.remove('hidden'); clearTimeout(hideTimer); hideTimer = setTimeout(() => langSw.classList.add('hidden'), 3000); };
+                window.addEventListener('scroll', () => { langSw.classList.add('hidden'); clearTimeout(hideTimer); hideTimer = setTimeout(() => langSw.classList.remove('hidden'), 800); }, { passive: true });
+                langSw.addEventListener('mouseenter', showSwitch);
+                document.addEventListener('touchstart', (e) => { if (langSw.contains(e.target)) { showSwitch() } });
+                setTimeout(() => langSw.classList.add('hidden'), 4000);
+            }
+        });
+    </script>
 </body>
 </html>
