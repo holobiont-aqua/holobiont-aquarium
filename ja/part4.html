@@ -1812,10 +1812,10 @@
             <div class="part-subtitle">著者の水槽における1年間の運用記録</div>
         </div>
 
-                <h2 id="sec-impl">著者の実装仕様</h2>
+                <h2 id="sec-impl">4.1 著者の実装仕様</h2>
         <p>以下は著者が実際に採用した具体的な構成である。第３章の汎用的手順を本環境に適用した実装例として参照されたい。</p>
 
-        <h3>物理構成</h3>
+        <h3>4.1.1 物理構成</h3>
         <p>水槽システムの物理的な構成を以下に示す。</p>
         <div class="holo-table-wrap fade-in">
             <table class="holo-table">
@@ -1830,7 +1830,7 @@
             </table>
         </div>
 
-        <h3>生体構成</h3>
+        <h3>4.1.2 生体構成</h3>
         <h4>メインタンク</h4>
         <p>メインタンクの生体構成を以下に示す。低層から頂点捕食者まで、食物連鎖の各層を意識して選定している。</p>
         <div class="holo-table-wrap fade-in">
@@ -1856,7 +1856,7 @@
             <div class="photo-caption">図. 著者の水槽全景 — 40×60×30cm特注オーバーフロー水槽。焼赤玉土底床、古葉石レイアウト。</div>
         </div>
 
-        <h3>炭素源エキスの構成</h3>
+        <h3>4.1.3 炭素源エキスの構成</h3>
         <h4>ベース液</h4>
         <p>3種の炭素源を以下の比率で混合し、ポンプボトルに充填する。</p>
         <div class="holo-table-wrap fade-in">
@@ -1904,7 +1904,7 @@
             バナナは必ず可食部（果肉）のみ使用すること。皮には農薬が残留している場合があり、エキスに溶け出してエビ類が全滅する危険がある。
         </div>
 
-        <h3>特筆事項：淡水性ヒドロ虫群体の発生</h3>
+        <h3>4.1.4 特筆事項：淡水性ヒドロ虫群体の発生</h3>
         <p>運用開始から約1年後、サンプ内に淡水性ヒドロ虫群体と考えられる生体の着生が確認された。樹状に分岐したストロン（匍匐茎）を伸ばし、水草やガラス面に密に着生する。淡水環境での報告例が少ない刺胞動物であり、本システムの豊富なバクテリア・微小甲殻類がヒドロ虫の定着を可能にした可能性がある。生態系の複雑化を示す興味深い観察事例として記録する。</p>
         <div class="photo-wrap fade-in">
             <img src="../photos/hydroid_colony.jpg" alt="淡水性ヒドロ虫群体 接写" loading="lazy">
@@ -1916,9 +1916,9 @@
         </div>
 
         <hr>
-<h2 id="sec-data">4.1 実測データと観察結果</h2>
+<h2 id="sec-data">4.2 実測データと観察結果</h2>
 
-        <h3>4.1.1 pH安定性</h3>
+        <h3>4.2.1 pH安定性</h3>
         <!-- pHカウンターアニメーション -->
         <div class="ph-counter-wrap fade-in">
             <div class="ph-value"><span id="ph-count">6.85</span><span class="ph-unit">pH</span></div>
@@ -1932,40 +1932,7 @@
         <p>pH 6.85が1年間にわたり安定的に維持されている。この結果は、硝化プロセスが事実上バイパスされていること——すなわち、硝酸によるpH低下が発生していないこと——を示唆するデータである。焼赤玉土の緩衝平衡点と一致しており、第１章 セクション4の「pHロック」仮説を支持する観察結果といえる。
         </p>
 
-        <div class="holo-table-wrap fade-in">
-            <table class="holo-table">
-                <tr>
-                    <th>項目</th>
-                    <th>詳細</th>
-                </tr>
-                <tr>
-                    <td data-label="項目">水槽サイズ</td>
-                    <td data-label="詳細">40×60×30cm（縦長・特注品）</td>
-                </tr>
-                <tr>
-                    <td data-label="項目">サンプ</td>
-                    <td data-label="詳細">30cmハイタイプ</td>
-                </tr>
-                <tr>
-                    <td data-label="項目">照明</td>
-                    <td data-label="詳細">ブリム パネルA（植物用ライト）</td>
-                </tr>
-                <tr>
-                    <td data-label="項目">水温</td>
-                    <td data-label="詳細">25〜26℃（ヒーター管理）</td>
-                </tr>
-                <tr>
-                    <td data-label="項目">運用期間</td>
-                    <td data-label="詳細">約1年間</td>
-                </tr>
-                <tr>
-                    <td data-label="項目">水換え</td>
-                    <td data-label="詳細">なし（足し水のみ）</td>
-                </tr>
-            </table>
-        </div>
-
-        <h3>4.1.3 日常の維持管理</h3>
+        <h3>4.2.2 日常の維持管理</h3>
         <div class="maint-grid fade-in">
             <div class="maint-card"><span class="maint-freq maint-freq-daily">毎日</span><span
                     class="maint-text">炭素源エキスをサンプへ1プッシュ</span></div>
@@ -1978,41 +1945,6 @@
         </div>
         <p>維持管理は実質的に「1プッシュと眺めること」に収束する。</p>
 
-        <hr>
-
-        <h2 id="sec-constraints">4.2 適用条件と制約</h2>
-
-        <details class="holo-details fade-in">
-            <summary>必須条件</summary>
-            <div class="details-body">
-                <ol>
-                    <li>新規立ち上げ時にのみ実践すること。立ち上げ済みの水槽への後付けは高リスク。</li>
-                    <li>オーバーフロー式が必須。外部フィルターは一瞬でヘドロが詰まるため特に危険。</li>
-                </ol>
-            </div>
-        </details>
-
-        <details class="holo-details fade-in">
-            <summary>向かない人</summary>
-            <div class="details-body">
-                <ul>
-                    <li><strong>ベントスへの嫌悪感がある人：</strong>サンプにはイトミミズ・ヨコエビ・ミズムシ等が大量生息し、メインタンクにも流入する。</li>
-                    <li><strong>アクアリウムのお世話を楽しみたい人：</strong>システムが安定すると、やることがほとんどなくなる。</li>
-                </ul>
-            </div>
-        </details>
-
-        <details class="holo-details fade-in">
-            <summary>オプション</summary>
-            <div class="details-body">
-                <ul>
-                    <li>浮遊物が気になる場合：サンプに淡水海綿を入れることで生物的に除去できる</li>
-                    <li>投入の完全自動化：ドーシングポンプの活用</li>
-                </ul>
-            </div>
-        </details>
-
-        <hr>
 
         <h2 id="sec-cost">4.3 コストと入手性</h2>
         <p>本システムの導入に必要な主な資材とそのコスト・入手先を以下に示す。</p>
