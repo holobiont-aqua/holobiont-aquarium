@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://holobiont-aqua.github.io/IBEE/sitemap.xml

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- トップページ -->
+  <url>
+    <loc>https://holobiont-aqua.github.io/IBEE/ibee_top.html</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- 概要（目次） -->
+  <url>
+    <loc>https://holobiont-aqua.github.io/IBEE/ja/index.html</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 第1章 理論 -->
+  <url>
+    <loc>https://holobiont-aqua.github.io/IBEE/ja/part1.html</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 第2章 環境構築 -->
+  <url>
+    <loc>https://holobiont-aqua.github.io/IBEE/ja/part2.html</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 第3章 構築方法 -->
+  <url>
+    <loc>https://holobiont-aqua.github.io/IBEE/ja/part3.html</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 第4章 実測 -->
+  <url>
+    <loc>https://holobiont-aqua.github.io/IBEE/ja/part4.html</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 第5章 考察 -->
+  <url>
+    <loc>https://holobiont-aqua.github.io/IBEE/ja/part5.html</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
