@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>第２章 — 構築可能な環境 | ホロビオントアクアリウム理論</title>
+    <title>Part 2 — 構築可能な環境 | ホロビオントアクアリウム理論</title>
     <meta name="description" content="ホロビオントアクアリウム理論が適用可能な構成とパラメータの選択肢。底床・デトリタス食性生物・炭素源の自由度を解説。">
     <meta name="keywords" content="無換水,換水ゼロ,水換え不要,アクアリウム,炭素源,ウォッカ法,ベントス,硝酸塩除去,オーバーフロー水槽,水草水槽,大型水槽,自律型生態系,ホロビオント">
-    <meta property="og:title" content="第２章 — 構築可能な環境 | ホロビオントアクアリウム理論">
+    <meta property="og:title" content="Part 2 — 構築可能な環境 | ホロビオントアクアリウム理論">
     <meta property="og:description" content="ホロビオントアクアリウム理論が適用可能な構成とパラメータの選択肢。底床・デトリタス食性生物・炭素源の自由度を解説。">
     <meta property="og:image" content="https://holobiont-aqua.github.io/holobiont-aquarium/photos/tank_overview.jpg">
     <meta property="og:type" content="article">
@@ -26,16 +26,7 @@
     </script>
 </head>
 
-<body style="margin:0;padding:0;background:#ffffff;font-family:'Inter',sans-serif;">
-    <header class="ibee-header"><div class="ibee-header-inner"><a href="../ibee_top.html" class="ibee-header-brand"><img src="../photos/ibee_logo.svg" alt="IBEE" class="ibee-header-logo"><div><div class="ibee-header-title">生物環境技術研究会</div><div class="ibee-header-subtitle">Institute of Biological Environmental Engineering</div></div></a></div></header>
-    <nav class="ibee-nav"><div class="ibee-nav-inner">
-        <a href="index.html">概要</a>
-        <a href="part1.html">第１章 理論</a>
-        <a href="part2.html" class="active">第２章 環境構築</a>
-        <a href="part3.html">第３章 構築方法</a>
-        <a href="part4.html">第４章 実測</a>
-        <a href="part5.html">第５章 考察</a>
-    </div></nav>
+<body style="margin:0;padding:0;background:#0d1117;font-family:'Inter',sans-serif;">
 
     <style>
         /* ===== 基本 ===== */
@@ -46,9 +37,9 @@
         .holo-body {
             font-size: 16px;
             line-height: 1.85;
-            color: #333333;
+            color: #c9d1d9;
             word-break: break-word;
-            background: #ffffff;
+            background: #0d1117;
             max-width: 800px;
             margin: 0 auto;
             padding: 20px
@@ -56,9 +47,9 @@
 
         /* ===== ボックス類 ===== */
         .holo-summary {
-            background: #ffffff;
-            border: 1px solid #d0d7de;
-            border-left: 4px solid #003366;
+            background: #0d1117;
+            border: 1px solid #30363d;
+            border-left: 4px solid #58a6ff;
             border-radius: 8px;
             padding: 16px 18px;
             margin: 20px 0
@@ -71,21 +62,21 @@
         }
 
         .holo-card {
-            background: #f5f7fa;
-            border: 1px solid #d0d7de;
+            background: #161b22;
+            border: 1px solid #30363d;
             border-radius: 8px;
             padding: 14px 16px;
             margin: 10px 0
         }
 
         .holo-card-green {
-            border-left: 3px solid #1a7f37
+            border-left: 3px solid #3fb950
         }
 
         .holo-warn-red {
-            background: #fef2f2;
-            border: 1px solid #cf222e;
-            border-left: 4px solid #cf222e;
+            background: #1c0a0a;
+            border: 1px solid #f85149;
+            border-left: 4px solid #f85149;
             border-radius: 8px;
             padding: 14px 16px;
             margin: 14px 0;
@@ -93,26 +84,26 @@
         }
 
         .holo-warn-yellow {
-            background: #fffbeb;
-            border: 1px solid #9a6700;
-            border-left: 4px solid #9a6700;
+            background: #1c1409;
+            border: 1px solid #d29922;
+            border-left: 4px solid #d29922;
             border-radius: 8px;
             padding: 14px 16px;
             margin: 14px 0
         }
 
         .holo-warn-purple {
-            background: #faf5ff;
-            border: 1px solid #7c3aed;
-            border-left: 4px solid #7c3aed;
+            background: #160d20;
+            border: 1px solid #8957e5;
+            border-left: 4px solid #8957e5;
             border-radius: 8px;
             padding: 14px 16px;
             margin: 14px 0
         }
 
         .holo-tip {
-            background: #f5f7fa;
-            border: 1px solid #d0d7de;
+            background: #161b22;
+            border: 1px solid #30363d;
             border-radius: 8px;
             padding: 14px 16px;
             margin: 14px 0
@@ -121,7 +112,7 @@
         .holo-blockquote {
             border-left: 3px solid #3d444d;
             padding: 4px 16px;
-            color: #666666;
+            color: #8b949e;
             margin: 16px 0;
             font-style: italic
         }
@@ -130,7 +121,7 @@
             font-size: .78em;
             text-transform: uppercase;
             letter-spacing: .07em;
-            color: #666666;
+            color: #8b949e;
             margin: 0 0 6px;
             display: block
         }
@@ -147,12 +138,12 @@
         }
 
         .holo-table th {
-            background: #f5f7fa;
-            color: #666666;
+            background: #161b22;
+            color: #8b949e;
             font-weight: 500;
             text-align: left;
             padding: 9px 12px;
-            border: 1px solid #d0d7de;
+            border: 1px solid #30363d;
             font-size: .8em;
             text-transform: uppercase;
             letter-spacing: .03em
@@ -160,14 +151,14 @@
 
         .holo-table td {
             padding: 9px 12px;
-            border: 1px solid #d0d7de;
-            color: #333333;
+            border: 1px solid #21262d;
+            color: #c9d1d9;
             vertical-align: top;
             line-height: 1.6
         }
 
         .holo-table tr:nth-child(even) td {
-            background: #ffffff
+            background: #0d1117
         }
 
         /* モバイル：行をカード化 */
@@ -190,8 +181,8 @@
             }
 
             .holo-table tr {
-                background: #f5f7fa;
-                border: 1px solid #d0d7de;
+                background: #161b22;
+                border: 1px solid #30363d;
                 border-radius: 8px;
                 margin-bottom: 10px;
                 overflow: hidden
@@ -203,7 +194,7 @@
 
             .holo-table td {
                 border: none;
-                border-bottom: 1px solid #d0d7de;
+                border-bottom: 1px solid #21262d;
                 padding: 8px 14px
             }
 
@@ -215,7 +206,7 @@
                 content: attr(data-label);
                 display: block;
                 font-size: .7em;
-                color: #003366;
+                color: #58a6ff;
                 text-transform: uppercase;
                 letter-spacing: .05em;
                 margin-bottom: 3px;
@@ -238,8 +229,8 @@
 
         /* ===== コードブロック ===== */
         .holo-pre {
-            background: #f5f7fa;
-            border: 1px solid #d0d7de;
+            background: #161b22;
+            border: 1px solid #30363d;
             border-radius: 8px;
             padding: 14px;
             overflow-x: auto;
@@ -247,7 +238,7 @@
             line-height: 1.7;
             font-size: .82em;
             white-space: pre;
-            color: #333333
+            color: #c9d1d9
         }
 
         /* ===== PC ===== */
@@ -323,7 +314,7 @@
             }
 
             50% {
-                box-shadow: 0 0 0 8px rgba(0, 51, 102, .15)
+                box-shadow: 0 0 0 8px rgba(88, 166, 255, .15)
             }
         }
 
@@ -343,44 +334,44 @@
         }
 
         .nc-node-base {
-            background: #f5f7fa;
-            border: 1px solid #d0d7de
+            background: #161b22;
+            border: 1px solid #30363d
         }
 
         .nc-node-danger {
-            background: #fce8e8;
-            border: 1px solid #cf222e
+            background: #2d1010;
+            border: 1px solid #f85149
         }
 
         .nc-node-warn {
             background: #2d1f08;
-            border: 1px solid #9a6700
+            border: 1px solid #d29922
         }
 
         .nc-node-acc {
-            background: #f0fdf4;
-            border: 1px solid #1a7f37
+            background: #16200a;
+            border: 1px solid #7ee787
         }
 
         .nc-node-sys {
-            background: #eff6ff;
-            border: 1px solid #003366;
+            background: #0d2440;
+            border: 1px solid #58a6ff;
             animation: nc-pulse 2s infinite, nc-fadein .5s ease both
         }
 
         .nc-node-out {
-            background: #f0fdf4;
-            border: 1px solid #1a7f37
+            background: #0a2a14;
+            border: 1px solid #3fb950
         }
 
         .nc-name {
-            color: #333333;
+            color: #e6edf3;
             font-weight: bold;
             font-size: .88em
         }
 
         .nc-sub {
-            color: #666666;
+            color: #8b949e;
             font-size: .74em;
             margin-top: 2px
         }
@@ -396,20 +387,20 @@
 
         .nc-badge-red {
             background: #3d0f0f;
-            color: #cf222e;
-            border: 1px solid #cf222e
+            color: #f85149;
+            border: 1px solid #f85149
         }
 
         .nc-badge-ora {
-            background: #fffbeb;
-            color: #9a6700;
-            border: 1px solid #9a6700
+            background: #2d1a06;
+            color: #d29922;
+            border: 1px solid #d29922
         }
 
         .nc-badge-yel {
             background: #1a2a0a;
-            color: #1a7f37;
-            border: 1px solid #1a7f37
+            color: #7ee787;
+            border: 1px solid #7ee787
         }
 
         .nc-conn {
@@ -426,7 +417,7 @@
             top: 0;
             bottom: 0;
             width: 2px;
-            background: #d0d7de;
+            background: #21262d;
             transform: translateX(-50%)
         }
 
@@ -434,7 +425,7 @@
             width: 8px;
             height: 8px;
             border-radius: 50%;
-            background: #003366;
+            background: #58a6ff;
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
@@ -442,16 +433,16 @@
         }
 
         .nc-dot-green {
-            background: #1a7f37
+            background: #3fb950
         }
 
         .nc-lbl {
-            background: #ffffff;
-            color: #666666;
+            background: #0d1117;
+            color: #8b949e;
             font-size: .72em;
             padding: 3px 10px;
             border-radius: 4px;
-            border: 1px solid #d0d7de;
+            border: 1px solid #21262d;
             position: relative;
             z-index: 1
         }
@@ -464,14 +455,14 @@
             border: 1px dashed #3d444d;
             border-radius: 8px;
             text-align: center;
-            color: #888888;
+            color: #484f58;
             font-size: .8em;
             text-decoration: line-through
         }
 
         .nc-label-sys {
             text-align: center;
-            color: #003366;
+            color: #58a6ff;
             font-size: .72em;
             letter-spacing: .1em;
             text-transform: uppercase;
@@ -512,25 +503,25 @@
         }
 
         .bl-box {
-            background: #f5f7fa;
-            border: 1px solid #d0d7de;
+            background: #161b22;
+            border: 1px solid #30363d;
             border-radius: 8px;
             padding: 10px 12px;
             font-size: .82em;
-            color: #333333;
+            color: #c9d1d9;
             text-align: center;
             width: 100%;
             line-height: 1.5
         }
 
         .bl-box-sump {
-            border-color: #003366;
-            background: #eff6ff
+            border-color: #58a6ff;
+            background: #0a1929
         }
 
         .bl-box-main {
-            border-color: #1a7f37;
-            background: #f0fdf4
+            border-color: #3fb950;
+            background: #0a1f10
         }
 
         .bl-box-label {
@@ -541,11 +532,11 @@
         }
 
         .bl-box-sump .bl-box-label {
-            color: #003366
+            color: #58a6ff
         }
 
         .bl-box-main .bl-box-label {
-            color: #1a7f37
+            color: #3fb950
         }
 
         .bl-arrow-v {
@@ -560,16 +551,16 @@
         .bl-arrow-line {
             width: 2px;
             flex: 1;
-            background: linear-gradient(to bottom, #d0d7de, #d0d7de)
+            background: linear-gradient(to bottom, #21262d, #21262d)
         }
 
         .bl-arrow-label {
             font-size: .68em;
-            color: #666666;
+            color: #8b949e;
             text-align: center;
             padding: 2px 6px;
-            background: #ffffff;
-            border: 1px solid #d0d7de;
+            background: #0d1117;
+            border: 1px solid #21262d;
             border-radius: 4px;
             position: relative;
             z-index: 1;
@@ -607,11 +598,11 @@
         }
 
         .bl-dot-blue {
-            background: #003366
+            background: #58a6ff
         }
 
         .bl-dot-green {
-            background: #1a7f37
+            background: #3fb950
         }
 
         .bl-arrow-h-wrap {
@@ -632,7 +623,7 @@
         .bl-arrow-h-line {
             width: 2px;
             height: 80px;
-            background: #d0d7de;
+            background: #21262d;
             position: relative;
             overflow: hidden
         }
@@ -668,18 +659,18 @@
         }
 
         .bl-h-dot-down {
-            background: #003366;
+            background: #58a6ff;
             animation-delay: 0s
         }
 
         .bl-h-dot-up {
-            background: #1a7f37;
+            background: #3fb950;
             animation-delay: 1s
         }
 
         .bl-arrow-h-label {
             font-size: .65em;
-            color: #666666;
+            color: #8b949e;
             text-align: center;
             writing-mode: horizontal-tb
         }
@@ -698,7 +689,7 @@
             top: 0;
             bottom: 0;
             width: 2px;
-            background: linear-gradient(to bottom, #003366, #1a7f37)
+            background: linear-gradient(to bottom, #58a6ff, #3fb950)
         }
 
         .step-item {
@@ -717,41 +708,41 @@
             width: 28px;
             height: 28px;
             border-radius: 50%;
-            background: #ffffff;
-            border: 2px solid #003366;
+            background: #0d1117;
+            border: 2px solid #58a6ff;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: .75em;
             font-weight: bold;
-            color: #003366;
+            color: #58a6ff;
             z-index: 1;
             flex-shrink: 0
         }
 
         .step-item:last-child .step-num {
-            border-color: #1a7f37;
-            color: #1a7f37
+            border-color: #3fb950;
+            color: #3fb950
         }
 
         .step-title {
             font-weight: bold;
-            color: #333333;
+            color: #e6edf3;
             margin: 4px 0 8px;
             font-size: .95em;
             padding-top: 3px
         }
 
         .step-body {
-            color: #333333;
+            color: #c9d1d9;
             font-size: .9em;
             line-height: 1.75
         }
 
         /* ===== pHカウンター ===== */
         .ph-counter-wrap {
-            background: #ffffff;
-            border: 1px solid #d0d7de;
+            background: #0d1117;
+            border: 1px solid #30363d;
             border-radius: 12px;
             padding: 24px 16px;
             margin: 20px 0;
@@ -761,7 +752,7 @@
         .ph-value {
             font-size: 3.5em;
             font-weight: bold;
-            color: #003366;
+            color: #58a6ff;
             letter-spacing: .05em;
             line-height: 1;
             font-variant-numeric: tabular-nums
@@ -769,18 +760,18 @@
 
         .ph-unit {
             font-size: 1.2em;
-            color: #666666;
+            color: #8b949e;
             margin-left: 4px
         }
 
         .ph-label {
-            color: #666666;
+            color: #8b949e;
             font-size: .88em;
             margin-top: 8px
         }
 
         .ph-bar-wrap {
-            background: #f5f7fa;
+            background: #161b22;
             border-radius: 8px;
             height: 8px;
             margin: 16px 0 8px;
@@ -789,7 +780,7 @@
 
         .ph-bar {
             height: 100%;
-            background: linear-gradient(to right, #cf222e, #9a6700, #003366, #1a7f37);
+            background: linear-gradient(to right, #f85149, #d29922, #58a6ff, #3fb950);
             width: 0;
             border-radius: 8px;
             transition: width 1.5s ease
@@ -803,7 +794,7 @@
             display: flex;
             justify-content: space-between;
             font-size: .7em;
-            color: #888888
+            color: #484f58
         }
 
         /* ===== 「三つの無」カード ===== */
@@ -821,8 +812,8 @@
         }
 
         .zero-card {
-            background: #eff6ff;
-            border: 1px solid #d0d7de;
+            background: #0a1929;
+            border: 1px solid #30363d;
             border-radius: 10px;
             padding: 16px;
             text-align: center
@@ -835,14 +826,14 @@
 
         .zero-title {
             font-weight: bold;
-            color: #003366;
+            color: #58a6ff;
             font-size: .92em;
             margin-bottom: 6px
         }
 
         .zero-body {
             font-size: .82em;
-            color: #666666;
+            color: #8b949e;
             line-height: 1.6;
             text-align: left
         }
@@ -862,8 +853,8 @@
         }
 
         .maint-card {
-            background: #f5f7fa;
-            border: 1px solid #d0d7de;
+            background: #161b22;
+            border: 1px solid #30363d;
             border-radius: 8px;
             padding: 12px 14px;
             display: flex;
@@ -882,27 +873,27 @@
         }
 
         .maint-freq-daily {
-            background: #eff6ff;
-            color: #003366;
-            border: 1px solid #003366
+            background: #0d2440;
+            color: #58a6ff;
+            border: 1px solid #58a6ff
         }
 
         .maint-freq-any {
-            background: #f0fdf4;
-            color: #1a7f37;
-            border: 1px solid #1a7f37
+            background: #0a2a14;
+            color: #3fb950;
+            border: 1px solid #3fb950
         }
 
         .maint-text {
-            color: #333333;
+            color: #c9d1d9;
             font-size: .85em;
             line-height: 1.5
         }
 
         /* ===== faq：スマホ向けアコーディオン ===== */
         details.holo-details {
-            background: #f5f7fa;
-            border: 1px solid #d0d7de;
+            background: #161b22;
+            border: 1px solid #30363d;
             border-radius: 8px;
             margin: 8px 0;
             overflow: hidden
@@ -911,7 +902,7 @@
         details.holo-details summary {
             padding: 12px 16px;
             cursor: pointer;
-            color: #333333;
+            color: #e6edf3;
             font-weight: bold;
             font-size: .9em;
             list-style: none;
@@ -923,7 +914,7 @@
 
         details.holo-details summary::after {
             content: '＋';
-            color: #666666;
+            color: #8b949e;
             font-size: 1.1em;
             flex-shrink: 0
         }
@@ -934,7 +925,7 @@
 
         details.holo-details .details-body {
             padding: 0 16px 14px;
-            color: #333333;
+            color: #c9d1d9;
             font-size: .88em;
             line-height: 1.75
         }
@@ -954,15 +945,15 @@
         }
 
         .approach-card {
-            background: #f5f7fa;
-            border: 1px solid #d0d7de;
+            background: #161b22;
+            border: 1px solid #30363d;
             border-radius: 10px;
             overflow: hidden;
             transition: border-color .2s
         }
 
         .approach-card:hover {
-            border-color: #003366
+            border-color: #58a6ff
         }
 
         .approach-card-body {
@@ -972,13 +963,13 @@
         .approach-card-title {
             font-weight: bold;
             font-size: .88em;
-            color: #333333;
+            color: #e6edf3;
             margin: 0 0 4px
         }
 
         .approach-card-desc {
             font-size: .78em;
-            color: #666666;
+            color: #8b949e;
             line-height: 1.5;
             margin: 0
         }
@@ -992,34 +983,34 @@
         }
 
         .badge-green {
-            background: #f0fdf4;
-            color: #1a7f37;
-            border: 1px solid #1a7f37
+            background: #0a2a14;
+            color: #3fb950;
+            border: 1px solid #3fb950
         }
 
         .badge-yellow {
-            background: #fffbeb;
-            color: #9a6700;
-            border: 1px solid #9a6700
+            background: #1c1409;
+            color: #d29922;
+            border: 1px solid #d29922
         }
 
         .badge-red {
-            background: #fef2f2;
-            color: #cf222e;
-            border: 1px solid #cf222e
+            background: #1c0a0a;
+            color: #f85149;
+            border: 1px solid #f85149
         }
 
         .badge-blue {
-            background: #eff6ff;
-            color: #003366;
-            border: 1px solid #003366
+            background: #0d2440;
+            color: #58a6ff;
+            border: 1px solid #58a6ff
         }
 
 
         .ap-svg {
             width: 100%;
             display: block;
-            background: #ffffff;
+            background: #0d1117;
             border-radius: 8px 8px 0 0
         }
 
@@ -1091,8 +1082,8 @@
         }
 
         .recipe-card-item {
-            background: #f5f7fa;
-            border: 1px solid #d0d7de;
+            background: #161b22;
+            border: 1px solid #30363d;
             border-radius: 10px;
             padding: 14px 12px;
             text-align: center;
@@ -1110,15 +1101,15 @@
         }
 
         .recipe-fast::before {
-            background: linear-gradient(to right, #cf222e, #9a6700)
+            background: linear-gradient(to right, #f85149, #d29922)
         }
 
         .recipe-mid::before {
-            background: #9a6700
+            background: #d29922
         }
 
         .recipe-slow::before {
-            background: #1a7f37
+            background: #3fb950
         }
 
         .recipe-emoji {
@@ -1128,7 +1119,7 @@
 
         .recipe-name {
             font-weight: bold;
-            color: #333333;
+            color: #e6edf3;
             font-size: .9em;
             margin-bottom: 4px
         }
@@ -1136,13 +1127,13 @@
         .recipe-amount {
             font-size: 1.3em;
             font-weight: bold;
-            color: #003366;
+            color: #58a6ff;
             margin-bottom: 4px
         }
 
         .recipe-component {
             font-size: .72em;
-            color: #666666;
+            color: #8b949e;
             margin-bottom: 6px
         }
 
@@ -1154,21 +1145,21 @@
         }
 
         .speed-fast {
-            background: #fef2f2;
-            color: #cf222e;
-            border: 1px solid #cf222e
+            background: #2d0e0e;
+            color: #f85149;
+            border: 1px solid #f85149
         }
 
         .speed-mid {
-            background: #fffbeb;
-            color: #9a6700;
-            border: 1px solid #9a6700
+            background: #2d1a06;
+            color: #d29922;
+            border: 1px solid #d29922
         }
 
         .speed-slow {
-            background: #f0fdf4;
-            color: #1a7f37;
-            border: 1px solid #1a7f37
+            background: #0a2a14;
+            color: #3fb950;
+            border: 1px solid #3fb950
         }
 
         .recipe-mineral-grid {
@@ -1184,8 +1175,8 @@
         }
 
         .recipe-mineral-item {
-            background: #f5f7fa;
-            border: 1px solid #d0d7de;
+            background: #161b22;
+            border: 1px solid #30363d;
             border-radius: 8px;
             padding: 10px;
             text-align: center
@@ -1199,12 +1190,12 @@
         .recipe-mineral-name {
             font-size: .78em;
             font-weight: bold;
-            color: #333333
+            color: #e6edf3
         }
 
         .recipe-mineral-note {
             font-size: .68em;
-            color: #666666;
+            color: #8b949e;
             margin-top: 2px
         }
 
@@ -1212,15 +1203,15 @@
             font-size: .75em;
             text-transform: uppercase;
             letter-spacing: .06em;
-            color: #666666;
+            color: #8b949e;
             margin: 14px 0 8px;
             padding-left: 2px
         }
 
 
         .wq-graph {
-            background: #ffffff;
-            border: 1px solid #d0d7de;
+            background: #0d1117;
+            border: 1px solid #30363d;
             border-radius: 10px;
             padding: 14px;
             margin-top: 14px
@@ -1228,7 +1219,7 @@
 
         .wq-title {
             font-size: .75em;
-            color: #666666;
+            color: #8b949e;
             text-transform: uppercase;
             letter-spacing: .06em;
             margin-bottom: 10px;
@@ -1238,7 +1229,7 @@
         .wq-chart {
             position: relative;
             height: 140px;
-            background: linear-gradient(to bottom, rgba(0, 51, 102, .05), transparent);
+            background: linear-gradient(to bottom, rgba(88, 166, 255, .05), transparent);
             border-radius: 6px;
             overflow: hidden
         }
@@ -1249,7 +1240,7 @@
             left: 0;
             right: 0;
             height: 100%;
-            background: linear-gradient(to right, transparent 0%, rgba(139, 148, 158, .25) 3%, rgba(139, 148, 158, .5) 8%, rgba(248, 81, 73, .35) 15%, rgba(248, 81, 73, .5) 25%, rgba(248, 81, 73, .45) 35%, rgba(210, 153, 34, .3) 50%, rgba(210, 153, 34, .2) 60%, rgba(63, 185, 80, .15) 72%, rgba(63, 185, 80, .08) 80%, rgba(88, 166, 255, .12) 100%);
+            background: linear-gradient(to right, transparent 0%, rgba(139, 148, 158, .15) 3%, rgba(139, 148, 158, .4) 8%, rgba(248, 81, 73, .35) 15%, rgba(248, 81, 73, .5) 25%, rgba(248, 81, 73, .45) 35%, rgba(210, 153, 34, .3) 50%, rgba(210, 153, 34, .2) 60%, rgba(63, 185, 80, .15) 72%, rgba(63, 185, 80, .08) 80%, rgba(88, 166, 255, .12) 100%);
             clip-path: polygon(0% 95%, 3% 80%, 8% 45%, 15% 20%, 22% 12%, 30% 15%, 40% 18%, 50% 25%, 60% 40%, 70% 70%, 75% 88%, 80% 93%, 85% 95%, 100% 95%, 100% 100%, 0% 100%)
         }
 
@@ -1281,13 +1272,13 @@
             justify-content: space-between;
             margin-top: 6px;
             font-size: .65em;
-            color: #888888
+            color: #484f58
         }
 
         .wq-event {
             position: absolute;
             font-size: .65em;
-            color: #333333;
+            color: #c9d1d9;
             text-align: center;
             white-space: nowrap
         }
@@ -1307,7 +1298,7 @@
 
         .pyramid-title {
             font-size: .8em;
-            color: #666666;
+            color: #8b949e;
             text-transform: uppercase;
             letter-spacing: .08em;
             margin-bottom: 16px
@@ -1336,26 +1327,26 @@
         }
 
         .pyramid-t1 {
-            background: linear-gradient(135deg, #fef2f2, #fce8e8);
-            border: 1px solid #cf222e;
+            background: linear-gradient(135deg, #1a0a0a, #2d1010);
+            border: 1px solid #f85149;
             max-width: 50%
         }
 
         .pyramid-t2 {
-            background: linear-gradient(135deg, #eff6ff, #eff6ff);
-            border: 1px solid #003366;
+            background: linear-gradient(135deg, #0a1929, #0d2440);
+            border: 1px solid #58a6ff;
             max-width: 65%
         }
 
         .pyramid-t3 {
-            background: linear-gradient(135deg, #f0fdf4, #f0fdf4);
-            border: 1px solid #1a7f37;
+            background: linear-gradient(135deg, #0a2a14, #16200a);
+            border: 1px solid #3fb950;
             max-width: 80%
         }
 
         .pyramid-t4 {
-            background: linear-gradient(135deg, #f5f7fa, #d0d7de);
-            border: 1px solid #d0d7de;
+            background: linear-gradient(135deg, #161b22, #21262d);
+            border: 1px solid #30363d;
             max-width: 95%
         }
 
@@ -1366,25 +1357,25 @@
 
         .pyramid-name {
             font-weight: bold;
-            color: #333333;
+            color: #e6edf3;
             font-size: .88em
         }
 
         .pyramid-desc {
             font-size: .7em;
-            color: #666666;
+            color: #8b949e;
             margin-top: 2px
         }
 
         .pyramid-arrow {
-            color: #d0d7de;
+            color: #30363d;
             font-size: 1.2em;
             line-height: 1
         }
 
         .pyramid-label {
             font-size: .65em;
-            color: #666666;
+            color: #8b949e;
             letter-spacing: .05em;
             margin-top: 12px
         }
@@ -1394,9 +1385,9 @@
             font-size: .72em;
             padding: 4px 14px;
             border-radius: 20px;
-            background: #eff6ff;
-            color: #003366;
-            border: 1px solid rgba(0, 51, 102, .3);
+            background: #0d2440;
+            color: #58a6ff;
+            border: 1px solid rgba(88, 166, 255, .3);
             margin-top: 10px;
             letter-spacing: .05em
         }
@@ -1412,8 +1403,8 @@
             gap: 0;
             border-radius: 20px;
             overflow: hidden;
-            border: 1px solid #d0d7de;
-            background: rgba(255, 255, 255, .95);
+            border: 1px solid #30363d;
+            background: rgba(13, 17, 23, .92);
             backdrop-filter: blur(8px);
             font-size: .78em;
             transition: opacity .4s, transform .4s;
@@ -1439,19 +1430,19 @@
 
         .lang-btn {
             padding: 6px 14px;
-            color: #666666;
+            color: #8b949e;
             text-decoration: none;
             transition: all .2s;
             font-weight: 600;
         }
 
         .lang-btn:hover {
-            color: #333333
+            color: #e6edf3
         }
 
         .lang-btn.active {
-            background: #003366;
-            color: #ffffff;
+            background: #58a6ff;
+            color: #0d1117;
         }
 
 
@@ -1460,7 +1451,7 @@
             margin: 20px 0;
             border-radius: 10px;
             overflow: hidden;
-            border: 1px solid #d0d7de;
+            border: 1px solid #21262d;
         }
 
         .photo-wrap img {
@@ -1468,15 +1459,15 @@
             max-height: 400px;
             object-fit: contain;
             display: block;
-            background: #f5f7fa;
+            background: #0a0e14;
         }
 
         .photo-caption {
             padding: 10px 14px;
             font-size: .8em;
-            color: #666666;
-            background: #f5f7fa;
-            border-top: 1px solid #d0d7de;
+            color: #8b949e;
+            background: #161b22;
+            border-top: 1px solid #21262d;
         }
 
         .photo-grid {
@@ -1499,13 +1490,13 @@
             border-radius: 12px;
             overflow: hidden;
             margin-bottom: 24px;
-            background: linear-gradient(rgba(0, 51, 102, .6), rgba(0, 34, 68, .85)), url('../photos/tank_overview.jpg') center/cover no-repeat;
+            background: linear-gradient(rgba(10, 22, 40, .7), rgba(13, 17, 23, .9)), url('../photos/tank_overview.jpg') center/cover no-repeat;
         }
 
         .hero-overlay {
             position: absolute;
             inset: 0;
-            background: linear-gradient(180deg, transparent 50%, #ffffff 100%);
+            background: linear-gradient(180deg, transparent 50%, #0d1117 100%);
         }
 
         .hero-content {
@@ -1520,17 +1511,17 @@
             font-size: .82em;
             padding: 6px 16px;
             border-radius: 20px;
-            background: rgba(0, 51, 102, .15);
-            color: #003366;
-            border: 1px solid rgba(0, 51, 102, .3);
+            background: rgba(88, 166, 255, .15);
+            color: #58a6ff;
+            border: 1px solid rgba(88, 166, 255, .3);
             letter-spacing: .08em;
             font-weight: 600;
         }
 
         /* ===== Table of Contents ===== */
         .toc {
-            background: #f5f7fa;
-            border: 1px solid #d0d7de;
+            background: #161b22;
+            border: 1px solid #21262d;
             border-radius: 8px;
             padding: 16px 20px;
             margin: 16px 0;
@@ -1548,13 +1539,13 @@
         }
 
         .toc-list a {
-            color: #666666;
+            color: #8b949e;
             text-decoration: none;
             transition: color .2s;
         }
 
         .toc-list a:hover {
-            color: #003366;
+            color: #58a6ff;
         }
 
         html {
@@ -1564,26 +1555,26 @@
         /* ===== N収支系統図（インタラクティブ版） ===== */
         .ntree-wrap { margin: 20px 0 }
         .ntree-root {
-            background: #f5f7fa; border: 1px solid #d0d7de; border-radius: 10px;
+            background: #161b22; border: 1px solid #30363d; border-radius: 10px;
             padding: 12px; text-align: center; margin-bottom: 4px;
         }
-        .ntree-root-title { font-weight: 700; font-size: .88em; color: #333333 }
-        .ntree-root-sub { font-size: .7em; color: #666666; margin-top: 2px }
-        .ntree-vline { width: 2px; height: 20px; background: #d0d7de; margin: 0 auto }
+        .ntree-root-title { font-weight: 700; font-size: .88em; color: #e6edf3 }
+        .ntree-root-sub { font-size: .7em; color: #8b949e; margin-top: 2px }
+        .ntree-vline { width: 2px; height: 20px; background: #30363d; margin: 0 auto }
         .ntree-fork {
             display: flex; align-items: flex-start; justify-content: center;
             height: 20px; position: relative;
         }
         .ntree-fork::before {
             content: ''; position: absolute; top: 0; left: 50%;
-            width: 2px; height: 10px; background: #d0d7de; transform: translateX(-50%);
+            width: 2px; height: 10px; background: #30363d; transform: translateX(-50%);
         }
         .ntree-fork::after {
             content: ''; position: absolute; top: 10px;
-            left: 25%; right: 25%; height: 2px; background: #d0d7de;
+            left: 25%; right: 25%; height: 2px; background: #30363d;
         }
         .ntree-fork-arm {
-            position: absolute; top: 10px; width: 2px; height: 10px; background: #d0d7de;
+            position: absolute; top: 10px; width: 2px; height: 10px; background: #30363d;
         }
         .ntree-fork-arm-l { left: 25%; transform: translateX(-50%) }
         .ntree-fork-arm-r { right: 25%; transform: translateX(50%) }
@@ -1592,16 +1583,16 @@
         .ntree-bh {
             width: 100%; border-radius: 8px; padding: 10px 8px; text-align: center;
         }
-        .ntree-bh-export { background: linear-gradient(135deg,#fef2f2,#fffbeb); border: 1px solid #9a6700 }
-        .ntree-bh-cycle { background: linear-gradient(135deg,#eff6ff,#f0fdf4); border: 1px solid #003366 }
+        .ntree-bh-export { background: linear-gradient(135deg,#1a0a0a,#1c1409); border: 1px solid #d29922 }
+        .ntree-bh-cycle { background: linear-gradient(135deg,#0a1929,#0a2a14); border: 1px solid #58a6ff }
         .ntree-bl { font-size: .68em; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 2px }
-        .ntree-bl-export { color: #9a6700 }
-        .ntree-bl-cycle { color: #003366 }
-        .ntree-bt { font-weight: 700; font-size: .82em; color: #333333 }
-        .ntree-bd { font-size: .65em; color: #666666; margin-top: 2px }
-        .ntree-vline-sm { width: 2px; height: 8px; background: #d0d7de; margin: 0 auto }
+        .ntree-bl-export { color: #d29922 }
+        .ntree-bl-cycle { color: #58a6ff }
+        .ntree-bt { font-weight: 700; font-size: .82em; color: #e6edf3 }
+        .ntree-bd { font-size: .65em; color: #8b949e; margin-top: 2px }
+        .ntree-vline-sm { width: 2px; height: 8px; background: #30363d; margin: 0 auto }
         .ntree-sub-label {
-            font-size: .62em; color: #666666; text-align: center;
+            font-size: .62em; color: #8b949e; text-align: center;
             padding: 4px 0 2px; letter-spacing: .04em;
         }
         /* リーフカード */
@@ -1611,43 +1602,43 @@
             -webkit-tap-highlight-color: transparent;
         }
         .ntree-lc:active { transform: scale(.98) }
-        .ntree-lc-phys { background: #f5f7fa; border: 1px solid #d0d7de }
-        .ntree-lc-gas { background: #fffbeb; border: 1px solid #9a6700 }
-        .ntree-lc-bio { background: #f0fdf4; border: 1px solid #1a7f37 }
-        .ntree-lc-cycle { background: #eff6ff; border: 1px solid #003366 }
+        .ntree-lc-phys { background: #161b22; border: 1px solid #30363d }
+        .ntree-lc-gas { background: #1c1409; border: 1px solid #d29922 }
+        .ntree-lc-bio { background: #16200a; border: 1px solid #7ee787 }
+        .ntree-lc-cycle { background: #0d2440; border: 1px solid #58a6ff }
         .ntree-lc-holo {
-            background: #eff6ff; border: 2px solid #003366;
+            background: #0d2440; border: 2px solid #58a6ff;
             animation: nc-pulse 2.5s ease infinite;
         }
-        .ntree-lc-romance { background: #faf5ff; border: 1px solid #7c3aed; opacity: .7 }
-        .ntree-ln { font-weight: 600; font-size: .78em; color: #333333 }
-        .ntree-ld { font-size: .65em; color: #666666; margin-top: 2px; line-height: 1.4 }
+        .ntree-lc-romance { background: #160d20; border: 1px solid #8957e5; opacity: .7 }
+        .ntree-ln { font-weight: 600; font-size: .78em; color: #e6edf3 }
+        .ntree-ld { font-size: .65em; color: #8b949e; margin-top: 2px; line-height: 1.4 }
         .ntree-lb {
             display: inline-block; font-size: .6em; padding: 1px 6px;
             border-radius: 4px; margin-top: 4px;
         }
-        .ntree-lb-phys { background: #d0d7de; color: #666666; border: 1px solid #d0d7de }
-        .ntree-lb-gas { background: #fffbeb; color: #9a6700; border: 1px solid #9a6700 }
-        .ntree-lb-bio { background: #f0fdf4; color: #1a7f37; border: 1px solid #1a7f37 }
-        .ntree-lb-cycle { background: #eff6ff; color: #003366; border: 1px solid #003366 }
-        .ntree-lb-romance { background: #faf5ff; color: #7c3aed; border: 1px solid #7c3aed }
+        .ntree-lb-phys { background: #21262d; color: #8b949e; border: 1px solid #30363d }
+        .ntree-lb-gas { background: #2d1a06; color: #d29922; border: 1px solid #d29922 }
+        .ntree-lb-bio { background: #0a2a14; color: #7ee787; border: 1px solid #7ee787 }
+        .ntree-lb-cycle { background: #0d2440; color: #58a6ff; border: 1px solid #58a6ff }
+        .ntree-lb-romance { background: #1a0d2e; color: #8957e5; border: 1px solid #8957e5 }
         /* 展開パネル */
         .ntree-detail {
             max-height: 0; overflow: hidden; transition: max-height .3s ease;
         }
         .ntree-lc.open .ntree-detail { max-height: 200px }
         .ntree-detail-inner {
-            padding: 6px 0 0; border-top: 1px solid rgba(0,0,0,.05); margin-top: 6px;
+            padding: 6px 0 0; border-top: 1px solid rgba(255,255,255,.08); margin-top: 6px;
         }
         .ntree-dr {
             display: flex; justify-content: space-between; font-size: .62em; padding: 2px 0;
         }
-        .ntree-dr-l { color: #666666 }
+        .ntree-dr-l { color: #8b949e }
         .ntree-dr-v { font-weight: 600 }
-        .ntree-dr-pro { color: #1a7f37 }
-        .ntree-dr-con { color: #cf222e }
+        .ntree-dr-pro { color: #3fb950 }
+        .ntree-dr-con { color: #f85149 }
         .ntree-tap-hint {
-            text-align: center; font-size: .65em; color: #888888; margin: 10px 0 16px;
+            text-align: center; font-size: .65em; color: #484f58; margin: 10px 0 16px;
         }
         /* 硝化注記 */
         .ntree-nitri-note {
@@ -1655,9 +1646,9 @@
             padding: 10px 12px; margin: 16px auto 0; max-width: 420px; text-align: center;
         }
         .ntree-nitri-title {
-            font-size: .72em; color: #888888; text-decoration: line-through; margin-bottom: 4px;
+            font-size: .72em; color: #484f58; text-decoration: line-through; margin-bottom: 4px;
         }
-        .ntree-nitri-body { font-size: .68em; color: #888888; line-height: 1.5 }
+        .ntree-nitri-body { font-size: .68em; color: #484f58; line-height: 1.5 }
         /* モバイル：縦スタック */
         @media(max-width:600px) {
             .ntree-branch { flex-direction: column; gap: 12px }
@@ -1678,23 +1669,23 @@
             margin-bottom: 8px;
         }
         .part-label-theory {
-            background: #eff6ff;
-            color: #003366;
-            border: 1px solid #003366;
+            background: #0d2440;
+            color: #58a6ff;
+            border: 1px solid #58a6ff;
         }
         .part-label-practice {
-            background: #f0fdf4;
-            color: #1a7f37;
-            border: 1px solid #1a7f37;
+            background: #1c2d0a;
+            color: #3fb950;
+            border: 1px solid #3fb950;
         }
         .part-title {
             font-size: 1.3em;
             font-weight: 700;
-            color: #333333;
+            color: #e6edf3;
         }
         .part-subtitle {
             font-size: .78em;
-            color: #666666;
+            color: #8b949e;
             margin-top: 4px;
         }
         /* TOC ネスト */
@@ -1705,8 +1696,8 @@
             margin: 10px 0 4px;
             padding-left: 0;
         }
-        .toc-part-theory { color: #003366 }
-        .toc-part-practice { color: #1a7f37 }
+        .toc-part-theory { color: #58a6ff }
+        .toc-part-practice { color: #3fb950 }
 
         /* ===== ページナビゲーション ===== */
         .page-nav {
@@ -1715,7 +1706,7 @@
             gap: 8px;
             padding: 10px 0;
             margin: 0 0 20px;
-            border-bottom: 1px solid #d0d7de;
+            border-bottom: 1px solid #21262d;
             flex-wrap: wrap;
         }
         .page-nav-bottom {
@@ -1724,28 +1715,27 @@
             gap: 8px;
             padding: 16px 0 0;
             margin: 32px 0 0;
-            border-top: 1px solid #d0d7de;
+            border-top: 1px solid #21262d;
             flex-wrap: wrap;
         }
         .page-nav-btn {
-            color: #666666;
+            color: #8b949e;
             text-decoration: none;
             font-size: .83em;
             padding: 6px 14px;
             border-radius: 6px;
-            border: 1px solid #d0d7de;
-            background: #f5f7fa;
+            border: 1px solid #30363d;
+            background: #161b22;
             transition: all .2s;
             white-space: nowrap;
         }
         .page-nav-btn:hover {
-            color: #333333;
-            border-color: #003366;
+            color: #e6edf3;
+            border-color: #58a6ff;
         }
         .page-nav-spacer { flex: 1; min-width: 8px; }
 
     </style>
-    <link rel="stylesheet" href="../ibee.css">
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -1794,27 +1784,27 @@
 
     <div class="holo-body">
         <div class="lang-switch">
-            <a href="../" class="lang-btn">EN</a>
-            <span class="lang-btn active">日本語</span>
+            <a href="../" class="lang-btn">🇬🇧 EN</a>
+            <span class="lang-btn active">🇯🇵 日本語</span>
         </div>
         <nav class="page-nav">
-            <a href="index.html" class="page-nav-btn">目次</a>
+            <a href="index.html" class="page-nav-btn">📑 目次</a>
             <div class="page-nav-spacer"></div>
-            <a href="part1.html" class="page-nav-btn">← 第１章 理論</a>
-            <a href="part3.html" class="page-nav-btn">第３章 構築方法 →</a>
+            <a href="part1.html" class="page-nav-btn">◀ Part 1 理論</a>
+            <a href="part3.html" class="page-nav-btn">Part 3 構築方法 ▶</a>
         </nav>
-        <!-- ===== 第２章：構築可能な環境 ===== -->
+        <!-- ===== Part 2：構築可能な環境 ===== -->
         <div class="part-header fade-in" id="part-configurations">
-            <div><span class="part-label part-label-practice">第２章</span></div>
+            <div><span class="part-label part-label-practice">Part 2</span></div>
             <div class="part-title">構築可能な環境 — パラメータの自由度</div>
             <div class="part-subtitle">本理論が適用可能な構成とその選択肢</div>
         </div>
 
-        <h2 id="sec-configurations">2.1 構成の自由度</h2>
+        <h2 id="sec-configurations">5. 構成の自由度</h2>
         <p>本理論が機能するための必須条件は限定的であり、その他の要素は自由に選択できる。</p>
 
-        <div class="holo-card fade-in" style="border-left:4px solid #cf222e">
-            <span class="holo-label" style="color:#cf222e">必須条件</span>
+        <div class="holo-card fade-in" style="border-left:4px solid #f85149">
+            <span class="holo-label" style="color:#f85149">必須条件</span>
             <ul style="margin:4px 0 0;padding-left:20px;font-size:.88em;line-height:1.9">
                 <li><strong>オーバーフロー式</strong>（曝気による酸素供給、大容量サンプ）</li>
                 <li><strong>サンプ内の多孔質素材</strong>（バクテリアの定着面）</li>
@@ -1822,7 +1812,6 @@
                 <li><strong>デトリタス食性生物</strong>（バイオマスの捕食者）</li>
             </ul>
         </div>
-        <p>必須条件を満たした上で、以下のパラメータは自由に選択できる。</p>
 
         <div class="holo-table-wrap fade-in">
             <table class="holo-table">
@@ -1859,248 +1848,248 @@
             </table>
         </div>
 
-        <h3>2.1.1 底床素材の選択</h3>
+        <h3>底床素材の選択</h3>
         <p>底床素材はpHロックの平衡点を決定するパラメータである。本理論においてバクテリアの主要定着面はサンプ内の多孔質素材であるため、底床はpHの基準値を設定する役割として機能する。なお、サンプに充填する素材は多孔質であることが条件だが、それを満たすなら底床と同じ素材を使用して構わない。</p>
         <div class="fade-in" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px;margin:16px 0">
 
             <!-- 焼赤玉土+ピートモス (pH 5.5〜6.5) -->
-            <div style="background:#f5f7fa;border:1px solid #d0d7de;border-radius:10px;overflow:hidden">
+            <div style="background:#161b22;border:1px solid #30363d;border-radius:10px;overflow:hidden">
                 <div style="position:relative">
                     <img src="../photos/substrate_akadama_peat.png" alt="焼赤玉土+ピートモス" style="width:100%;height:100px;object-fit:cover;display:block">
-                    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.65));padding:6px 10px 4px">
+                    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.85));padding:6px 10px 4px">
                         <div style="font-size:.82em;font-weight:700;color:#fff">焼赤玉土 ＋ ピートモス</div>
                     </div>
                 </div>
                 <div style="padding:10px 12px">
-                    <span style="display:inline-block;background:#fffbeb;border:1px solid #9a6700;color:#9a6700;font-size:.72em;font-weight:700;border-radius:4px;padding:2px 8px;margin-bottom:6px">pH 5.5〜6.5</span>
-                    <div style="font-size:.78em;color:#333333;line-height:1.6;margin-bottom:6px">ピートモスのタンニン酸・フルボ酸が溶出しpHを押し下げる。崩壊せず長期維持可能</div>
-                    <div style="font-size:.72em;color:#666666"> チョコレートグラミー・アピスト等の超軟水・弱酸性種</div>
+                    <span style="display:inline-block;background:#1a1400;border:1px solid #d29922;color:#d29922;font-size:.72em;font-weight:700;border-radius:4px;padding:2px 8px;margin-bottom:6px">pH 5.5〜6.5</span>
+                    <div style="font-size:.78em;color:#c9d1d9;line-height:1.6;margin-bottom:6px">ピートモスのタンニン酸・フルボ酸が溶出しpHを押し下げる。崩壊せず長期維持可能</div>
+                    <div style="font-size:.72em;color:#8b949e">🐟 チョコレートグラミー・アピスト等の超軟水・弱酸性種</div>
                 </div>
             </div>
 
             <!-- 焼赤玉土 (pH 6.7〜6.9) -->
-            <div style="background:#f5f7fa;border:1px solid #d0d7de;border-radius:10px;overflow:hidden">
+            <div style="background:#161b22;border:1px solid #30363d;border-radius:10px;overflow:hidden">
                 <div style="position:relative">
                     <img src="../photos/substrate_akadama.png" alt="焼赤玉土" style="width:100%;height:100px;object-fit:cover;display:block">
-                    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.65));padding:6px 10px 4px">
+                    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.85));padding:6px 10px 4px">
                         <div style="font-size:.82em;font-weight:700;color:#fff">焼赤玉土</div>
                     </div>
                 </div>
                 <div style="padding:10px 12px">
-                    <span style="display:inline-block;background:#eff6ff;border:1px solid #003366;color:#003366;font-size:.72em;font-weight:700;border-radius:4px;padding:2px 8px;margin-bottom:6px">pH 6.7〜6.9</span>
-                    <div style="font-size:.78em;color:#333333;line-height:1.6;margin-bottom:6px">弱酸性・多孔質でバクテリア定着も良好。長期維持可能</div>
-                    <div style="font-size:.72em;color:#666666"> テトラ・エンゼル等の弱酸性魚全般</div>
+                    <span style="display:inline-block;background:#0d2440;border:1px solid #58a6ff;color:#58a6ff;font-size:.72em;font-weight:700;border-radius:4px;padding:2px 8px;margin-bottom:6px">pH 6.7〜6.9</span>
+                    <div style="font-size:.78em;color:#c9d1d9;line-height:1.6;margin-bottom:6px">弱酸性・多孔質でバクテリア定着も良好。長期維持可能</div>
+                    <div style="font-size:.72em;color:#8b949e">🐟 テトラ・エンゼル等の弱酸性魚全般</div>
                 </div>
             </div>
 
             <!-- 大磯砂 (pH 7.0) -->
-            <div style="background:#f5f7fa;border:1px solid #d0d7de;border-radius:10px;overflow:hidden">
+            <div style="background:#161b22;border:1px solid #30363d;border-radius:10px;overflow:hidden">
                 <div style="position:relative">
                     <img src="../photos/substrate_oiso.png" alt="大磯砂" style="width:100%;height:100px;object-fit:cover;display:block">
-                    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.65));padding:6px 10px 4px">
+                    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.85));padding:6px 10px 4px">
                         <div style="font-size:.82em;font-weight:700;color:#fff">大磯砂</div>
                     </div>
                 </div>
                 <div style="padding:10px 12px">
-                    <span style="display:inline-block;background:#f0f3f7;border:1px solid #d0d7de;color:#666666;font-size:.72em;font-weight:700;border-radius:4px;padding:2px 8px;margin-bottom:6px">pH 7.0前後</span>
-                    <div style="font-size:.78em;color:#333333;line-height:1.6;margin-bottom:6px">中性・安定・長期使用可能。貝殻が多いと若干アルカリに傾く</div>
-                    <div style="font-size:.72em;color:#666666"> 金魚・メダカ・中性〜弱アルカリを好む魚全般</div>
+                    <span style="display:inline-block;background:#1a1a1a;border:1px solid #8b949e;color:#8b949e;font-size:.72em;font-weight:700;border-radius:4px;padding:2px 8px;margin-bottom:6px">pH 7.0前後</span>
+                    <div style="font-size:.78em;color:#c9d1d9;line-height:1.6;margin-bottom:6px">中性・安定・長期使用可能。貝殻が多いと若干アルカリに傾く</div>
+                    <div style="font-size:.72em;color:#8b949e">🐟 金魚・メダカ・中性〜弱アルカリを好む魚全般</div>
                 </div>
             </div>
 
             <!-- ベアタンク (pH 7.0) -->
-            <div style="background:#f5f7fa;border:1px solid #d0d7de;border-radius:10px;overflow:hidden">
+            <div style="background:#161b22;border:1px solid #30363d;border-radius:10px;overflow:hidden">
                 <div style="position:relative">
                     <img src="../photos/substrate_bare_tank.png" alt="ベアタンク" style="width:100%;height:100px;object-fit:cover;display:block">
-                    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.65));padding:6px 10px 4px">
+                    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.85));padding:6px 10px 4px">
                         <div style="font-size:.82em;font-weight:700;color:#fff">ベアタンク</div>
                     </div>
                 </div>
                 <div style="padding:10px 12px">
-                    <span style="display:inline-block;background:#f0f3f7;border:1px solid #d0d7de;color:#666666;font-size:.72em;font-weight:700;border-radius:4px;padding:2px 8px;margin-bottom:6px">pH 7.0前後</span>
-                    <div style="font-size:.78em;color:#333333;line-height:1.6;margin-bottom:6px">底床なし。pH平衡はサンプ素材に依存。メンテナンスが容易</div>
-                    <div style="font-size:.72em;color:#666666"> 大型肉食魚・訓練目的等</div>
+                    <span style="display:inline-block;background:#1a1a1a;border:1px solid #8b949e;color:#8b949e;font-size:.72em;font-weight:700;border-radius:4px;padding:2px 8px;margin-bottom:6px">pH 7.0前後</span>
+                    <div style="font-size:.78em;color:#c9d1d9;line-height:1.6;margin-bottom:6px">底床なし。pH平衡はサンプ素材に依存。メンテナンスが容易</div>
+                    <div style="font-size:.72em;color:#8b949e">🐟 大型肉食魚・訓練目的等</div>
                 </div>
             </div>
 
             <!-- サンゴ砂 (pH 8.0〜8.4) -->
-            <div style="background:#f5f7fa;border:1px solid #d0d7de;border-radius:10px;overflow:hidden">
+            <div style="background:#161b22;border:1px solid #30363d;border-radius:10px;overflow:hidden">
                 <div style="position:relative">
                     <img src="../photos/substrate_coral_sand.png" alt="サンゴ砂" style="width:100%;height:100px;object-fit:cover;display:block">
-                    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.65));padding:6px 10px 4px">
+                    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.85));padding:6px 10px 4px">
                         <div style="font-size:.82em;font-weight:700;color:#fff">サンゴ砂</div>
                     </div>
                 </div>
                 <div style="padding:10px 12px">
-                    <span style="display:inline-block;background:#f0fdf4;border:1px solid #1a7f37;color:#1a7f37;font-size:.72em;font-weight:700;border-radius:4px;padding:2px 8px;margin-bottom:6px">pH 8.0〜8.4</span>
-                    <div style="font-size:.78em;color:#333333;line-height:1.6;margin-bottom:6px">強アルカリ性。炭酸カルシウムの溶出でpHを持続的に押し上げる</div>
-                    <div style="font-size:.72em;color:#666666"> 海水魚・アフリカンシクリッド・汽水魚等</div>
+                    <span style="display:inline-block;background:#0a2a14;border:1px solid #3fb950;color:#3fb950;font-size:.72em;font-weight:700;border-radius:4px;padding:2px 8px;margin-bottom:6px">pH 8.0〜8.4</span>
+                    <div style="font-size:.78em;color:#c9d1d9;line-height:1.6;margin-bottom:6px">強アルカリ性。炭酸カルシウムの溶出でpHを持続的に押し上げる</div>
+                    <div style="font-size:.72em;color:#8b949e">🐟 海水魚・アフリカンシクリッド・汽水魚等</div>
                 </div>
             </div>
 
-        </div>        <h3>2.1.2 炭素源の種類と特性</h3>
+        </div>        <h3>炭素源の種類と特性</h3>
         <p>炭素源はバクテリアのエネルギー源であり、種類により分解速度が異なる。窒素源（NH₄⁺）が律速となるため過剰な炭素源はCO₂として放散され、厳密な計量は不要である。ただし極端な過剰投入は水質悪化を招くため、pHの推移を指標に添加量を調整するとよい。</p>
         <div class="recipe-wrap fade-in">
             <div class="recipe-grid">
                 <div class="recipe-card-item recipe-fast">
-                    <div class="recipe-emoji"></div>
+                    <div class="recipe-emoji">⚗️</div>
                     <div class="recipe-name">エタノール<br><small style="font-weight:400;opacity:.7">C₂H₅OH</small></div>
                     <div class="recipe-component">エタノール → 酢酸 → TCA回路</div>
                     <span class="recipe-speed speed-fast">高速分解</span>
                 </div>
                 <div class="recipe-card-item recipe-mid">
-                    <div class="recipe-emoji"></div>
+                    <div class="recipe-emoji">🧪</div>
                     <div class="recipe-name">酢酸<br><small style="font-weight:400;opacity:.7">CH₃COOH</small></div>
                     <div class="recipe-component">酢酸として直接供給</div>
                     <span class="recipe-speed speed-mid">中速分解</span>
                 </div>
                 <div class="recipe-card-item recipe-slow">
-                    <div class="recipe-emoji"></div>
+                    <div class="recipe-emoji">🔬</div>
                     <div class="recipe-name">スクロース<br><small style="font-weight:400;opacity:.7">C₁₂H₂₂O₁₁</small></div>
                     <div class="recipe-component">スクロース → 単糖へ加水分解</div>
                     <span class="recipe-speed speed-slow">低速分解</span>
                 </div>
             </div>
         </div>
-        <p>本理論では複数の炭素源を混合した「炭素源エキス」を使用する。急激なバクテリア増殖と酸素消費のリスクを緩和しながら、安定した継続供給を実現するためである。具体的なレシピは第３章で解説する。</p>
+        <p>本理論では複数の炭素源を混合した「炭素源エキス」を使用する。急激なバクテリア増殖と酸素消費のリスクを緩和しながら、安定した継続供給を実現するためである。具体的なレシピはPart 3で解説する。</p>
 
-        <h3>2.1.3 ベントスの選択とフルオート方式の条件</h3>
+        <h3>ベントスの選択とフルオート方式の条件</h3>
         <p>デトリタス食性生物（ベントス）の選択は、循環方式の自動化度合に直接影響する。フルオート方式では、ベントスが給水ポンプのインペラーを通過できるサイズであることが条件となる。</p>
         <div class="fade-in" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px;margin:16px 0">
 
             <!-- ミジンコ -->
-            <div style="background:#f5f7fa;border:1px solid #d0d7de;border-radius:10px;overflow:hidden">
+            <div style="background:#161b22;border:1px solid #30363d;border-radius:10px;overflow:hidden">
                 <div style="position:relative">
                     <img src="../photos/benthos_daphnia.png" alt="ミジンコ" style="width:100%;height:100px;object-fit:cover;display:block">
-                    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.65));padding:6px 10px 4px">
+                    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.85));padding:6px 10px 4px">
                         <div style="font-size:.82em;font-weight:700;color:#fff">ミジンコ（Daphnia等）</div>
                     </div>
                 </div>
                 <div style="padding:10px 12px">
                     <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px">
-                        <span style="display:inline-block;background:#f0f3f7;border:1px solid #d0d7de;color:#333333;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">0.2〜3mm</span>
-                        <span style="display:inline-block;background:#f0fdf4;border:1px solid #1a7f37;color:#1a7f37;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">フルオート</span>
+                        <span style="display:inline-block;background:#1a1a1a;border:1px solid #8b949e;color:#c9d1d9;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">0.2〜3mm</span>
+                        <span style="display:inline-block;background:#0a2a14;border:1px solid #3fb950;color:#3fb950;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">フルオート</span>
                     </div>
-                    <div style="font-size:.78em;color:#333333;line-height:1.6">懸濁バクテリアを直接濾過捕食。水質改善効果が高く、小型魚の生き餌として最適。溶存酸素の指標にもなる</div>
+                    <div style="font-size:.78em;color:#c9d1d9;line-height:1.6">懸濁バクテリアを直接濾過捕食。水質改善効果が高く、小型魚の生き餌として最適。溶存酸素の指標にもなる</div>
                 </div>
             </div>
 
             <!-- イトミミズ -->
-            <div style="background:#f5f7fa;border:1px solid #d0d7de;border-radius:10px;overflow:hidden">
+            <div style="background:#161b22;border:1px solid #30363d;border-radius:10px;overflow:hidden">
                 <div style="position:relative">
                     <img src="../photos/benthos_tubifex.png" alt="イトミミズ" style="width:100%;height:100px;object-fit:cover;display:block">
-                    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.65));padding:6px 10px 4px">
+                    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.85));padding:6px 10px 4px">
                         <div style="font-size:.82em;font-weight:700;color:#fff">イトミミズ</div>
                     </div>
                 </div>
                 <div style="padding:10px 12px">
                     <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px">
-                        <span style="display:inline-block;background:#f0f3f7;border:1px solid #d0d7de;color:#333333;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">〜2mm</span>
-                        <span style="display:inline-block;background:#f0fdf4;border:1px solid #1a7f37;color:#1a7f37;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">フルオート</span>
+                        <span style="display:inline-block;background:#1a1a1a;border:1px solid #8b949e;color:#c9d1d9;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">〜2mm</span>
+                        <span style="display:inline-block;background:#0a2a14;border:1px solid #3fb950;color:#3fb950;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">フルオート</span>
                     </div>
-                    <div style="font-size:.78em;color:#333333;line-height:1.6">増殖速度が速く安定供給しやすい。魚の嗜好性も高い</div>
+                    <div style="font-size:.78em;color:#c9d1d9;line-height:1.6">増殖速度が速く安定供給しやすい。魚の嗜好性も高い</div>
                 </div>
             </div>
 
             <!-- ヨコエビ -->
-            <div style="background:#f5f7fa;border:1px solid #d0d7de;border-radius:10px;overflow:hidden">
+            <div style="background:#161b22;border:1px solid #30363d;border-radius:10px;overflow:hidden">
                 <div style="position:relative">
                     <img src="../photos/benthos_gammarus.png" alt="ヨコエビ" style="width:100%;height:100px;object-fit:cover;display:block">
-                    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.65));padding:6px 10px 4px">
+                    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.85));padding:6px 10px 4px">
                         <div style="font-size:.82em;font-weight:700;color:#fff">ヨコエビ</div>
                     </div>
                 </div>
                 <div style="padding:10px 12px">
                     <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px">
-                        <span style="display:inline-block;background:#f0f3f7;border:1px solid #d0d7de;color:#333333;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">2〜10mm</span>
-                        <span style="display:inline-block;background:#f0fdf4;border:1px solid #1a7f37;color:#1a7f37;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">フルオート</span>
+                        <span style="display:inline-block;background:#1a1a1a;border:1px solid #8b949e;color:#c9d1d9;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">2〜10mm</span>
+                        <span style="display:inline-block;background:#0a2a14;border:1px solid #3fb950;color:#3fb950;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">フルオート</span>
                     </div>
-                    <div style="font-size:.78em;color:#333333;line-height:1.6">底床撹拌効果も高い。多くの魚が好んで捕食</div>
+                    <div style="font-size:.78em;color:#c9d1d9;line-height:1.6">底床撹拌効果も高い。多くの魚が好んで捕食</div>
                 </div>
             </div>
 
             <!-- ミズムシ -->
-            <div style="background:#f5f7fa;border:1px solid #d0d7de;border-radius:10px;overflow:hidden">
+            <div style="background:#161b22;border:1px solid #30363d;border-radius:10px;overflow:hidden">
                 <div style="position:relative">
                     <img src="../photos/benthos_asellus.png" alt="ミズムシ" style="width:100%;height:100px;object-fit:cover;display:block">
-                    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.65));padding:6px 10px 4px">
+                    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.85));padding:6px 10px 4px">
                         <div style="font-size:.82em;font-weight:700;color:#fff">ミズムシ（Asellus）</div>
                     </div>
                 </div>
                 <div style="padding:10px 12px">
                     <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px">
-                        <span style="display:inline-block;background:#f0f3f7;border:1px solid #d0d7de;color:#333333;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">5〜15mm</span>
-                        <span style="display:inline-block;background:#f0fdf4;border:1px solid #1a7f37;color:#1a7f37;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">フルオート</span>
+                        <span style="display:inline-block;background:#1a1a1a;border:1px solid #8b949e;color:#c9d1d9;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">5〜15mm</span>
+                        <span style="display:inline-block;background:#0a2a14;border:1px solid #3fb950;color:#3fb950;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">フルオート</span>
                     </div>
-                    <div style="font-size:.78em;color:#333333;line-height:1.6">デトリタス分解能力が高い。低水温にも強く淡水系では安定して増殖</div>
+                    <div style="font-size:.78em;color:#c9d1d9;line-height:1.6">デトリタス分解能力が高い。低水温にも強く淡水系では安定して増殖</div>
                 </div>
             </div>
 
             <!-- トランペットスネール -->
-            <div style="background:#f5f7fa;border:1px solid #d0d7de;border-radius:10px;overflow:hidden">
+            <div style="background:#161b22;border:1px solid #30363d;border-radius:10px;overflow:hidden">
                 <div style="position:relative">
                     <img src="../photos/benthos_mts.png" alt="トランペットスネール" style="width:100%;height:100px;object-fit:cover;display:block">
-                    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.65));padding:6px 10px 4px">
+                    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.85));padding:6px 10px 4px">
                         <div style="font-size:.82em;font-weight:700;color:#fff">トランペットスネール</div>
                     </div>
                 </div>
                 <div style="padding:10px 12px">
                     <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px">
-                        <span style="display:inline-block;background:#f0f3f7;border:1px solid #d0d7de;color:#333333;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">1〜3cm</span>
-                        <span style="display:inline-block;background:#fffbeb;border:1px solid #9a6700;color:#9a6700;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">手動（底床撹拌）</span>
+                        <span style="display:inline-block;background:#1a1a1a;border:1px solid #8b949e;color:#c9d1d9;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">1〜3cm</span>
+                        <span style="display:inline-block;background:#1a1400;border:1px solid #d29922;color:#d29922;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">手動（底床撹拌）</span>
                     </div>
-                    <div style="font-size:.78em;color:#333333;line-height:1.6">昼間は底床に潜り嫌気化を防ぐ。夜間にデトリタスを摂食。底床撹拌機能が§4「底床非嫌気化」の帰結と整合する</div>
+                    <div style="font-size:.78em;color:#c9d1d9;line-height:1.6">昼間は底床に潜り嫌気化を防ぐ。夜間にデトリタスを摂食。底床撹拌機能が§4「底床非嫌気化」の帰結と整合する</div>
                 </div>
             </div>
 
             <!-- ミナミヌマエビ -->
-            <div style="background:#f5f7fa;border:1px solid #d0d7de;border-radius:10px;overflow:hidden">
+            <div style="background:#161b22;border:1px solid #30363d;border-radius:10px;overflow:hidden">
                 <div style="position:relative">
                     <img src="../photos/benthos_cherry_shrimp.png" alt="ミナミヌマエビ" style="width:100%;height:100px;object-fit:cover;display:block">
-                    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.65));padding:6px 10px 4px">
+                    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.85));padding:6px 10px 4px">
                         <div style="font-size:.82em;font-weight:700;color:#fff">ミナミヌマエビ</div>
                     </div>
                 </div>
                 <div style="padding:10px 12px">
                     <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px">
-                        <span style="display:inline-block;background:#f0f3f7;border:1px solid #d0d7de;color:#333333;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">1.5〜3cm</span>
-                        <span style="display:inline-block;background:#f0fdf4;border:1px solid #1a7f37;color:#1a7f37;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">フルオート</span>
+                        <span style="display:inline-block;background:#1a1a1a;border:1px solid #8b949e;color:#c9d1d9;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">1.5〜3cm</span>
+                        <span style="display:inline-block;background:#0a2a14;border:1px solid #3fb950;color:#3fb950;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">フルオート</span>
                     </div>
-                    <div style="font-size:.78em;color:#333333;line-height:1.6">デトリタス・藻類・バクテリアバイオマスを幅広く摂食。増殖サイクルが短く稚エビが常時供給される。入手容易</div>
+                    <div style="font-size:.78em;color:#c9d1d9;line-height:1.6">デトリタス・藻類・バクテリアバイオマスを幅広く摂食。増殖サイクルが短く稚エビが常時供給される。入手容易</div>
                 </div>
             </div>
 
             <!-- ヤマトヌマエビ -->
-            <div style="background:#f5f7fa;border:1px solid #d0d7de;border-radius:10px;overflow:hidden">
+            <div style="background:#161b22;border:1px solid #30363d;border-radius:10px;overflow:hidden">
                 <div style="position:relative">
                     <img src="../photos/benthos_amano_shrimp.png" alt="ヤマトヌマエビ" style="width:100%;height:100px;object-fit:cover;display:block">
-                    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.65));padding:6px 10px 4px">
+                    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.85));padding:6px 10px 4px">
                         <div style="font-size:.82em;font-weight:700;color:#fff">ヤマトヌマエビ</div>
                     </div>
                 </div>
                 <div style="padding:10px 12px">
                     <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px">
-                        <span style="display:inline-block;background:#f0f3f7;border:1px solid #d0d7de;color:#333333;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">3〜5cm</span>
-                        <span style="display:inline-block;background:#fffbeb;border:1px solid #9a6700;color:#9a6700;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">手動 / 大型ポンプ</span>
+                        <span style="display:inline-block;background:#1a1a1a;border:1px solid #8b949e;color:#c9d1d9;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">3〜5cm</span>
+                        <span style="display:inline-block;background:#1a1400;border:1px solid #d29922;color:#d29922;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">手動 / 大型ポンプ</span>
                     </div>
-                    <div style="font-size:.78em;color:#333333;line-height:1.6">デトリタス分解力はミナミより強力。大型の有機物も処理可能。<span style="color:#666666">淡水では繁殖しないため個体数は自然増加しない</span></div>
+                    <div style="font-size:.78em;color:#c9d1d9;line-height:1.6">デトリタス分解力はミナミより強力。大型の有機物も処理可能。<span style="color:#8b949e">淡水では繁殖しないため個体数は自然増加しない</span></div>
                 </div>
             </div>
 
             <!-- ドジョウ -->
-            <div style="background:#f5f7fa;border:1px solid #d0d7de;border-radius:10px;overflow:hidden">
+            <div style="background:#161b22;border:1px solid #30363d;border-radius:10px;overflow:hidden">
                 <div style="position:relative">
                     <img src="../photos/benthos_loach.png" alt="ドジョウ" style="width:100%;height:100px;object-fit:cover;display:block">
-                    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.65));padding:6px 10px 4px">
+                    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.85));padding:6px 10px 4px">
                         <div style="font-size:.82em;font-weight:700;color:#fff">ドジョウ</div>
                     </div>
                 </div>
                 <div style="padding:10px 12px">
                     <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px">
-                        <span style="display:inline-block;background:#f0f3f7;border:1px solid #d0d7de;color:#333333;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">5〜15cm</span>
-                        <span style="display:inline-block;background:#fffbeb;border:1px solid #9a6700;color:#9a6700;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">手動 / 大型ポンプ</span>
+                        <span style="display:inline-block;background:#1a1a1a;border:1px solid #8b949e;color:#c9d1d9;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">5〜15cm</span>
+                        <span style="display:inline-block;background:#1a1400;border:1px solid #d29922;color:#d29922;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">手動 / 大型ポンプ</span>
                     </div>
-                    <div style="font-size:.78em;color:#333333;line-height:1.6">底床撹拌力が強い。大型肉食魚向けの餌として最適</div>
+                    <div style="font-size:.78em;color:#c9d1d9;line-height:1.6">底床撹拌力が強い。大型肉食魚向けの餌として最適</div>
                 </div>
             </div>
 
@@ -2110,28 +2099,27 @@
             ポンプのインペラークリアランスが概ね3mm以上であれば、イトミミズや稚ヨコエビの通過が可能なことが多い。ただし、使用するポンプの仕様を事前に確認することを推奨する。
         </div>
 
-        <h3>2.1.4 適用しにくい構成</h3>
+        <h3>適用しにくい構成</h3>
         <p>本理論は適用範囲が広いが、以下の構成では必須条件（十分な酸素供給・大容量サンプ）が成立しにくく、適用が困難である。</p>
         <div class="holo-warn-red fade-in">
-            <strong>× 上部フィルター単体：</strong>サンプに相当する大容量の処理槽を持たないため、バクテリアバイオマスの蓄積とベントス増殖に必要な空間が確保できない。
+            <strong>❌ 上部フィルター単体：</strong>サンプに相当する大容量の処理槽を持たないため、バクテリアバイオマスの蓄積とベントス増殖に必要な空間が確保できない。
         </div>
         <div class="holo-warn-red fade-in">
-            <strong>× 外部フィルター単体：</strong>密閉構造のため内部の酸素供給が不十分。好気性の従属栄養細菌の増殖条件を長期維持できない。
+            <strong>❌ 外部フィルター単体：</strong>密閉構造のため内部の酸素供給が不十分。好気性の従属栄養細菌の増殖条件を長期維持できない。
         </div>
         <div class="holo-warn-yellow fade-in">
-            <strong>※ 30L未満の小型水槽：</strong>技術的には不可能ではないが、バイオロードと炭素源量の管理が極めてシビアになる。十分な経験を積んでから挑戦することを推奨する。
+            <strong>⚠ 30L未満の小型水槽：</strong>技術的には不可能ではないが、バイオロードと炭素源量の管理が極めてシビアになる。十分な経験を積んでから挑戦することを推奨する。
         </div>
 
         <hr>
         <nav class="page-nav-bottom">
-            <a href="index.html" class="page-nav-btn">目次</a>
+            <a href="index.html" class="page-nav-btn">📑 目次</a>
             <div class="page-nav-spacer"></div>
-            <a href="part1.html" class="page-nav-btn">← 第１章 理論</a>
-            <a href="part3.html" class="page-nav-btn">第３章 構築方法 →</a>
+            <a href="part1.html" class="page-nav-btn">◀ Part 1 理論</a>
+            <a href="part3.html" class="page-nav-btn">Part 3 構築方法 ▶</a>
         </nav>
 
     </div>
-    <footer class="ibee-footer"><div class="ibee-footer-inner"><div class="ibee-footer-org">生物環境技術研究会</div><div class="ibee-footer-en">Institute of Biological Environmental Engineering</div><div class="ibee-footer-since">Since. 1999</div><div class="ibee-footer-cite"><div class="ibee-footer-cite-label">推奨引用形式</div>生物環境技術研究会 (2026). ホロビオントアクアリウム理論. Retrieved from https://holobiont-aqua.github.io/holobiont-aquarium/ja/</div><div class="ibee-footer-note">※本サイトは個人が運営する技術情報サイトです</div></div></footer>
 </body>
 
 </html>

@@ -1,0 +1,1127 @@
+<!-- はてなブログHTML貼り付け用 ver.8 -->
+<style>
+    /* モバイルファースト */
+    .holo-summary {
+        background: #0d1117;
+        border: 1px solid #30363d;
+        border-left: 4px solid #58a6ff;
+        border-radius: 6px;
+        padding: 16px 18px;
+        margin: 20px 0;
+        color: #c9d1d9
+    }
+
+    .holo-summary ul {
+        margin: 8px 0 0;
+        padding-left: 18px;
+        line-height: 1.9
+    }
+
+    .holo-card {
+        background: #161b22;
+        border: 1px solid #30363d;
+        border-radius: 6px;
+        padding: 14px 16px;
+        margin: 10px 0;
+        color: #c9d1d9
+    }
+
+    .holo-card-green {
+        border-left: 3px solid #3fb950
+    }
+
+    .holo-warn-red {
+        background: #1c0a0a;
+        border: 1px solid #f85149;
+        border-left: 4px solid #f85149;
+        border-radius: 6px;
+        padding: 14px 16px;
+        margin: 14px 0;
+        color: #c9d1d9;
+        line-height: 1.8
+    }
+
+    .holo-warn-yellow {
+        background: #1c1409;
+        border: 1px solid #d29922;
+        border-left: 4px solid #d29922;
+        border-radius: 6px;
+        padding: 14px 16px;
+        margin: 14px 0;
+        color: #c9d1d9
+    }
+
+    .holo-warn-purple {
+        background: #160d20;
+        border: 1px solid #8957e5;
+        border-left: 4px solid #8957e5;
+        border-radius: 6px;
+        padding: 14px 16px;
+        margin: 14px 0;
+        color: #c9d1d9
+    }
+
+    .holo-tip {
+        background: #161b22;
+        border: 1px solid #30363d;
+        border-radius: 6px;
+        padding: 14px 16px;
+        margin: 14px 0;
+        color: #c9d1d9
+    }
+
+    .holo-data {
+        background: #0d1117;
+        border: 1px solid #30363d;
+        border-radius: 6px;
+        padding: 16px;
+        margin: 16px 0;
+        text-align: center
+    }
+
+    .holo-blockquote {
+        border-left: 3px solid #3d444d;
+        padding: 2px 14px;
+        color: #8b949e;
+        margin: 14px 0
+    }
+
+    .holo-label {
+        font-size: .82em;
+        text-transform: uppercase;
+        letter-spacing: .05em;
+        color: #8b949e;
+        margin: 0 0 6px
+    }
+
+    /* テーブル横スクロール */
+    .holo-table-wrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin: 14px 0;
+        border-radius: 6px
+    }
+
+    .holo-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: .88em;
+        white-space: nowrap
+    }
+
+    .holo-table th {
+        background: #161b22;
+        color: #8b949e;
+        font-weight: normal;
+        text-align: left;
+        padding: 8px 12px;
+        border: 1px solid #30363d;
+        font-size: .82em;
+        text-transform: uppercase;
+        letter-spacing: .03em
+    }
+
+    .holo-table td {
+        padding: 8px 12px;
+        border: 1px solid #21262d;
+        color: #c9d1d9;
+        vertical-align: top;
+        line-height: 1.5
+    }
+
+    .holo-table tr:nth-child(even) td {
+        background: #0d1117
+    }
+
+    /* コードブロック横スクロール */
+    .holo-pre {
+        background: #161b22;
+        border: 1px solid #30363d;
+        border-radius: 6px;
+        padding: 14px;
+        color: #c9d1d9;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        line-height: 1.7;
+        font-size: .82em;
+        white-space: pre
+    }
+
+    /* PC */
+    @media(min-width:640px) {
+        .holo-summary {
+            padding: 20px 24px
+        }
+
+        .holo-card,
+        .holo-warn-red,
+        .holo-warn-yellow,
+        .holo-warn-purple,
+        .holo-tip {
+            padding: 14px 18px
+        }
+
+        .holo-table {
+            font-size: .93em;
+            white-space: normal
+        }
+
+        .holo-pre {
+            font-size: .88em
+        }
+    }
+
+    /* 硝化サイクル図 */
+    @keyframes nc-flow {
+        0% {
+            transform: translateY(-2px);
+            opacity: 0
+        }
+
+        20% {
+            opacity: 1
+        }
+
+        100% {
+            transform: translateY(36px);
+            opacity: 0
+        }
+    }
+
+    @keyframes nc-fadein {
+        from {
+            opacity: 0;
+            transform: translateY(6px)
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0)
+        }
+    }
+
+    @keyframes nc-pulse {
+
+        0%,
+        100% {
+            box-shadow: 0 0 0 0 rgba(88, 166, 255, 0)
+        }
+
+        50% {
+            box-shadow: 0 0 0 8px rgba(88, 166, 255, .12)
+        }
+    }
+
+    .nc-wrap {
+        max-width: 400px;
+        margin: 20px auto;
+        font-family: sans-serif
+    }
+
+    .nc-node {
+        border-radius: 8px;
+        padding: 10px 14px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        animation: nc-fadein .5s ease both
+    }
+
+    .nc-node-base {
+        background: #161b22;
+        border: 1px solid #30363d
+    }
+
+    .nc-node-danger {
+        background: #2d1010;
+        border: 1px solid #f85149
+    }
+
+    .nc-node-warn {
+        background: #2d1f08;
+        border: 1px solid #d29922
+    }
+
+    .nc-node-acc {
+        background: #16200a;
+        border: 1px solid #7ee787
+    }
+
+    .nc-node-sys {
+        background: #0d2440;
+        border: 1px solid #58a6ff;
+        animation: nc-pulse 2s infinite, nc-fadein .5s ease both
+    }
+
+    .nc-node-out {
+        background: #0a2a14;
+        border: 1px solid #3fb950
+    }
+
+    .nc-name {
+        color: #e6edf3;
+        font-weight: bold;
+        font-size: .9em
+    }
+
+    .nc-sub {
+        color: #8b949e;
+        font-size: .75em;
+        margin-top: 2px
+    }
+
+    .nc-badge {
+        font-size: .7em;
+        padding: 2px 8px;
+        border-radius: 10px;
+        white-space: nowrap;
+        flex-shrink: 0;
+        margin-left: 8px
+    }
+
+    .nc-badge-red {
+        background: #3d0f0f;
+        color: #f85149;
+        border: 1px solid #f85149
+    }
+
+    .nc-badge-ora {
+        background: #2d1a06;
+        color: #d29922;
+        border: 1px solid #d29922
+    }
+
+    .nc-badge-yel {
+        background: #1a2a0a;
+        color: #7ee787;
+        border: 1px solid #7ee787
+    }
+
+    .nc-conn {
+        text-align: center;
+        position: relative;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center
+    }
+
+    .nc-line {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: #21262d;
+        transform: translateX(-50%)
+    }
+
+    .nc-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #58a6ff;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: nc-flow 1.6s ease-in infinite
+    }
+
+    .nc-dot-green {
+        background: #3fb950
+    }
+
+    .nc-lbl {
+        background: #0d1117;
+        color: #8b949e;
+        font-size: .73em;
+        padding: 2px 10px;
+        border-radius: 4px;
+        border: 1px solid #21262d;
+        position: relative;
+        z-index: 1
+    }
+
+    .nc-cross {
+        max-width: 400px;
+        margin: 0 auto 8px;
+        padding: 8px 14px;
+        background: #111;
+        border: 1px dashed #3d444d;
+        border-radius: 8px;
+        text-align: center;
+        color: #484f58;
+        font-size: .8em;
+        text-decoration: line-through
+    }
+
+    .nc-label-sys {
+        text-align: center;
+        color: #58a6ff;
+        font-size: .72em;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        margin: 4px 0 0
+    }
+</style>
+
+<h1>淡水水槽を「換水ゼロ」にした話——炭素源×ベントスで作る自律型生態系アクアリウム</h1>
+<p><em>無換水・無給餌・CO₂無添加のオーバーフロー式水草水槽を1年間維持した記録と理論</em></p>
+
+<hr>
+
+<div class="holo-summary">
+    <p style="margin:0 0 10px;font-weight:bold;color:#79c0ff;">📋 この記事でわかること</p>
+    <ul>
+        <li>淡水水槽で「換水なし」が難しい本当の理由</li>
+        <li>炭素源＋ベントスで硝酸塩を食物連鎖として系外排出する仕組み</li>
+        <li>スーパーとホムセンで揃う炭素源エキスのレシピ</li>
+        <li>白濁を乗り越える1ヶ月の立ち上げ手順</li>
+        <li>1年間・pH 6.85を維持した実際のデータ</li>
+    </ul>
+</div>
+
+<hr>
+
+<h2>はじめに</h2>
+
+<p>まず、この記事を読んで最初に思うことを代わりに言っておこう。</p>
+<div class="holo-blockquote">
+    <p>「魚飼ってんだから、換水くらいしろよ」</p>
+</div>
+<p>ごもっともだ。ただ、正直に言うと面倒なのだ。</p>
+<p>週に一度バケツを持ち出して、水抜いて、カルキ抜いて、温度合わせて、ゆっくり足して——それを何年も続けるのは純粋に手間がかかる。大型水槽ともなれば腰も痛くなる。</p>
+<p>だから考えた。「換水しなくていい仕組みを作ればいいのでは？」と。</p>
+<p>その答えとして辿り着いたのが、この記事で紹介するシステムだ。炭素源の投入と底生生物（ベントス）の食物連鎖を組み合わせることで、無換水・無給餌・CO₂無添加でのオーバーフロー式水草水槽を1年以上にわたって安定稼働させた。その記録と理論的背景をまとめる。
+</p>
+<p>便宜上このシステムを「ホロビオントアクアリウム」と呼ぶ。生物学の概念・Holobiont（ホロビオント）——宿主と共生微生物群全体を一つの超個体として捉える思想——になぞらえ、水槽全体を魚・バクテリア・ベントス・水草が一体となった「超個体としての生態系」として設計するという意味合いを込めた名称だ。
+</p>
+
+<hr>
+
+<h2>対象読者</h2>
+<ul>
+    <li>オーバーフロー式水槽を持っている、または導入を検討している方</li>
+    <li>換水の手間に限界を感じている中〜上級者のアクアリスト</li>
+    <li>生態系的アプローチに知的な関心を持つ方</li>
+</ul>
+<p>初心者には推奨しない。必要な設備のハードルが高く、立ち上げ時に1ヶ月間の白濁に耐える知識と胆力が求められる。</p>
+
+<hr>
+
+<h2>淡水の「無換水」、なぜ難しいのか</h2>
+
+<h3>既存手法の比較</h3>
+<div class="holo-table-wrap">
+    <table class="holo-table">
+        <tr>
+            <th>アプローチ</th>
+            <th>原理</th>
+            <th>メリット</th>
+            <th>デメリット</th>
+        </tr>
+        <tr>
+            <td>高密植水草水槽（ADA式等）</td>
+            <td>水草が硝酸塩・リン酸を吸収</td>
+            <td>景観が美しい</td>
+            <td>CO₂添加必須・トリミング手間・崩壊リスク</td>
+        </tr>
+        <tr>
+            <td>DSB（嫌気砂床）</td>
+            <td>嫌気性細菌が硝酸塩を窒素ガスに還元</td>
+            <td>硝酸塩を根本除去</td>
+            <td>崩壊時に硫化水素発生・淡水での実績薄</td>
+        </tr>
+        <tr>
+            <td>外部脱窒炉</td>
+            <td>嫌気区画で脱窒を強制</td>
+            <td>制御しやすい</td>
+            <td>装置複雑・詰まりリスク・維持コスト高</td>
+        </tr>
+        <tr>
+            <td>本システム（好気性炭素同化）</td>
+            <td>好気性バクテリアが硝酸塩を菌体タンパクに取り込み、ベントスが捕食して系外排出</td>
+            <td>管理ほぼゼロ・CO₂不要・自己完結・リセット不要</td>
+            <td>設備ハードル高・ベントス必要・初心者不向き</td>
+        </tr>
+    </table>
+</div>
+
+<h3>海水では成立していた手法が、淡水では使えない理由</h3>
+<p>海水アクアリウムの世界では、ウォッカ法（炭素源添加）＋ベルリン式（プロテインスキマー）という組み合わせで無換水を達成する手法が知られている。しかし淡水への転用には根本的な障壁がある。</p>
+<div class="holo-table-wrap">
+    <table class="holo-table">
+        <tr>
+            <th>比較項目</th>
+            <th>海水（ベルリン式＋ウォッカ法）</th>
+            <th>淡水（本システム）</th>
+        </tr>
+        <tr>
+            <td>有機物の最終除去手段</td>
+            <td>プロテインスキマー（泡として系外排出）</td>
+            <td>ベントスによる捕食（食物連鎖で系外排出）</td>
+        </tr>
+        <tr>
+            <td>スキマーの使用可否</td>
+            <td>使用可</td>
+            <td>淡水では泡立ちが起きない（表面張力の違い）</td>
+        </tr>
+        <tr>
+            <td>適用水域</td>
+            <td>海水のみ</td>
+            <td>淡水で実現</td>
+        </tr>
+    </table>
+</div>
+
+<h3>なぜ嫌気性ではなく好気性を選んだか</h3>
+<div class="holo-card">
+    <p class="holo-label">Key Point</p>
+    <p style="margin:0">好気性アプローチはすべてが<strong>目で見て確認・調整できる</strong>。嫌気性アプローチはブラックボックスで、崩壊してから気づくことが多い。</p>
+</div>
+<div class="holo-table-wrap">
+    <table class="holo-table">
+        <tr>
+            <th>状況</th>
+            <th>観察できるサイン</th>
+            <th>対処法</th>
+        </tr>
+        <tr>
+            <td>ヘドロ除去が追いつかない</td>
+            <td>サンプのヘドロが増える</td>
+            <td>炭素源投入量を減らす・一時的に手動で吸出す</td>
+        </tr>
+        <tr>
+            <td>ベントスが増えすぎている</td>
+            <td>サンプが過密になる</td>
+            <td>魚にもっと食べさせる・一部を間引く</td>
+        </tr>
+        <tr>
+            <td>酸素が不足している</td>
+            <td>白濁に腐臭が混じる</td>
+            <td>エアレーション追加・ポンプを強化する</td>
+        </tr>
+        <tr>
+            <td>バランスが取れている</td>
+            <td>水がクリアで臭いがない</td>
+            <td>何もしなくてよい</td>
+        </tr>
+    </table>
+</div>
+
+<hr>
+
+<h2>このシステムの仕組み</h2>
+
+<h3>硝化サイクルのどこに介入するか</h3>
+
+<!-- 硝化サイクル アニメーション図 -->
+<div class="nc-wrap">
+    <div class="nc-node nc-node-base" style="animation-delay:0s">
+        <div>
+            <div class="nc-name">🐟 魚の排泄物・残餌</div>
+        </div>
+    </div>
+    <div class="nc-conn">
+        <div class="nc-line"></div>
+        <div class="nc-dot" style="animation-delay:0s"></div>
+    </div>
+    <div class="nc-node nc-node-danger" style="animation-delay:.1s">
+        <div>
+            <div class="nc-name">アンモニア（NH₃）</div>
+        </div>
+        <span class="nc-badge nc-badge-red">猛毒</span>
+    </div>
+    <div class="nc-conn">
+        <div class="nc-line"></div>
+        <div class="nc-dot" style="animation-delay:.3s"></div>
+        <div class="nc-lbl">亜硝酸菌 Nitrosomonas</div>
+    </div>
+    <div class="nc-node nc-node-warn" style="animation-delay:.2s">
+        <div>
+            <div class="nc-name">亜硝酸塩（NO₂⁻）</div>
+        </div>
+        <span class="nc-badge nc-badge-ora">毒性あり</span>
+    </div>
+    <div class="nc-conn">
+        <div class="nc-line"></div>
+        <div class="nc-dot" style="animation-delay:.6s"></div>
+        <div class="nc-lbl">硝酸菌 Nitrobacter</div>
+    </div>
+    <div class="nc-node nc-node-acc" style="animation-delay:.3s">
+        <div>
+            <div class="nc-name">硝酸塩（NO₃⁻）</div>
+            <div class="nc-sub">毒性は低いが蓄積し続ける ← ここが問題</div>
+        </div>
+        <span class="nc-badge nc-badge-yel">蓄積</span>
+    </div>
+    <div class="nc-conn" style="height:16px">
+        <div class="nc-line"></div>
+    </div>
+    <div class="nc-cross">🚫 従来の解決策：換水で薄める</div>
+    <div class="nc-label-sys">▼ 本システムのアプローチ</div>
+    <div class="nc-conn">
+        <div class="nc-line" style="background:#1d3a5e"></div>
+        <div class="nc-dot nc-dot-green" style="animation-delay:.9s"></div>
+        <div class="nc-lbl">従属栄養バクテリア ＋ 炭素源投入</div>
+    </div>
+    <div class="nc-node nc-node-sys" style="animation-delay:.4s">
+        <div>
+            <div class="nc-name">炭素同化</div>
+            <div class="nc-sub">硝酸塩 → 菌体タンパク（バクテリアの体）</div>
+        </div>
+    </div>
+    <div class="nc-conn">
+        <div class="nc-line" style="background:#1d3a5e"></div>
+        <div class="nc-dot nc-dot-green" style="animation-delay:1.2s"></div>
+        <div class="nc-lbl">ベントスが捕食（イトミミズ・ヨコエビ等）</div>
+    </div>
+    <div class="nc-node nc-node-out" style="animation-delay:.5s">
+        <div>
+            <div class="nc-name">✅ 食物連鎖として系外排出</div>
+            <div class="nc-sub">水換え不要・自律して完結</div>
+        </div>
+    </div>
+</div>
+
+<p>硝化サイクル——アンモニアを亜硝酸塩、さらに硝酸塩へと変換するプロセス——はどんな水槽でも起きている。問題はその先だ。硝酸塩は比較的無害だが蓄積し続ける。従来の水槽管理では換水によって薄めるしか手がなかった。</p>
+<p>本システムが介入するのはまさにこの「硝酸塩の最終処理」の段階だ。好気性バクテリアは炭素源をエネルギーに硝酸塩を菌体タンパクとして自身の細胞内に取り込む。これを炭素同化という。硝酸塩が「バクテリアの体」に変換され、あとはその体をベントスに食わせれば、窒素は食物連鎖として系外へ出ていく。
+</p>
+
+<div class="holo-table-wrap">
+    <table class="holo-table">
+        <tr>
+            <th>ヘドロ除去手段</th>
+            <th>淡水での実現性</th>
+            <th>備考</th>
+        </tr>
+        <tr>
+            <td>プロテインスキマー</td>
+            <td>不可</td>
+            <td>海水の表面張力に依存</td>
+        </tr>
+        <tr>
+            <td>手動サイフォン吸出し</td>
+            <td>可能</td>
+            <td>換水に近い手間が発生し本末転倒</td>
+        </tr>
+        <tr>
+            <td>機械的フィルター（外部等）</td>
+            <td>不可</td>
+            <td>一瞬で詰まる</td>
+        </tr>
+        <tr>
+            <td>ベントス捕食（本システム）</td>
+            <td>自律的</td>
+            <td>自己完結・無管理</td>
+        </tr>
+    </table>
+</div>
+
+<h3>ベントスループと物質循環</h3>
+<pre class="holo-pre">【サンプ：処理の主舞台】
+
+炭素源エキスをサンプへ直接投入
+  → 好気性バクテリアが爆増し、炭素同化を行う
+    → 水中の硝酸塩が菌体タンパクとして固定される
+      → バクテリアがヘドロ化
+        → サンプ内のベントス類（イトミミズ・ヨコエビ等）がヘドロを捕食・増殖
+
+【メインタンク → サンプ】
+
+オーバーフローでメインタンクの水がサンプへ流入
+  → 魚の排泄物・残餌由来の窒素・有機物もサンプへ運ばれ処理される
+
+【サンプ → メインタンク】
+
+給水ポンプがベントスを巻き込みメインタンクへ送水
+  → ベントスが魚の生きた餌として消費される
+    → 魚が成長・排泄 → 再びサイクルへ</pre>
+
+<p>メインタンクは展示空間。サンプが生物処理エンジン。オーバーフロー式は落水による曝気（酸素供給）とヘドロ・有機物のサンプへの輸送という二重の役割を担う、必要不可欠なインフラだ。</p>
+
+<h3>一般的なサンプとの役割の違い</h3>
+<div class="holo-table-wrap">
+    <table class="holo-table">
+        <tr>
+            <th>項目</th>
+            <th>一般的なサンプ</th>
+            <th>本システムのサンプ</th>
+        </tr>
+        <tr>
+            <td>主な役割</td>
+            <td>分解層（ろ材・バクテリアで有機物を分解）</td>
+            <td>分解層＋生産層</td>
+        </tr>
+        <tr>
+            <td>生物</td>
+            <td>バクテリア中心</td>
+            <td>バクテリア＋ベントス（生物生産）</td>
+        </tr>
+        <tr>
+            <td>メインタンクとの関係</td>
+            <td>補助的な処理槽</td>
+            <td>実質的なメイン（生態系の心臓部）</td>
+        </tr>
+        <tr>
+            <td>出力</td>
+            <td>浄化された水</td>
+            <td>浄化された水＋生きた餌（ベントス）</td>
+        </tr>
+    </table>
+</div>
+<p>一般的なオーバーフロー水槽では、サンプはあくまで「メインタンクを支える裏方」だ。しかしこのシステムでは、炭素同化・ヘドロ処理・ベントス増殖のすべてがサンプで起き、そのサンプからメインタンクへ栄養が供給される。生態系の中心はサンプにあり、メインタンクはむしろその恩恵を受ける側に立つ。
+</p>
+
+<h3>副次的に達成される「三つの無」</h3>
+<div class="holo-card holo-card-green">
+    <p style="margin:0 0 6px;font-weight:bold;color:#3fb950">① 無給餌</p>
+    <p style="margin:0;font-size:.95em">
+        サンプで増殖したベントスが給水ポンプを通じて常時メインタンクへ供給される。魚は自ら餌を摂取するため、手動での給餌が原則不要となる。ただしベントスが軌道に乗るまでの初期は、通常通り給餌すること。</p>
+</div>
+<div class="holo-card holo-card-green">
+    <p style="margin:0 0 6px;font-weight:bold;color:#3fb950">② CO₂無添加でのオーバーフロー式水草栽培</p>
+    <p style="margin:0;font-size:.95em">
+        通説では「オーバーフロー式は落水でCO₂がガス抜けするため水草水槽には不向き」とされている。しかし本システムでは、爆増した好気性バクテリアが大量のCO₂を常時産生する。このバクテリア呼吸由来のCO₂が落水によるガス抜け分を上回り、水草の光合成を賄う。
+    </p>
+</div>
+<div class="holo-card holo-card-green">
+    <p style="margin:0 0 6px;font-weight:bold;color:#3fb950">③ 底床のリセット不要</p>
+    <p style="margin:0;font-size:.95em">ベントスはメインタンクにも侵入し底床を撹拌し続ける。この撹拌作用により底床が嫌気化（硫化水素発生）しない。理論上、水槽のリセットが不要になる。</p>
+</div>
+
+<hr>
+
+<h2>なぜオーバーフロー式でなければならないか</h2>
+<div class="holo-table-wrap">
+    <table class="holo-table">
+        <tr>
+            <th>ろ過方式</th>
+            <th>ヘドロ輸送</th>
+            <th>酸素供給</th>
+            <th>適合性</th>
+        </tr>
+        <tr>
+            <td><strong>オーバーフロー式</strong></td>
+            <td>サンプへ自動落下</td>
+            <td>落水曝気で十分</td>
+            <td>唯一の適合</td>
+        </tr>
+        <tr>
+            <td>外部フィルター</td>
+            <td>内部で即座に詰まる</td>
+            <td>ポンプ循環のみ</td>
+            <td>絶対NG</td>
+        </tr>
+        <tr>
+            <td>上部フィルター</td>
+            <td>ウール・ろ材で捕捉</td>
+            <td>—</td>
+            <td>不可</td>
+        </tr>
+        <tr>
+            <td>底面フィルター</td>
+            <td>底床に蓄積</td>
+            <td>—</td>
+            <td>不可</td>
+        </tr>
+        <tr>
+            <td>スポンジ・投げ込み</td>
+            <td>スポンジに捕捉</td>
+            <td>—</td>
+            <td>不可</td>
+        </tr>
+    </table>
+</div>
+<p>バクテリアが爆増するこのシステムは、酸素要求量が通常の水槽と比較にならないほど高い。オーバーフロー式の落水曝気だけがこの需要を安定的に賄える。ヘドロを「詰まらせず流す」という設計思想とも完全に一致しており、このシステムにとってオーバーフロー式は唯一無二の選択肢だ。
+</p>
+
+<hr>
+
+<h2>炭素源エキスのレシピ</h2>
+
+<h3>ベース液</h3>
+<div class="holo-table-wrap">
+    <table class="holo-table">
+        <tr>
+            <th>成分</th>
+            <th>量</th>
+            <th>主成分</th>
+            <th>速度特性</th>
+        </tr>
+        <tr>
+            <td>ウォッカ</td>
+            <td>200ml</td>
+            <td>エタノール</td>
+            <td>速効性・多様なバクテリアに即利用される</td>
+        </tr>
+        <tr>
+            <td>米酢</td>
+            <td>50ml</td>
+            <td>酢酸</td>
+            <td>中速・酢酸資化菌を活性化</td>
+        </tr>
+        <tr>
+            <td>グラニュー糖</td>
+            <td>15g</td>
+            <td>スクロース</td>
+            <td>緩効性・糖資化菌を活性化</td>
+        </tr>
+    </table>
+</div>
+<p>複数の炭素源を用いることで、特定のバクテリアが優占するモノカルチャー化を防止し、多様なバクテリアコミュニティを維持する。これがシステムのレジリエンス（回復力）の源泉となる。</p>
+
+<h3>ミネラル補給の漬け込み素材</h3>
+<p>無換水では水道水からの微量ミネラル補給がなくなる。この問題を、炭素源エキスに以下を漬け込むことで解決する。</p>
+<div class="holo-table-wrap">
+    <table class="holo-table">
+        <tr>
+            <th>素材</th>
+            <th>主な供給成分</th>
+            <th>目的</th>
+        </tr>
+        <tr>
+            <td>藻塩</td>
+            <td>海藻由来の微量ミネラル全般</td>
+            <td>Na・K・Mg・Ca・ヨウ素等</td>
+        </tr>
+        <tr>
+            <td>バナナ（可食部のみ）</td>
+            <td>カリウム・Mg・微量元素</td>
+            <td>特にカリウムの補充</td>
+        </tr>
+        <tr>
+            <td>ルイボスティー茶葉</td>
+            <td>Ca・K・Zn・Mn等</td>
+            <td>広範な微量ミネラル</td>
+        </tr>
+    </table>
+</div>
+<div class="holo-warn-yellow">
+    <strong>⚠️ 注意</strong><br>
+    バナナは必ず可食部（果肉）のみ使用すること。皮には農薬が残留している場合があり、エキスに溶け出してエビ類が全滅する危険がある。
+</div>
+
+<h3>投入方法</h3>
+<p>サンプへポンプ1プッシュを毎日投入する。ドーシングポンプを使用すれば完全自動化も可能だ。作ったエキスは常温保存でいい。ウォッカのアルコールが防腐剤として機能するため、冷蔵保存の必要はなく、長期間そのまま使用できる。</p>
+
+<hr>
+
+<h2>立ち上げ手順</h2>
+
+<p>立ち上げ期間の目安は約1ヶ月。著者は魚を入れた状態で立ち上げたが、これは通常非常にリスクが高い行為だ。以下は一般化した安全な手順を示す。</p>
+
+<h3>STEP 1：底床の選定</h3>
+<p>焼赤玉土を推奨する。多孔質でバクテリアが定着しやすく、栄養分がないため初期の水質を安定させやすい。</p>
+<div class="holo-warn-purple">
+    <strong>📌 重要</strong><br>
+    必ず「硬質」タイプを選ぶこと。通常の赤玉土や鹿沼土は水中で崩れて泥だらけになる。硬質（焼き）タイプは高温処理で固化されており、水中でも粒が維持される。
+</div>
+<div class="holo-table-wrap">
+    <table class="holo-table">
+        <tr>
+            <th>素材</th>
+            <th>pH傾向</th>
+            <th>水草適性</th>
+            <th>価格</th>
+            <th>備考</th>
+        </tr>
+        <tr>
+            <td>焼赤玉土（硬質）</td>
+            <td>弱酸性</td>
+            <td>◎</td>
+            <td>安価</td>
+            <td>最も推奨</td>
+        </tr>
+        <tr>
+            <td>焼き鹿沼土（硬質）</td>
+            <td>弱酸性〜酸性</td>
+            <td>◎</td>
+            <td>安価</td>
+            <td>赤玉土より酸性強め</td>
+        </tr>
+        <tr>
+            <td>富士砂</td>
+            <td>弱酸性</td>
+            <td>◎</td>
+            <td>安価</td>
+            <td>火山性・崩れにくい</td>
+        </tr>
+        <tr>
+            <td>吸着系ソイル</td>
+            <td>弱酸性</td>
+            <td>◎</td>
+            <td>中程度</td>
+            <td>初期にアンモニア吸着で立ち上げがやや遅れる可能性・1〜2年で崩壊</td>
+        </tr>
+        <tr>
+            <td><s>栄養系ソイル</s></td>
+            <td>弱酸性</td>
+            <td>—</td>
+            <td>中程度</td>
+            <td>初期の栄養溶出が過剰で不向き</td>
+        </tr>
+    </table>
+</div>
+
+<h3>STEP 2：サンプへの赤玉土充填</h3>
+<p>サンプ内にも焼赤玉土を可能な限り敷き詰める。ポンプとは区画を隔てること。バクテリアの定着面積を最大化し、後のベントス定着の基盤を作る。</p>
+
+<h3>STEP 3：空回し＋初回投入</h3>
+<ol>
+    <li>水を入れてオーバーフローを空回し（この時点では魚なし）</li>
+    <li>ゴーストフィーディング：餌を少量投入してアンモニア源を供給する</li>
+    <li>炭素源エキスをサンプへ投入（約1プッシュ）</li>
+    <li>数日以内に水が牛乳のように白濁し始める</li>
+</ol>
+<div class="holo-warn-red">
+    <strong>🚫 やってはいけないこと</strong><br>
+    白濁はバクテリアブルームであり「成功の証」だ。以下は絶対に禁止：<br>
+    ・<strong>換水</strong>：増殖したバクテリアコミュニティを破壊し、立ち上げをゼロに戻す<br>
+    ・<strong>白濁除去剤の使用</strong>：バクテリアを凝集・除去してしまい同様に無効化する<br><br>
+    白濁を「異常」と判断して介入すればするほど立ち上げが失敗する。1ヶ月間、何もせず投入を続ける忍耐力がこのシステムの最大の要件かもしれない。
+</div>
+
+<h3>STEP 4：1ヶ月の継続、そして「突然のクリア化」</h3>
+<p>白濁したまま、毎日餌＋炭素源エキスの投入を継続する。約1ヶ月間続けると、ある日突然水がクリアになる。生態系が臨界点を超えて安定した——バクテリアコミュニティの確立が完了した——サインだ。</p>
+<div class="holo-tip">
+    <p class="holo-label">🔧 トラブルシューティング</p>
+    <strong>腐臭がしたら</strong><br>
+    白濁中に腐臭がする場合、好気性ではなく嫌気性分解が起きている——酸素不足のサインだ。緊急エアレーションを追加し、ポンプをより強力なものに交換すること。クリア化後もポンプ流量を維持し続けること。
+</div>
+
+<h3>STEP 5：水草植付け＆ベントス投入</h3>
+<p>クリア化を確認したら、水草を植え付けるとともに、サンプにベントス類（イトミミズ・ヨコエビ等）を投入する。</p>
+
+<h3>STEP 6：魚の段階的導入</h3>
+<p>水草が根を張り始めたら、低層魚→中層魚→上層魚→頂点捕食者の順に導入する。ベントスの供給が安定するまでは通常通り給餌を続けること。ベントスがポンプを通じて流入し、魚が自然に捕食する様子が確認できれば、徐々に給餌量を減らしていける。
+</p>
+
+<hr>
+
+<h2>実際の水槽データ</h2>
+
+<div class="holo-table-wrap">
+    <table class="holo-table">
+        <tr>
+            <th>項目</th>
+            <th>詳細</th>
+        </tr>
+        <tr>
+            <td>水槽サイズ</td>
+            <td>40×60×30cm（縦長・特注品）</td>
+        </tr>
+        <tr>
+            <td>サンプ</td>
+            <td>30cmハイタイプ</td>
+        </tr>
+        <tr>
+            <td>照明</td>
+            <td>ブリム パネルA（植物用ライト）</td>
+        </tr>
+        <tr>
+            <td>水温</td>
+            <td>25〜26℃（ヒーター管理）</td>
+        </tr>
+        <tr>
+            <td>運用期間</td>
+            <td>約1年間</td>
+        </tr>
+        <tr>
+            <td>水換え</td>
+            <td>なし（足し水のみ）</td>
+        </tr>
+        <tr>
+            <td>pH</td>
+            <td>6.85を1年間継続して維持</td>
+        </tr>
+    </table>
+</div>
+
+<div class="holo-data">
+    <p style="margin:0 0 4px;font-size:2.5em;font-weight:bold;color:#58a6ff;letter-spacing:.05em">pH 6.85</p>
+    <p style="margin:0;color:#8b949e;font-size:.9em">1年間継続して維持 / 水換えなし</p>
+</div>
+
+<p>通常の無換水水槽では硝酸塩の蓄積による酸性化（pH低下）が避けられないが、本システムでは炭素同化で硝酸塩が除去されるため、pHが自律的に安定する。換水して調整するより、むしろ安定しているという逆説が生じている。</p>
+
+<h3>メインタンク生体構成</h3>
+<div class="holo-table-wrap">
+    <table class="holo-table">
+        <tr>
+            <th>生体</th>
+            <th>数</th>
+            <th>層・役割</th>
+        </tr>
+        <tr>
+            <td>エンゼルフィッシュ</td>
+            <td>3</td>
+            <td>頂点捕食者</td>
+        </tr>
+        <tr>
+            <td>ナノストムス・ベッコフォルディ</td>
+            <td>7</td>
+            <td>中〜上層</td>
+        </tr>
+        <tr>
+            <td>リングローチ</td>
+            <td>1</td>
+            <td>低層</td>
+        </tr>
+        <tr>
+            <td>ホンコンプレコ</td>
+            <td>2</td>
+            <td>低層・コケ取り</td>
+        </tr>
+        <tr>
+            <td>アベニーパファー</td>
+            <td>1</td>
+            <td>中層・スネール駆除</td>
+        </tr>
+        <tr>
+            <td>ヒメツメカエル</td>
+            <td>3</td>
+            <td>低〜中層</td>
+        </tr>
+        <tr>
+            <td>ミナミヌマエビ</td>
+            <td>複数</td>
+            <td>低層・清掃</td>
+        </tr>
+        <tr>
+            <td>ラムズホーン</td>
+            <td>複数</td>
+            <td>低層・分解</td>
+        </tr>
+    </table>
+</div>
+<p>水草はエイクホルニア・アズレアとバリスネリアのみ。CO₂添加なし・オーバーフロー式でアズレアが大きく育っている。</p>
+
+<h3>日常の維持管理</h3>
+<div class="holo-table-wrap">
+    <table class="holo-table">
+        <tr>
+            <th>頻度</th>
+            <th>作業</th>
+        </tr>
+        <tr>
+            <td>毎日</td>
+            <td>炭素源エキスをサンプへ1プッシュ</td>
+        </tr>
+        <tr>
+            <td>毎日</td>
+            <td>水槽を眺める（異常確認）</td>
+        </tr>
+        <tr>
+            <td>随時</td>
+            <td>水が減ったら足し水</td>
+        </tr>
+        <tr>
+            <td>随時</td>
+            <td>水草が伸びたらトリミング</td>
+        </tr>
+    </table>
+</div>
+<p>一度安定すると白濁はほぼ完全に消える。維持管理は実質的に「1プッシュと眺めること」に収束する。</p>
+
+<hr>
+
+<h2>向かない人・やってはいけないこと</h2>
+
+<p><strong>必須条件：</strong></p>
+<ol>
+    <li>新規立ち上げ時にのみ実践すること。立ち上げ済みの水槽への後付けは高リスクで、バクテリアコミュニティが崩壊する可能性がある。</li>
+    <li>オーバーフロー式が必須。外部フィルターは一瞬でヘドロが詰まるため特に危険。</li>
+</ol>
+<p><strong>向かない人：</strong></p>
+<ul>
+    <li>ベントスへの嫌悪感がある人。サンプにはイトミミズ・ヨコエビ・ミズムシ等が大量生息する。これらはメインタンクにも流入する。</li>
+    <li>アクアリウムのお世話を楽しみたい人。システムが安定すると、やることがほとんどなくなる。</li>
+</ul>
+<p><strong>オプション：</strong></p>
+<ul>
+    <li>浮遊物が気になる場合：サンプに淡水海綿を入れることで生物的に除去できる</li>
+    <li>投入の完全自動化：ドーシングポンプの活用</li>
+</ul>
+
+<hr>
+
+<h2>コストと入手性</h2>
+
+<div class="holo-table-wrap">
+    <table class="holo-table">
+        <tr>
+            <th>項目</th>
+            <th>コスト</th>
+            <th>入手先</th>
+        </tr>
+        <tr>
+            <td>オーバーフロー水槽</td>
+            <td>高め（最大のハードル）</td>
+            <td>アクアリウムショップ・通販</td>
+        </tr>
+        <tr>
+            <td>焼赤玉土</td>
+            <td>安価</td>
+            <td>ホームセンター</td>
+        </tr>
+        <tr>
+            <td>ウォッカ・米酢・グラニュー糖</td>
+            <td>安価</td>
+            <td>スーパー</td>
+        </tr>
+        <tr>
+            <td>藻塩・バナナ・ルイボスティー</td>
+            <td>安価</td>
+            <td>スーパー</td>
+        </tr>
+        <tr>
+            <td>ベントス類</td>
+            <td>安価〜無料</td>
+            <td>入手性が難点（釣具店・採取等）</td>
+        </tr>
+    </table>
+</div>
+
+<p>オーバーフロー水槽さえ用意できれば、ランニングコストはほぼゼロに近い。唯一のボトルネックはベントス類の入手性だ。イトミミズは釣具店で活き餌として入手可能。ヨコエビは水路や水田での採集も選択肢となる。</p>
+
+<hr>
+
+<h2>大型水槽ほど真価を発揮する</h2>
+
+<p>本システムは、水槽を大型化するほど恩恵が大きくなると考えられる。</p>
+<p>大型水槽の水換えは圧倒的に重労働だ。100L・200L・300Lを超える水槽の換水作業は、それだけで趣味の継続を断念させるほどの負担になりうる。本システムはその水換えをゼロにする。</p>
+<p>水量が増えるほど水質バッファが大きくなり急激な変動が起きにくい。バクテリアコミュニティとベントスの生息域が広がりシステムがより安定する。ランニングコストはほとんど増加しない（炭素源の投入量が多少増える程度）。換水を前提とした水槽管理では「大型化するほど維持が大変になる」のが常識だが、このシステムではその関係が逆転する。
+</p>
+
+<hr>
+
+<h2>おわりに</h2>
+
+<p>本システムの発想の原点は、2chの「砂糖添加水槽」スレッドだった。「白濁する」「酸欠になる」「危険」という失敗談の集積を見て、逆に問いを立てた。</p>
+<div class="holo-blockquote">
+    <p>「なぜ失敗するのか？ 構造的に成功させるにはどうすればよいか？」</p>
+</div>
+<ul>
+    <li>白濁するのは問題ではなく、バクテリアが爆増しているサインだ</li>
+    <li>酸欠はオーバーフローの落水曝気で解決できる</li>
+    <li>単一炭素源の弱さは複数種の組み合わせで補える</li>
+    <li>増えたバクテリアのヘドロはベントスに食わせれば良い</li>
+</ul>
+<p>これらの回答を繋げていくと、自然と今のシステムに辿り着いた。</p>
+<p>Holobiont——宿主と共生微生物の総体を一つの超個体として見る視点——は後から知った概念だが、このシステムの設計思想を的確に表す言葉だと感じた。水槽は魚を飼うための容器ではなく、魚・バクテリア・ベントス・水草が一体となって動く、一つの生命体なのだ。
+</p>
+<p>最後に一つ、未検証の仮説を記しておく。これだけ多様なバクテリアが常時水槽内に存在し、魚がベントスを通じてそれらを継続的に摂取するとすれば、魚の腸内環境が豊かになり、免疫力・疾病耐性が向上する可能性があるのではないか。まさにホロビオントとしての魚——これはいつか検証したい問いだ。
+</p>
+<p>もう一つ。私は美しい水草レイアウト水槽を作る才能がない。細かいトリミング、ソイルの管理、CO₂の調整……正直、続かないのだ。だからこの記事の水草はアズレアとバリスネリアの二種だけになっている。しかしおそらく、このシステムはADA式のような美しい水草水槽にも応用できるはずだと考えている。誰かが試してくれたら、ぜひ結果を教えてほしい。
+</p>
+
+<div class="holo-data">
+    <p style="margin:0;color:#8b949e;font-size:1em;letter-spacing:.1em">pH 6.85 &nbsp;|&nbsp; 水換えなし &nbsp;|&nbsp; 給餌なし
+        &nbsp;|&nbsp; CO₂添加なし</p>
+    <p style="margin:8px 0 0;color:#4d5566;font-size:.85em">それでも水槽は今日も静かに、自律して動いている。</p>
+</div>
+
+<hr>
+<p style="color:#8b949e;font-size:.85em">著者：アクアリウム歴約10年 / 換水廃止論者<br>ver.8 / 2026年3月</p>

@@ -1,0 +1,2321 @@
+﻿<!-- はてなブログHTML貼り付け用 ver.10 / スマートフォンファースト・重複排除版 -->
+<style>
+    /* ===== 基本 ===== */
+    * {
+        box-sizing: border-box
+    }
+
+    .holo-body {
+        font-size: 16px;
+        line-height: 1.85;
+        color: #c9d1d9;
+        word-break: break-word
+    }
+
+    /* ===== ボックス類 ===== */
+    .holo-summary {
+        background: #0d1117;
+        border: 1px solid #30363d;
+        border-left: 4px solid #58a6ff;
+        border-radius: 8px;
+        padding: 16px 18px;
+        margin: 20px 0
+    }
+
+    .holo-summary ul {
+        margin: 8px 0 0;
+        padding-left: 20px;
+        line-height: 2
+    }
+
+    .holo-card {
+        background: #161b22;
+        border: 1px solid #30363d;
+        border-radius: 8px;
+        padding: 14px 16px;
+        margin: 10px 0
+    }
+
+    .holo-card-green {
+        border-left: 3px solid #3fb950
+    }
+
+    .holo-warn-red {
+        background: #1c0a0a;
+        border: 1px solid #f85149;
+        border-left: 4px solid #f85149;
+        border-radius: 8px;
+        padding: 14px 16px;
+        margin: 14px 0;
+        line-height: 1.8
+    }
+
+    .holo-warn-yellow {
+        background: #1c1409;
+        border: 1px solid #d29922;
+        border-left: 4px solid #d29922;
+        border-radius: 8px;
+        padding: 14px 16px;
+        margin: 14px 0
+    }
+
+    .holo-warn-purple {
+        background: #160d20;
+        border: 1px solid #8957e5;
+        border-left: 4px solid #8957e5;
+        border-radius: 8px;
+        padding: 14px 16px;
+        margin: 14px 0
+    }
+
+    .holo-tip {
+        background: #161b22;
+        border: 1px solid #30363d;
+        border-radius: 8px;
+        padding: 14px 16px;
+        margin: 14px 0
+    }
+
+    .holo-blockquote {
+        border-left: 3px solid #3d444d;
+        padding: 4px 16px;
+        color: #8b949e;
+        margin: 16px 0;
+        font-style: italic
+    }
+
+    .holo-label {
+        font-size: .78em;
+        text-transform: uppercase;
+        letter-spacing: .07em;
+        color: #8b949e;
+        margin: 0 0 6px;
+        display: block
+    }
+
+    /* ===== テーブル（モバイル：カード積み / PC：通常テーブル） ===== */
+    .holo-table-wrap {
+        margin: 14px 0
+    }
+
+    .holo-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: .9em
+    }
+
+    .holo-table th {
+        background: #161b22;
+        color: #8b949e;
+        font-weight: 500;
+        text-align: left;
+        padding: 9px 12px;
+        border: 1px solid #30363d;
+        font-size: .8em;
+        text-transform: uppercase;
+        letter-spacing: .03em
+    }
+
+    .holo-table td {
+        padding: 9px 12px;
+        border: 1px solid #21262d;
+        color: #c9d1d9;
+        vertical-align: top;
+        line-height: 1.6
+    }
+
+    .holo-table tr:nth-child(even) td {
+        background: #0d1117
+    }
+
+    /* モバイル：行をカード化 */
+    @media(max-width:600px) {
+        .holo-table-wrap {
+            overflow-x: visible
+        }
+
+        /* theadがないため tr:first-child でヘッダー行を非表示 */
+        .holo-table tr:first-child {
+            display: none
+        }
+
+        .holo-table,
+        .holo-table tbody,
+        .holo-table tr,
+        .holo-table td {
+            display: block;
+            width: 100%
+        }
+
+        .holo-table tr {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            overflow: hidden
+        }
+
+        .holo-table tr:nth-child(even) td {
+            background: transparent
+        }
+
+        .holo-table td {
+            border: none;
+            border-bottom: 1px solid #21262d;
+            padding: 8px 14px
+        }
+
+        .holo-table td:last-child {
+            border-bottom: none
+        }
+
+        .holo-table td::before {
+            content: attr(data-label);
+            display: block;
+            font-size: .7em;
+            color: #58a6ff;
+            text-transform: uppercase;
+            letter-spacing: .05em;
+            margin-bottom: 3px;
+            font-weight: 600
+        }
+    }
+
+    /* PC */
+    @media(min-width:601px) {
+        .holo-table-wrap {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            border-radius: 8px
+        }
+
+        .holo-table {
+            font-size: .93em
+        }
+    }
+
+    /* ===== コードブロック ===== */
+    .holo-pre {
+        background: #161b22;
+        border: 1px solid #30363d;
+        border-radius: 8px;
+        padding: 14px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        line-height: 1.7;
+        font-size: .82em;
+        white-space: pre;
+        color: #c9d1d9
+    }
+
+    /* ===== PC ===== */
+    @media(min-width:640px) {
+        .holo-table {
+            font-size: .93em;
+            white-space: normal
+        }
+
+        .holo-pre {
+            font-size: .88em
+        }
+    }
+
+    /* ===== スクロールフェードイン ===== */
+    .fade-in {
+        opacity: 0;
+        transform: translateY(16px);
+        transition: opacity .6s ease, transform .6s ease
+    }
+
+    .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0)
+    }
+
+    .fade-in-delay-1 {
+        transition-delay: .1s
+    }
+
+    .fade-in-delay-2 {
+        transition-delay: .2s
+    }
+
+    .fade-in-delay-3 {
+        transition-delay: .3s
+    }
+
+    /* ===== 硝化サイクル図 ===== */
+    @keyframes nc-flow {
+        0% {
+            transform: translateY(-2px);
+            opacity: 0
+        }
+
+        20% {
+            opacity: 1
+        }
+
+        100% {
+            transform: translateY(36px);
+            opacity: 0
+        }
+    }
+
+    @keyframes nc-fadein {
+        from {
+            opacity: 0;
+            transform: translateY(8px)
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0)
+        }
+    }
+
+    @keyframes nc-pulse {
+
+        0%,
+        100% {
+            box-shadow: 0 0 0 0 rgba(88, 166, 255, 0)
+        }
+
+        50% {
+            box-shadow: 0 0 0 8px rgba(88, 166, 255, .15)
+        }
+    }
+
+    .nc-wrap {
+        max-width: 400px;
+        margin: 20px auto
+    }
+
+    .nc-node {
+        border-radius: 8px;
+        padding: 10px 14px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        animation: nc-fadein .5s ease both
+    }
+
+    .nc-node-base {
+        background: #161b22;
+        border: 1px solid #30363d
+    }
+
+    .nc-node-danger {
+        background: #2d1010;
+        border: 1px solid #f85149
+    }
+
+    .nc-node-warn {
+        background: #2d1f08;
+        border: 1px solid #d29922
+    }
+
+    .nc-node-acc {
+        background: #16200a;
+        border: 1px solid #7ee787
+    }
+
+    .nc-node-sys {
+        background: #0d2440;
+        border: 1px solid #58a6ff;
+        animation: nc-pulse 2s infinite, nc-fadein .5s ease both
+    }
+
+    .nc-node-out {
+        background: #0a2a14;
+        border: 1px solid #3fb950
+    }
+
+    .nc-name {
+        color: #e6edf3;
+        font-weight: bold;
+        font-size: .88em
+    }
+
+    .nc-sub {
+        color: #8b949e;
+        font-size: .74em;
+        margin-top: 2px
+    }
+
+    .nc-badge {
+        font-size: .68em;
+        padding: 2px 8px;
+        border-radius: 10px;
+        white-space: nowrap;
+        flex-shrink: 0;
+        margin-left: 8px
+    }
+
+    .nc-badge-red {
+        background: #3d0f0f;
+        color: #f85149;
+        border: 1px solid #f85149
+    }
+
+    .nc-badge-ora {
+        background: #2d1a06;
+        color: #d29922;
+        border: 1px solid #d29922
+    }
+
+    .nc-badge-yel {
+        background: #1a2a0a;
+        color: #7ee787;
+        border: 1px solid #7ee787
+    }
+
+    .nc-conn {
+        position: relative;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center
+    }
+
+    .nc-line {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: #21262d;
+        transform: translateX(-50%)
+    }
+
+    .nc-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #58a6ff;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: nc-flow 1.6s ease-in infinite
+    }
+
+    .nc-dot-green {
+        background: #3fb950
+    }
+
+    .nc-lbl {
+        background: #0d1117;
+        color: #8b949e;
+        font-size: .72em;
+        padding: 3px 10px;
+        border-radius: 4px;
+        border: 1px solid #21262d;
+        position: relative;
+        z-index: 1
+    }
+
+    .nc-cross {
+        max-width: 400px;
+        margin: 0 auto 8px;
+        padding: 8px 14px;
+        background: #111;
+        border: 1px dashed #3d444d;
+        border-radius: 8px;
+        text-align: center;
+        color: #484f58;
+        font-size: .8em;
+        text-decoration: line-through
+    }
+
+    .nc-label-sys {
+        text-align: center;
+        color: #58a6ff;
+        font-size: .72em;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        margin: 4px 0 0
+    }
+
+    /* ===== ベントスループ図 ===== */
+    @keyframes bl-spin {
+        to {
+            stroke-dashoffset: -440
+        }
+    }
+
+    @keyframes bl-badge-pulse {
+
+        0%,
+        100% {
+            transform: scale(1)
+        }
+
+        50% {
+            transform: scale(1.05)
+        }
+    }
+
+    .bl-wrap {
+        margin: 20px auto;
+        max-width: 480px
+    }
+
+    .bl-cycle {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 0;
+        align-items: center;
+        justify-items: center
+    }
+
+    .bl-box {
+        background: #161b22;
+        border: 1px solid #30363d;
+        border-radius: 8px;
+        padding: 10px 12px;
+        font-size: .82em;
+        color: #c9d1d9;
+        text-align: center;
+        width: 100%;
+        line-height: 1.5
+    }
+
+    .bl-box-sump {
+        border-color: #58a6ff;
+        background: #0a1929
+    }
+
+    .bl-box-main {
+        border-color: #3fb950;
+        background: #0a1f10
+    }
+
+    .bl-box-label {
+        font-size: .68em;
+        text-transform: uppercase;
+        letter-spacing: .05em;
+        margin-bottom: 4px
+    }
+
+    .bl-box-sump .bl-box-label {
+        color: #58a6ff
+    }
+
+    .bl-box-main .bl-box-label {
+        color: #3fb950
+    }
+
+    .bl-arrow-v {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 4px 0;
+        position: relative;
+        min-height: 48px
+    }
+
+    .bl-arrow-line {
+        width: 2px;
+        flex: 1;
+        background: linear-gradient(to bottom, #21262d, #21262d)
+    }
+
+    .bl-arrow-label {
+        font-size: .68em;
+        color: #8b949e;
+        text-align: center;
+        padding: 2px 6px;
+        background: #0d1117;
+        border: 1px solid #21262d;
+        border-radius: 4px;
+        position: relative;
+        z-index: 1;
+        white-space: nowrap
+    }
+
+    @keyframes bl-dotfall {
+        0% {
+            top: 0;
+            opacity: 0
+        }
+
+        10% {
+            opacity: 1
+        }
+
+        90% {
+            opacity: 1
+        }
+
+        100% {
+            top: 100%;
+            opacity: 0
+        }
+    }
+
+    .bl-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: bl-dotfall 2s ease-in infinite
+    }
+
+    .bl-dot-blue {
+        background: #58a6ff
+    }
+
+    .bl-dot-green {
+        background: #3fb950
+    }
+
+    .bl-arrow-h-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 4px;
+        height: 100%
+    }
+
+    .bl-arrow-h {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        flex-direction: column
+    }
+
+    .bl-arrow-h-line {
+        width: 2px;
+        height: 80px;
+        background: #21262d;
+        position: relative;
+        overflow: hidden
+    }
+
+    @keyframes bl-hflow {
+        0% {
+            top: -10px;
+            opacity: 0
+        }
+
+        20% {
+            opacity: 1
+        }
+
+        80% {
+            opacity: 1
+        }
+
+        100% {
+            top: calc(100% + 10px);
+            opacity: 0
+        }
+    }
+
+    .bl-h-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: bl-hflow 2s linear infinite
+    }
+
+    .bl-h-dot-down {
+        background: #58a6ff;
+        animation-delay: 0s
+    }
+
+    .bl-h-dot-up {
+        background: #3fb950;
+        animation-delay: 1s
+    }
+
+    .bl-arrow-h-label {
+        font-size: .65em;
+        color: #8b949e;
+        text-align: center;
+        writing-mode: horizontal-tb
+    }
+
+    /* ===== STEPタイムライン ===== */
+    .step-wrap {
+        position: relative;
+        padding-left: 20px;
+        margin: 24px 0
+    }
+
+    .step-wrap::before {
+        content: '';
+        position: absolute;
+        left: 16px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: linear-gradient(to bottom, #58a6ff, #3fb950)
+    }
+
+    .step-item {
+        position: relative;
+        padding: 0 0 24px 32px
+    }
+
+    .step-item:last-child {
+        padding-bottom: 0
+    }
+
+    .step-num {
+        position: absolute;
+        left: -4px;
+        top: 0;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: #0d1117;
+        border: 2px solid #58a6ff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: .75em;
+        font-weight: bold;
+        color: #58a6ff;
+        z-index: 1;
+        flex-shrink: 0
+    }
+
+    .step-item:last-child .step-num {
+        border-color: #3fb950;
+        color: #3fb950
+    }
+
+    .step-title {
+        font-weight: bold;
+        color: #e6edf3;
+        margin: 4px 0 8px;
+        font-size: .95em;
+        padding-top: 3px
+    }
+
+    .step-body {
+        color: #c9d1d9;
+        font-size: .9em;
+        line-height: 1.75
+    }
+
+    /* ===== pHカウンター ===== */
+    .ph-counter-wrap {
+        background: #0d1117;
+        border: 1px solid #30363d;
+        border-radius: 12px;
+        padding: 24px 16px;
+        margin: 20px 0;
+        text-align: center
+    }
+
+    .ph-value {
+        font-size: 3.5em;
+        font-weight: bold;
+        color: #58a6ff;
+        letter-spacing: .05em;
+        line-height: 1;
+        font-variant-numeric: tabular-nums
+    }
+
+    .ph-unit {
+        font-size: 1.2em;
+        color: #8b949e;
+        margin-left: 4px
+    }
+
+    .ph-label {
+        color: #8b949e;
+        font-size: .88em;
+        margin-top: 8px
+    }
+
+    .ph-bar-wrap {
+        background: #161b22;
+        border-radius: 8px;
+        height: 8px;
+        margin: 16px 0 8px;
+        overflow: hidden
+    }
+
+    .ph-bar {
+        height: 100%;
+        background: linear-gradient(to right, #f85149, #d29922, #58a6ff, #3fb950);
+        width: 0;
+        border-radius: 8px;
+        transition: width 1.5s ease
+    }
+
+    .ph-bar.animated {
+        width: 100%
+    }
+
+    .ph-bar-labels {
+        display: flex;
+        justify-content: space-between;
+        font-size: .7em;
+        color: #484f58
+    }
+
+    /* ===== 「三つの無」カード ===== */
+    .zero-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin: 16px 0
+    }
+
+    @media(min-width:500px) {
+        .zero-grid {
+            grid-template-columns: repeat(3, 1fr)
+        }
+    }
+
+    .zero-card {
+        background: #0a1929;
+        border: 1px solid #30363d;
+        border-radius: 10px;
+        padding: 16px;
+        text-align: center
+    }
+
+    .zero-icon {
+        font-size: 2em;
+        margin-bottom: 8px
+    }
+
+    .zero-title {
+        font-weight: bold;
+        color: #58a6ff;
+        font-size: .92em;
+        margin-bottom: 6px
+    }
+
+    .zero-body {
+        font-size: .82em;
+        color: #8b949e;
+        line-height: 1.6;
+        text-align: left
+    }
+
+    /* ===== 維持管理カード ===== */
+    .maint-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 8px;
+        margin: 14px 0
+    }
+
+    @media(min-width:400px) {
+        .maint-grid {
+            grid-template-columns: 1fr 1fr
+        }
+    }
+
+    .maint-card {
+        background: #161b22;
+        border: 1px solid #30363d;
+        border-radius: 8px;
+        padding: 12px 14px;
+        display: flex;
+        gap: 10px;
+        align-items: flex-start
+    }
+
+    .maint-freq {
+        font-size: .7em;
+        font-weight: bold;
+        padding: 2px 8px;
+        border-radius: 4px;
+        white-space: nowrap;
+        flex-shrink: 0;
+        margin-top: 2px
+    }
+
+    .maint-freq-daily {
+        background: #0d2440;
+        color: #58a6ff;
+        border: 1px solid #58a6ff
+    }
+
+    .maint-freq-any {
+        background: #0a2a14;
+        color: #3fb950;
+        border: 1px solid #3fb950
+    }
+
+    .maint-text {
+        color: #c9d1d9;
+        font-size: .85em;
+        line-height: 1.5
+    }
+
+    /* ===== faq：スマホ向けアコーディオン ===== */
+    details.holo-details {
+        background: #161b22;
+        border: 1px solid #30363d;
+        border-radius: 8px;
+        margin: 8px 0;
+        overflow: hidden
+    }
+
+    details.holo-details summary {
+        padding: 12px 16px;
+        cursor: pointer;
+        color: #e6edf3;
+        font-weight: bold;
+        font-size: .9em;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        -webkit-tap-highlight-color: transparent
+    }
+
+    details.holo-details summary::after {
+        content: '＋';
+        color: #8b949e;
+        font-size: 1.1em;
+        flex-shrink: 0
+    }
+
+    details.holo-details[open] summary::after {
+        content: '－'
+    }
+
+    details.holo-details .details-body {
+        padding: 0 16px 14px;
+        color: #c9d1d9;
+        font-size: .88em;
+        line-height: 1.75
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // スクロールフェードイン
+        const io = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible') } });
+        }, { threshold: .15 });
+        document.querySelectorAll('.fade-in').forEach(el => io.observe(el));
+
+        // pHカウンターアップ
+        const phEl = document.getElementById('ph-count');
+        const phBar = document.getElementById('ph-bar');
+        let phDone = false;
+        if (phEl) {
+            const phIo = new IntersectionObserver(entries => {
+                if (entries[0].isIntersecting && !phDone) {
+                    phDone = true;
+                    let v = 0, target = 6.85, dur = 1800, step = target / (dur / 16);
+                    const tick = () => {
+                        v = Math.min(v + step, target);
+                        phEl.textContent = v.toFixed(2);
+                        if (v < target) requestAnimationFrame(tick);
+                        else { if (phBar) phBar.classList.add('animated') }
+                    };
+                    requestAnimationFrame(tick);
+                }
+            }, { threshold: .3 });
+            phIo.observe(phEl);
+        }
+    });
+</script>
+
+<div class="holo-body">
+
+    <h1>淡水水槽を「換水ゼロ」にした話——炭素源×ベントスで作る自律型生態系アクアリウム</h1>
+    <p><em>無換水・無給餌・CO₂無添加のオーバーフロー式水草水槽を1年間維持した記録と理論</em></p>
+
+    <hr>
+
+    <div class="holo-summary fade-in">
+        <p style="margin:0 0 10px;font-weight:bold;color:#79c0ff">📋 この記事でわかること</p>
+        <ul>
+            <li>淡水水槽で「換水なし」が難しい本当の理由</li>
+            <li>炭素源＋ベントスで硝酸塩を食物連鎖として系外排出する仕組み</li>
+            <li>スーパーとホムセンで揃う炭素源エキスのレシピ</li>
+            <li>白濁を乗り越える1ヶ月の立ち上げ手順</li>
+            <li>1年間・pH 6.85を維持した実際のデータ</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h2>はじめに</h2>
+    <p>まず、この記事を読んで最初に思うことを代わりに言っておこう。</p>
+    <div class="holo-blockquote">
+        <p>「魚飼ってんだから、換水くらいしろよ」</p>
+    </div>
+    <p>ごもっともだ。ただ、正直に言うと面倒なのだ。</p>
+    <p>週に一度バケツを持ち出して、水抜いて、カルキ抜いて、温度合わせて、ゆっくり足して——それを何年も続けるのは純粋に手間がかかる。大型水槽ともなれば腰も痛くなる。</p>
+    <p>だから考えた。「換水しなくていい仕組みを作ればいいのでは？」と。</p>
+    <p>その答えとして辿り着いたのが、この記事で紹介するシステムだ。炭素源の投入と底生生物（ベントス）の食物連鎖を組み合わせることで、無換水・無給餌・CO₂無添加でのオーバーフロー式水草水槽を1年以上にわたって安定稼働させた。その記録と理論的背景をまとめる。
+    </p>
+    <p>便宜上このシステムを「ホロビオントアクアリウム」と呼ぶ。生物学の概念・Holobiont（ホロビオント）——宿主と共生微生物群全体を一つの超個体として捉える思想——になぞらえた名称だ。</p>
+
+    <hr>
+
+    <h2>対象読者</h2>
+    <ul>
+        <li>オーバーフロー式水槽を持っている、または導入を検討している方</li>
+        <li>換水の手間に限界を感じている中〜上級者のアクアリスト</li>
+        <li>生態系的アプローチに知的な関心を持つ方</li>
+    </ul>
+    <p>初心者には推奨しない。必要な設備のハードルが高く、立ち上げ時に1ヶ月間の白濁に耐える知識と胆力が求められる。</p>
+
+    <hr>
+
+    <h2>淡水の「無換水」、なぜ難しいのか</h2>
+
+    <h3>既存手法の比較</h3>
+
+    <!-- 概念図グリッド -->
+    <style>
+        .approach-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 16px 0
+        }
+
+        @media(max-width:480px) {
+            .approach-grid {
+                grid-template-columns: 1fr
+            }
+        }
+
+        .approach-card {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: border-color .2s
+        }
+
+        .approach-card:hover {
+            border-color: #58a6ff
+        }
+
+        .approach-card img {
+            width: 100%;
+            display: block;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            background: #0d1117
+        }
+
+        .approach-card-body {
+            padding: 10px 14px
+        }
+
+        .approach-card-title {
+            font-weight: bold;
+            font-size: .88em;
+            color: #e6edf3;
+            margin: 0 0 4px
+        }
+
+        .approach-card-desc {
+            font-size: .78em;
+            color: #8b949e;
+            line-height: 1.5;
+            margin: 0
+        }
+
+        .approach-card-badge {
+            display: inline-block;
+            font-size: .68em;
+            padding: 1px 8px;
+            border-radius: 4px;
+            margin-bottom: 6px
+        }
+
+        .badge-green {
+            background: #0a2a14;
+            color: #3fb950;
+            border: 1px solid #3fb950
+        }
+
+        .badge-yellow {
+            background: #1c1409;
+            color: #d29922;
+            border: 1px solid #d29922
+        }
+
+        .badge-red {
+            background: #1c0a0a;
+            color: #f85149;
+            border: 1px solid #f85149
+        }
+
+        .badge-blue {
+            background: #0d2440;
+            color: #58a6ff;
+            border: 1px solid #58a6ff
+        }
+    </style>
+
+    <style>
+        .ap-svg {
+            width: 100%;
+            display: block;
+            background: #0d1117;
+            border-radius: 8px 8px 0 0
+        }
+
+        @keyframes ap-flow {
+            0% {
+                opacity: 0
+            }
+
+            15% {
+                opacity: 1
+            }
+
+            85% {
+                opacity: 1
+            }
+
+            100% {
+                opacity: 0
+            }
+        }
+
+        @keyframes ap-pulse {
+
+            0%,
+            100% {
+                r: 3
+            }
+
+            50% {
+                r: 5
+            }
+        }
+
+        @keyframes ap-dash {
+            to {
+                stroke-dashoffset: -12
+            }
+        }
+
+        .ap-dot {
+            animation: ap-flow 2s ease infinite
+        }
+
+        .ap-blink {
+            animation: ap-pulse 1.5s ease infinite
+        }
+
+        .ap-dashed {
+            stroke-dasharray: 4 4;
+            animation: ap-dash 1s linear infinite
+        }
+    </style>
+
+    <div class="approach-grid fade-in">
+        <!-- ADA式 -->
+        <div class="approach-card">
+            <svg class="ap-svg" viewBox="0 0 200 120">
+                <text x="100" y="14" fill="#8b949e" font-size="7" text-anchor="middle"
+                    font-family="sans-serif">NO₃⁻の行方</text>
+                <!-- 魚 → NO₃⁻ -->
+                <text x="30" y="42" fill="#c9d1d9" font-size="16" text-anchor="middle">🐟</text>
+                <line x1="48" y1="38" x2="75" y2="38" stroke="#30363d" stroke-width="1.5" />
+                <rect x="78" y="28" width="44" height="20" rx="4" fill="#16200a" stroke="#7ee787" />
+                <text x="100" y="42" fill="#7ee787" font-size="8" text-anchor="middle"
+                    font-family="sans-serif">NO₃⁻</text>
+                <line x1="122" y1="38" x2="148" y2="38" stroke="#30363d" stroke-width="1.5" />
+                <!-- 水草が吸収 -->
+                <text x="168" y="42" fill="#c9d1d9" font-size="16" text-anchor="middle">🌿</text>
+                <text x="168" y="55" fill="#3fb950" font-size="6" text-anchor="middle"
+                    font-family="sans-serif">吸収</text>
+                <!-- 流れドット -->
+                <circle cx="60" cy="38" r="3" fill="#7ee787" class="ap-dot" />
+                <circle cx="135" cy="38" r="3" fill="#3fb950" class="ap-dot" style="animation-delay:.5s" />
+                <!-- CO₂ -->
+                <text x="100" y="75" fill="#d29922" font-size="7" text-anchor="middle" font-family="sans-serif">⚠
+                    CO₂添加が必須</text>
+                <rect x="55" y="82" width="90" height="18" rx="4" fill="none" stroke="#d29922" stroke-width="1"
+                    stroke-dasharray="3 3" />
+                <text x="100" y="94" fill="#d29922" font-size="7" text-anchor="middle" font-family="sans-serif">💨 CO₂
+                    ボンベ</text>
+            </svg>
+            <div class="approach-card-body">
+                <span class="approach-card-badge badge-green">景観◎</span>
+                <div class="approach-card-title">ADA式 高密植水草水槽</div>
+                <div class="approach-card-desc">水草が硝酸塩を直接吸収。CO₂添加と高光量が必須。</div>
+            </div>
+        </div>
+
+        <!-- DSB -->
+        <div class="approach-card">
+            <svg class="ap-svg" viewBox="0 0 200 120">
+                <text x="100" y="14" fill="#8b949e" font-size="7" text-anchor="middle"
+                    font-family="sans-serif">NO₃⁻の行方</text>
+                <rect x="20" y="22" width="160" height="30" rx="4" fill="#16200a" stroke="#7ee787" />
+                <text x="100" y="41" fill="#7ee787" font-size="9" text-anchor="middle" font-family="sans-serif">NO₃⁻
+                    蓄積</text>
+                <!-- 矢印下 -->
+                <line x1="100" y1="52" x2="100" y2="68" stroke="#30363d" stroke-width="1.5" />
+                <circle cx="100" cy="60" r="3" fill="#d29922" class="ap-dot" />
+                <!-- 嫌気砂床 -->
+                <rect x="20" y="70" width="160" height="25" rx="4" fill="#1c1409" stroke="#d29922" />
+                <text x="100" y="80" fill="#d29922" font-size="7" text-anchor="middle"
+                    font-family="sans-serif">嫌気砂床（15cm+）</text>
+                <text x="100" y="90" fill="#8b949e" font-size="7" text-anchor="middle" font-family="sans-serif">NO₃⁻ →
+                    N₂↑ ガス放出</text>
+                <!-- 危険 -->
+                <text x="100" y="110" fill="#f85149" font-size="7" text-anchor="middle" font-family="sans-serif">💀
+                    崩壊時：硫化水素（H₂S）発生</text>
+            </svg>
+            <div class="approach-card-body">
+                <span class="approach-card-badge badge-yellow">硫化水素リスク</span>
+                <div class="approach-card-title">DSB（嫌気砂床）</div>
+                <div class="approach-card-desc">嫌気性細菌が硝酸塩をN₂ガスに還元。崩壊が致命的。</div>
+            </div>
+        </div>
+
+        <!-- 外部脱窒炉 -->
+        <div class="approach-card">
+            <svg class="ap-svg" viewBox="0 0 200 120">
+                <text x="100" y="14" fill="#8b949e" font-size="7" text-anchor="middle"
+                    font-family="sans-serif">NO₃⁻の行方</text>
+                <!-- 水槽 -->
+                <rect x="15" y="28" width="55" height="35" rx="4" fill="#161b22" stroke="#30363d" />
+                <text x="42" y="43" fill="#c9d1d9" font-size="7" text-anchor="middle" font-family="sans-serif">水槽</text>
+                <text x="42" y="53" fill="#7ee787" font-size="7" text-anchor="middle"
+                    font-family="sans-serif">NO₃⁻</text>
+                <!-- 矢印 -->
+                <line x1="70" y1="45" x2="108" y2="45" stroke="#8957e5" stroke-width="1.5" class="ap-dashed" />
+                <circle cx="90" cy="45" r="3" fill="#8957e5" class="ap-dot" />
+                <!-- 脱窒炉 -->
+                <rect x="110" y="25" width="75" height="40" rx="6" fill="#160d20" stroke="#8957e5" />
+                <text x="148" y="40" fill="#8957e5" font-size="7" text-anchor="middle"
+                    font-family="sans-serif">外部脱窒炉</text>
+                <text x="148" y="52" fill="#8b949e" font-size="7" text-anchor="middle" font-family="sans-serif">NO₃⁻ →
+                    N₂↑</text>
+                <!-- 戻り -->
+                <path d="M148,65 L148,80 L42,80 L42,63" fill="none" stroke="#30363d" stroke-width="1"
+                    stroke-dasharray="3 3" />
+                <text x="95" y="90" fill="#8b949e" font-size="6" text-anchor="middle" font-family="sans-serif">←
+                    処理水を返送</text>
+                <!-- 注意 -->
+                <text x="100" y="110" fill="#d29922" font-size="7" text-anchor="middle" font-family="sans-serif">⚠
+                    装置が複雑・詰まりリスク</text>
+            </svg>
+            <div class="approach-card-body">
+                <span class="approach-card-badge badge-yellow">装置複雑</span>
+                <div class="approach-card-title">外部脱窒炉</div>
+                <div class="approach-card-desc">嫌気区画で脱窒を強制。制御しやすいが運用が煩雑。</div>
+            </div>
+        </div>
+
+        <!-- 本システム -->
+        <div class="approach-card" style="border-color:#58a6ff">
+            <svg class="ap-svg" viewBox="0 0 200 120">
+                <text x="100" y="14" fill="#58a6ff" font-size="7" text-anchor="middle" font-family="sans-serif"
+                    font-weight="bold">NO₃⁻の行方 — 本システム</text>
+                <!-- NO₃⁻ -->
+                <rect x="10" y="25" width="42" height="20" rx="4" fill="#16200a" stroke="#7ee787" />
+                <text x="31" y="38" fill="#7ee787" font-size="7" text-anchor="middle"
+                    font-family="sans-serif">NO₃⁻</text>
+                <!-- 矢印1 -->
+                <line x1="52" y1="35" x2="68" y2="35" stroke="#1d3a5e" stroke-width="1.5" />
+                <circle cx="60" cy="35" r="3" fill="#58a6ff" class="ap-dot" />
+                <!-- 炭素同化 -->
+                <rect x="70" y="24" width="58" height="22" rx="4" fill="#0d2440" stroke="#58a6ff">
+                    <animate attributeName="stroke-opacity" values="1;.4;1" dur="2s" repeatCount="indefinite" />
+                </rect>
+                <text x="99" y="33" fill="#58a6ff" font-size="6.5" text-anchor="middle" font-family="sans-serif">🧪
+                    炭素源</text>
+                <text x="99" y="42" fill="#58a6ff" font-size="6" text-anchor="middle" font-family="sans-serif">→
+                    菌体タンパク</text>
+                <!-- 矢印2 -->
+                <line x1="128" y1="35" x2="148" y2="35" stroke="#1d3a5e" stroke-width="1.5" />
+                <circle cx="138" cy="35" r="3" fill="#3fb950" class="ap-dot" style="animation-delay:.4s" />
+                <!-- ベントス -->
+                <text x="168" y="39" fill="#c9d1d9" font-size="14" text-anchor="middle">🐛</text>
+                <text x="168" y="50" fill="#3fb950" font-size="6" text-anchor="middle"
+                    font-family="sans-serif">捕食</text>
+                <!-- 循環矢印 -->
+                <path d="M168,55 L168,75 L42,75 L42,58" fill="none" stroke="#3fb950" stroke-width="1.5"
+                    class="ap-dashed" />
+                <text x="30" y="66" fill="#c9d1d9" font-size="12" text-anchor="middle">🐟</text>
+                <text x="105" y="84" fill="#3fb950" font-size="6" text-anchor="middle" font-family="sans-serif">🐟
+                    魚がベントスを食べる → 排泄 → NO₃⁻ → ループ</text>
+                <!-- 結論 -->
+                <rect x="30" y="95" width="140" height="18" rx="4" fill="#0a2a14" stroke="#3fb950" />
+                <text x="100" y="107" fill="#3fb950" font-size="7" text-anchor="middle" font-family="sans-serif">✅
+                    食物連鎖で系外排出・換水不要</text>
+            </svg>
+            <div class="approach-card-body">
+                <span class="approach-card-badge badge-blue">本システム ✅</span>
+                <div class="approach-card-title">好気性炭素同化＋ベントスループ</div>
+                <div class="approach-card-desc">炭素源→バクテリア→ベントス→魚の循環で硝酸塩を自律排出。</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="holo-table-wrap fade-in">
+        <table class="holo-table">
+            <tr>
+                <th>アプローチ</th>
+                <th>原理</th>
+                <th>メリット</th>
+                <th>デメリット</th>
+            </tr>
+            <tr>
+                <td data-label="アプローチ">高密植水草水槽（ADA式等）</td>
+                <td data-label="原理">水草が硝酸塩・リン酸を吸収</td>
+                <td data-label="メリット">景観が美しい</td>
+                <td data-label="デメリット">CO₂添加必須・トリミング手間・崩壊リスク</td>
+            </tr>
+            <tr>
+                <td data-label="アプローチ">DSB（嫌気砂床）</td>
+                <td data-label="原理">嫌気性細菌が硝酸塩を窒素ガスに還元</td>
+                <td data-label="メリット">硝酸塩を根本除去</td>
+                <td data-label="デメリット">崩壊時に硫化水素発生・淡水での実績薄</td>
+            </tr>
+            <tr>
+                <td data-label="アプローチ">外部脱窒炉</td>
+                <td data-label="原理">嫌気区画で脱窒を強制</td>
+                <td data-label="メリット">制御しやすい</td>
+                <td data-label="デメリット">装置複雑・詰まりリスク・維持コスト高</td>
+            </tr>
+            <tr>
+                <td data-label="アプローチ">本システム（好気性炭素同化）</td>
+                <td data-label="原理">好気性バクテリアが硝酸塩を菌体タンパクに取り込み、ベントスが捕食して系外排出</td>
+                <td data-label="メリット">管理ほぼゼロ・CO₂不要・自己完結・リセット不要</td>
+                <td data-label="デメリット">設備ハードル高・ベントス必要・初心者不向き</td>
+            </tr>
+        </table>
+    </div>
+
+    <h3>海水では成立していた手法が、淡水では使えない理由</h3>
+    <div class="holo-table-wrap fade-in">
+        <table class="holo-table">
+            <tr>
+                <th>比較項目</th>
+                <th>海水（ベルリン式＋ウォッカ法）</th>
+                <th>淡水（本システム）</th>
+            </tr>
+            <tr>
+                <td data-label="比較項目">有機物の最終除去手段</td>
+                <td data-label="海水（ベルリン式＋ウォッカ法）">プロテインスキマー（泡として系外排出）</td>
+                <td data-label="淡水（本システム）">ベントスによる捕食（食物連鎖で系外排出）</td>
+            </tr>
+            <tr>
+                <td data-label="比較項目">スキマーの使用可否</td>
+                <td data-label="海水（ベルリン式＋ウォッカ法）">使用可</td>
+                <td data-label="淡水（本システム）">淡水では泡立ちが起きない（表面張力の違い）</td>
+            </tr>
+            <tr>
+                <td data-label="比較項目">適用水域</td>
+                <td data-label="海水（ベルリン式＋ウォッカ法）">海水のみ</td>
+                <td data-label="淡水（本システム）">淡水で実現</td>
+            </tr>
+        </table>
+    </div>
+    <p>プロテインスキマーは淡水では機能しない。これが「淡水では好気性炭素同化アプローチは難しい」と考えられてきた最大の理由であり、本システムはこの壁をベントスの食物連鎖で突破した。</p>
+
+    <h3>なぜ嫌気性ではなく好気性を選んだか</h3>
+    <div class="holo-card fade-in">
+        <span class="holo-label">Key Point</span>
+        <p style="margin:0">好気性アプローチはすべてが<strong>目で見て確認・調整できる</strong>。嫌気性アプローチはブラックボックスで、崩壊してから気づくことが多い。</p>
+    </div>
+    <div class="holo-table-wrap fade-in">
+        <table class="holo-table">
+            <tr>
+                <th>状況</th>
+                <th>観察できるサイン</th>
+                <th>対処法</th>
+            </tr>
+            <tr>
+                <td data-label="状況">ヘドロ除去が追いつかない</td>
+                <td data-label="観察できるサイン">サンプのヘドロが増える</td>
+                <td data-label="対処法">炭素源投入量を減らす・手動で吸出す</td>
+            </tr>
+            <tr>
+                <td data-label="状況">ベントスが増えすぎている</td>
+                <td data-label="観察できるサイン">サンプが過密になる</td>
+                <td data-label="対処法">魚にもっと食べさせる・一部を間引く</td>
+            </tr>
+            <tr>
+                <td data-label="状況">酸素が不足している</td>
+                <td data-label="観察できるサイン">白濁に腐臭が混じる</td>
+                <td data-label="対処法">エアレーション追加・ポンプを強化する</td>
+            </tr>
+            <tr>
+                <td data-label="状況">バランスが取れている</td>
+                <td data-label="観察できるサイン">水がクリアで臭いがない</td>
+                <td data-label="対処法">何もしなくてよい</td>
+            </tr>
+        </table>
+    </div>
+
+    <hr>
+
+    <h2>このシステムの仕組み</h2>
+
+    <h3>硝化サイクルのどこに介入するか</h3>
+
+    <div class="nc-wrap fade-in">
+        <div class="nc-node nc-node-base" style="animation-delay:0s">
+            <div>
+                <div class="nc-name">🐟 魚の排泄物・残餌</div>
+            </div>
+        </div>
+        <div class="nc-conn">
+            <div class="nc-line"></div>
+            <div class="nc-dot" style="animation-delay:0s"></div>
+        </div>
+        <div class="nc-node nc-node-danger" style="animation-delay:.1s">
+            <div>
+                <div class="nc-name">アンモニア（NH₃）</div>
+            </div>
+            <span class="nc-badge nc-badge-red">猛毒</span>
+        </div>
+        <div class="nc-conn">
+            <div class="nc-line"></div>
+            <div class="nc-dot" style="animation-delay:.3s"></div>
+            <div class="nc-lbl">亜硝酸菌 Nitrosomonas</div>
+        </div>
+        <div class="nc-node nc-node-warn" style="animation-delay:.2s">
+            <div>
+                <div class="nc-name">亜硝酸塩（NO₂⁻）</div>
+            </div>
+            <span class="nc-badge nc-badge-ora">毒性あり</span>
+        </div>
+        <div class="nc-conn">
+            <div class="nc-line"></div>
+            <div class="nc-dot" style="animation-delay:.6s"></div>
+            <div class="nc-lbl">硝酸菌 Nitrobacter</div>
+        </div>
+        <div class="nc-node nc-node-acc" style="animation-delay:.3s">
+            <div>
+                <div class="nc-name">硝酸塩（NO₃⁻）</div>
+                <div class="nc-sub">毒性は低いが蓄積し続ける ← ここが問題</div>
+            </div>
+            <span class="nc-badge nc-badge-yel">蓄積</span>
+        </div>
+        <div class="nc-conn" style="height:14px">
+            <div class="nc-line"></div>
+        </div>
+        <div class="nc-cross">🚫 従来の解決策：換水で薄める</div>
+        <div class="nc-label-sys">▼ 本システムのアプローチ</div>
+        <div class="nc-conn">
+            <div class="nc-line" style="background:#1d3a5e"></div>
+            <div class="nc-dot nc-dot-green" style="animation-delay:.9s"></div>
+            <div class="nc-lbl">従属栄養バクテリア ＋ 炭素源投入</div>
+        </div>
+        <div class="nc-node nc-node-sys" style="animation-delay:.4s">
+            <div>
+                <div class="nc-name">炭素同化</div>
+                <div class="nc-sub">硝酸塩 → 菌体タンパク（バクテリアの体）</div>
+            </div>
+        </div>
+        <div class="nc-conn">
+            <div class="nc-line" style="background:#1d3a5e"></div>
+            <div class="nc-dot nc-dot-green" style="animation-delay:1.2s"></div>
+            <div class="nc-lbl">ベントスが捕食（イトミミズ・ヨコエビ等）</div>
+        </div>
+        <div class="nc-node nc-node-out" style="animation-delay:.5s">
+            <div>
+                <div class="nc-name">✅ 食物連鎖として系外排出</div>
+                <div class="nc-sub">水換え不要・自律して完結</div>
+            </div>
+        </div>
+    </div>
+
+    <p>硝化サイクル——アンモニアを亜硝酸塩、さらに硝酸塩へと変換するプロセス——はどんな水槽でも起きている。問題はその先だ。硝酸塩は比較的無害だが蓄積し続ける。本システムはこの「硝酸塩の最終処理」を炭素同化で置き換えた。</p>
+
+    <h3>ベントスループと物質循環</h3>
+    <p>本システムの核心は、サンプとメインタンクの間を物質が循環し続ける「ベントスループ」にある。</p>
+
+    <!-- ベントスループ循環図 -->
+    <div class="bl-wrap fade-in">
+        <div style="display:grid;grid-template-columns:1fr 32px 1fr;gap:0;align-items:stretch">
+
+            <!-- サンプ側 -->
+            <div style="display:flex;flex-direction:column;gap:6px">
+                <div class="bl-box bl-box-sump">
+                    <div class="bl-box-label">サンプ（処理の主舞台）</div>
+                    🧪 炭素源エキス投入<br>↓<br>🦠 バクテリア爆増<br>↓<br>⬛ ヘドロ化<br>↓<br>🐛 ベントスが捕食・増殖
+                </div>
+            </div>
+
+            <!-- 中央矢印 -->
+            <div
+                style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;position:relative">
+                <div
+                    style="display:flex;flex-direction:column;align-items:center;height:100%;position:relative;width:100%">
+                    <div
+                        style="width:2px;height:50%;background:#21262d;position:absolute;left:50%;top:0;transform:translateX(-50%)">
+                    </div>
+                    <div
+                        style="width:2px;height:50%;background:#21262d;position:absolute;left:50%;bottom:0;transform:translateX(-50%)">
+                    </div>
+                    <!-- 上向き矢印（オーバーフロー → サンプ）-->
+                    <div style="position:absolute;top:20%;left:50%;transform:translateX(-50%);text-align:center">
+                        <div
+                            style="font-size:.62em;color:#8b949e;writing-mode:vertical-rl;text-orientation:mixed;white-space:nowrap">
+                            ↑ OF落水</div>
+                    </div>
+                    <!-- 下向き矢印（ポンプ → メイン）-->
+                    <div style="position:absolute;bottom:20%;left:50%;transform:translateX(-50%);text-align:center">
+                        <div
+                            style="font-size:.62em;color:#8b949e;writing-mode:vertical-rl;text-orientation:mixed;white-space:nowrap">
+                            ↓ 給水ポンプ</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- メインタンク側 -->
+            <div style="display:flex;flex-direction:column;gap:6px">
+                <div class="bl-box bl-box-main">
+                    <div class="bl-box-label">メインタンク（展示）</div>
+                    🐟 魚がベントスを捕食<br>↓<br>💚 魚が成長<br>↓<br>💩 排泄物・残餌<br>↓<br>🌊 オーバーフローでサンプへ
+                </div>
+            </div>
+
+        </div>
+        <p style="text-align:center;margin:10px 0 0;font-size:.78em;color:#8b949e">この循環が自律して回り続けることで、換水が不要になる</p>
+    </div>
+
+    <h3>一般的なサンプとの役割の違い</h3>
+    <div class="holo-table-wrap fade-in">
+        <table class="holo-table">
+            <tr>
+                <th>項目</th>
+                <th>一般的なサンプ</th>
+                <th>本システムのサンプ</th>
+            </tr>
+            <tr>
+                <td data-label="項目">主な役割</td>
+                <td data-label="一般的なサンプ">分解層（ろ材・バクテリアで有機物を分解）</td>
+                <td data-label="本システムのサンプ">分解層＋生産層</td>
+            </tr>
+            <tr>
+                <td data-label="項目">生物</td>
+                <td data-label="一般的なサンプ">バクテリア中心</td>
+                <td data-label="本システムのサンプ">バクテリア＋ベントス（生物生産）</td>
+            </tr>
+            <tr>
+                <td data-label="項目">メインタンクとの関係</td>
+                <td data-label="一般的なサンプ">補助的な処理槽</td>
+                <td data-label="本システムのサンプ">実質的なメイン（生態系の心臓部）</td>
+            </tr>
+            <tr>
+                <td data-label="項目">出力</td>
+                <td data-label="一般的なサンプ">浄化された水</td>
+                <td data-label="本システムのサンプ">浄化された水＋生きた餌（ベントス）</td>
+            </tr>
+        </table>
+    </div>
+
+    <h3>副次的に達成される「三つの無」</h3>
+
+    <div class="zero-grid">
+        <div class="zero-card fade-in fade-in-delay-1">
+            <div class="zero-icon">🍽️</div>
+            <div class="zero-title">① 無給餌</div>
+            <div class="zero-body">サンプで増殖したベントスが給水ポンプを通じて常時メインタンクへ供給される。初期はベントスが安定するまで通常通り給餌すること。</div>
+        </div>
+        <div class="zero-card fade-in fade-in-delay-2">
+            <div class="zero-icon">💨</div>
+            <div class="zero-title">② CO₂無添加</div>
+            <div class="zero-body">爆増した好気性バクテリアが常時大量のCO₂を産生。落水によるガス抜けを上回り、水草の光合成を賄う。オーバーフロー式でも水草が育つ。</div>
+        </div>
+        <div class="zero-card fade-in fade-in-delay-3">
+            <div class="zero-icon">♾️</div>
+            <div class="zero-title">③ リセット不要</div>
+            <div class="zero-body">ベントスが底床を撹拌し続けるため、底床が嫌気化（硫化水素発生）しない。理論上、水槽のリセットが不要になる。</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <h2>なぜオーバーフロー式でなければならないか</h2>
+    <div class="holo-table-wrap fade-in">
+        <table class="holo-table">
+            <tr>
+                <th>ろ過方式</th>
+                <th>ヘドロ輸送</th>
+                <th>酸素供給</th>
+                <th>適合性</th>
+            </tr>
+            <tr>
+                <td data-label="ろ過方式"><strong>オーバーフロー式</strong></td>
+                <td data-label="ヘドロ輸送">サンプへ自動落下</td>
+                <td data-label="酸素供給">落水曝気で十分</td>
+                <td data-label="適合性">唯一の適合 ✅</td>
+            </tr>
+            <tr>
+                <td data-label="ろ過方式">外部フィルター</td>
+                <td data-label="ヘドロ輸送">内部で即座に詰まる</td>
+                <td data-label="酸素供給">ポンプ循環のみ</td>
+                <td data-label="適合性">絶対NG 🚫</td>
+            </tr>
+            <tr>
+                <td data-label="ろ過方式">上部フィルター</td>
+                <td data-label="ヘドロ輸送">ウール・ろ材で捕捉</td>
+                <td data-label="酸素供給">—</td>
+                <td data-label="適合性">不可</td>
+            </tr>
+            <tr>
+                <td data-label="ろ過方式">底面フィルター</td>
+                <td data-label="ヘドロ輸送">底床に蓄積</td>
+                <td data-label="酸素供給">—</td>
+                <td data-label="適合性">不可</td>
+            </tr>
+            <tr>
+                <td data-label="ろ過方式">スポンジ・投げ込み</td>
+                <td data-label="ヘドロ輸送">スポンジに捕捉</td>
+                <td data-label="酸素供給">—</td>
+                <td data-label="適合性">不可</td>
+            </tr>
+        </table>
+    </div>
+    <p>バクテリアが爆増するこのシステムは、酸素要求量が通常の水槽と比較にならないほど高い。ヘドロを「詰まらせず流す」設計と合わせて、オーバーフロー式が唯一無二の選択肢だ。</p>
+
+    <hr>
+
+    <h2>炭素源エキスのレシピ</h2>
+
+    <h3>ベース液</h3>
+
+    <!-- レシピカード -->
+    <style>
+        .recipe-wrap {
+            margin: 16px 0
+        }
+
+        .recipe-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 14px
+        }
+
+        @media(max-width:500px) {
+            .recipe-grid {
+                grid-template-columns: 1fr
+            }
+        }
+
+        .recipe-card-item {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 10px;
+            padding: 14px 12px;
+            text-align: center;
+            position: relative;
+            overflow: hidden
+        }
+
+        .recipe-card-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px
+        }
+
+        .recipe-fast::before {
+            background: linear-gradient(to right, #f85149, #d29922)
+        }
+
+        .recipe-mid::before {
+            background: #d29922
+        }
+
+        .recipe-slow::before {
+            background: #3fb950
+        }
+
+        .recipe-emoji {
+            font-size: 2.2em;
+            margin-bottom: 6px
+        }
+
+        .recipe-name {
+            font-weight: bold;
+            color: #e6edf3;
+            font-size: .9em;
+            margin-bottom: 4px
+        }
+
+        .recipe-amount {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #58a6ff;
+            margin-bottom: 4px
+        }
+
+        .recipe-component {
+            font-size: .72em;
+            color: #8b949e;
+            margin-bottom: 6px
+        }
+
+        .recipe-speed {
+            display: inline-block;
+            font-size: .68em;
+            padding: 2px 8px;
+            border-radius: 10px
+        }
+
+        .speed-fast {
+            background: #2d0e0e;
+            color: #f85149;
+            border: 1px solid #f85149
+        }
+
+        .speed-mid {
+            background: #2d1a06;
+            color: #d29922;
+            border: 1px solid #d29922
+        }
+
+        .speed-slow {
+            background: #0a2a14;
+            color: #3fb950;
+            border: 1px solid #3fb950
+        }
+
+        .recipe-mineral-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px
+        }
+
+        @media(max-width:500px) {
+            .recipe-mineral-grid {
+                grid-template-columns: 1fr 1fr
+            }
+        }
+
+        .recipe-mineral-item {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center
+        }
+
+        .recipe-mineral-emoji {
+            font-size: 1.6em;
+            margin-bottom: 4px
+        }
+
+        .recipe-mineral-name {
+            font-size: .78em;
+            font-weight: bold;
+            color: #e6edf3
+        }
+
+        .recipe-mineral-note {
+            font-size: .68em;
+            color: #8b949e;
+            margin-top: 2px
+        }
+
+        .recipe-section-label {
+            font-size: .75em;
+            text-transform: uppercase;
+            letter-spacing: .06em;
+            color: #8b949e;
+            margin: 14px 0 8px;
+            padding-left: 2px
+        }
+    </style>
+
+    <div class="recipe-wrap fade-in">
+        <div class="recipe-section-label">⚗️ ベース液（合計約265ml）</div>
+        <div class="recipe-grid">
+            <div class="recipe-card-item recipe-fast">
+                <div class="recipe-emoji">🍶</div>
+                <div class="recipe-name">ウォッカ</div>
+                <div class="recipe-amount">200 ml</div>
+                <div class="recipe-component">主成分：エタノール</div>
+                <span class="recipe-speed speed-fast">⚡ 速効性</span>
+            </div>
+            <div class="recipe-card-item recipe-mid">
+                <div class="recipe-emoji">🍶</div>
+                <div class="recipe-name">米酢</div>
+                <div class="recipe-amount">50 ml</div>
+                <div class="recipe-component">主成分：酢酸</div>
+                <span class="recipe-speed speed-mid">⏱ 中速</span>
+            </div>
+            <div class="recipe-card-item recipe-slow">
+                <div class="recipe-emoji">🥄</div>
+                <div class="recipe-name">グラニュー糖</div>
+                <div class="recipe-amount">15 g</div>
+                <div class="recipe-component">主成分：スクロース</div>
+                <span class="recipe-speed speed-slow">🌿 緩効性</span>
+            </div>
+        </div>
+        <div class="recipe-section-label">🧂 漬け込み素材（ミネラル補給）</div>
+        <div class="recipe-mineral-grid">
+            <div class="recipe-mineral-item">
+                <div class="recipe-mineral-emoji">🌊</div>
+                <div class="recipe-mineral-name">藻塩</div>
+                <div class="recipe-mineral-note">Na・K・Mg・Ca・ヨウ素</div>
+            </div>
+            <div class="recipe-mineral-item">
+                <div class="recipe-mineral-emoji">🍌</div>
+                <div class="recipe-mineral-name">バナナ（可食部）</div>
+                <div class="recipe-mineral-note">カリウム・Mg補充</div>
+            </div>
+            <div class="recipe-mineral-item">
+                <div class="recipe-mineral-emoji">🍵</div>
+                <div class="recipe-mineral-name">ルイボスティー</div>
+                <div class="recipe-mineral-note">Ca・K・Zn・Mn等</div>
+            </div>
+        </div>
+        <p style="font-size:.78em;color:#8b949e;margin:8px 0 0">3種の炭素源を組み合わせることでモノカルチャー化を防ぎ、多様なバクテリアコミュニティを維持する。</p>
+    </div>
+
+    <div class="holo-warn-yellow fade-in">
+        <strong>⚠️ 注意</strong><br>
+        バナナは必ず可食部（果肉）のみ使用すること。皮には農薬が残留している場合があり、エキスに溶け出してエビ類が全滅する危険がある。
+    </div>
+    <p>サンプへポンプ1プッシュを毎日投入する。ドーシングポンプで完全自動化も可能。常温保存でいい——ウォッカのアルコールが防腐剤として機能する。</p>
+
+    <hr>
+
+    <h2>立ち上げ手順（約1ヶ月）</h2>
+
+    <div class="step-wrap fade-in">
+        <div class="step-item">
+            <div class="step-num">1</div>
+            <div class="step-title">底床の選定</div>
+            <div class="step-body">
+                焼赤玉土（硬質）を推奨する。多孔質でバクテリアが定着しやすく、栄養分がないため初期水質が安定しやすい。
+                <div class="holo-warn-purple" style="margin-top:10px">
+                    <strong>📌 重要</strong><br>必ず「硬質」タイプを選ぶこと。通常の赤玉土は水中で崩れる。
+                </div>
+            </div>
+        </div>
+        <div class="step-item">
+            <div class="step-num">2</div>
+            <div class="step-title">サンプへの赤玉土充填</div>
+            <div class="step-body">サンプ内にも焼赤玉土を可能な限り敷き詰める。ポンプとは区画を隔てること。バクテリアの定着面積を最大化する。</div>
+        </div>
+        <div class="step-item">
+            <div class="step-num">3</div>
+            <div class="step-title">空回し＋初回投入</div>
+            <div class="step-body">
+                水を入れてオーバーフローを空回し。ゴーストフィーディング（餌を少量投入してアンモニア源を供給）と炭素源エキス投入を開始する。数日以内に白濁が始まる。
+                <div class="holo-warn-red" style="margin-top:10px">
+                    <strong>🚫 絶対にやってはいけないこと</strong><br>
+                    <strong>換水</strong>・<strong>白濁除去剤の使用</strong><br>白濁はバクテリアブルームであり「成功の証」だ。介入すれば立ち上げがゼロに戻る。
+                </div>
+            </div>
+        </div>
+        <div class="step-item">
+            <div class="step-num">4</div>
+            <div class="step-title">1ヶ月継続 → 突然のクリア化</div>
+            <div class="step-body">
+                白濁したまま毎日投入を継続。約1ヶ月後、ある日突然水がクリアになる。生態系が臨界点を超えた合図だ。
+                <div class="holo-tip" style="margin-top:10px">
+                    <span class="holo-label">🔧 トラブルシューティング</span>
+                    <strong>腐臭がしたら</strong>：嫌気性分解が起きている——酸素不足のサイン。緊急エアレーション追加、ポンプを強化すること。
+                </div>
+
+                <!-- 水質変化グラフ -->
+                <style>
+                    .wq-graph {
+                        background: #0d1117;
+                        border: 1px solid #30363d;
+                        border-radius: 10px;
+                        padding: 14px;
+                        margin-top: 14px
+                    }
+
+                    .wq-title {
+                        font-size: .75em;
+                        color: #8b949e;
+                        text-transform: uppercase;
+                        letter-spacing: .06em;
+                        margin-bottom: 10px;
+                        text-align: center
+                    }
+
+                    .wq-chart {
+                        position: relative;
+                        height: 140px;
+                        background: linear-gradient(to bottom, rgba(88, 166, 255, .05), transparent);
+                        border-radius: 6px;
+                        overflow: hidden
+                    }
+
+                    .wq-area {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        height: 100%;
+                        background: linear-gradient(to right, transparent 0%, rgba(139, 148, 158, .15) 3%, rgba(139, 148, 158, .4) 8%, rgba(248, 81, 73, .35) 15%, rgba(248, 81, 73, .5) 25%, rgba(248, 81, 73, .45) 35%, rgba(210, 153, 34, .3) 50%, rgba(210, 153, 34, .2) 60%, rgba(63, 185, 80, .15) 72%, rgba(63, 185, 80, .08) 80%, rgba(88, 166, 255, .12) 100%);
+                        clip-path: polygon(0% 95%, 3% 80%, 8% 45%, 15% 20%, 22% 12%, 30% 15%, 40% 18%, 50% 25%, 60% 40%, 70% 70%, 75% 88%, 80% 93%, 85% 95%, 100% 95%, 100% 100%, 0% 100%)
+                    }
+
+                    @keyframes wq-line-draw {
+                        from {
+                            stroke-dashoffset: 800
+                        }
+
+                        to {
+                            stroke-dashoffset: 0
+                        }
+                    }
+
+                    .wq-svg {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%
+                    }
+
+                    .wq-svg polyline {
+                        stroke-dasharray: 800;
+                        animation: wq-line-draw 3s ease forwards
+                    }
+
+                    .wq-labels {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: 6px;
+                        font-size: .65em;
+                        color: #484f58
+                    }
+
+                    .wq-event {
+                        position: absolute;
+                        font-size: .65em;
+                        color: #c9d1d9;
+                        text-align: center;
+                        white-space: nowrap
+                    }
+
+                    .wq-event-dot {
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 50%;
+                        margin: 0 auto 3px
+                    }
+                </style>
+
+                <div class="wq-graph">
+                    <div class="wq-title">📊 立ち上げ期間の水の透明度イメージ</div>
+                    <div class="wq-chart">
+                        <div class="wq-area"></div>
+                        <svg class="wq-svg" viewBox="0 0 400 140" preserveAspectRatio="none">
+                            <polyline fill="none" stroke="#58a6ff" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                points="0,133 12,112 32,63 60,28 88,17 120,21 160,25 200,35 240,56 280,98 300,123 320,131 340,133 400,133" />
+                        </svg>
+                        <!-- イベントマーカー -->
+                        <div class="wq-event" style="left:14%;top:8%">
+                            <div class="wq-event-dot" style="background:#f85149"></div>白濁ピーク
+                        </div>
+                        <div class="wq-event" style="left:68%;top:55%">
+                            <div class="wq-event-dot" style="background:#d29922"></div>徐々に改善
+                        </div>
+                        <div class="wq-event" style="right:8%;top:78%">
+                            <div class="wq-event-dot" style="background:#3fb950"></div>クリア化 ✨
+                        </div>
+                    </div>
+                    <div class="wq-labels">
+                        <span>Day 1</span>
+                        <span>Week 1</span>
+                        <span>Week 2</span>
+                        <span>Week 3</span>
+                        <span>Week 4 〜</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="step-item">
+            <div class="step-num">5</div>
+            <div class="step-title">水草植付け＆ベントス投入</div>
+            <div class="step-body">クリア化確認後、水草を植え付け、サンプにイトミミズ・ヨコエビ等を投入する。</div>
+        </div>
+        <div class="step-item">
+            <div class="step-num">6</div>
+            <div class="step-title">魚の段階的導入</div>
+            <div class="step-body">
+                低層魚→中層魚→上層魚→頂点捕食者の順に導入する。ベントスが安定するまでは通常通り給餌。ポンプを通じてベントスが流入し、魚が自然に捕食する様子が確認できれば給餌を徐々に減らせる。</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <h2>実際の水槽データ</h2>
+
+    <!-- pHカウンターアニメーション -->
+    <div class="ph-counter-wrap fade-in">
+        <div class="ph-value"><span id="ph-count">0.00</span><span class="ph-unit">pH</span></div>
+        <div class="ph-label">1年間継続して維持 / 水換えなし</div>
+        <div class="ph-bar-wrap">
+            <div class="ph-bar" id="ph-bar"></div>
+        </div>
+        <div class="ph-bar-labels"><span>酸性（pH4）</span><span>中性（pH7）</span><span>アルカリ（pH9）</span></div>
+    </div>
+
+    <p>通常の無換水水槽では硝酸塩の蓄積による酸性化が避けられないが、本システムでは炭素同化で硝酸塩が除去されるため、pHが自律的に安定する。換水して調整するより、むしろ安定しているという逆説が生じている。</p>
+
+    <div class="holo-table-wrap fade-in">
+        <table class="holo-table">
+            <tr>
+                <th>項目</th>
+                <th>詳細</th>
+            </tr>
+            <tr>
+                <td data-label="項目">水槽サイズ</td>
+                <td data-label="詳細">40×60×30cm（縦長・特注品）</td>
+            </tr>
+            <tr>
+                <td data-label="項目">サンプ</td>
+                <td data-label="詳細">30cmハイタイプ</td>
+            </tr>
+            <tr>
+                <td data-label="項目">照明</td>
+                <td data-label="詳細">ブリム パネルA（植物用ライト）</td>
+            </tr>
+            <tr>
+                <td data-label="項目">水温</td>
+                <td data-label="詳細">25〜26℃（ヒーター管理）</td>
+            </tr>
+            <tr>
+                <td data-label="項目">運用期間</td>
+                <td data-label="詳細">約1年間</td>
+            </tr>
+            <tr>
+                <td data-label="項目">水換え</td>
+                <td data-label="詳細">なし（足し水のみ）</td>
+            </tr>
+        </table>
+    </div>
+
+    <h3>メインタンク生体構成</h3>
+    <div class="holo-table-wrap fade-in">
+        <table class="holo-table">
+            <tr>
+                <th>生体</th>
+                <th>数</th>
+                <th>層・役割</th>
+            </tr>
+            <tr>
+                <td data-label="生体">エンゼルフィッシュ</td>
+                <td data-label="数">3</td>
+                <td data-label="層・役割">頂点捕食者</td>
+            </tr>
+            <tr>
+                <td data-label="生体">ナノストムス・ベッコフォルディ</td>
+                <td data-label="数">7</td>
+                <td data-label="層・役割">中〜上層</td>
+            </tr>
+            <tr>
+                <td data-label="生体">リングローチ</td>
+                <td data-label="数">1</td>
+                <td data-label="層・役割">低層</td>
+            </tr>
+            <tr>
+                <td data-label="生体">ホンコンプレコ</td>
+                <td data-label="数">2</td>
+                <td data-label="層・役割">低層・コケ取り</td>
+            </tr>
+            <tr>
+                <td data-label="生体">アベニーパファー</td>
+                <td data-label="数">1</td>
+                <td data-label="層・役割">中層・スネール駆除</td>
+            </tr>
+            <tr>
+                <td data-label="生体">ヒメツメカエル</td>
+                <td data-label="数">3</td>
+                <td data-label="層・役割">低〜中層</td>
+            </tr>
+            <tr>
+                <td data-label="生体">ミナミヌマエビ</td>
+                <td data-label="数">複数</td>
+                <td data-label="層・役割">低層・清掃</td>
+            </tr>
+            <tr>
+                <td data-label="生体">ラムズホーン</td>
+                <td data-label="数">複数</td>
+                <td data-label="層・役割">低層・分解</td>
+            </tr>
+        </table>
+    </div>
+
+    <h3>日常の維持管理</h3>
+    <div class="maint-grid fade-in">
+        <div class="maint-card"><span class="maint-freq maint-freq-daily">毎日</span><span
+                class="maint-text">炭素源エキスをサンプへ1プッシュ</span></div>
+        <div class="maint-card"><span class="maint-freq maint-freq-daily">毎日</span><span
+                class="maint-text">水槽を眺める（異常確認）</span></div>
+        <div class="maint-card"><span class="maint-freq maint-freq-any">随時</span><span
+                class="maint-text">水が減ったら足し水</span></div>
+        <div class="maint-card"><span class="maint-freq maint-freq-any">随時</span><span
+                class="maint-text">水草が伸びたらトリミング</span></div>
+    </div>
+    <p>維持管理は実質的に「1プッシュと眺めること」に収束する。</p>
+
+    <hr>
+
+    <h2>向かない人・やってはいけないこと</h2>
+
+    <details class="holo-details fade-in">
+        <summary>必須条件</summary>
+        <div class="details-body">
+            <ol>
+                <li>新規立ち上げ時にのみ実践すること。立ち上げ済みの水槽への後付けは高リスク。</li>
+                <li>オーバーフロー式が必須。外部フィルターは一瞬でヘドロが詰まるため特に危険。</li>
+            </ol>
+        </div>
+    </details>
+
+    <details class="holo-details fade-in">
+        <summary>向かない人</summary>
+        <div class="details-body">
+            <ul>
+                <li><strong>ベントスへの嫌悪感がある人：</strong>サンプにはイトミミズ・ヨコエビ・ミズムシ等が大量生息し、メインタンクにも流入する。</li>
+                <li><strong>アクアリウムのお世話を楽しみたい人：</strong>システムが安定すると、やることがほとんどなくなる。</li>
+            </ul>
+        </div>
+    </details>
+
+    <details class="holo-details fade-in">
+        <summary>オプション</summary>
+        <div class="details-body">
+            <ul>
+                <li>浮遊物が気になる場合：サンプに淡水海綿を入れることで生物的に除去できる</li>
+                <li>投入の完全自動化：ドーシングポンプの活用</li>
+            </ul>
+        </div>
+    </details>
+
+    <hr>
+
+    <h2>コストと入手性</h2>
+    <div class="holo-table-wrap fade-in">
+        <table class="holo-table">
+            <tr>
+                <th>項目</th>
+                <th>コスト</th>
+                <th>入手先</th>
+            </tr>
+            <tr>
+                <td data-label="項目">オーバーフロー水槽</td>
+                <td data-label="コスト">高め（最大のハードル）</td>
+                <td data-label="入手先">アクアリウムショップ・通販</td>
+            </tr>
+            <tr>
+                <td data-label="項目">焼赤玉土</td>
+                <td data-label="コスト">安価</td>
+                <td data-label="入手先">ホームセンター</td>
+            </tr>
+            <tr>
+                <td data-label="項目">ウォッカ・米酢・グラニュー糖</td>
+                <td data-label="コスト">安価</td>
+                <td data-label="入手先">スーパー</td>
+            </tr>
+            <tr>
+                <td data-label="項目">藻塩・バナナ・ルイボスティー</td>
+                <td data-label="コスト">安価</td>
+                <td data-label="入手先">スーパー</td>
+            </tr>
+            <tr>
+                <td data-label="項目">ベントス類</td>
+                <td data-label="コスト">安価〜無料</td>
+                <td data-label="入手先">釣具店・採取等（入手性が難点）</td>
+            </tr>
+        </table>
+    </div>
+    <p>オーバーフロー水槽さえ用意できれば、ランニングコストはほぼゼロに近い。</p>
+
+    <hr>
+
+    <h2>大型水槽ほど真価を発揮する</h2>
+    <p>大型水槽の水換えは圧倒的に重労働だ。100L・200L・300Lを超える水槽の換水作業は、それだけで趣味の継続を断念させるほどの負担になりうる。本システムはその水換えをゼロにする。</p>
+    <p>水量が増えるほど水質バッファが大きく変動が起きにくい。バクテリアとベントスの生息域が広がりシステムが安定する。換水を前提とした水槽管理では「大型化するほど維持が大変」なのが常識だが、このシステムではその関係が逆転する。</p>
+
+    <hr>
+
+    <!-- 食物連鎖ピラミッド -->
+    <style>
+        .pyramid-section {
+            margin: 20px 0;
+            text-align: center
+        }
+
+        .pyramid-title {
+            font-size: .8em;
+            color: #8b949e;
+            text-transform: uppercase;
+            letter-spacing: .08em;
+            margin-bottom: 16px
+        }
+
+        .pyramid-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            max-width: 420px;
+            margin: 0 auto
+        }
+
+        .pyramid-tier {
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+            position: relative;
+            transition: transform .2s
+        }
+
+        .pyramid-tier:hover {
+            transform: scale(1.02)
+        }
+
+        .pyramid-t1 {
+            background: linear-gradient(135deg, #1a0a0a, #2d1010);
+            border: 1px solid #f85149;
+            max-width: 50%
+        }
+
+        .pyramid-t2 {
+            background: linear-gradient(135deg, #0a1929, #0d2440);
+            border: 1px solid #58a6ff;
+            max-width: 65%
+        }
+
+        .pyramid-t3 {
+            background: linear-gradient(135deg, #0a2a14, #16200a);
+            border: 1px solid #3fb950;
+            max-width: 80%
+        }
+
+        .pyramid-t4 {
+            background: linear-gradient(135deg, #161b22, #21262d);
+            border: 1px solid #30363d;
+            max-width: 95%
+        }
+
+        .pyramid-emoji {
+            font-size: 1.6em;
+            margin-bottom: 2px
+        }
+
+        .pyramid-name {
+            font-weight: bold;
+            color: #e6edf3;
+            font-size: .88em
+        }
+
+        .pyramid-desc {
+            font-size: .7em;
+            color: #8b949e;
+            margin-top: 2px
+        }
+
+        .pyramid-arrow {
+            color: #30363d;
+            font-size: 1.2em;
+            line-height: 1
+        }
+
+        .pyramid-label {
+            font-size: .65em;
+            color: #8b949e;
+            letter-spacing: .05em;
+            margin-top: 12px
+        }
+
+        .pyramid-concept {
+            display: inline-block;
+            font-size: .72em;
+            padding: 4px 14px;
+            border-radius: 20px;
+            background: #0d2440;
+            color: #58a6ff;
+            border: 1px solid rgba(88, 166, 255, .3);
+            margin-top: 10px;
+            letter-spacing: .05em
+        }
+    </style>
+
+    <div class="pyramid-section fade-in">
+        <div class="pyramid-title">🔺 ホロビオント食物連鎖ピラミッド</div>
+        <div class="pyramid-wrap">
+            <div class="pyramid-tier pyramid-t1 fade-in fade-in-delay-1">
+                <div class="pyramid-emoji">🐟</div>
+                <div class="pyramid-name">魚（頂点捕食者）</div>
+                <div class="pyramid-desc">エンゼルフィッシュ・カエル等</div>
+            </div>
+            <div class="pyramid-arrow">▽</div>
+            <div class="pyramid-tier pyramid-t2 fade-in fade-in-delay-2">
+                <div class="pyramid-emoji">🐛</div>
+                <div class="pyramid-name">ベントス（一次消費者）</div>
+                <div class="pyramid-desc">イトミミズ・ヨコエビ・ミズムシ</div>
+            </div>
+            <div class="pyramid-arrow">▽</div>
+            <div class="pyramid-tier pyramid-t3 fade-in fade-in-delay-3">
+                <div class="pyramid-emoji">🦠</div>
+                <div class="pyramid-name">バクテリア（生産者/分解者）</div>
+                <div class="pyramid-desc">好気性従属栄養菌・硝化菌</div>
+            </div>
+            <div class="pyramid-arrow">▽</div>
+            <div class="pyramid-tier pyramid-t4 fade-in">
+                <div class="pyramid-emoji">🧪</div>
+                <div class="pyramid-name">有機物 / 炭素源</div>
+                <div class="pyramid-desc">ウォッカ・米酢・グラニュー糖 + 魚の排泄物</div>
+            </div>
+        </div>
+        <div class="pyramid-label">水槽全体が一つの超個体（ホロビオント）として機能する</div>
+        <div><span class="pyramid-concept">Holobiont Aquarium</span></div>
+    </div>
+
+    <hr>
+
+    <h2>おわりに</h2>
+    <p>本システムの発想の原点は、2chの「砂糖添加水槽」スレッドだった。「白濁する」「酸欠になる」「危険」という失敗談を見て、逆に問いを立てた。</p>
+    <div class="holo-blockquote">
+        <p>「なぜ失敗するのか？ 構造的に成功させるにはどうすればよいか？」</p>
+    </div>
+    <ul>
+        <li>白濁するのは問題ではなく、バクテリアが爆増しているサインだ</li>
+        <li>酸欠はオーバーフローの落水曝気で解決できる</li>
+        <li>単一炭素源の弱さは複数種の組み合わせで補える</li>
+        <li>増えたバクテリアのヘドロはベントスに食わせれば良い</li>
+    </ul>
+    <p>Holobiont——宿主と共生微生物の総体を一つの超個体として見る視点——は後から知った概念だが、このシステムの設計思想を的確に表す言葉だと感じた。水槽は魚を飼うための容器ではなく、魚・バクテリア・ベントス・水草が一体となって動く、一つの生命体なのだ。
+    </p>
+    <p>もう一つ。私は美しい水草レイアウト水槽を作る才能がない。だからこの記事の水草はアズレアとバリスネリアの二種だけになっている。しかしおそらく、このシステムはADA式のような美しい水草水槽にも応用できるはずだと考えている。誰かが試してくれたら、ぜひ結果を教えてほしい。
+    </p>
+
+    <div class="ph-counter-wrap fade-in" style="padding:16px 24px">
+        <p style="margin:0;color:#8b949e;font-size:.95em;letter-spacing:.08em;text-align:center">pH 6.85 &nbsp;|&nbsp;
+            水換えなし &nbsp;|&nbsp; 給餌なし &nbsp;|&nbsp; CO₂添加なし</p>
+        <p style="margin:8px 0 0;color:#484f58;font-size:.82em;text-align:center">それでも水槽は今日も静かに、自律して動いている。</p>
+    </div>
+
+    <hr>
+    <p style="color:#8b949e;font-size:.82em">著者：アクアリウム歴約10年 / 換水廃止論者<br>ver.10 / 2026年3月</p>
+
+</div>

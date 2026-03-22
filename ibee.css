@@ -1,0 +1,1339 @@
+/* ================================================================
+   IBEE — 生物環境技術研究会 デザインシステム
+   Institute of Biological Environmental Engineering
+   Since. 1999
+   ================================================================
+   紺青(#003366)ベースの研究機関スタイル。国交省の技術資料にたまたま似た。
+   ================================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Inter:wght@400;600;700&family=Shippori+Mincho:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+/* ===== カラートークン ===== */
+:root {
+    --ibee-navy: #003366;
+    --ibee-navy-dark: #002244;
+    --ibee-navy-light: #004488;
+    --ibee-accent: #0066aa;
+    --ibee-bg: #ffffff;
+    --ibee-bg-alt: #f5f7fa;
+    --ibee-bg-card: #f0f3f7;
+    --ibee-text: #333333;
+    --ibee-text-light: #666666;
+    --ibee-text-muted: #888888;
+    --ibee-border: #d0d7de;
+    --ibee-border-light: #e8ecf0;
+    --ibee-success: #1a7f37;
+    --ibee-warning: #9a6700;
+    --ibee-danger: #cf222e;
+    --ibee-info: #0969da;
+    --ibee-link: #0056b3;
+}
+
+/* ===== IBEEヘッダー ===== */
+.ibee-header {
+    background: var(--ibee-navy);
+    color: #ffffff;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0,0,0,.15);
+}
+
+.ibee-header-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 24px;
+}
+
+.ibee-header-brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.ibee-header-logo {
+    height: 52px;
+    width: auto;
+    flex-shrink: 0;
+    margin: 2px 0;
+}
+
+.ibee-header-title {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    font-size: 1.35em;
+    letter-spacing: .1em;
+    line-height: 1.3;
+}
+
+.ibee-header-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: .82em;
+    font-weight: 500;
+    opacity: .8;
+    letter-spacing: .06em;
+    font-style: italic;
+}
+
+/* ナビゲーション */
+.ibee-nav {
+    background: var(--ibee-navy-dark);
+    border-bottom: 3px solid var(--ibee-accent);
+}
+
+.ibee-nav-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    gap: 0;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+.ibee-nav a {
+    color: rgba(255,255,255,.85);
+    text-decoration: none;
+    font-size: .82em;
+    font-family: 'Noto Sans JP', sans-serif;
+    padding: 10px 16px;
+    white-space: nowrap;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -3px;
+    transition: all .2s;
+}
+
+.ibee-nav a:hover,
+.ibee-nav a.active {
+    color: #ffffff;
+    border-bottom-color: #ffffff;
+    background: rgba(255,255,255,.08);
+}
+
+/* ===== IBEEフッター ===== */
+.ibee-footer {
+    background: var(--ibee-navy);
+    color: rgba(255,255,255,.8);
+    padding: 32px 20px;
+    margin-top: 48px;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.ibee-footer-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.ibee-footer-org {
+    font-size: .95em;
+    font-weight: 700;
+    letter-spacing: .08em;
+    margin-bottom: 4px;
+}
+
+.ibee-footer-en {
+    font-size: .75em;
+    opacity: .7;
+    margin-bottom: 16px;
+}
+
+.ibee-footer-since {
+    font-size: .78em;
+    opacity: .6;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.ibee-footer-cite {
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 6px;
+    padding: 14px 18px;
+    text-align: left;
+    font-size: .75em;
+    line-height: 1.6;
+    margin: 16px auto;
+    max-width: 600px;
+}
+
+.ibee-footer-cite-label {
+    font-weight: 700;
+    font-size: .85em;
+    margin-bottom: 6px;
+    color: rgba(255,255,255,.9);
+}
+
+.ibee-footer-note {
+    font-size: .7em;
+    opacity: .5;
+    margin-top: 20px;
+}
+
+/* ===== 基本レイアウト ===== */
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--ibee-bg) !important;
+    font-family: 'Noto Sans JP', 'Inter', sans-serif !important;
+}
+
+.holo-body {
+    font-size: 16px;
+    line-height: 1.9;
+    color: var(--ibee-text) !important;
+    word-break: break-word;
+    background: var(--ibee-bg) !important;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 32px 20px;
+}
+
+/* ===== 見出し ===== */
+.holo-body h1 {
+    color: var(--ibee-navy) !important;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    border-bottom: 3px solid var(--ibee-navy);
+    padding-bottom: 8px;
+    margin-top: 40px;
+}
+
+.holo-body h2 {
+    color: var(--ibee-navy) !important;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    border-left: 4px solid var(--ibee-navy);
+    padding-left: 12px;
+    margin-top: 36px;
+}
+
+.holo-body h3 {
+    color: var(--ibee-navy-light) !important;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    margin-top: 28px;
+}
+
+/* ===== リンク ===== */
+.holo-body a {
+    color: var(--ibee-link);
+}
+
+.holo-body a:hover {
+    color: var(--ibee-navy);
+}
+
+/* ===== ボックス類 ===== */
+.holo-summary {
+    background: var(--ibee-bg-alt) !important;
+    border: 1px solid var(--ibee-border) !important;
+    border-left: 4px solid var(--ibee-navy) !important;
+    border-radius: 6px !important;
+    color: var(--ibee-text);
+}
+
+.holo-summary ul {
+    color: var(--ibee-text);
+}
+
+.holo-card {
+    background: var(--ibee-bg-alt) !important;
+    border: 1px solid var(--ibee-border) !important;
+    border-radius: 6px !important;
+    color: var(--ibee-text) !important;
+}
+
+.holo-card-green {
+    border-left: 3px solid var(--ibee-success) !important;
+}
+
+.holo-warn-red {
+    background: #fef2f2 !important;
+    border: 1px solid var(--ibee-danger) !important;
+    border-left: 4px solid var(--ibee-danger) !important;
+    border-radius: 6px !important;
+    color: var(--ibee-text) !important;
+}
+
+.holo-warn-yellow {
+    background: #fffbeb !important;
+    border: 1px solid var(--ibee-warning) !important;
+    border-left: 4px solid var(--ibee-warning) !important;
+    border-radius: 6px !important;
+    color: var(--ibee-text) !important;
+}
+
+.holo-warn-purple {
+    background: #faf5ff !important;
+    border: 1px solid #7c3aed !important;
+    border-left: 4px solid #7c3aed !important;
+    border-radius: 6px !important;
+    color: var(--ibee-text) !important;
+}
+
+.holo-tip {
+    background: var(--ibee-bg-alt) !important;
+    border: 1px solid var(--ibee-border) !important;
+    border-radius: 6px !important;
+    color: var(--ibee-text) !important;
+}
+
+.holo-blockquote {
+    border-left: 3px solid var(--ibee-border) !important;
+    color: var(--ibee-text-light) !important;
+}
+
+.holo-label {
+    color: var(--ibee-text-muted) !important;
+}
+
+/* ===== テーブル ===== */
+.holo-table th {
+    background: var(--ibee-navy) !important;
+    color: #ffffff !important;
+    border: 1px solid var(--ibee-navy-dark) !important;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.holo-table td {
+    border: 1px solid var(--ibee-border) !important;
+    color: var(--ibee-text) !important;
+}
+
+.holo-table tr:nth-child(even) td {
+    background: var(--ibee-bg-alt) !important;
+}
+
+/* モバイルテーブル */
+@media(max-width:600px) {
+    .holo-table tr {
+        background: var(--ibee-bg-alt) !important;
+        border: 1px solid var(--ibee-border) !important;
+    }
+
+    .holo-table tr:nth-child(even) td {
+        background: transparent !important;
+    }
+
+    .holo-table td {
+        border: none !important;
+        border-bottom: 1px solid var(--ibee-border-light) !important;
+    }
+
+    .holo-table td::before {
+        color: var(--ibee-navy) !important;
+    }
+}
+
+/* ===== コードブロック ===== */
+.holo-pre {
+    background: var(--ibee-bg-alt) !important;
+    border: 1px solid var(--ibee-border) !important;
+    border-radius: 6px !important;
+    color: var(--ibee-text) !important;
+}
+
+/* ===== 硝化サイクル図 ===== */
+.nc-node-base {
+    background: var(--ibee-bg-alt) !important;
+    border: 1px solid var(--ibee-border) !important;
+}
+
+.nc-node-danger {
+    background: #fef2f2 !important;
+    border: 1px solid var(--ibee-danger) !important;
+}
+
+.nc-node-warn {
+    background: #fffbeb !important;
+    border: 1px solid var(--ibee-warning) !important;
+}
+
+.nc-node-acc {
+    background: #f0fdf4 !important;
+    border: 1px solid var(--ibee-success) !important;
+}
+
+.nc-node-sys {
+    background: #eff6ff !important;
+    border: 1px solid var(--ibee-navy) !important;
+}
+
+.nc-node-out {
+    background: #f0fdf4 !important;
+    border: 1px solid var(--ibee-success) !important;
+}
+
+.nc-name {
+    color: var(--ibee-text) !important;
+}
+
+.nc-sub {
+    color: var(--ibee-text-light) !important;
+}
+
+.nc-badge-red {
+    background: #fef2f2 !important;
+    color: var(--ibee-danger) !important;
+    border: 1px solid var(--ibee-danger) !important;
+}
+
+.nc-badge-ora {
+    background: #fffbeb !important;
+    color: var(--ibee-warning) !important;
+    border: 1px solid var(--ibee-warning) !important;
+}
+
+.nc-badge-yel {
+    background: #f0fdf4 !important;
+    color: var(--ibee-success) !important;
+    border: 1px solid var(--ibee-success) !important;
+}
+
+.nc-line {
+    background: var(--ibee-border) !important;
+}
+
+.nc-dot {
+    background: var(--ibee-navy) !important;
+}
+
+.nc-dot-green {
+    background: var(--ibee-success) !important;
+}
+
+.nc-lbl {
+    background: var(--ibee-bg) !important;
+    color: var(--ibee-text-light) !important;
+    border: 1px solid var(--ibee-border) !important;
+}
+
+.nc-cross {
+    background: var(--ibee-bg-alt) !important;
+    border: 1px dashed var(--ibee-border) !important;
+    color: var(--ibee-text-muted) !important;
+}
+
+.nc-label-sys {
+    color: var(--ibee-navy) !important;
+}
+
+/* ===== ベントスループ図 ===== */
+.bl-box {
+    background: var(--ibee-bg-alt) !important;
+    border: 1px solid var(--ibee-border) !important;
+    color: var(--ibee-text) !important;
+}
+
+.bl-box-sump {
+    border-color: var(--ibee-navy) !important;
+    background: #eff6ff !important;
+}
+
+.bl-box-main {
+    border-color: var(--ibee-success) !important;
+    background: #f0fdf4 !important;
+}
+
+.bl-box-sump .bl-box-label {
+    color: var(--ibee-navy) !important;
+}
+
+.bl-box-main .bl-box-label {
+    color: var(--ibee-success) !important;
+}
+
+.bl-arrow-line {
+    background: var(--ibee-border) !important;
+}
+
+.bl-arrow-label {
+    color: var(--ibee-text-light) !important;
+    background: var(--ibee-bg) !important;
+    border: 1px solid var(--ibee-border) !important;
+}
+
+.bl-dot-blue {
+    background: var(--ibee-navy) !important;
+}
+
+.bl-dot-green {
+    background: var(--ibee-success) !important;
+}
+
+.bl-arrow-h-label {
+    color: var(--ibee-text-light) !important;
+}
+
+.bl-arrow-h-line {
+    background: var(--ibee-border) !important;
+}
+
+.bl-h-dot-down {
+    background: var(--ibee-navy) !important;
+}
+
+.bl-h-dot-up {
+    background: var(--ibee-success) !important;
+}
+
+/* ===== STEPタイムライン ===== */
+.step-wrap::before {
+    background: linear-gradient(to bottom, var(--ibee-navy), var(--ibee-success)) !important;
+}
+
+.step-num {
+    background: var(--ibee-bg) !important;
+    border: 2px solid var(--ibee-navy) !important;
+    color: var(--ibee-navy) !important;
+}
+
+.step-item:last-child .step-num {
+    border-color: var(--ibee-success) !important;
+    color: var(--ibee-success) !important;
+}
+
+.step-title {
+    color: var(--ibee-text) !important;
+}
+
+.step-body {
+    color: var(--ibee-text) !important;
+}
+
+/* ===== pHカウンター ===== */
+.ph-counter-wrap {
+    background: var(--ibee-bg-alt) !important;
+    border: 1px solid var(--ibee-border) !important;
+}
+
+.ph-value {
+    color: var(--ibee-navy) !important;
+}
+
+.ph-unit {
+    color: var(--ibee-text-light) !important;
+}
+
+.ph-label {
+    color: var(--ibee-text-light) !important;
+}
+
+.ph-bar-wrap {
+    background: var(--ibee-border-light) !important;
+}
+
+.ph-bar-labels {
+    color: var(--ibee-text-muted) !important;
+}
+
+/* ===== 「三つの無」カード ===== */
+.zero-card {
+    background: #eff6ff !important;
+    border: 1px solid var(--ibee-border) !important;
+}
+
+.zero-title {
+    color: var(--ibee-navy) !important;
+}
+
+.zero-body {
+    color: var(--ibee-text-light) !important;
+}
+
+/* ===== 維持管理カード ===== */
+.maint-card {
+    background: var(--ibee-bg-alt) !important;
+    border: 1px solid var(--ibee-border) !important;
+}
+
+.maint-freq-daily {
+    background: #eff6ff !important;
+    color: var(--ibee-navy) !important;
+    border: 1px solid var(--ibee-navy) !important;
+}
+
+.maint-freq-any {
+    background: #f0fdf4 !important;
+    color: var(--ibee-success) !important;
+    border: 1px solid var(--ibee-success) !important;
+}
+
+.maint-text {
+    color: var(--ibee-text) !important;
+}
+
+/* ===== FAQ アコーディオン ===== */
+details.holo-details {
+    background: var(--ibee-bg-alt) !important;
+    border: 1px solid var(--ibee-border) !important;
+}
+
+details.holo-details summary {
+    color: var(--ibee-text) !important;
+}
+
+details.holo-details summary::after {
+    color: var(--ibee-text-muted) !important;
+}
+
+details.holo-details .details-body {
+    color: var(--ibee-text) !important;
+}
+
+/* ===== アプローチカード ===== */
+.approach-card {
+    background: var(--ibee-bg-alt) !important;
+    border: 1px solid var(--ibee-border) !important;
+}
+
+.approach-card:hover {
+    border-color: var(--ibee-navy) !important;
+}
+
+.approach-card-title {
+    color: var(--ibee-text) !important;
+}
+
+.approach-card-desc {
+    color: var(--ibee-text-light) !important;
+}
+
+.badge-green {
+    background: #f0fdf4 !important;
+    color: var(--ibee-success) !important;
+    border: 1px solid var(--ibee-success) !important;
+}
+
+.badge-yellow {
+    background: #fffbeb !important;
+    color: var(--ibee-warning) !important;
+    border: 1px solid var(--ibee-warning) !important;
+}
+
+.badge-red {
+    background: #fef2f2 !important;
+    color: var(--ibee-danger) !important;
+    border: 1px solid var(--ibee-danger) !important;
+}
+
+/* ===== ページタイトル ===== */
+.ibee-page-title {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.6em;
+    font-weight: 700;
+    color: var(--ibee-navy);
+    border-bottom: 3px solid var(--ibee-navy);
+    padding-bottom: 12px;
+    margin: 24px 0 16px;
+    line-height: 1.4;
+}
+
+/* ===== パンくずリスト ===== */
+.ibee-breadcrumb {
+    font-size: .8em;
+    color: var(--ibee-text-muted);
+    padding: 12px 0;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.ibee-breadcrumb a {
+    color: var(--ibee-link);
+    text-decoration: none;
+}
+
+.ibee-breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* ===== 前後ページリンク ===== */
+.ibee-page-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--ibee-border);
+}
+
+.ibee-page-nav a {
+    color: var(--ibee-navy);
+    text-decoration: none;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: .9em;
+    font-weight: 500;
+    padding: 8px 16px;
+    border: 1px solid var(--ibee-border);
+    border-radius: 4px;
+    transition: all .2s;
+}
+
+.ibee-page-nav a:hover {
+    background: var(--ibee-bg-alt);
+    border-color: var(--ibee-navy);
+}
+
+/* ===== レスポンシブ ===== */
+@media(max-width:640px) {
+    .ibee-header-title {
+        font-size: .88em;
+    }
+    .ibee-header-subtitle {
+        display: none;
+    }
+    .ibee-header-logo {
+        height: 32px;
+    }
+    .ibee-nav a {
+        font-size: .75em;
+        padding: 8px 10px;
+    }
+    .ibee-page-nav {
+        flex-direction: column;
+    }
+}
+
+/* ================================================================
+   追加オーバーライド: ページ固有のダーク系コンポーネント
+   ================================================================ */
+
+/* ===== レシピカード（炭素源） ===== */
+.recipe-card-item {
+    background: var(--ibee-bg-alt) !important;
+    border: 1px solid var(--ibee-border) !important;
+}
+
+.recipe-name {
+    color: var(--ibee-text) !important;
+}
+
+.recipe-amount {
+    color: var(--ibee-navy) !important;
+}
+
+.recipe-component {
+    color: var(--ibee-text-light) !important;
+}
+
+.recipe-section-label {
+    color: var(--ibee-text-muted) !important;
+}
+
+.speed-fast {
+    background: #fef2f2 !important;
+    color: var(--ibee-danger) !important;
+    border: 1px solid var(--ibee-danger) !important;
+}
+
+.speed-mid {
+    background: #fffbeb !important;
+    color: var(--ibee-warning) !important;
+    border: 1px solid var(--ibee-warning) !important;
+}
+
+.speed-slow {
+    background: #f0fdf4 !important;
+    color: var(--ibee-success) !important;
+    border: 1px solid var(--ibee-success) !important;
+}
+
+/* ===== ミネラルカード ===== */
+.recipe-mineral-item {
+    background: var(--ibee-bg-alt) !important;
+    border: 1px solid var(--ibee-border) !important;
+}
+
+.recipe-mineral-name {
+    color: var(--ibee-text) !important;
+}
+
+.recipe-mineral-note {
+    color: var(--ibee-text-light) !important;
+}
+
+/* ===== 水質グラフ ===== */
+.wq-graph {
+    background: var(--ibee-bg-alt) !important;
+    border: 1px solid var(--ibee-border) !important;
+}
+
+.wq-title {
+    color: var(--ibee-text-muted) !important;
+}
+
+.wq-labels {
+    color: var(--ibee-text-muted) !important;
+}
+
+.wq-event {
+    color: var(--ibee-text) !important;
+}
+
+/* ===== ピラミッド図 ===== */
+.pyramid-title {
+    color: var(--ibee-text-muted) !important;
+}
+
+.pyramid-t1 {
+    background: linear-gradient(135deg, #fef2f2, #fce8e8) !important;
+    border: 1px solid var(--ibee-danger) !important;
+}
+
+.pyramid-t2 {
+    background: linear-gradient(135deg, #eff6ff, #dbeafe) !important;
+    border: 1px solid var(--ibee-navy) !important;
+}
+
+.pyramid-t3 {
+    background: linear-gradient(135deg, #f0fdf4, #dcfce7) !important;
+    border: 1px solid var(--ibee-success) !important;
+}
+
+.pyramid-t4 {
+    background: linear-gradient(135deg, var(--ibee-bg-alt), var(--ibee-bg-card)) !important;
+    border: 1px solid var(--ibee-border) !important;
+}
+
+.pyramid-name {
+    color: var(--ibee-text) !important;
+}
+
+.pyramid-desc {
+    color: var(--ibee-text-light) !important;
+}
+
+.pyramid-arrow {
+    color: var(--ibee-border) !important;
+}
+
+.pyramid-label {
+    color: var(--ibee-text-muted) !important;
+}
+
+.pyramid-concept {
+    background: #eff6ff !important;
+    color: var(--ibee-navy) !important;
+    border: 1px solid rgba(0, 51, 102, .3) !important;
+}
+
+/* ===== ページナビボタン ===== */
+.page-nav-btn {
+    background: var(--ibee-bg-alt) !important;
+    border: 1px solid var(--ibee-border) !important;
+    color: var(--ibee-navy) !important;
+}
+
+.page-nav-btn:hover {
+    background: var(--ibee-navy) !important;
+    color: #ffffff !important;
+    border-color: var(--ibee-navy) !important;
+}
+
+.page-nav,
+.page-nav-bottom {
+    background: transparent !important;
+}
+
+/* ===== 言語切替 ===== */
+.lang-switch {
+    background: rgba(255, 255, 255, .95) !important;
+    border: 1px solid var(--ibee-border) !important;
+    backdrop-filter: blur(8px);
+}
+
+.lang-btn {
+    color: var(--ibee-text-light) !important;
+}
+
+.lang-btn:hover {
+    color: var(--ibee-text) !important;
+}
+
+.lang-btn.active {
+    background: var(--ibee-navy) !important;
+    color: #ffffff !important;
+}
+
+/* ===== ヒーローバナー ===== */
+.hero-banner {
+    background: linear-gradient(rgba(0, 51, 102, .6), rgba(0, 34, 68, .85)), url('../photos/tank_overview.jpg') center/cover no-repeat !important;
+}
+
+.hero-overlay {
+    background: linear-gradient(180deg, transparent 50%, var(--ibee-bg) 100%) !important;
+}
+
+.hero-badge {
+    background: rgba(0, 51, 102, .15) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, .3) !important;
+}
+
+/* ===== 写真ギャラリー ===== */
+.photo-wrap {
+    border: 1px solid var(--ibee-border) !important;
+}
+
+.photo-wrap img {
+    background: var(--ibee-bg-alt) !important;
+}
+
+.photo-caption {
+    background: var(--ibee-bg-alt) !important;
+    color: var(--ibee-text-light) !important;
+    border-top: 1px solid var(--ibee-border) !important;
+}
+
+/* ===== SVG図（アプローチ図等） ===== */
+.ap-svg {
+    background: var(--ibee-bg-alt) !important;
+}
+
+/* ===== バッジ（青） ===== */
+.badge-blue {
+    background: #eff6ff !important;
+    color: var(--ibee-navy) !important;
+    border: 1px solid var(--ibee-navy) !important;
+}
+
+/* ===== TOC（目次） ===== */
+.toc-wrap {
+    background: var(--ibee-bg-alt) !important;
+    border: 1px solid var(--ibee-border) !important;
+}
+
+.toc-part-label {
+    color: var(--ibee-navy) !important;
+}
+
+.toc-list a {
+    color: var(--ibee-link) !important;
+}
+
+/* ===== インラインstyleで指定された色の強制オーバーライド ===== */
+.holo-body [style*="color:#c9d1d9"],
+.holo-body [style*="color: #c9d1d9"] {
+    color: var(--ibee-text) !important;
+}
+
+.holo-body [style*="color:#e6edf3"],
+.holo-body [style*="color: #e6edf3"] {
+    color: var(--ibee-text) !important;
+}
+
+.holo-body [style*="color:#8b949e"],
+.holo-body [style*="color: #8b949e"] {
+    color: var(--ibee-text-light) !important;
+}
+
+.holo-body [style*="color:#484f58"],
+.holo-body [style*="color: #484f58"] {
+    color: var(--ibee-text-muted) !important;
+}
+
+.holo-body [style*="color:#58a6ff"],
+.holo-body [style*="color: #58a6ff"] {
+    color: var(--ibee-navy) !important;
+}
+
+.holo-body [style*="color:#3fb950"],
+.holo-body [style*="color: #3fb950"] {
+    color: var(--ibee-success) !important;
+}
+
+.holo-body [style*="color:#d29922"],
+.holo-body [style*="color: #d29922"] {
+    color: var(--ibee-warning) !important;
+}
+
+.holo-body [style*="color:#f85149"],
+.holo-body [style*="color: #f85149"] {
+    color: var(--ibee-danger) !important;
+}
+
+.holo-body [style*="color:#8957e5"],
+.holo-body [style*="color: #8957e5"] {
+    color: #7c3aed !important;
+}
+
+.holo-body [style*="background:#161b22"],
+.holo-body [style*="background: #161b22"],
+.holo-body [style*="background-color:#161b22"] {
+    background: var(--ibee-bg-alt) !important;
+}
+
+.holo-body [style*="background:#0d1117"],
+.holo-body [style*="background: #0d1117"],
+.holo-body [style*="background-color:#0d1117"] {
+    background: var(--ibee-bg) !important;
+}
+
+.holo-body [style*="border-color:#58a6ff"],
+.holo-body [style*="border-color: #58a6ff"] {
+    border-color: var(--ibee-navy) !important;
+}
+
+.holo-body [style*="border-color:#3fb950"],
+.holo-body [style*="border-color: #3fb950"] {
+    border-color: var(--ibee-success) !important;
+}
+
+.holo-body [style*="border-color:#d29922"],
+.holo-body [style*="border-color: #d29922"] {
+    border-color: var(--ibee-warning) !important;
+}
+
+.holo-body [style*="border-color:#f85149"],
+.holo-body [style*="border-color: #f85149"] {
+    border-color: var(--ibee-danger) !important;
+}
+
+/* ===== hr（罫線） ===== */
+.holo-body hr {
+    border-color: var(--ibee-border) !important;
+    border-style: solid;
+    opacity: .5;
+}
+
+/* ================================================================
+   インラインstyle属性の強制オーバーライド（属性セレクタ + !important）
+   CSS仕様上、!important付きの外部CSSはインラインstyle(!importantなし)に勝つ
+   ================================================================ */
+
+/* ダーク背景色の強制変換 */
+[style*="background:#161b22"],
+[style*="background: #161b22"] {
+    background: var(--ibee-bg-alt) !important;
+}
+
+[style*="background:#0d1117"],
+[style*="background: #0d1117"] {
+    background: var(--ibee-bg) !important;
+}
+
+[style*="background:#0a1929"],
+[style*="background: #0a1929"] {
+    background: #eff6ff !important;
+}
+
+[style*="background:#0d2440"],
+[style*="background: #0d2440"] {
+    background: #eff6ff !important;
+}
+
+[style*="background:#0a2a14"],
+[style*="background: #0a2a14"] {
+    background: #f0fdf4 !important;
+}
+
+[style*="background:#1c1409"],
+[style*="background: #1c1409"] {
+    background: #fffbeb !important;
+}
+
+[style*="background:#1c0a0a"],
+[style*="background: #1c0a0a"] {
+    background: #fef2f2 !important;
+}
+
+[style*="background:#160d20"],
+[style*="background: #160d20"] {
+    background: #faf5ff !important;
+}
+
+[style*="background:#111"],
+[style*="background: #111"] {
+    background: var(--ibee-bg-alt) !important;
+}
+
+/* ダークボーダーの強制変換 */
+[style*="border:1px solid #30363d"],
+[style*="border: 1px solid #30363d"] {
+    border-color: var(--ibee-border) !important;
+}
+
+[style*="border:1px solid #21262d"],
+[style*="border: 1px solid #21262d"] {
+    border-color: var(--ibee-border-light) !important;
+}
+
+[style*="border-bottom:1px solid #21262d"],
+[style*="border-bottom: 1px solid #21262d"] {
+    border-bottom-color: var(--ibee-border) !important;
+}
+
+/* ダーク文字色の強制変換（.holo-body外も含む） */
+[style*="color:#c9d1d9"],
+[style*="color: #c9d1d9"] {
+    color: var(--ibee-text) !important;
+}
+
+[style*="color:#e6edf3"],
+[style*="color: #e6edf3"] {
+    color: var(--ibee-text) !important;
+}
+
+[style*="color:#8b949e"],
+[style*="color: #8b949e"] {
+    color: var(--ibee-text-light) !important;
+}
+
+[style*="color:#484f58"],
+[style*="color: #484f58"] {
+    color: var(--ibee-text-muted) !important;
+}
+
+[style*="color:#58a6ff"],
+[style*="color: #58a6ff"] {
+    color: var(--ibee-navy) !important;
+}
+
+[style*="color:#3fb950"],
+[style*="color: #3fb950"] {
+    color: var(--ibee-success) !important;
+}
+
+[style*="color:#d29922"],
+[style*="color: #d29922"] {
+    color: var(--ibee-warning) !important;
+}
+
+[style*="color:#f85149"],
+[style*="color: #f85149"] {
+    color: var(--ibee-danger) !important;
+}
+
+[style*="color:#8957e5"],
+[style*="color: #8957e5"] {
+    color: #7c3aed !important;
+}
+
+[style*="color:#fff"],
+[style*="color: #fff"] {
+    /* 白文字はそのまま維持（ヘッダー等で使用） */
+}
+
+/* border-color のインライン指定 */
+[style*="border-color:#58a6ff"],
+[style*="border-color: #58a6ff"] {
+    border-color: var(--ibee-navy) !important;
+}
+
+[style*="border-color:#3fb950"],
+[style*="border-color: #3fb950"] {
+    border-color: var(--ibee-success) !important;
+}
+
+[style*="border-color:#d29922"],
+[style*="border-color: #d29922"] {
+    border-color: var(--ibee-warning) !important;
+}
+
+[style*="border-color:#f85149"],
+[style*="border-color: #f85149"] {
+    border-color: var(--ibee-danger) !important;
+}
+
+/* ===== N収支系統図（ntree系） ===== */
+.ntree-root {
+    background: var(--ibee-bg-alt) !important;
+    border: 1px solid var(--ibee-border) !important;
+}
+
+.ntree-root-title {
+    color: var(--ibee-text) !important;
+}
+
+.ntree-root-sub {
+    color: var(--ibee-text-light) !important;
+}
+
+.ntree-vline,
+.ntree-vline-sm {
+    background: var(--ibee-border) !important;
+}
+
+.ntree-fork::before,
+.ntree-fork::after,
+.ntree-fork-arm {
+    background: var(--ibee-border) !important;
+}
+
+.ntree-bh-export {
+    background: linear-gradient(135deg, #fffbeb, #fef3c7) !important;
+    border: 1px solid var(--ibee-warning) !important;
+}
+
+.ntree-bh-cycle {
+    background: linear-gradient(135deg, #eff6ff, #dbeafe) !important;
+    border: 1px solid var(--ibee-navy) !important;
+}
+
+.ntree-bl-export {
+    color: var(--ibee-warning) !important;
+}
+
+.ntree-bl-cycle {
+    color: var(--ibee-navy) !important;
+}
+
+.ntree-bt {
+    color: var(--ibee-text) !important;
+}
+
+.ntree-bd {
+    color: var(--ibee-text-light) !important;
+}
+
+.ntree-sub-label {
+    color: var(--ibee-text-muted) !important;
+}
+
+.ntree-lc-phys {
+    background: var(--ibee-bg-alt) !important;
+    border: 1px solid var(--ibee-border) !important;
+}
+
+.ntree-lc-gas {
+    background: #fffbeb !important;
+    border: 1px solid var(--ibee-warning) !important;
+}
+
+.ntree-lc-bio {
+    background: #f0fdf4 !important;
+    border: 1px solid var(--ibee-success) !important;
+}
+
+.ntree-lc-cycle {
+    background: #eff6ff !important;
+    border: 1px solid var(--ibee-navy) !important;
+}
+
+.ntree-lc-holo {
+    background: #eff6ff !important;
+    border: 2px solid var(--ibee-navy) !important;
+}
+
+.ntree-lc-romance {
+    background: #faf5ff !important;
+    border: 1px solid #7c3aed !important;
+}
+
+.ntree-ln {
+    color: var(--ibee-text) !important;
+}
+
+.ntree-ld {
+    color: var(--ibee-text-light) !important;
+}
+
+.ntree-lb-phys {
+    background: var(--ibee-bg-card) !important;
+    color: var(--ibee-text-light) !important;
+    border: 1px solid var(--ibee-border) !important;
+}
+
+.ntree-lb-gas {
+    background: #fffbeb !important;
+    color: var(--ibee-warning) !important;
+    border: 1px solid var(--ibee-warning) !important;
+}
+
+.ntree-lb-bio {
+    background: #f0fdf4 !important;
+    color: var(--ibee-success) !important;
+    border: 1px solid var(--ibee-success) !important;
+}
+
+.ntree-lb-cycle {
+    background: #eff6ff !important;
+    color: var(--ibee-navy) !important;
+    border: 1px solid var(--ibee-navy) !important;
+}
+
+.ntree-lb-romance {
+    background: #faf5ff !important;
+    color: #7c3aed !important;
+    border: 1px solid #7c3aed !important;
+}
+
+.ntree-detail-inner {
+    border-top: 1px solid var(--ibee-border-light) !important;
+}
+
+.ntree-dr-l {
+    color: var(--ibee-text-light) !important;
+}
+
+.ntree-dr-pro {
+    color: var(--ibee-success) !important;
+}
+
+.ntree-dr-con {
+    color: var(--ibee-danger) !important;
+}
+
+.ntree-nitri-body {
+    color: var(--ibee-text-muted) !important;
+}
+
+/* ===== Partヘッダー ===== */
+.part-label-theory {
+    background: #eff6ff !important;
+    color: var(--ibee-navy) !important;
+    border: 1px solid var(--ibee-navy) !important;
+}
+
+.part-label-practice {
+    background: #f0fdf4 !important;
+    color: var(--ibee-success) !important;
+    border: 1px solid var(--ibee-success) !important;
+}
+
+.part-title {
+    color: var(--ibee-text) !important;
+}
+
+.part-subtitle {
+    color: var(--ibee-text-light) !important;
+}
+
+/* TOC内の色分け */
+.toc-part-theory {
+    color: var(--ibee-navy) !important;
+}
+
+.toc-part-practice {
+    color: var(--ibee-success) !important;
+}
+
+/* ===== TOC本体 ===== */
+.toc {
+    background: var(--ibee-bg-alt) !important;
+    border: 1px solid var(--ibee-border) !important;
+}
+
+.toc-list a {
+    color: var(--ibee-text-light) !important;
+}
+
+.toc-list a:hover {
+    color: var(--ibee-navy) !important;
+}
+
+/* ===== ページナビ罫線 ===== */
+.page-nav {
+    border-bottom: 1px solid var(--ibee-border) !important;
+}
+
+.page-nav-bottom {
+    border-top: 1px solid var(--ibee-border) !important;
+}
+
+/* ===== スクロールフェードインはそのまま維持 ===== */

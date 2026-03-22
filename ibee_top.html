@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生物環境技術研究会 — IBEE</title>
+    <meta name="description" content="生物環境技術研究会（IBEE）は、生物学的手法を用いた環境技術の応用研究を行う研究会です。">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="ibee.css">
+    <style>
+        /* ===== トップページ固有スタイル ===== */
+
+        /* メインビジュアル */
+        .ibee-hero {
+            position: relative;
+            height: 260px;
+            background: linear-gradient(rgba(0,34,68,.75), rgba(0,51,102,.85)),
+                        url('photos/tank_overview.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #ffffff;
+        }
+        .ibee-hero-inner {
+            max-width: 700px;
+            padding: 0 24px;
+        }
+        .ibee-hero-title {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 1.6em;
+            font-weight: 700;
+            letter-spacing: .1em;
+            margin: 0 0 8px;
+            line-height: 1.4;
+        }
+        .ibee-hero-sub {
+            font-size: .88em;
+            opacity: .85;
+            line-height: 1.6;
+        }
+        @media(max-width:600px) {
+            .ibee-hero { height: 200px }
+            .ibee-hero-title { font-size: 1.2em }
+            .ibee-hero-sub { font-size: .78em }
+        }
+
+        /* コンテンツラッパー */
+        .ibee-main {
+            max-width: 880px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* セクション見出し */
+        .ibee-section-title {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 1.05em;
+            font-weight: 700;
+            color: var(--ibee-navy);
+            border-left: 4px solid var(--ibee-navy);
+            padding-left: 12px;
+            margin: 40px 0 20px;
+        }
+
+        /* お知らせリスト（行政サイト風） */
+        .ibee-news-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .ibee-news-item {
+            display: flex;
+            gap: 16px;
+            align-items: baseline;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--ibee-border-light);
+            font-size: .9em;
+        }
+        .ibee-news-item:last-child {
+            border-bottom: none;
+        }
+        .ibee-news-date {
+            color: var(--ibee-text-muted);
+            font-size: .85em;
+            white-space: nowrap;
+            min-width: 90px;
+            font-family: 'Inter', sans-serif;
+        }
+        .ibee-news-tag {
+            display: inline-block;
+            font-size: .7em;
+            padding: 1px 8px;
+            border-radius: 3px;
+            white-space: nowrap;
+            font-weight: 600;
+        }
+        .ibee-news-tag-report {
+            background: var(--ibee-bg-card);
+            color: var(--ibee-navy);
+            border: 1px solid var(--ibee-border);
+        }
+        .ibee-news-tag-update {
+            background: #eff6ff;
+            color: var(--ibee-accent);
+            border: 1px solid var(--ibee-accent);
+        }
+        .ibee-news-text {
+            color: var(--ibee-text);
+            line-height: 1.6;
+        }
+        .ibee-news-text a {
+            color: var(--ibee-link);
+            text-decoration: none;
+        }
+        .ibee-news-text a:hover {
+            text-decoration: underline;
+        }
+        @media(max-width:500px) {
+            .ibee-news-item {
+                flex-direction: column;
+                gap: 4px;
+            }
+        }
+
+        /* 研究報告カード */
+        .ibee-report-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin: 0 0 32px;
+        }
+        .ibee-report-card {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 20px;
+            background: var(--ibee-bg);
+            border: 1px solid var(--ibee-border);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: border-color .2s, box-shadow .2s;
+            text-decoration: none;
+            color: inherit;
+        }
+        .ibee-report-card:hover {
+            border-color: var(--ibee-navy);
+            box-shadow: 0 4px 12px rgba(0,51,102,.1);
+        }
+        .ibee-report-thumb {
+            width: 100%;
+            height: 100%;
+            min-height: 140px;
+            object-fit: cover;
+            display: block;
+        }
+        .ibee-report-body {
+            padding: 16px 16px 16px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .ibee-report-label {
+            font-size: .68em;
+            text-transform: uppercase;
+            letter-spacing: .08em;
+            color: var(--ibee-navy);
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        .ibee-report-title {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 1.05em;
+            font-weight: 700;
+            color: var(--ibee-text);
+            margin: 0 0 8px;
+            line-height: 1.5;
+        }
+        .ibee-report-desc {
+            font-size: .82em;
+            color: var(--ibee-text-light);
+            line-height: 1.7;
+            margin: 0;
+        }
+        .ibee-report-meta {
+            font-size: .72em;
+            color: var(--ibee-text-muted);
+            margin-top: 8px;
+        }
+        @media(max-width:600px) {
+            .ibee-report-card {
+                grid-template-columns: 1fr;
+            }
+            .ibee-report-thumb {
+                min-height: 160px;
+            }
+            .ibee-report-body {
+                padding: 12px 16px 16px;
+            }
+        }
+
+        /* 運営情報 */
+        .ibee-about {
+            background: var(--ibee-bg-alt);
+            border: 1px solid var(--ibee-border-light);
+            border-radius: 8px;
+            padding: 24px 28px;
+            margin: 0 0 32px;
+        }
+        .ibee-about-title {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: .95em;
+            font-weight: 700;
+            color: var(--ibee-navy);
+            margin: 0 0 12px;
+        }
+        .ibee-about p {
+            font-size: .88em;
+            color: var(--ibee-text);
+            line-height: 1.85;
+            margin: 0 0 8px;
+        }
+        .ibee-about p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 組織情報テーブル */
+        .ibee-info-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: .85em;
+            margin: 16px 0 0;
+        }
+        .ibee-info-table th {
+            text-align: left;
+            color: var(--ibee-text-light);
+            font-weight: 600;
+            padding: 8px 16px 8px 0;
+            border-bottom: 1px solid var(--ibee-border-light);
+            white-space: nowrap;
+            width: 100px;
+        }
+        .ibee-info-table td {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--ibee-border-light);
+            color: var(--ibee-text);
+        }
+    </style>
+</head>
+<body>
+    <!-- ===== ヘッダー ===== -->
+    <header class="ibee-header">
+        <div class="ibee-header-inner">
+            <a href="ibee_top.html" class="ibee-header-brand">
+                <img src="photos/ibee_logo.svg" alt="IBEE" class="ibee-header-logo">
+                <div>
+                    <div class="ibee-header-title">生物環境技術研究会</div>
+                    <div class="ibee-header-subtitle">Institute of Biological Environmental Engineering</div>
+                </div>
+            </a>
+        </div>
+    </header>
+    <nav class="ibee-nav">
+        <div class="ibee-nav-inner">
+            <a href="ibee_top.html" class="active">ホーム</a>
+            <a href="#reports">研究報告</a>
+            <a href="#about">運営情報</a>
+        </div>
+    </nav>
+
+
+    <!-- ===== メインコンテンツ ===== -->
+    <main class="ibee-main">
+        <!-- お知らせ -->
+        <h2 class="ibee-section-title">お知らせ</h2>
+        <ul class="ibee-news-list">
+            <li class="ibee-news-item">
+                <span class="ibee-news-date">2026.03.21</span>
+                <span class="ibee-news-tag ibee-news-tag-update">更新</span>
+                <span class="ibee-news-text"><a href="ja/index.html">ホロビオントアクアリウム理論</a> ver.11 を公開しました</span>
+            </li>
+            <li class="ibee-news-item">
+                <span class="ibee-news-date">2026.03.08</span>
+                <span class="ibee-news-tag ibee-news-tag-report">報告</span>
+                <span class="ibee-news-text">ホロビオントアクアリウム理論の章構成を全面改訂しました</span>
+            </li>
+            <li class="ibee-news-item">
+                <span class="ibee-news-date">2025.03</span>
+                <span class="ibee-news-tag ibee-news-tag-report">報告</span>
+                <span class="ibee-news-text">ホロビオントアクアリウム理論 初版を公開しました</span>
+            </li>
+        </ul>
+
+        <!-- 研究報告 -->
+        <h2 class="ibee-section-title" id="reports">研究報告</h2>
+        <div class="ibee-report-grid">
+            <a href="ja/index.html" class="ibee-report-card">
+                <img src="photos/tank_overview.jpg" alt="ホロビオントアクアリウム 水槽全景" class="ibee-report-thumb" loading="lazy">
+                <div class="ibee-report-body">
+                    <div class="ibee-report-label">技術報告 No.1</div>
+                    <h3 class="ibee-report-title">ホロビオントアクアリウム理論</h3>
+                    <p class="ibee-report-desc">従属栄養細菌の炭素同化とデトリタス食性生物による食物連鎖を利用した、淡水オーバーフロー水槽の自律的窒素循環システム。理論・構築方法・1年間の実測データを報告する。</p>
+                    <div class="ibee-report-meta">全5章 ｜ ver.11（2026年3月）</div>
+                </div>
+            </a>
+        </div>
+
+        <!-- 運営情報 -->
+        <h2 class="ibee-section-title" id="about">運営情報</h2>
+        <div class="ibee-about">
+            <table class="ibee-info-table">
+                <tr>
+                    <th>名称</th>
+                    <td>生物環境技術研究会（IBEE）</td>
+                </tr>
+                <tr>
+                    <th>設立</th>
+                    <td>1999年</td>
+                </tr>
+                <tr>
+                    <th>活動内容</th>
+                    <td>
+                        <ol style="margin:0;padding-left:20px;line-height:1.8">
+                            <li><strong>生物共生型環境管理技術に関する調査研究</strong><br>
+                                <span style="font-size:.9em;color:#666666">閉鎖循環系における微生物群集の動態解析、従属栄養細菌を基盤とした生態系設計手法の開発</span></li>
+                            <li><strong>水圏・陸域における生態系設計技術の実証</strong><br>
+                                <span style="font-size:.9em;color:#666666">淡水・海水環境での生物共生系の構築と長期運用、底床設計と炭素源供給による植物育成技術の検証</span></li>
+                            <li><strong>技術資料の作成および公開</strong><br>
+                                <span style="font-size:.9em;color:#666666">実証データに基づく技術文書の整備と一般公開、生態系管理に関する基礎的知見の体系化</span></li>
+                        </ol>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </main>
+
+    <!-- ===== フッター ===== -->
+    <footer class="ibee-footer">
+        <div class="ibee-footer-inner">
+            <div class="ibee-footer-org">生物環境技術研究会</div>
+            <div class="ibee-footer-en">Institute of Biological Environmental Engineering</div>
+            <div class="ibee-footer-since">Since. 1999</div>
+            <div class="ibee-footer-note">※本サイトは個人が運営する技術情報サイトです</div>
+        </div>
+    </footer>
+</body>
+</html>

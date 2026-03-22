@@ -1,0 +1,335 @@
+﻿<h2>対象読者</h2>
+    <ul>
+        <li>オーバーフロー式水槽を持っている、または導入を検討している方</li>
+        <li>換水の手間に限界を感じている中〜上級者のアクアリスト</li>
+        <li>生態系的アプローチに知的な関心を持つ方</li>
+    </ul>
+    <p>初心者には推奨しない。必要な設備のハードルが高く、立ち上げ時に1ヶ月間の白濁に耐える知識と胆力が求められる。</p>
+
+    <hr>
+
+    <h2>淡水の「無換水」、なぜ難しいのか</h2>
+
+    <h3>既存手法の比較</h3>
+
+    <!-- 概念図グリッド -->
+    
+
+    
+
+    <div class="approach-grid fade-in">
+        <!-- ADA式 -->
+        <div class="approach-card">
+            <svg class="ap-svg" viewBox="0 0 200 120">
+                <text x="100" y="14" fill="#8b949e" font-size="7" text-anchor="middle"
+                    font-family="sans-serif">NO₃⁻の行方</text>
+                <!-- 魚 → NO₃⁻ -->
+                <text x="30" y="42" fill="#c9d1d9" font-size="16" text-anchor="middle">🐟</text>
+                <line x1="48" y1="38" x2="75" y2="38" stroke="#30363d" stroke-width="1.5" />
+                <rect x="78" y="28" width="44" height="20" rx="4" fill="#16200a" stroke="#7ee787" />
+                <text x="100" y="42" fill="#7ee787" font-size="8" text-anchor="middle"
+                    font-family="sans-serif">NO₃⁻</text>
+                <line x1="122" y1="38" x2="148" y2="38" stroke="#30363d" stroke-width="1.5" />
+                <!-- 水草が吸収 -->
+                <text x="168" y="42" fill="#c9d1d9" font-size="16" text-anchor="middle">🌿</text>
+                <text x="168" y="55" fill="#3fb950" font-size="6" text-anchor="middle"
+                    font-family="sans-serif">吸収</text>
+                <!-- 流れドット -->
+                <circle cx="60" cy="38" r="3" fill="#7ee787" class="ap-dot" />
+                <circle cx="135" cy="38" r="3" fill="#3fb950" class="ap-dot" style="animation-delay:.5s" />
+                <!-- CO₂ -->
+                <text x="100" y="75" fill="#d29922" font-size="7" text-anchor="middle" font-family="sans-serif">⚠
+                    CO₂添加が必須</text>
+                <rect x="55" y="82" width="90" height="18" rx="4" fill="none" stroke="#d29922" stroke-width="1"
+                    stroke-dasharray="3 3" />
+                <text x="100" y="94" fill="#d29922" font-size="7" text-anchor="middle" font-family="sans-serif">💨 CO₂
+                    ボンベ</text>
+            </svg>
+            <div class="approach-card-body">
+                <span class="approach-card-badge badge-green">景観◎</span>
+                <div class="approach-card-title">ADA式 高密植水草水槽</div>
+                <div class="approach-card-desc">水草が硝酸塩を直接吸収。CO₂添加と高光量が必須。</div>
+            </div>
+        </div>
+
+        <!-- DSB -->
+        <div class="approach-card">
+            <svg class="ap-svg" viewBox="0 0 200 120">
+                <text x="100" y="14" fill="#8b949e" font-size="7" text-anchor="middle"
+                    font-family="sans-serif">NO₃⁻の行方</text>
+                <rect x="20" y="22" width="160" height="30" rx="4" fill="#16200a" stroke="#7ee787" />
+                <text x="100" y="41" fill="#7ee787" font-size="9" text-anchor="middle" font-family="sans-serif">NO₃⁻
+                    蓄積</text>
+                <!-- 矢印下 -->
+                <line x1="100" y1="52" x2="100" y2="68" stroke="#30363d" stroke-width="1.5" />
+                <circle cx="100" cy="60" r="3" fill="#d29922" class="ap-dot" />
+                <!-- 嫌気砂床 -->
+                <rect x="20" y="70" width="160" height="25" rx="4" fill="#1c1409" stroke="#d29922" />
+                <text x="100" y="80" fill="#d29922" font-size="7" text-anchor="middle"
+                    font-family="sans-serif">嫌気砂床（15cm+）</text>
+                <text x="100" y="90" fill="#8b949e" font-size="7" text-anchor="middle" font-family="sans-serif">NO₃⁻ →
+                    N₂↑ ガス放出</text>
+                <!-- 危険 -->
+                <text x="100" y="110" fill="#f85149" font-size="7" text-anchor="middle" font-family="sans-serif">💀
+                    崩壊時：硫化水素（H₂S）発生</text>
+            </svg>
+            <div class="approach-card-body">
+                <span class="approach-card-badge badge-yellow">硫化水素リスク</span>
+                <div class="approach-card-title">DSB（嫌気砂床）</div>
+                <div class="approach-card-desc">嫌気性細菌が硝酸塩をN₂ガスに還元。崩壊が致命的。</div>
+            </div>
+        </div>
+
+        <!-- 外部脱窒炉 -->
+        <div class="approach-card">
+            <svg class="ap-svg" viewBox="0 0 200 120">
+                <text x="100" y="14" fill="#8b949e" font-size="7" text-anchor="middle"
+                    font-family="sans-serif">NO₃⁻の行方</text>
+                <!-- 水槽 -->
+                <rect x="15" y="28" width="55" height="35" rx="4" fill="#161b22" stroke="#30363d" />
+                <text x="42" y="43" fill="#c9d1d9" font-size="7" text-anchor="middle" font-family="sans-serif">水槽</text>
+                <text x="42" y="53" fill="#7ee787" font-size="7" text-anchor="middle"
+                    font-family="sans-serif">NO₃⁻</text>
+                <!-- 矢印 -->
+                <line x1="70" y1="45" x2="108" y2="45" stroke="#8957e5" stroke-width="1.5" class="ap-dashed" />
+                <circle cx="90" cy="45" r="3" fill="#8957e5" class="ap-dot" />
+                <!-- 脱窒炉 -->
+                <rect x="110" y="25" width="75" height="40" rx="6" fill="#160d20" stroke="#8957e5" />
+                <text x="148" y="40" fill="#8957e5" font-size="7" text-anchor="middle"
+                    font-family="sans-serif">外部脱窒炉</text>
+                <text x="148" y="52" fill="#8b949e" font-size="7" text-anchor="middle" font-family="sans-serif">NO₃⁻ →
+                    N₂↑</text>
+                <!-- 戻り -->
+                <path d="M148,65 L148,80 L42,80 L42,63" fill="none" stroke="#30363d" stroke-width="1"
+                    stroke-dasharray="3 3" />
+                <text x="95" y="90" fill="#8b949e" font-size="6" text-anchor="middle" font-family="sans-serif">←
+                    処理水を返送</text>
+                <!-- 注意 -->
+                <text x="100" y="110" fill="#d29922" font-size="7" text-anchor="middle" font-family="sans-serif">⚠
+                    装置が複雑・詰まりリスク</text>
+            </svg>
+            <div class="approach-card-body">
+                <span class="approach-card-badge badge-yellow">装置複雑</span>
+                <div class="approach-card-title">外部脱窒炉</div>
+                <div class="approach-card-desc">嫌気区画で脱窒を強制。制御しやすいが運用が煩雑。</div>
+            </div>
+        </div>
+
+        <!-- 本システム -->
+        <div class="approach-card" style="border-color:#58a6ff">
+            <svg class="ap-svg" viewBox="0 0 200 120">
+                <text x="100" y="14" fill="#58a6ff" font-size="7" text-anchor="middle" font-family="sans-serif"
+                    font-weight="bold">NO₃⁻の行方 — 本システム</text>
+                <!-- NO₃⁻ -->
+                <rect x="10" y="25" width="42" height="20" rx="4" fill="#16200a" stroke="#7ee787" />
+                <text x="31" y="38" fill="#7ee787" font-size="7" text-anchor="middle"
+                    font-family="sans-serif">NO₃⁻</text>
+                <!-- 矢印1 -->
+                <line x1="52" y1="35" x2="68" y2="35" stroke="#1d3a5e" stroke-width="1.5" />
+                <circle cx="60" cy="35" r="3" fill="#58a6ff" class="ap-dot" />
+                <!-- 炭素同化 -->
+                <rect x="70" y="24" width="58" height="22" rx="4" fill="#0d2440" stroke="#58a6ff">
+                    <animate attributeName="stroke-opacity" values="1;.4;1" dur="2s" repeatCount="indefinite" />
+                </rect>
+                <text x="99" y="33" fill="#58a6ff" font-size="6.5" text-anchor="middle" font-family="sans-serif">🧪
+                    炭素源</text>
+                <text x="99" y="42" fill="#58a6ff" font-size="6" text-anchor="middle" font-family="sans-serif">→
+                    菌体タンパク</text>
+                <!-- 矢印2 -->
+                <line x1="128" y1="35" x2="148" y2="35" stroke="#1d3a5e" stroke-width="1.5" />
+                <circle cx="138" cy="35" r="3" fill="#3fb950" class="ap-dot" style="animation-delay:.4s" />
+                <!-- ベントス -->
+                <text x="168" y="39" fill="#c9d1d9" font-size="14" text-anchor="middle">🐛</text>
+                <text x="168" y="50" fill="#3fb950" font-size="6" text-anchor="middle"
+                    font-family="sans-serif">捕食</text>
+                <!-- 循環矢印 -->
+                <path d="M168,55 L168,75 L42,75 L42,58" fill="none" stroke="#3fb950" stroke-width="1.5"
+                    class="ap-dashed" />
+                <text x="30" y="66" fill="#c9d1d9" font-size="12" text-anchor="middle">🐟</text>
+                <text x="105" y="84" fill="#3fb950" font-size="6" text-anchor="middle" font-family="sans-serif">🐟
+                    魚がベントスを食べる → 排泄 → NO₃⁻ → ループ</text>
+                <!-- 結論 -->
+                <rect x="30" y="95" width="140" height="18" rx="4" fill="#0a2a14" stroke="#3fb950" />
+                <text x="100" y="107" fill="#3fb950" font-size="7" text-anchor="middle" font-family="sans-serif">✅
+                    食物連鎖で系外排出・換水不要</text>
+            </svg>
+            <div class="approach-card-body">
+                <span class="approach-card-badge badge-blue">本システム ✅</span>
+                <div class="approach-card-title">好気性炭素同化＋ベントスループ</div>
+                <div class="approach-card-desc">炭素源→バクテリア→ベントス→魚の循環で硝酸塩を自律排出。</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="holo-table-wrap fade-in">
+        <table class="holo-table">
+            <tr>
+                <th>アプローチ</th>
+                <th>原理</th>
+                <th>メリット</th>
+                <th>デメリット</th>
+            </tr>
+            <tr>
+                <td data-label="アプローチ">高密植水草水槽（ADA式等）</td>
+                <td data-label="原理">水草が硝酸塩・リン酸を吸収</td>
+                <td data-label="メリット">景観が美しい</td>
+                <td data-label="デメリット">CO₂添加必須・トリミング手間・崩壊リスク</td>
+            </tr>
+            <tr>
+                <td data-label="アプローチ">DSB（嫌気砂床）</td>
+                <td data-label="原理">嫌気性細菌が硝酸塩を窒素ガスに還元</td>
+                <td data-label="メリット">硝酸塩を根本除去</td>
+                <td data-label="デメリット">崩壊時に硫化水素発生・淡水での実績薄</td>
+            </tr>
+            <tr>
+                <td data-label="アプローチ">外部脱窒炉</td>
+                <td data-label="原理">嫌気区画で脱窒を強制</td>
+                <td data-label="メリット">制御しやすい</td>
+                <td data-label="デメリット">装置複雑・詰まりリスク・維持コスト高</td>
+            </tr>
+            <tr>
+                <td data-label="アプローチ">本システム（好気性炭素同化）</td>
+                <td data-label="原理">好気性バクテリアが硝酸塩を菌体タンパクに取り込み、ベントスが捕食して系外排出</td>
+                <td data-label="メリット">管理ほぼゼロ・CO₂不要・自己完結・リセット不要</td>
+                <td data-label="デメリット">設備ハードル高・ベントス必要・初心者不向き</td>
+            </tr>
+        </table>
+    </div>
+
+    <h3>海水では成立していた手法が、淡水では使えない理由</h3>
+    <div class="holo-table-wrap fade-in">
+        <table class="holo-table">
+            <tr>
+                <th>比較項目</th>
+                <th>海水（ベルリン式＋ウォッカ法）</th>
+                <th>淡水（本システム）</th>
+            </tr>
+            <tr>
+                <td data-label="比較項目">有機物の最終除去手段</td>
+                <td data-label="海水（ベルリン式＋ウォッカ法）">プロテインスキマー（泡として系外排出）</td>
+                <td data-label="淡水（本システム）">ベントスによる捕食（食物連鎖で系外排出）</td>
+            </tr>
+            <tr>
+                <td data-label="比較項目">スキマーの使用可否</td>
+                <td data-label="海水（ベルリン式＋ウォッカ法）">使用可</td>
+                <td data-label="淡水（本システム）">淡水では泡立ちが起きない（表面張力の違い）</td>
+            </tr>
+            <tr>
+                <td data-label="比較項目">適用水域</td>
+                <td data-label="海水（ベルリン式＋ウォッカ法）">海水のみ</td>
+                <td data-label="淡水（本システム）">淡水で実現</td>
+            </tr>
+        </table>
+    </div>
+    <p>プロテインスキマーは淡水では機能しない。これが「淡水では好気性炭素同化アプローチは難しい」と考えられてきた最大の理由であり、本システムはこの壁をベントスの食物連鎖で突破した。</p>
+
+    <h3>なぜ嫌気性ではなく好気性を選んだか</h3>
+    <div class="holo-card fade-in">
+        <span class="holo-label">Key Point</span>
+        <p style="margin:0">好気性アプローチはすべてが<strong>目で見て確認・調整できる</strong>。嫌気性アプローチはブラックボックスで、崩壊してから気づくことが多い。</p>
+    </div>
+    <div class="holo-table-wrap fade-in">
+        <table class="holo-table">
+            <tr>
+                <th>状況</th>
+                <th>観察できるサイン</th>
+                <th>対処法</th>
+            </tr>
+            <tr>
+                <td data-label="状況">ヘドロ除去が追いつかない</td>
+                <td data-label="観察できるサイン">サンプのヘドロが増える</td>
+                <td data-label="対処法">炭素源投入量を減らす・手動で吸出す</td>
+            </tr>
+            <tr>
+                <td data-label="状況">ベントスが増えすぎている</td>
+                <td data-label="観察できるサイン">サンプが過密になる</td>
+                <td data-label="対処法">魚にもっと食べさせる・一部を間引く</td>
+            </tr>
+            <tr>
+                <td data-label="状況">酸素が不足している</td>
+                <td data-label="観察できるサイン">白濁に腐臭が混じる</td>
+                <td data-label="対処法">エアレーション追加・ポンプを強化する</td>
+            </tr>
+            <tr>
+                <td data-label="状況">バランスが取れている</td>
+                <td data-label="観察できるサイン">水がクリアで臭いがない</td>
+                <td data-label="対処法">何もしなくてよい</td>
+            </tr>
+        </table>
+    </div>
+
+    <hr>
+
+    <h2 id="sec-how-ja">このシステムの仕組み</h2>
+
+    <h3>硝化サイクルのどこに介入するか</h3>
+
+    <div class="nc-wrap fade-in">
+        <div class="nc-node nc-node-base" style="animation-delay:0s">
+            <div>
+                <div class="nc-name">🐟 魚の排泄物・残餌</div>
+            </div>
+        </div>
+        <div class="nc-conn">
+            <div class="nc-line"></div>
+            <div class="nc-dot" style="animation-delay:0s"></div>
+        </div>
+        <div class="nc-node nc-node-danger" style="animation-delay:.1s">
+            <div>
+                <div class="nc-name">アンモニア（NH₃）</div>
+            </div>
+            <span class="nc-badge nc-badge-red">猛毒</span>
+        </div>
+        <div class="nc-conn">
+            <div class="nc-line"></div>
+            <div class="nc-dot" style="animation-delay:.3s"></div>
+            <div class="nc-lbl">亜硝酸菌 Nitrosomonas</div>
+        </div>
+        <div class="nc-node nc-node-warn" style="animation-delay:.2s">
+            <div>
+                <div class="nc-name">亜硝酸塩（NO₂⁻）</div>
+            </div>
+            <span class="nc-badge nc-badge-ora">毒性あり</span>
+        </div>
+        <div class="nc-conn">
+            <div class="nc-line"></div>
+            <div class="nc-dot" style="animation-delay:.6s"></div>
+            <div class="nc-lbl">硝酸菌 Nitrobacter</div>
+        </div>
+        <div class="nc-node nc-node-acc" style="animation-delay:.3s">
+            <div>
+                <div class="nc-name">硝酸塩（NO₃⁻）</div>
+                <div class="nc-sub">毒性は低いが蓄積し続ける ← ここが問題</div>
+            </div>
+            <span class="nc-badge nc-badge-yel">蓄積</span>
+        </div>
+        <div class="nc-conn" style="height:14px">
+            <div class="nc-line"></div>
+        </div>
+        <div class="nc-cross">🚫 従来の解決策：換水で薄める</div>
+        <div class="nc-label-sys">▼ 本システムのアプローチ</div>
+        <div class="nc-conn">
+            <div class="nc-line" style="background:#1d3a5e"></div>
+            <div class="nc-dot nc-dot-green" style="animation-delay:.9s"></div>
+            <div class="nc-lbl">従属栄養バクテリア ＋ 炭素源投入</div>
+        </div>
+        <div class="nc-node nc-node-sys" style="animation-delay:.4s">
+            <div>
+                <div class="nc-name">炭素同化</div>
+                <div class="nc-sub">硝酸塩 → 菌体タンパク（バクテリアの体）</div>
+            </div>
+        </div>
+        <div class="nc-conn">
+            <div class="nc-line" style="background:#1d3a5e"></div>
+            <div class="nc-dot nc-dot-green" style="animation-delay:1.2s"></div>
+            <div class="nc-lbl">ベントスが捕食（イトミミズ・ヨコエビ等）</div>
+        </div>
+        <div class="nc-node nc-node-out" style="animation-delay:.5s">
+            <div>
+                <div class="nc-name">✅ 食物連鎖として系外排出</div>
+                <div class="nc-sub">水換え不要・自律して完結</div>
+            </div>
+        </div>
+    </div>
+

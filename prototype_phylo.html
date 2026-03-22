@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N収支系統図 プロトタイプ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background: #0d1117;
+            font-family: 'Inter', sans-serif;
+            color: #c9d1d9;
+            line-height: 1.7;
+        }
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 20px 16px;
+        }
+        h2 {
+            color: #e6edf3;
+            font-size: 1.2em;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+        .tree-subtitle {
+            color: #8b949e;
+            font-size: .78em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* ===== 系統図ツリー ===== */
+        .tree-root {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 10px;
+            padding: 12px;
+            text-align: center;
+            margin-bottom: 4px;
+        }
+        .tree-root-title {
+            font-weight: 700;
+            font-size: .88em;
+            color: #e6edf3;
+        }
+        .tree-root-sub {
+            font-size: .7em;
+            color: #8b949e;
+            margin-top: 2px;
+        }
+
+        /* 垂直接続線 */
+        .tree-vline {
+            width: 2px;
+            height: 20px;
+            background: #30363d;
+            margin: 0 auto;
+        }
+
+        /* 分岐 */
+        .tree-branch {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 4px;
+        }
+        .tree-branch-col {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* ブランチヘッダー */
+        .branch-header {
+            width: 100%;
+            border-radius: 8px;
+            padding: 10px 8px;
+            text-align: center;
+            position: relative;
+        }
+        .branch-header-export {
+            background: linear-gradient(135deg, #1a0a0a, #1c1409);
+            border: 1px solid #d29922;
+        }
+        .branch-header-cycle {
+            background: linear-gradient(135deg, #0a1929, #0a2a14);
+            border: 1px solid #58a6ff;
+        }
+        .branch-label {
+            font-size: .68em;
+            text-transform: uppercase;
+            letter-spacing: .06em;
+            margin-bottom: 2px;
+        }
+        .branch-label-export { color: #d29922; }
+        .branch-label-cycle { color: #58a6ff; }
+        .branch-title {
+            font-weight: 700;
+            font-size: .82em;
+            color: #e6edf3;
+        }
+        .branch-desc {
+            font-size: .65em;
+            color: #8b949e;
+            margin-top: 2px;
+        }
+
+        /* リーフカード */
+        .leaf-card {
+            width: 100%;
+            border-radius: 8px;
+            padding: 8px 10px;
+            margin-top: 4px;
+            text-align: left;
+            transition: transform .2s, border-color .2s;
+            cursor: default;
+        }
+        .leaf-card:hover {
+            transform: scale(1.02);
+        }
+
+        /* 排出系リーフ */
+        .leaf-phys {
+            background: #161b22;
+            border: 1px solid #30363d;
+        }
+        .leaf-bio-gas {
+            background: #1c1409;
+            border: 1px solid #d29922;
+        }
+        .leaf-bio-mass {
+            background: #16200a;
+            border: 1px solid #7ee787;
+        }
+
+        /* 循環系リーフ */
+        .leaf-cycle {
+            background: #0d2440;
+            border: 1px solid #58a6ff;
+        }
+        .leaf-cycle-holo {
+            background: #0d2440;
+            border: 2px solid #58a6ff;
+            animation: leaf-pulse 2.5s ease infinite;
+        }
+        @keyframes leaf-pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(88,166,255,0); }
+            50% { box-shadow: 0 0 0 6px rgba(88,166,255,.15); }
+        }
+        .leaf-cycle-romance {
+            background: #160d20;
+            border: 1px solid #8957e5;
+            opacity: .7;
+        }
+
+        .leaf-name {
+            font-weight: 600;
+            font-size: .78em;
+            color: #e6edf3;
+        }
+        .leaf-desc {
+            font-size: .65em;
+            color: #8b949e;
+            margin-top: 2px;
+            line-height: 1.4;
+        }
+        .leaf-badge {
+            display: inline-block;
+            font-size: .6em;
+            padding: 1px 6px;
+            border-radius: 4px;
+            margin-top: 4px;
+        }
+        .badge-export-phys {
+            background: #21262d;
+            color: #8b949e;
+            border: 1px solid #30363d;
+        }
+        .badge-export-gas {
+            background: #2d1a06;
+            color: #d29922;
+            border: 1px solid #d29922;
+        }
+        .badge-export-bio {
+            background: #0a2a14;
+            color: #7ee787;
+            border: 1px solid #7ee787;
+        }
+        .badge-cycle {
+            background: #0d2440;
+            color: #58a6ff;
+            border: 1px solid #58a6ff;
+        }
+        .badge-romance {
+            background: #1a0d2e;
+            color: #8957e5;
+            border: 1px solid #8957e5;
+        }
+
+        /* サブブランチラベル */
+        .sub-branch-label {
+            font-size: .62em;
+            color: #8b949e;
+            text-align: center;
+            padding: 4px 0 2px;
+            letter-spacing: .04em;
+        }
+
+        /* 分岐線（二分岐） */
+        .tree-fork {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            height: 20px;
+            position: relative;
+        }
+        .tree-fork::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 2px;
+            height: 10px;
+            background: #30363d;
+            transform: translateX(-50%);
+        }
+        .tree-fork::after {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: calc(25%);
+            right: calc(25%);
+            height: 2px;
+            background: #30363d;
+        }
+        .tree-fork-arm-left,
+        .tree-fork-arm-right {
+            position: absolute;
+            top: 10px;
+            width: 2px;
+            height: 10px;
+            background: #30363d;
+        }
+        .tree-fork-arm-left { left: 25%; transform: translateX(-50%); }
+        .tree-fork-arm-right { right: 25%; transform: translateX(50%); }
+
+        /* 小分岐線 */
+        .tree-vline-sm {
+            width: 2px;
+            height: 8px;
+            background: #30363d;
+            margin: 0 auto;
+        }
+
+        /* 硝化注記 */
+        .nitri-note {
+            background: #111;
+            border: 1px dashed #3d444d;
+            border-radius: 8px;
+            padding: 10px 12px;
+            margin: 16px 0;
+            text-align: center;
+        }
+        .nitri-note-title {
+            font-size: .72em;
+            color: #484f58;
+            text-decoration: line-through;
+            margin-bottom: 4px;
+        }
+        .nitri-note-body {
+            font-size: .68em;
+            color: #484f58;
+            line-height: 1.5;
+        }
+
+        /* スクロールフェードイン */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(12px);
+            transition: opacity .5s ease, transform .5s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* アニメーション遅延 */
+        .delay-1 { transition-delay: .1s; }
+        .delay-2 { transition-delay: .2s; }
+        .delay-3 { transition-delay: .3s; }
+        .delay-4 { transition-delay: .4s; }
+        .delay-5 { transition-delay: .5s; }
+
+        /* 流れドットアニメーション */
+        @keyframes flow-down {
+            0% { top: -4px; opacity: 0; }
+            20% { opacity: 1; }
+            80% { opacity: 1; }
+            100% { top: 100%; opacity: 0; }
+        }
+        .tree-vline {
+            position: relative;
+            overflow: hidden;
+        }
+        .tree-vline .flow-dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #58a6ff;
+            animation: flow-down 1.8s ease-in-out infinite;
+        }
+        .flow-dot-export { background: #d29922; }
+        .flow-dot-cycle { background: #58a6ff; }
+
+        /* 展開パネル */
+        .leaf-detail {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .3s ease;
+        }
+        .leaf-card.open .leaf-detail {
+            max-height: 200px;
+        }
+        .leaf-detail-inner {
+            padding: 6px 0 0;
+            border-top: 1px solid rgba(255,255,255,.08);
+            margin-top: 6px;
+        }
+        .leaf-detail-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: .62em;
+            padding: 2px 0;
+        }
+        .leaf-detail-label { color: #8b949e; }
+        .leaf-detail-value { color: #c9d1d9; font-weight: 600; }
+        .leaf-detail-value.pro { color: #3fb950; }
+        .leaf-detail-value.con { color: #f85149; }
+
+        /* タップ/クリック表示ヒント */
+        .tap-hint {
+            text-align: center;
+            font-size: .65em;
+            color: #484f58;
+            margin: 10px 0 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <h2>水槽の窒素はどこへ行くか</h2>
+        <p class="tree-subtitle">N総量収支に基づくアクアリウム窒素管理の全体像</p>
+
+        <!-- ルートノード -->
+        <div class="tree-root fade-in">
+            <div class="tree-root-title">🐟 魚の排泄 → NH₄⁺（アンモニア）発生</div>
+            <div class="tree-root-sub">この窒素を、捨てるか。回すか。</div>
+        </div>
+
+        <!-- 分岐線 -->
+        <div class="tree-fork">
+            <div class="tree-fork-arm-left"></div>
+            <div class="tree-fork-arm-right"></div>
+        </div>
+
+        <!-- 二大分岐 -->
+        <div class="tree-branch">
+            <!-- 排出（Export）列 -->
+            <div class="tree-branch-col">
+                <div class="branch-header branch-header-export fade-in delay-1">
+                    <div class="branch-label branch-label-export">Export</div>
+                    <div class="branch-title">排出</div>
+                    <div class="branch-desc">窒素を系外へ捨てる</div>
+                </div>
+
+                <div class="tree-vline-sm"></div>
+                <div class="sub-branch-label">物理・化学的</div>
+
+                <div class="leaf-card leaf-phys fade-in delay-2" onclick="this.classList.toggle('open')">
+                    <div class="leaf-name">💧 換水</div>
+                    <div class="leaf-desc">水ごと物理排出</div>
+                    <span class="leaf-badge badge-export-phys">物理的</span>
+                    <div class="leaf-detail"><div class="leaf-detail-inner">
+                        <div class="leaf-detail-row"><span class="leaf-detail-label">利点</span><span class="leaf-detail-value pro">確実・簡単・即効</span></div>
+                        <div class="leaf-detail-row"><span class="leaf-detail-label">欠点</span><span class="leaf-detail-value con">大型水槽で重労働</span></div>
+                    </div></div>
+                </div>
+
+                <div class="leaf-card leaf-phys fade-in delay-2" onclick="this.classList.toggle('open')">
+                    <div class="leaf-name">🧱 吸着材</div>
+                    <div class="leaf-desc">ゼオライト等に吸着→交換</div>
+                    <span class="leaf-badge badge-export-phys">化学的</span>
+                    <div class="leaf-detail"><div class="leaf-detail-inner">
+                        <div class="leaf-detail-row"><span class="leaf-detail-label">利点</span><span class="leaf-detail-value pro">手軽・併用可能</span></div>
+                        <div class="leaf-detail-row"><span class="leaf-detail-label">欠点</span><span class="leaf-detail-value con">交換コスト・容量有限</span></div>
+                    </div></div>
+                </div>
+
+                <div class="leaf-card leaf-phys fade-in delay-2" onclick="this.classList.toggle('open')">
+                    <div class="leaf-name">🫧 プロテインスキマー</div>
+                    <div class="leaf-desc">気泡で有機物を系外排出（海水）</div>
+                    <span class="leaf-badge badge-export-phys">物理化学的</span>
+                    <div class="leaf-detail"><div class="leaf-detail-inner">
+                        <div class="leaf-detail-row"><span class="leaf-detail-label">利点</span><span class="leaf-detail-value pro">海水では高効率</span></div>
+                        <div class="leaf-detail-row"><span class="leaf-detail-label">欠点</span><span class="leaf-detail-value con">淡水では機能しない</span></div>
+                    </div></div>
+                </div>
+
+                <div class="tree-vline-sm"></div>
+                <div class="sub-branch-label">生物的 → ガス化</div>
+
+                <div class="leaf-card leaf-bio-gas fade-in delay-3" onclick="this.classList.toggle('open')">
+                    <div class="leaf-name">💨 嫌気脱窒</div>
+                    <div class="leaf-desc">NO₃⁻ → N₂ガスとして大気へ放出</div>
+                    <span class="leaf-badge badge-export-gas">DSB・脱窒炉</span>
+                    <div class="leaf-detail"><div class="leaf-detail-inner">
+                        <div class="leaf-detail-row"><span class="leaf-detail-label">利点</span><span class="leaf-detail-value pro">窒素を完全除去</span></div>
+                        <div class="leaf-detail-row"><span class="leaf-detail-label">欠点</span><span class="leaf-detail-value con">H₂S発生リスク・崩壊時致命的</span></div>
+                    </div></div>
+                </div>
+
+                <div class="tree-vline-sm"></div>
+                <div class="sub-branch-label">生物的 → バイオマス化</div>
+
+                <div class="leaf-card leaf-bio-mass fade-in delay-4" onclick="this.classList.toggle('open')">
+                    <div class="leaf-name">🌿 水草吸収</div>
+                    <div class="leaf-desc">植物が窒素を同化→トリミングで排出</div>
+                    <span class="leaf-badge badge-export-bio">ADA式・Walstad式</span>
+                    <div class="leaf-detail"><div class="leaf-detail-inner">
+                        <div class="leaf-detail-row"><span class="leaf-detail-label">利点</span><span class="leaf-detail-value pro">景観性優秀</span></div>
+                        <div class="leaf-detail-row"><span class="leaf-detail-label">欠点</span><span class="leaf-detail-value con">CO₂添加・高光量が必須</span></div>
+                    </div></div>
+                </div>
+
+                <div class="leaf-card leaf-bio-mass fade-in delay-4" onclick="this.classList.toggle('open')">
+                    <div class="leaf-name">🦠 菌体排出</div>
+                    <div class="leaf-desc">バクテリアを増やし→スキマー等で排出</div>
+                    <span class="leaf-badge badge-export-bio">バイオペレット等</span>
+                    <div class="leaf-detail"><div class="leaf-detail-inner">
+                        <div class="leaf-detail-row"><span class="leaf-detail-label">利点</span><span class="leaf-detail-value pro">硝酸塩を効率的に除去</span></div>
+                        <div class="leaf-detail-row"><span class="leaf-detail-label">欠点</span><span class="leaf-detail-value con">スキマー必須（海水のみ）</span></div>
+                    </div></div>
+                </div>
+            </div>
+
+            <!-- 循環（Cycle）列 -->
+            <div class="tree-branch-col">
+                <div class="branch-header branch-header-cycle fade-in delay-1">
+                    <div class="branch-label branch-label-cycle">Cycle</div>
+                    <div class="branch-title">循環</div>
+                    <div class="branch-desc">窒素を系内で回す</div>
+                </div>
+
+                <div class="tree-vline-sm"></div>
+                <div class="sub-branch-label">光独立栄養（光＋CO₂）</div>
+
+                <div class="leaf-card leaf-cycle fade-in delay-2" onclick="this.classList.toggle('open')">
+                    <div class="leaf-name">☀️ グリーンウォーター式</div>
+                    <div class="leaf-desc">藻類が光でNH₄⁺を同化→食物連鎖</div>
+                    <span class="leaf-badge badge-cycle">屋外・低負荷</span>
+                    <div class="leaf-detail"><div class="leaf-detail-inner">
+                        <div class="leaf-detail-row"><span class="leaf-detail-label">利点</span><span class="leaf-detail-value pro">太陽光のみで自走</span></div>
+                        <div class="leaf-detail-row"><span class="leaf-detail-label">欠点</span><span class="leaf-detail-value con">天候依存・高負荷不可</span></div>
+                    </div></div>
+                </div>
+
+                <div class="tree-vline-sm"></div>
+                <div class="sub-branch-label">光従属栄養（光＋有機物）</div>
+
+                <div class="leaf-card leaf-cycle fade-in delay-3" onclick="this.classList.toggle('open')">
+                    <div class="leaf-name">🔴 PNSB（紅色非硫黄細菌）</div>
+                    <div class="leaf-desc">光＋有機物でNH₄⁺を同化</div>
+                    <span class="leaf-badge badge-cycle">嫌気＋光で機能</span>
+                    <div class="leaf-detail"><div class="leaf-detail-inner">
+                        <div class="leaf-detail-row"><span class="leaf-detail-label">利点</span><span class="leaf-detail-value pro">高栄養バイオマス生成</span></div>
+                        <div class="leaf-detail-row"><span class="leaf-detail-label">欠点</span><span class="leaf-detail-value con">嫌気環境が必要</span></div>
+                    </div></div>
+                </div>
+
+                <div class="tree-vline-sm"></div>
+                <div class="sub-branch-label">従属栄養（有機炭素）</div>
+
+                <div class="leaf-card leaf-cycle-holo fade-in delay-4" onclick="this.classList.toggle('open')">
+                    <div class="leaf-name">🧪 ホロビオント式</div>
+                    <div class="leaf-desc">従属栄養細菌がNH₄⁺を直接同化<br>ベントスが捕食→食物連鎖循環</div>
+                    <span class="leaf-badge badge-cycle">室内・高負荷・実用</span>
+                    <div class="leaf-detail"><div class="leaf-detail-inner">
+                        <div class="leaf-detail-row"><span class="leaf-detail-label">利点</span><span class="leaf-detail-value pro">無換水・pHロック・自走</span></div>
+                        <div class="leaf-detail-row"><span class="leaf-detail-label">欠点</span><span class="leaf-detail-value con">OF必須・初期白濁</span></div>
+                    </div></div>
+                </div>
+
+                <div class="tree-vline-sm"></div>
+                <div class="sub-branch-label">化学独立栄養（H₂S等）</div>
+
+                <div class="leaf-card leaf-cycle-romance fade-in delay-5" onclick="this.classList.toggle('open')">
+                    <div class="leaf-name">⚗️ 硫黄駆動型</div>
+                    <div class="leaf-desc">無機物酸化で窒素を同化</div>
+                    <span class="leaf-badge badge-romance">理論上・未実用</span>
+                    <div class="leaf-detail"><div class="leaf-detail-inner">
+                        <div class="leaf-detail-row"><span class="leaf-detail-label">利点</span><span class="leaf-detail-value pro">光も炭素も不要</span></div>
+                        <div class="leaf-detail-row"><span class="leaf-detail-label">欠点</span><span class="leaf-detail-value con">H₂S有毒・実現例なし</span></div>
+                    </div></div>
+                </div>
+            </div>
+        </div>
+
+        <p class="tap-hint">各カードをタップすると詳細を表示</p>
+
+        <!-- 硝化サイクル注記 -->
+        <div class="nitri-note fade-in">
+            <div class="nitri-note-title">🚫 硝化サイクル（NH₄⁺ → NO₂⁻ → NO₃⁻）</div>
+            <div class="nitri-note-body">
+                窒素の形態を変えるだけで、系内の総窒素量は減らない。<br>
+                排出にも循環にも寄与しない「毒性変換バッファ」。<br>
+                上記のどの排出手段が実行されるまでの時間稼ぎとして機能する。
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // スクロールフェードイン
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.15 });
+        document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+    </script>
+</body>
+</html>

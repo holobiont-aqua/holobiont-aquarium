@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>第３章 — 構築方法 | ホロビオントアクアリウム理論</title>
-    <meta name="description" content="オーバーフロー式水槽のシステム設計、立ち上げ手順、管理手順を解説する汎用的な構築ガイド。">
+    <title>Part 3 — 構築方法：著者の実装例 | ホロビオントアクアリウム理論</title>
+    <meta name="description" content="オーバーフロー式水槽のシステム設計、炭素源エキスのレシピ（ウォッカ・米酢・グラニュー糖）、立ち上げ手順（約1ヶ月）を詳解。">
     <meta name="keywords" content="無換水,換水ゼロ,水換え不要,アクアリウム,炭素源,ウォッカ法,ベントス,硝酸塩除去,オーバーフロー水槽,水草水槽,大型水槽,自律型生態系,ホロビオント">
-    <meta property="og:title" content="第３章 — 構築方法 | ホロビオントアクアリウム理論">
-    <meta property="og:description" content="オーバーフロー式水槽のシステム設計、立ち上げ手順、管理手順を解説する汎用的な構築ガイド。">
+    <meta property="og:title" content="Part 3 — 構築方法：著者の実装例 | ホロビオントアクアリウム理論">
+    <meta property="og:description" content="オーバーフロー式水槽のシステム設計、炭素源エキスのレシピ（ウォッカ・米酢・グラニュー糖）、立ち上げ手順（約1ヶ月）を詳解。">
     <meta property="og:image" content="https://holobiont-aqua.github.io/holobiont-aquarium/photos/tank_overview.jpg">
     <meta property="og:type" content="article">
     <link rel="alternate" hreflang="en" href="https://holobiont-aqua.github.io/holobiont-aquarium/">
@@ -26,16 +26,7 @@
     </script>
 </head>
 
-<body style="margin:0;padding:0;background:#ffffff;font-family:'Inter',sans-serif;">
-    <header class="ibee-header"><div class="ibee-header-inner"><a href="../ibee_top.html" class="ibee-header-brand"><img src="../photos/ibee_logo.svg" alt="IBEE" class="ibee-header-logo"><div><div class="ibee-header-title">生物環境技術研究会</div><div class="ibee-header-subtitle">Institute of Biological Environmental Engineering</div></div></a></div></header>
-    <nav class="ibee-nav"><div class="ibee-nav-inner">
-        <a href="index.html">概要</a>
-        <a href="part1.html">第１章 理論</a>
-        <a href="part2.html">第２章 環境構築</a>
-        <a href="part3.html" class="active">第３章 構築方法</a>
-        <a href="part4.html">第４章 実測</a>
-        <a href="part5.html">第５章 考察</a>
-    </div></nav>
+<body style="margin:0;padding:0;background:#0d1117;font-family:'Inter',sans-serif;">
 
     <style>
         /* ===== 基本 ===== */
@@ -46,9 +37,9 @@
         .holo-body {
             font-size: 16px;
             line-height: 1.85;
-            color: #333333;
+            color: #c9d1d9;
             word-break: break-word;
-            background: #ffffff;
+            background: #0d1117;
             max-width: 800px;
             margin: 0 auto;
             padding: 20px
@@ -56,9 +47,9 @@
 
         /* ===== ボックス類 ===== */
         .holo-summary {
-            background: #ffffff;
-            border: 1px solid #d0d7de;
-            border-left: 4px solid #003366;
+            background: #0d1117;
+            border: 1px solid #30363d;
+            border-left: 4px solid #58a6ff;
             border-radius: 8px;
             padding: 16px 18px;
             margin: 20px 0
@@ -71,21 +62,21 @@
         }
 
         .holo-card {
-            background: #f5f7fa;
-            border: 1px solid #d0d7de;
+            background: #161b22;
+            border: 1px solid #30363d;
             border-radius: 8px;
             padding: 14px 16px;
             margin: 10px 0
         }
 
         .holo-card-green {
-            border-left: 3px solid #1a7f37
+            border-left: 3px solid #3fb950
         }
 
         .holo-warn-red {
-            background: #fef2f2;
-            border: 1px solid #cf222e;
-            border-left: 4px solid #cf222e;
+            background: #1c0a0a;
+            border: 1px solid #f85149;
+            border-left: 4px solid #f85149;
             border-radius: 8px;
             padding: 14px 16px;
             margin: 14px 0;
@@ -93,26 +84,26 @@
         }
 
         .holo-warn-yellow {
-            background: #fffbeb;
-            border: 1px solid #9a6700;
-            border-left: 4px solid #9a6700;
+            background: #1c1409;
+            border: 1px solid #d29922;
+            border-left: 4px solid #d29922;
             border-radius: 8px;
             padding: 14px 16px;
             margin: 14px 0
         }
 
         .holo-warn-purple {
-            background: #faf5ff;
-            border: 1px solid #7c3aed;
-            border-left: 4px solid #7c3aed;
+            background: #160d20;
+            border: 1px solid #8957e5;
+            border-left: 4px solid #8957e5;
             border-radius: 8px;
             padding: 14px 16px;
             margin: 14px 0
         }
 
         .holo-tip {
-            background: #f5f7fa;
-            border: 1px solid #d0d7de;
+            background: #161b22;
+            border: 1px solid #30363d;
             border-radius: 8px;
             padding: 14px 16px;
             margin: 14px 0
@@ -121,7 +112,7 @@
         .holo-blockquote {
             border-left: 3px solid #3d444d;
             padding: 4px 16px;
-            color: #666666;
+            color: #8b949e;
             margin: 16px 0;
             font-style: italic
         }
@@ -130,7 +121,7 @@
             font-size: .78em;
             text-transform: uppercase;
             letter-spacing: .07em;
-            color: #666666;
+            color: #8b949e;
             margin: 0 0 6px;
             display: block
         }
@@ -147,12 +138,12 @@
         }
 
         .holo-table th {
-            background: #f5f7fa;
-            color: #666666;
+            background: #161b22;
+            color: #8b949e;
             font-weight: 500;
             text-align: left;
             padding: 9px 12px;
-            border: 1px solid #d0d7de;
+            border: 1px solid #30363d;
             font-size: .8em;
             text-transform: uppercase;
             letter-spacing: .03em
@@ -160,14 +151,14 @@
 
         .holo-table td {
             padding: 9px 12px;
-            border: 1px solid #d0d7de;
-            color: #333333;
+            border: 1px solid #21262d;
+            color: #c9d1d9;
             vertical-align: top;
             line-height: 1.6
         }
 
         .holo-table tr:nth-child(even) td {
-            background: #ffffff
+            background: #0d1117
         }
 
         /* モバイル：行をカード化 */
@@ -190,8 +181,8 @@
             }
 
             .holo-table tr {
-                background: #f5f7fa;
-                border: 1px solid #d0d7de;
+                background: #161b22;
+                border: 1px solid #30363d;
                 border-radius: 8px;
                 margin-bottom: 10px;
                 overflow: hidden
@@ -203,7 +194,7 @@
 
             .holo-table td {
                 border: none;
-                border-bottom: 1px solid #d0d7de;
+                border-bottom: 1px solid #21262d;
                 padding: 8px 14px
             }
 
@@ -215,7 +206,7 @@
                 content: attr(data-label);
                 display: block;
                 font-size: .7em;
-                color: #003366;
+                color: #58a6ff;
                 text-transform: uppercase;
                 letter-spacing: .05em;
                 margin-bottom: 3px;
@@ -238,8 +229,8 @@
 
         /* ===== コードブロック ===== */
         .holo-pre {
-            background: #f5f7fa;
-            border: 1px solid #d0d7de;
+            background: #161b22;
+            border: 1px solid #30363d;
             border-radius: 8px;
             padding: 14px;
             overflow-x: auto;
@@ -247,7 +238,7 @@
             line-height: 1.7;
             font-size: .82em;
             white-space: pre;
-            color: #333333
+            color: #c9d1d9
         }
 
         /* ===== PC ===== */
@@ -323,7 +314,7 @@
             }
 
             50% {
-                box-shadow: 0 0 0 8px rgba(0, 51, 102, .15)
+                box-shadow: 0 0 0 8px rgba(88, 166, 255, .15)
             }
         }
 
@@ -343,44 +334,44 @@
         }
 
         .nc-node-base {
-            background: #f5f7fa;
-            border: 1px solid #d0d7de
+            background: #161b22;
+            border: 1px solid #30363d
         }
 
         .nc-node-danger {
-            background: #fce8e8;
-            border: 1px solid #cf222e
+            background: #2d1010;
+            border: 1px solid #f85149
         }
 
         .nc-node-warn {
             background: #2d1f08;
-            border: 1px solid #9a6700
+            border: 1px solid #d29922
         }
 
         .nc-node-acc {
-            background: #f0fdf4;
-            border: 1px solid #1a7f37
+            background: #16200a;
+            border: 1px solid #7ee787
         }
 
         .nc-node-sys {
-            background: #eff6ff;
-            border: 1px solid #003366;
+            background: #0d2440;
+            border: 1px solid #58a6ff;
             animation: nc-pulse 2s infinite, nc-fadein .5s ease both
         }
 
         .nc-node-out {
-            background: #f0fdf4;
-            border: 1px solid #1a7f37
+            background: #0a2a14;
+            border: 1px solid #3fb950
         }
 
         .nc-name {
-            color: #333333;
+            color: #e6edf3;
             font-weight: bold;
             font-size: .88em
         }
 
         .nc-sub {
-            color: #666666;
+            color: #8b949e;
             font-size: .74em;
             margin-top: 2px
         }
@@ -396,20 +387,20 @@
 
         .nc-badge-red {
             background: #3d0f0f;
-            color: #cf222e;
-            border: 1px solid #cf222e
+            color: #f85149;
+            border: 1px solid #f85149
         }
 
         .nc-badge-ora {
-            background: #fffbeb;
-            color: #9a6700;
-            border: 1px solid #9a6700
+            background: #2d1a06;
+            color: #d29922;
+            border: 1px solid #d29922
         }
 
         .nc-badge-yel {
             background: #1a2a0a;
-            color: #1a7f37;
-            border: 1px solid #1a7f37
+            color: #7ee787;
+            border: 1px solid #7ee787
         }
 
         .nc-conn {
@@ -426,7 +417,7 @@
             top: 0;
             bottom: 0;
             width: 2px;
-            background: #d0d7de;
+            background: #21262d;
             transform: translateX(-50%)
         }
 
@@ -434,7 +425,7 @@
             width: 8px;
             height: 8px;
             border-radius: 50%;
-            background: #003366;
+            background: #58a6ff;
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
@@ -442,16 +433,16 @@
         }
 
         .nc-dot-green {
-            background: #1a7f37
+            background: #3fb950
         }
 
         .nc-lbl {
-            background: #ffffff;
-            color: #666666;
+            background: #0d1117;
+            color: #8b949e;
             font-size: .72em;
             padding: 3px 10px;
             border-radius: 4px;
-            border: 1px solid #d0d7de;
+            border: 1px solid #21262d;
             position: relative;
             z-index: 1
         }
@@ -464,14 +455,14 @@
             border: 1px dashed #3d444d;
             border-radius: 8px;
             text-align: center;
-            color: #888888;
+            color: #484f58;
             font-size: .8em;
             text-decoration: line-through
         }
 
         .nc-label-sys {
             text-align: center;
-            color: #003366;
+            color: #58a6ff;
             font-size: .72em;
             letter-spacing: .1em;
             text-transform: uppercase;
@@ -512,25 +503,25 @@
         }
 
         .bl-box {
-            background: #f5f7fa;
-            border: 1px solid #d0d7de;
+            background: #161b22;
+            border: 1px solid #30363d;
             border-radius: 8px;
             padding: 10px 12px;
             font-size: .82em;
-            color: #333333;
+            color: #c9d1d9;
             text-align: center;
             width: 100%;
             line-height: 1.5
         }
 
         .bl-box-sump {
-            border-color: #003366;
-            background: #eff6ff
+            border-color: #58a6ff;
+            background: #0a1929
         }
 
         .bl-box-main {
-            border-color: #1a7f37;
-            background: #f0fdf4
+            border-color: #3fb950;
+            background: #0a1f10
         }
 
         .bl-box-label {
@@ -541,11 +532,11 @@
         }
 
         .bl-box-sump .bl-box-label {
-            color: #003366
+            color: #58a6ff
         }
 
         .bl-box-main .bl-box-label {
-            color: #1a7f37
+            color: #3fb950
         }
 
         .bl-arrow-v {
@@ -560,16 +551,16 @@
         .bl-arrow-line {
             width: 2px;
             flex: 1;
-            background: linear-gradient(to bottom, #d0d7de, #d0d7de)
+            background: linear-gradient(to bottom, #21262d, #21262d)
         }
 
         .bl-arrow-label {
             font-size: .68em;
-            color: #666666;
+            color: #8b949e;
             text-align: center;
             padding: 2px 6px;
-            background: #ffffff;
-            border: 1px solid #d0d7de;
+            background: #0d1117;
+            border: 1px solid #21262d;
             border-radius: 4px;
             position: relative;
             z-index: 1;
@@ -607,11 +598,11 @@
         }
 
         .bl-dot-blue {
-            background: #003366
+            background: #58a6ff
         }
 
         .bl-dot-green {
-            background: #1a7f37
+            background: #3fb950
         }
 
         .bl-arrow-h-wrap {
@@ -632,7 +623,7 @@
         .bl-arrow-h-line {
             width: 2px;
             height: 80px;
-            background: #d0d7de;
+            background: #21262d;
             position: relative;
             overflow: hidden
         }
@@ -668,18 +659,18 @@
         }
 
         .bl-h-dot-down {
-            background: #003366;
+            background: #58a6ff;
             animation-delay: 0s
         }
 
         .bl-h-dot-up {
-            background: #1a7f37;
+            background: #3fb950;
             animation-delay: 1s
         }
 
         .bl-arrow-h-label {
             font-size: .65em;
-            color: #666666;
+            color: #8b949e;
             text-align: center;
             writing-mode: horizontal-tb
         }
@@ -698,7 +689,7 @@
             top: 0;
             bottom: 0;
             width: 2px;
-            background: linear-gradient(to bottom, #003366, #1a7f37)
+            background: linear-gradient(to bottom, #58a6ff, #3fb950)
         }
 
         .step-item {
@@ -717,41 +708,41 @@
             width: 28px;
             height: 28px;
             border-radius: 50%;
-            background: #ffffff;
-            border: 2px solid #003366;
+            background: #0d1117;
+            border: 2px solid #58a6ff;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: .75em;
             font-weight: bold;
-            color: #003366;
+            color: #58a6ff;
             z-index: 1;
             flex-shrink: 0
         }
 
         .step-item:last-child .step-num {
-            border-color: #1a7f37;
-            color: #1a7f37
+            border-color: #3fb950;
+            color: #3fb950
         }
 
         .step-title {
             font-weight: bold;
-            color: #333333;
+            color: #e6edf3;
             margin: 4px 0 8px;
             font-size: .95em;
             padding-top: 3px
         }
 
         .step-body {
-            color: #333333;
+            color: #c9d1d9;
             font-size: .9em;
             line-height: 1.75
         }
 
         /* ===== pHカウンター ===== */
         .ph-counter-wrap {
-            background: #ffffff;
-            border: 1px solid #d0d7de;
+            background: #0d1117;
+            border: 1px solid #30363d;
             border-radius: 12px;
             padding: 24px 16px;
             margin: 20px 0;
@@ -761,7 +752,7 @@
         .ph-value {
             font-size: 3.5em;
             font-weight: bold;
-            color: #003366;
+            color: #58a6ff;
             letter-spacing: .05em;
             line-height: 1;
             font-variant-numeric: tabular-nums
@@ -769,18 +760,18 @@
 
         .ph-unit {
             font-size: 1.2em;
-            color: #666666;
+            color: #8b949e;
             margin-left: 4px
         }
 
         .ph-label {
-            color: #666666;
+            color: #8b949e;
             font-size: .88em;
             margin-top: 8px
         }
 
         .ph-bar-wrap {
-            background: #f5f7fa;
+            background: #161b22;
             border-radius: 8px;
             height: 8px;
             margin: 16px 0 8px;
@@ -789,7 +780,7 @@
 
         .ph-bar {
             height: 100%;
-            background: linear-gradient(to right, #cf222e, #9a6700, #003366, #1a7f37);
+            background: linear-gradient(to right, #f85149, #d29922, #58a6ff, #3fb950);
             width: 0;
             border-radius: 8px;
             transition: width 1.5s ease
@@ -803,7 +794,7 @@
             display: flex;
             justify-content: space-between;
             font-size: .7em;
-            color: #888888
+            color: #484f58
         }
 
         /* ===== 「三つの無」カード ===== */
@@ -821,8 +812,8 @@
         }
 
         .zero-card {
-            background: #eff6ff;
-            border: 1px solid #d0d7de;
+            background: #0a1929;
+            border: 1px solid #30363d;
             border-radius: 10px;
             padding: 16px;
             text-align: center
@@ -835,14 +826,14 @@
 
         .zero-title {
             font-weight: bold;
-            color: #003366;
+            color: #58a6ff;
             font-size: .92em;
             margin-bottom: 6px
         }
 
         .zero-body {
             font-size: .82em;
-            color: #666666;
+            color: #8b949e;
             line-height: 1.6;
             text-align: left
         }
@@ -862,8 +853,8 @@
         }
 
         .maint-card {
-            background: #f5f7fa;
-            border: 1px solid #d0d7de;
+            background: #161b22;
+            border: 1px solid #30363d;
             border-radius: 8px;
             padding: 12px 14px;
             display: flex;
@@ -882,27 +873,27 @@
         }
 
         .maint-freq-daily {
-            background: #eff6ff;
-            color: #003366;
-            border: 1px solid #003366
+            background: #0d2440;
+            color: #58a6ff;
+            border: 1px solid #58a6ff
         }
 
         .maint-freq-any {
-            background: #f0fdf4;
-            color: #1a7f37;
-            border: 1px solid #1a7f37
+            background: #0a2a14;
+            color: #3fb950;
+            border: 1px solid #3fb950
         }
 
         .maint-text {
-            color: #333333;
+            color: #c9d1d9;
             font-size: .85em;
             line-height: 1.5
         }
 
         /* ===== faq：スマホ向けアコーディオン ===== */
         details.holo-details {
-            background: #f5f7fa;
-            border: 1px solid #d0d7de;
+            background: #161b22;
+            border: 1px solid #30363d;
             border-radius: 8px;
             margin: 8px 0;
             overflow: hidden
@@ -911,7 +902,7 @@
         details.holo-details summary {
             padding: 12px 16px;
             cursor: pointer;
-            color: #333333;
+            color: #e6edf3;
             font-weight: bold;
             font-size: .9em;
             list-style: none;
@@ -923,7 +914,7 @@
 
         details.holo-details summary::after {
             content: '＋';
-            color: #666666;
+            color: #8b949e;
             font-size: 1.1em;
             flex-shrink: 0
         }
@@ -934,7 +925,7 @@
 
         details.holo-details .details-body {
             padding: 0 16px 14px;
-            color: #333333;
+            color: #c9d1d9;
             font-size: .88em;
             line-height: 1.75
         }
@@ -954,15 +945,15 @@
         }
 
         .approach-card {
-            background: #f5f7fa;
-            border: 1px solid #d0d7de;
+            background: #161b22;
+            border: 1px solid #30363d;
             border-radius: 10px;
             overflow: hidden;
             transition: border-color .2s
         }
 
         .approach-card:hover {
-            border-color: #003366
+            border-color: #58a6ff
         }
 
         .approach-card-body {
@@ -972,13 +963,13 @@
         .approach-card-title {
             font-weight: bold;
             font-size: .88em;
-            color: #333333;
+            color: #e6edf3;
             margin: 0 0 4px
         }
 
         .approach-card-desc {
             font-size: .78em;
-            color: #666666;
+            color: #8b949e;
             line-height: 1.5;
             margin: 0
         }
@@ -992,34 +983,34 @@
         }
 
         .badge-green {
-            background: #f0fdf4;
-            color: #1a7f37;
-            border: 1px solid #1a7f37
+            background: #0a2a14;
+            color: #3fb950;
+            border: 1px solid #3fb950
         }
 
         .badge-yellow {
-            background: #fffbeb;
-            color: #9a6700;
-            border: 1px solid #9a6700
+            background: #1c1409;
+            color: #d29922;
+            border: 1px solid #d29922
         }
 
         .badge-red {
-            background: #fef2f2;
-            color: #cf222e;
-            border: 1px solid #cf222e
+            background: #1c0a0a;
+            color: #f85149;
+            border: 1px solid #f85149
         }
 
         .badge-blue {
-            background: #eff6ff;
-            color: #003366;
-            border: 1px solid #003366
+            background: #0d2440;
+            color: #58a6ff;
+            border: 1px solid #58a6ff
         }
 
 
         .ap-svg {
             width: 100%;
             display: block;
-            background: #ffffff;
+            background: #0d1117;
             border-radius: 8px 8px 0 0
         }
 
@@ -1091,8 +1082,8 @@
         }
 
         .recipe-card-item {
-            background: #f5f7fa;
-            border: 1px solid #d0d7de;
+            background: #161b22;
+            border: 1px solid #30363d;
             border-radius: 10px;
             padding: 14px 12px;
             text-align: center;
@@ -1110,15 +1101,15 @@
         }
 
         .recipe-fast::before {
-            background: linear-gradient(to right, #cf222e, #9a6700)
+            background: linear-gradient(to right, #f85149, #d29922)
         }
 
         .recipe-mid::before {
-            background: #9a6700
+            background: #d29922
         }
 
         .recipe-slow::before {
-            background: #1a7f37
+            background: #3fb950
         }
 
         .recipe-emoji {
@@ -1128,7 +1119,7 @@
 
         .recipe-name {
             font-weight: bold;
-            color: #333333;
+            color: #e6edf3;
             font-size: .9em;
             margin-bottom: 4px
         }
@@ -1136,13 +1127,13 @@
         .recipe-amount {
             font-size: 1.3em;
             font-weight: bold;
-            color: #003366;
+            color: #58a6ff;
             margin-bottom: 4px
         }
 
         .recipe-component {
             font-size: .72em;
-            color: #666666;
+            color: #8b949e;
             margin-bottom: 6px
         }
 
@@ -1154,21 +1145,21 @@
         }
 
         .speed-fast {
-            background: #fef2f2;
-            color: #cf222e;
-            border: 1px solid #cf222e
+            background: #2d0e0e;
+            color: #f85149;
+            border: 1px solid #f85149
         }
 
         .speed-mid {
-            background: #fffbeb;
-            color: #9a6700;
-            border: 1px solid #9a6700
+            background: #2d1a06;
+            color: #d29922;
+            border: 1px solid #d29922
         }
 
         .speed-slow {
-            background: #f0fdf4;
-            color: #1a7f37;
-            border: 1px solid #1a7f37
+            background: #0a2a14;
+            color: #3fb950;
+            border: 1px solid #3fb950
         }
 
         .recipe-mineral-grid {
@@ -1184,8 +1175,8 @@
         }
 
         .recipe-mineral-item {
-            background: #f5f7fa;
-            border: 1px solid #d0d7de;
+            background: #161b22;
+            border: 1px solid #30363d;
             border-radius: 8px;
             padding: 10px;
             text-align: center
@@ -1199,12 +1190,12 @@
         .recipe-mineral-name {
             font-size: .78em;
             font-weight: bold;
-            color: #333333
+            color: #e6edf3
         }
 
         .recipe-mineral-note {
             font-size: .68em;
-            color: #666666;
+            color: #8b949e;
             margin-top: 2px
         }
 
@@ -1212,15 +1203,15 @@
             font-size: .75em;
             text-transform: uppercase;
             letter-spacing: .06em;
-            color: #666666;
+            color: #8b949e;
             margin: 14px 0 8px;
             padding-left: 2px
         }
 
 
         .wq-graph {
-            background: #ffffff;
-            border: 1px solid #d0d7de;
+            background: #0d1117;
+            border: 1px solid #30363d;
             border-radius: 10px;
             padding: 14px;
             margin-top: 14px
@@ -1228,7 +1219,7 @@
 
         .wq-title {
             font-size: .75em;
-            color: #666666;
+            color: #8b949e;
             text-transform: uppercase;
             letter-spacing: .06em;
             margin-bottom: 10px;
@@ -1238,7 +1229,7 @@
         .wq-chart {
             position: relative;
             height: 140px;
-            background: linear-gradient(to bottom, rgba(0, 51, 102, .05), transparent);
+            background: linear-gradient(to bottom, rgba(88, 166, 255, .05), transparent);
             border-radius: 6px;
             overflow: hidden
         }
@@ -1249,7 +1240,7 @@
             left: 0;
             right: 0;
             height: 100%;
-            background: linear-gradient(to right, transparent 0%, rgba(139, 148, 158, .25) 3%, rgba(139, 148, 158, .5) 8%, rgba(248, 81, 73, .35) 15%, rgba(248, 81, 73, .5) 25%, rgba(248, 81, 73, .45) 35%, rgba(210, 153, 34, .3) 50%, rgba(210, 153, 34, .2) 60%, rgba(63, 185, 80, .15) 72%, rgba(63, 185, 80, .08) 80%, rgba(88, 166, 255, .12) 100%);
+            background: linear-gradient(to right, transparent 0%, rgba(139, 148, 158, .15) 3%, rgba(139, 148, 158, .4) 8%, rgba(248, 81, 73, .35) 15%, rgba(248, 81, 73, .5) 25%, rgba(248, 81, 73, .45) 35%, rgba(210, 153, 34, .3) 50%, rgba(210, 153, 34, .2) 60%, rgba(63, 185, 80, .15) 72%, rgba(63, 185, 80, .08) 80%, rgba(88, 166, 255, .12) 100%);
             clip-path: polygon(0% 95%, 3% 80%, 8% 45%, 15% 20%, 22% 12%, 30% 15%, 40% 18%, 50% 25%, 60% 40%, 70% 70%, 75% 88%, 80% 93%, 85% 95%, 100% 95%, 100% 100%, 0% 100%)
         }
 
@@ -1281,13 +1272,13 @@
             justify-content: space-between;
             margin-top: 6px;
             font-size: .65em;
-            color: #888888
+            color: #484f58
         }
 
         .wq-event {
             position: absolute;
             font-size: .65em;
-            color: #333333;
+            color: #c9d1d9;
             text-align: center;
             white-space: nowrap
         }
@@ -1307,7 +1298,7 @@
 
         .pyramid-title {
             font-size: .8em;
-            color: #666666;
+            color: #8b949e;
             text-transform: uppercase;
             letter-spacing: .08em;
             margin-bottom: 16px
@@ -1336,26 +1327,26 @@
         }
 
         .pyramid-t1 {
-            background: linear-gradient(135deg, #fef2f2, #fce8e8);
-            border: 1px solid #cf222e;
+            background: linear-gradient(135deg, #1a0a0a, #2d1010);
+            border: 1px solid #f85149;
             max-width: 50%
         }
 
         .pyramid-t2 {
-            background: linear-gradient(135deg, #eff6ff, #eff6ff);
-            border: 1px solid #003366;
+            background: linear-gradient(135deg, #0a1929, #0d2440);
+            border: 1px solid #58a6ff;
             max-width: 65%
         }
 
         .pyramid-t3 {
-            background: linear-gradient(135deg, #f0fdf4, #f0fdf4);
-            border: 1px solid #1a7f37;
+            background: linear-gradient(135deg, #0a2a14, #16200a);
+            border: 1px solid #3fb950;
             max-width: 80%
         }
 
         .pyramid-t4 {
-            background: linear-gradient(135deg, #f5f7fa, #d0d7de);
-            border: 1px solid #d0d7de;
+            background: linear-gradient(135deg, #161b22, #21262d);
+            border: 1px solid #30363d;
             max-width: 95%
         }
 
@@ -1366,25 +1357,25 @@
 
         .pyramid-name {
             font-weight: bold;
-            color: #333333;
+            color: #e6edf3;
             font-size: .88em
         }
 
         .pyramid-desc {
             font-size: .7em;
-            color: #666666;
+            color: #8b949e;
             margin-top: 2px
         }
 
         .pyramid-arrow {
-            color: #d0d7de;
+            color: #30363d;
             font-size: 1.2em;
             line-height: 1
         }
 
         .pyramid-label {
             font-size: .65em;
-            color: #666666;
+            color: #8b949e;
             letter-spacing: .05em;
             margin-top: 12px
         }
@@ -1394,9 +1385,9 @@
             font-size: .72em;
             padding: 4px 14px;
             border-radius: 20px;
-            background: #eff6ff;
-            color: #003366;
-            border: 1px solid rgba(0, 51, 102, .3);
+            background: #0d2440;
+            color: #58a6ff;
+            border: 1px solid rgba(88, 166, 255, .3);
             margin-top: 10px;
             letter-spacing: .05em
         }
@@ -1412,8 +1403,8 @@
             gap: 0;
             border-radius: 20px;
             overflow: hidden;
-            border: 1px solid #d0d7de;
-            background: rgba(255, 255, 255, .95);
+            border: 1px solid #30363d;
+            background: rgba(13, 17, 23, .92);
             backdrop-filter: blur(8px);
             font-size: .78em;
             transition: opacity .4s, transform .4s;
@@ -1439,19 +1430,19 @@
 
         .lang-btn {
             padding: 6px 14px;
-            color: #666666;
+            color: #8b949e;
             text-decoration: none;
             transition: all .2s;
             font-weight: 600;
         }
 
         .lang-btn:hover {
-            color: #333333
+            color: #e6edf3
         }
 
         .lang-btn.active {
-            background: #003366;
-            color: #ffffff;
+            background: #58a6ff;
+            color: #0d1117;
         }
 
 
@@ -1460,7 +1451,7 @@
             margin: 20px 0;
             border-radius: 10px;
             overflow: hidden;
-            border: 1px solid #d0d7de;
+            border: 1px solid #21262d;
         }
 
         .photo-wrap img {
@@ -1468,15 +1459,15 @@
             max-height: 400px;
             object-fit: contain;
             display: block;
-            background: #f5f7fa;
+            background: #0a0e14;
         }
 
         .photo-caption {
             padding: 10px 14px;
             font-size: .8em;
-            color: #666666;
-            background: #f5f7fa;
-            border-top: 1px solid #d0d7de;
+            color: #8b949e;
+            background: #161b22;
+            border-top: 1px solid #21262d;
         }
 
         .photo-grid {
@@ -1499,13 +1490,13 @@
             border-radius: 12px;
             overflow: hidden;
             margin-bottom: 24px;
-            background: linear-gradient(rgba(0, 51, 102, .6), rgba(0, 34, 68, .85)), url('../photos/tank_overview.jpg') center/cover no-repeat;
+            background: linear-gradient(rgba(10, 22, 40, .7), rgba(13, 17, 23, .9)), url('../photos/tank_overview.jpg') center/cover no-repeat;
         }
 
         .hero-overlay {
             position: absolute;
             inset: 0;
-            background: linear-gradient(180deg, transparent 50%, #ffffff 100%);
+            background: linear-gradient(180deg, transparent 50%, #0d1117 100%);
         }
 
         .hero-content {
@@ -1520,17 +1511,17 @@
             font-size: .82em;
             padding: 6px 16px;
             border-radius: 20px;
-            background: rgba(0, 51, 102, .15);
-            color: #003366;
-            border: 1px solid rgba(0, 51, 102, .3);
+            background: rgba(88, 166, 255, .15);
+            color: #58a6ff;
+            border: 1px solid rgba(88, 166, 255, .3);
             letter-spacing: .08em;
             font-weight: 600;
         }
 
         /* ===== Table of Contents ===== */
         .toc {
-            background: #f5f7fa;
-            border: 1px solid #d0d7de;
+            background: #161b22;
+            border: 1px solid #21262d;
             border-radius: 8px;
             padding: 16px 20px;
             margin: 16px 0;
@@ -1548,13 +1539,13 @@
         }
 
         .toc-list a {
-            color: #666666;
+            color: #8b949e;
             text-decoration: none;
             transition: color .2s;
         }
 
         .toc-list a:hover {
-            color: #003366;
+            color: #58a6ff;
         }
 
         html {
@@ -1564,26 +1555,26 @@
         /* ===== N収支系統図（インタラクティブ版） ===== */
         .ntree-wrap { margin: 20px 0 }
         .ntree-root {
-            background: #f5f7fa; border: 1px solid #d0d7de; border-radius: 10px;
+            background: #161b22; border: 1px solid #30363d; border-radius: 10px;
             padding: 12px; text-align: center; margin-bottom: 4px;
         }
-        .ntree-root-title { font-weight: 700; font-size: .88em; color: #333333 }
-        .ntree-root-sub { font-size: .7em; color: #666666; margin-top: 2px }
-        .ntree-vline { width: 2px; height: 20px; background: #d0d7de; margin: 0 auto }
+        .ntree-root-title { font-weight: 700; font-size: .88em; color: #e6edf3 }
+        .ntree-root-sub { font-size: .7em; color: #8b949e; margin-top: 2px }
+        .ntree-vline { width: 2px; height: 20px; background: #30363d; margin: 0 auto }
         .ntree-fork {
             display: flex; align-items: flex-start; justify-content: center;
             height: 20px; position: relative;
         }
         .ntree-fork::before {
             content: ''; position: absolute; top: 0; left: 50%;
-            width: 2px; height: 10px; background: #d0d7de; transform: translateX(-50%);
+            width: 2px; height: 10px; background: #30363d; transform: translateX(-50%);
         }
         .ntree-fork::after {
             content: ''; position: absolute; top: 10px;
-            left: 25%; right: 25%; height: 2px; background: #d0d7de;
+            left: 25%; right: 25%; height: 2px; background: #30363d;
         }
         .ntree-fork-arm {
-            position: absolute; top: 10px; width: 2px; height: 10px; background: #d0d7de;
+            position: absolute; top: 10px; width: 2px; height: 10px; background: #30363d;
         }
         .ntree-fork-arm-l { left: 25%; transform: translateX(-50%) }
         .ntree-fork-arm-r { right: 25%; transform: translateX(50%) }
@@ -1592,16 +1583,16 @@
         .ntree-bh {
             width: 100%; border-radius: 8px; padding: 10px 8px; text-align: center;
         }
-        .ntree-bh-export { background: linear-gradient(135deg,#fef2f2,#fffbeb); border: 1px solid #9a6700 }
-        .ntree-bh-cycle { background: linear-gradient(135deg,#eff6ff,#f0fdf4); border: 1px solid #003366 }
+        .ntree-bh-export { background: linear-gradient(135deg,#1a0a0a,#1c1409); border: 1px solid #d29922 }
+        .ntree-bh-cycle { background: linear-gradient(135deg,#0a1929,#0a2a14); border: 1px solid #58a6ff }
         .ntree-bl { font-size: .68em; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 2px }
-        .ntree-bl-export { color: #9a6700 }
-        .ntree-bl-cycle { color: #003366 }
-        .ntree-bt { font-weight: 700; font-size: .82em; color: #333333 }
-        .ntree-bd { font-size: .65em; color: #666666; margin-top: 2px }
-        .ntree-vline-sm { width: 2px; height: 8px; background: #d0d7de; margin: 0 auto }
+        .ntree-bl-export { color: #d29922 }
+        .ntree-bl-cycle { color: #58a6ff }
+        .ntree-bt { font-weight: 700; font-size: .82em; color: #e6edf3 }
+        .ntree-bd { font-size: .65em; color: #8b949e; margin-top: 2px }
+        .ntree-vline-sm { width: 2px; height: 8px; background: #30363d; margin: 0 auto }
         .ntree-sub-label {
-            font-size: .62em; color: #666666; text-align: center;
+            font-size: .62em; color: #8b949e; text-align: center;
             padding: 4px 0 2px; letter-spacing: .04em;
         }
         /* リーフカード */
@@ -1611,43 +1602,43 @@
             -webkit-tap-highlight-color: transparent;
         }
         .ntree-lc:active { transform: scale(.98) }
-        .ntree-lc-phys { background: #f5f7fa; border: 1px solid #d0d7de }
-        .ntree-lc-gas { background: #fffbeb; border: 1px solid #9a6700 }
-        .ntree-lc-bio { background: #f0fdf4; border: 1px solid #1a7f37 }
-        .ntree-lc-cycle { background: #eff6ff; border: 1px solid #003366 }
+        .ntree-lc-phys { background: #161b22; border: 1px solid #30363d }
+        .ntree-lc-gas { background: #1c1409; border: 1px solid #d29922 }
+        .ntree-lc-bio { background: #16200a; border: 1px solid #7ee787 }
+        .ntree-lc-cycle { background: #0d2440; border: 1px solid #58a6ff }
         .ntree-lc-holo {
-            background: #eff6ff; border: 2px solid #003366;
+            background: #0d2440; border: 2px solid #58a6ff;
             animation: nc-pulse 2.5s ease infinite;
         }
-        .ntree-lc-romance { background: #faf5ff; border: 1px solid #7c3aed; opacity: .7 }
-        .ntree-ln { font-weight: 600; font-size: .78em; color: #333333 }
-        .ntree-ld { font-size: .65em; color: #666666; margin-top: 2px; line-height: 1.4 }
+        .ntree-lc-romance { background: #160d20; border: 1px solid #8957e5; opacity: .7 }
+        .ntree-ln { font-weight: 600; font-size: .78em; color: #e6edf3 }
+        .ntree-ld { font-size: .65em; color: #8b949e; margin-top: 2px; line-height: 1.4 }
         .ntree-lb {
             display: inline-block; font-size: .6em; padding: 1px 6px;
             border-radius: 4px; margin-top: 4px;
         }
-        .ntree-lb-phys { background: #d0d7de; color: #666666; border: 1px solid #d0d7de }
-        .ntree-lb-gas { background: #fffbeb; color: #9a6700; border: 1px solid #9a6700 }
-        .ntree-lb-bio { background: #f0fdf4; color: #1a7f37; border: 1px solid #1a7f37 }
-        .ntree-lb-cycle { background: #eff6ff; color: #003366; border: 1px solid #003366 }
-        .ntree-lb-romance { background: #faf5ff; color: #7c3aed; border: 1px solid #7c3aed }
+        .ntree-lb-phys { background: #21262d; color: #8b949e; border: 1px solid #30363d }
+        .ntree-lb-gas { background: #2d1a06; color: #d29922; border: 1px solid #d29922 }
+        .ntree-lb-bio { background: #0a2a14; color: #7ee787; border: 1px solid #7ee787 }
+        .ntree-lb-cycle { background: #0d2440; color: #58a6ff; border: 1px solid #58a6ff }
+        .ntree-lb-romance { background: #1a0d2e; color: #8957e5; border: 1px solid #8957e5 }
         /* 展開パネル */
         .ntree-detail {
             max-height: 0; overflow: hidden; transition: max-height .3s ease;
         }
         .ntree-lc.open .ntree-detail { max-height: 200px }
         .ntree-detail-inner {
-            padding: 6px 0 0; border-top: 1px solid rgba(0,0,0,.05); margin-top: 6px;
+            padding: 6px 0 0; border-top: 1px solid rgba(255,255,255,.08); margin-top: 6px;
         }
         .ntree-dr {
             display: flex; justify-content: space-between; font-size: .62em; padding: 2px 0;
         }
-        .ntree-dr-l { color: #666666 }
+        .ntree-dr-l { color: #8b949e }
         .ntree-dr-v { font-weight: 600 }
-        .ntree-dr-pro { color: #1a7f37 }
-        .ntree-dr-con { color: #cf222e }
+        .ntree-dr-pro { color: #3fb950 }
+        .ntree-dr-con { color: #f85149 }
         .ntree-tap-hint {
-            text-align: center; font-size: .65em; color: #888888; margin: 10px 0 16px;
+            text-align: center; font-size: .65em; color: #484f58; margin: 10px 0 16px;
         }
         /* 硝化注記 */
         .ntree-nitri-note {
@@ -1655,9 +1646,9 @@
             padding: 10px 12px; margin: 16px auto 0; max-width: 420px; text-align: center;
         }
         .ntree-nitri-title {
-            font-size: .72em; color: #888888; text-decoration: line-through; margin-bottom: 4px;
+            font-size: .72em; color: #484f58; text-decoration: line-through; margin-bottom: 4px;
         }
-        .ntree-nitri-body { font-size: .68em; color: #888888; line-height: 1.5 }
+        .ntree-nitri-body { font-size: .68em; color: #484f58; line-height: 1.5 }
         /* モバイル：縦スタック */
         @media(max-width:600px) {
             .ntree-branch { flex-direction: column; gap: 12px }
@@ -1678,23 +1669,23 @@
             margin-bottom: 8px;
         }
         .part-label-theory {
-            background: #eff6ff;
-            color: #003366;
-            border: 1px solid #003366;
+            background: #0d2440;
+            color: #58a6ff;
+            border: 1px solid #58a6ff;
         }
         .part-label-practice {
-            background: #f0fdf4;
-            color: #1a7f37;
-            border: 1px solid #1a7f37;
+            background: #1c2d0a;
+            color: #3fb950;
+            border: 1px solid #3fb950;
         }
         .part-title {
             font-size: 1.3em;
             font-weight: 700;
-            color: #333333;
+            color: #e6edf3;
         }
         .part-subtitle {
             font-size: .78em;
-            color: #666666;
+            color: #8b949e;
             margin-top: 4px;
         }
         /* TOC ネスト */
@@ -1705,8 +1696,8 @@
             margin: 10px 0 4px;
             padding-left: 0;
         }
-        .toc-part-theory { color: #003366 }
-        .toc-part-practice { color: #1a7f37 }
+        .toc-part-theory { color: #58a6ff }
+        .toc-part-practice { color: #3fb950 }
 
         /* ===== ページナビゲーション ===== */
         .page-nav {
@@ -1715,7 +1706,7 @@
             gap: 8px;
             padding: 10px 0;
             margin: 0 0 20px;
-            border-bottom: 1px solid #d0d7de;
+            border-bottom: 1px solid #21262d;
             flex-wrap: wrap;
         }
         .page-nav-bottom {
@@ -1724,28 +1715,27 @@
             gap: 8px;
             padding: 16px 0 0;
             margin: 32px 0 0;
-            border-top: 1px solid #d0d7de;
+            border-top: 1px solid #21262d;
             flex-wrap: wrap;
         }
         .page-nav-btn {
-            color: #666666;
+            color: #8b949e;
             text-decoration: none;
             font-size: .83em;
             padding: 6px 14px;
             border-radius: 6px;
-            border: 1px solid #d0d7de;
-            background: #f5f7fa;
+            border: 1px solid #30363d;
+            background: #161b22;
             transition: all .2s;
             white-space: nowrap;
         }
         .page-nav-btn:hover {
-            color: #333333;
-            border-color: #003366;
+            color: #e6edf3;
+            border-color: #58a6ff;
         }
         .page-nav-spacer { flex: 1; min-width: 8px; }
 
     </style>
-    <link rel="stylesheet" href="../ibee.css">
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -1794,25 +1784,24 @@
 
     <div class="holo-body">
         <div class="lang-switch">
-            <a href="../" class="lang-btn">EN</a>
-            <span class="lang-btn active">日本語</span>
+            <a href="../" class="lang-btn">🇬🇧 EN</a>
+            <span class="lang-btn active">🇯🇵 日本語</span>
         </div>
         <nav class="page-nav">
-            <a href="index.html" class="page-nav-btn">目次</a>
+            <a href="index.html" class="page-nav-btn">📑 目次</a>
             <div class="page-nav-spacer"></div>
-            <a href="part2.html" class="page-nav-btn">← 第２章 構築可能な環境</a>
-            <a href="part4.html" class="page-nav-btn">第４章 実際の状況 →</a>
+            <a href="part2.html" class="page-nav-btn">◀ Part 2 構築可能な環境</a>
+            <a href="part4.html" class="page-nav-btn">Part 4 実際の状況 ▶</a>
         </nav>
-                <!-- ===== 第３章：構築方法 ===== -->
+        <!-- ===== Part 3：構築方法 ===== -->
         <div class="part-header fade-in" id="part-build">
-            <div><span class="part-label" style="border-color:#9a6700;color:#9a6700">第３章</span></div>
-            <div class="part-title">構築方法</div>
-            <div class="part-subtitle">ホロビオント式水槽の設計・立ち上げ・運用の汎用的手順</div>
+            <div><span class="part-label" style="border-color:#d29922;color:#d29922">Part 3</span></div>
+            <div class="part-title">構築方法 — 著者の実装例</div>
+            <div class="part-subtitle">以下は著者が実際に採用した構成・レシピ・手順である</div>
         </div>
 
-        <h2 id="sec-design">3.1 システム設計</h2>
+        <h2 id="sec-design">6. システム設計</h2>
         <h3>オーバーフロー式が必要な理由</h3>
-        <p>本システムではバクテリアが爆増するため、酸素要求量が通常の水槽と比較にならないほど高い。各ろ過方式の適合性を以下に示す。</p>
         <div class="holo-table-wrap fade-in">
             <table class="holo-table">
                 <tr>
@@ -1825,13 +1814,13 @@
                     <td data-label="ろ過方式"><strong>オーバーフロー式</strong></td>
                     <td data-label="ヘドロ輸送">サンプへ自動落下</td>
                     <td data-label="酸素供給">落水曝気で十分</td>
-                    <td data-label="適合性">唯一の適合（◎）</td>
+                    <td data-label="適合性">唯一の適合 ✅</td>
                 </tr>
                 <tr>
                     <td data-label="ろ過方式">外部フィルター</td>
                     <td data-label="ヘドロ輸送">内部で即座に詰まる</td>
                     <td data-label="酸素供給">ポンプ循環のみ</td>
-                    <td data-label="適合性">不適合（×）</td>
+                    <td data-label="適合性">絶対NG 🚫</td>
                 </tr>
                 <tr>
                     <td data-label="ろ過方式">上部フィルター</td>
@@ -1857,20 +1846,84 @@
 
         <hr>
 
-        <h2 id="sec-setup">3.2 立ち上げ手順（約1ヶ月）</h2>
+        <h2 id="sec-recipe">炭素源エキスのレシピ</h2>
+
+        <h3>ベース液</h3>
+
+        <!-- レシピカード -->
+
+
+        <div class="recipe-wrap fade-in">
+            <div class="recipe-section-label">⚗️ ベース液（合計約265ml）</div>
+            <div class="recipe-grid">
+                <div class="recipe-card-item recipe-fast">
+                    <div class="recipe-emoji">🍶</div>
+                    <div class="recipe-name">ウォッカ</div>
+                    <div class="recipe-amount">200 ml</div>
+                    <div class="recipe-component">主成分：エタノール</div>
+                    <span class="recipe-speed speed-fast">⚡ 速効性</span>
+                </div>
+                <div class="recipe-card-item recipe-mid">
+                    <div class="recipe-emoji">🍶</div>
+                    <div class="recipe-name">米酢</div>
+                    <div class="recipe-amount">50 ml</div>
+                    <div class="recipe-component">主成分：酢酸</div>
+                    <span class="recipe-speed speed-mid">⏱ 中速</span>
+                </div>
+                <div class="recipe-card-item recipe-slow">
+                    <div class="recipe-emoji">🥄</div>
+                    <div class="recipe-name">グラニュー糖</div>
+                    <div class="recipe-amount">15 g</div>
+                    <div class="recipe-component">主成分：スクロース</div>
+                    <span class="recipe-speed speed-slow">🌿 緩効性</span>
+                </div>
+            </div>
+            <div class="recipe-section-label">🧂 漬け込み素材（ミネラル補給）</div>
+            <div class="recipe-mineral-grid">
+                <div class="recipe-mineral-item">
+                    <div class="recipe-mineral-emoji">🌊</div>
+                    <div class="recipe-mineral-name">藻塩</div>
+                    <div class="recipe-mineral-note">Na・K・Mg・Ca・ヨウ素</div>
+                </div>
+                <div class="recipe-mineral-item">
+                    <div class="recipe-mineral-emoji">🍌</div>
+                    <div class="recipe-mineral-name">バナナ（可食部）</div>
+                    <div class="recipe-mineral-note">カリウム・Mg補充</div>
+                </div>
+                <div class="recipe-mineral-item">
+                    <div class="recipe-mineral-emoji">🍵</div>
+                    <div class="recipe-mineral-name">ルイボスティー</div>
+                    <div class="recipe-mineral-note">Ca・K・Zn・Mn等</div>
+                </div>
+            </div>
+            <p style="font-size:.78em;color:#8b949e;margin:8px 0 0">3種の炭素源を組み合わせることでモノカルチャー化を防ぎ、多様なバクテリアコミュニティを維持する。</p>
+        </div>
+
+        <div class="holo-warn-yellow fade-in">
+            <strong>⚠️ 注意</strong><br>
+            バナナは必ず可食部（果肉）のみ使用すること。皮には農薬が残留している場合があり、エキスに溶け出してエビ類が全滅する危険がある。
+        </div>
+        <p>本エキスをサンプへ定量（目安：ポンプ1プッシュ）を毎日投入する。ドーシングポンプによる完全自動化も可能。ウォッカのアルコールが防腐剤として機能するため、常温保存が可能である。</p>
+
+        <hr>
+
+        <h2 id="sec-setup">立ち上げ手順（約1ヶ月）</h2>
 
         <div class="step-wrap fade-in">
             <div class="step-item">
                 <div class="step-num">1</div>
                 <div class="step-title">底床の選定</div>
                 <div class="step-body">
-                    多孔質で水中崩壊しない底床素材を選定する。バクテリアの定着面積が大きく、栄養分が少ないことが望ましい。底床素材の化学的性質がpHロックの平衡点を決定するため、目標とする水質に応じて選択する。
+                    焼赤玉土（硬質）を推奨する。多孔質でバクテリアが定着しやすく、栄養分がないため初期水質が安定しやすい。
+                    <div class="holo-warn-purple" style="margin-top:10px">
+                        <strong>📌 重要</strong><br>必ず「硬質」タイプを選ぶこと。通常の赤玉土は水中で崩れる。
+                    </div>
                 </div>
             </div>
             <div class="step-item">
                 <div class="step-num">2</div>
-                <div class="step-title">サンプへの多孔質ろ材の充填</div>
-                <div class="step-body">サンプ内に多孔質ろ材を可能な限り敷き詰める。ポンプとは区画を隔てること。バクテリアの定着面積を最大化することが目的である。</div>
+                <div class="step-title">サンプへの赤玉土充填</div>
+                <div class="step-body">サンプ内にも焼赤玉土を可能な限り敷き詰める。ポンプとは区画を隔てること。バクテリアの定着面積を最大化する。</div>
             </div>
             <div class="step-item">
                 <div class="step-num">3</div>
@@ -1878,7 +1931,7 @@
                 <div class="step-body">
                     水を入れてオーバーフローを空回し。ゴーストフィーディング（餌を少量投入してアンモニア源を供給）と炭素源エキス投入を開始する。数日以内に白濁が始まる。
                     <div class="holo-warn-red" style="margin-top:10px">
-                        <strong>※ 立ち上げ期間の禁止事項</strong><br>
+                        <strong>🚫 立ち上げ期間の禁止事項</strong><br>
                         <strong>換水</strong>・<strong>白濁除去剤の使用</strong><br>白濁はバクテリアブルームであり、系が正常に進行していることを示す。介入すると従属栄養細菌のコロニー形成が初期化される。
                     </div>
                 </div>
@@ -1888,85 +1941,67 @@
                 <div class="step-title">1ヶ月継続 → 突然のクリア化</div>
                 <div class="step-body">
                     白濁したまま毎日投入を継続する。約1ヶ月後、水が急速に透明化することが観察される。これはバクテリアのフロック形成と底床への定着が完了し、系が安定状態に移行した指標である。理論上、十分な酸素と炭素源が確保された時点で従属栄養細菌によるアンモニア同化が成立するため、この段階から生体投入が可能となる。
+                    <div class="holo-tip" style="margin-top:10px">
+                        <span class="holo-label">🔧 トラブルシューティング</span>
+                        <strong>腐臭がしたら</strong>：嫌気性分解が起きている——酸素不足のサイン。緊急エアレーション追加、ポンプを強化すること。
+                    </div>
 
-                    <!-- 水質変化グラフ（削除済み） -->
-                    
+                    <!-- 水質変化グラフ -->
+
+
+                    <div class="wq-graph">
+                        <div class="wq-title">📊 立ち上げ期間の水の透明度イメージ</div>
+                        <div class="wq-chart">
+                            <div class="wq-area"></div>
+                            <svg class="wq-svg" viewBox="0 0 400 140" preserveAspectRatio="none">
+                                <polyline fill="none" stroke="#58a6ff" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    points="0,133 12,112 32,63 60,28 88,17 120,21 160,25 200,35 240,56 280,98 300,123 320,131 340,133 400,133" />
+                            </svg>
+                            <!-- イベントマーカー -->
+                            <div class="wq-event" style="left:14%;top:8%">
+                                <div class="wq-event-dot" style="background:#f85149"></div>白濁ピーク
+                            </div>
+                            <div class="wq-event" style="left:68%;top:55%">
+                                <div class="wq-event-dot" style="background:#d29922"></div>徐々に改善
+                            </div>
+                            <div class="wq-event" style="right:8%;top:78%">
+                                <div class="wq-event-dot" style="background:#3fb950"></div>クリア化 ✨
+                            </div>
+                        </div>
+                        <div class="wq-labels">
+                            <span>Day 1</span>
+                            <span>Week 1</span>
+                            <span>Week 2</span>
+                            <span>Week 3</span>
+                            <span>Week 4 〜</span>
+                        </div>
+                    </div>
+
                 </div>
             </div>
             <div class="step-item">
                 <div class="step-num">5</div>
-                <div class="step-title">水草植付け＆デトリタス食性生物の投入</div>
-                <div class="step-body">クリア化確認後、水草を植え付け、サンプにデトリタス食性生物を投入する。第２章で述べたフルオート方式を採用する場合は、ポンプを通過できるサイズの生物を選択する。</div>
+                <div class="step-title">水草植付け＆ベントス投入</div>
+                <div class="step-body">クリア化確認後、水草を植え付け、サンプにイトミミズ・ヨコエビ等を投入する。</div>
             </div>
             <div class="step-item">
                 <div class="step-num">6</div>
                 <div class="step-title">魚の段階的導入</div>
                 <div class="step-body">
-                    低層魚→中層魚→上層魚→頂点捕食者の順に導入する。デトリタス食性生物が安定するまでは通常通り給餌。ポンプを通じてデトリタス食性生物が流入し、魚が自然に捕食する様子が確認できれば給餌を徐々に減らせる。</div>
+                    低層魚→中層魚→上層魚→頂点捕食者の順に導入する。ベントスが安定するまでは通常通り給餌。ポンプを通じてベントスが流入し、魚が自然に捕食する様子が確認できれば給餌を徐々に減らせる。</div>
             </div>
         </div>
 
         <hr>
-
-        <h2 id="sec-maintenance">3.3 管理手順</h2>
-
-        <h3>日常の管理</h3>
-        <p>系が安定した後の管理は極めて単純である。</p>
-        <div class="maint-grid fade-in">
-            <div class="maint-card"><span class="maint-freq maint-freq-daily">毎日</span><span
-                    class="maint-text">炭素源エキスを定量投入する</span></div>
-            <div class="maint-card"><span class="maint-freq maint-freq-daily">毎日</span><span
-                    class="maint-text">水槽を観察する（異常確認）</span></div>
-            <div class="maint-card"><span class="maint-freq maint-freq-any">随時</span><span
-                    class="maint-text">蒸発分の足し水</span></div>
-            <div class="maint-card"><span class="maint-freq maint-freq-any">随時</span><span
-                    class="maint-text">水草のトリミング</span></div>
-        </div>
-        <p>水草を植える場合は、カリウム・マグネシウム・鉄等の微量元素の補給が必要となる。炭素源エキスへの添加、または水草用液肥の併用を検討する。</p>
-
-        <h3>トラブルシューティング</h3>
-        <p style="font-size:.88em;color:#666666">好気性アプローチの利点は、異常が目で見て確認できること。以下のサインが見られたら対処する。</p>
-        <div class="holo-table-wrap fade-in">
-            <table class="holo-table">
-                <tr>
-                    <th>状況</th>
-                    <th>観察できるサイン</th>
-                    <th>対処法</th>
-                </tr>
-                <tr>
-                    <td data-label="状況">ヘドロ除去が追いつかない</td>
-                    <td data-label="観察できるサイン">サンプのヘドロが増える</td>
-                    <td data-label="対処法">炭素源投入量を減らす・手動で吸出す</td>
-                </tr>
-                <tr>
-                    <td data-label="状況">デトリタス食性生物が増えすぎている</td>
-                    <td data-label="観察できるサイン">サンプが過密になる</td>
-                    <td data-label="対処法">魚にもっと食べさせる・一部を間引く</td>
-                </tr>
-                <tr>
-                    <td data-label="状況">酸素が不足している</td>
-                    <td data-label="観察できるサイン">白濁に腐臭が混じる</td>
-                    <td data-label="対処法">エアレーション追加・ポンプを強化する</td>
-                </tr>
-                <tr>
-                    <td data-label="状況">バランスが取れている</td>
-                    <td data-label="観察できるサイン">水がクリアで臭いがない</td>
-                    <td data-label="対処法">何もしなくてよい</td>
-                </tr>
-            </table>
-        </div>
-
-        <hr>
         <nav class="page-nav-bottom">
-            <a href="index.html" class="page-nav-btn">目次</a>
+            <a href="index.html" class="page-nav-btn">📑 目次</a>
             <div class="page-nav-spacer"></div>
-            <a href="part2.html" class="page-nav-btn">← 第２章 構築可能な環境</a>
-            <a href="part4.html" class="page-nav-btn">第４章 実際の状況 →</a>
+            <a href="part2.html" class="page-nav-btn">◀ Part 2 構築可能な環境</a>
+            <a href="part4.html" class="page-nav-btn">Part 4 実際の状況 ▶</a>
         </nav>
 
-
     </div>
-    <footer class="ibee-footer"><div class="ibee-footer-inner"><div class="ibee-footer-org">生物環境技術研究会</div><div class="ibee-footer-en">Institute of Biological Environmental Engineering</div><div class="ibee-footer-since">Since. 1999</div><div class="ibee-footer-cite"><div class="ibee-footer-cite-label">推奨引用形式</div>生物環境技術研究会 (2026). ホロビオントアクアリウム理論. Retrieved from https://holobiont-aqua.github.io/holobiont-aquarium/ja/</div><div class="ibee-footer-note">※本サイトは個人が運営する技術情報サイトです</div></div></footer>
 </body>
 
 </html>

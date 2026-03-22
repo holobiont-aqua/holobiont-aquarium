@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="10 45 180 110">
+  <ellipse cx="100" cy="100" rx="80" ry="40" 
+           transform="rotate(-25 100 100)" 
+           fill="none" stroke="#ffffff" stroke-width="3.5" opacity=".9"/>
+  <ellipse cx="100" cy="100" rx="74" ry="36" 
+           transform="rotate(-25 100 100)" 
+           fill="none" stroke="#ffffff" stroke-width="1.2" opacity=".5"/>
+  <text x="100" y="100" 
+        text-anchor="middle" 
+        dominant-baseline="central"
+        font-family="'Inter','Helvetica Neue',Arial,sans-serif" 
+        font-weight="700" 
+        font-size="50" 
+        fill="#ffffff" 
+        letter-spacing="2">IBEE</text>
+</svg>
