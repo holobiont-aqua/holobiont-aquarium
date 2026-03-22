@@ -55,4 +55,60 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- English: Top Page -->
+  <url>
+    <loc>https://holobiont-aqua.github.io/IBEE/en/ibee_top.html</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- English: Overview -->
+  <url>
+    <loc>https://holobiont-aqua.github.io/IBEE/en/index.html</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- English: Ch.1 Theory -->
+  <url>
+    <loc>https://holobiont-aqua.github.io/IBEE/en/part1.html</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- English: Ch.2 Environment -->
+  <url>
+    <loc>https://holobiont-aqua.github.io/IBEE/en/part2.html</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- English: Ch.3 Methods -->
+  <url>
+    <loc>https://holobiont-aqua.github.io/IBEE/en/part3.html</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- English: Ch.4 Data -->
+  <url>
+    <loc>https://holobiont-aqua.github.io/IBEE/en/part4.html</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- English: Ch.5 Discussion -->
+  <url>
+    <loc>https://holobiont-aqua.github.io/IBEE/en/part5.html</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>

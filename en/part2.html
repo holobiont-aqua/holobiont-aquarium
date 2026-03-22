@@ -1,0 +1,2139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 2 — Viable Environments | Holobiont Aquarium Theory</title>
+    <meta name="description" content="Applicable configurations and parameter options for the Holobiont Aquarium Theory. Explains flexibility of substrate, detritivores, and carbon sources.">
+    <meta name="keywords" content="no water change,zero water change,aquarium,carbon source,vodka method,benthos,nitrate removal,overflow tank,planted tank,large tank,autonomous ecosystem,holobiont">
+    <meta property="og:title" content="Chapter 2 — Viable Environments | Holobiont Aquarium Theory">
+    <meta property="og:description" content="Applicable configurations and parameter options for the Holobiont Aquarium Theory. Explains flexibility of substrate, detritivores, and carbon sources.">
+    <meta property="og:image" content="https://holobiont-aqua.github.io/IBEE/photos/tank_overview.jpg">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://holobiont-aqua.github.io/IBEE/en/part2.html">
+    <link rel="canonical" href="https://holobiont-aqua.github.io/IBEE/en/part2.html">
+    <link rel="alternate" hreflang="en" href="https://holobiont-aqua.github.io/IBEE/">
+    <link rel="alternate" hreflang="ja" href="https://holobiont-aqua.github.io/IBEE/ja/">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XQZMTDJE7C"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XQZMTDJE7C');
+    </script>
+</head>
+
+<body style="margin:0;padding:0;background:#ffffff;font-family:'Inter',sans-serif;">
+    <header class="ibee-header"><div class="ibee-header-inner"><a href="ibee_top.html" class="ibee-header-brand"><img src="../photos/ibee_logo.svg" alt="IBEE" class="ibee-header-logo"><div><div class="ibee-header-title">生物環境技術研究会</div><div class="ibee-header-subtitle">Institute of Biological Environmental Engineering</div></div></a></div></header>
+    <nav class="ibee-nav"><div class="ibee-nav-inner">
+        <a href="index.html">Overview</a>
+        <a href="part1.html">Ch.1 Theory</a>
+        <a href="part2.html" class="active">Ch.2 Environment</a>
+        <a href="part3.html">Ch.3 Methods</a>
+        <a href="part4.html">Ch.4 Data</a>
+        <a href="part5.html">Ch.5 Discussion</a>
+    </div></nav>
+
+    <style>
+        /* ===== 基本 ===== */
+        * {
+            box-sizing: border-box
+        }
+
+        .holo-body {
+            font-size: 16px;
+            line-height: 1.85;
+            color: #333333;
+            word-break: break-word;
+            background: #ffffff;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px
+        }
+
+        /* ===== ボックス類 ===== */
+        .holo-summary {
+            background: #ffffff;
+            border: 1px solid #d0d7de;
+            border-left: 4px solid #003366;
+            border-radius: 8px;
+            padding: 16px 18px;
+            margin: 20px 0
+        }
+
+        .holo-summary ul {
+            margin: 8px 0 0;
+            padding-left: 20px;
+            line-height: 2
+        }
+
+        .holo-card {
+            background: #f5f7fa;
+            border: 1px solid #d0d7de;
+            border-radius: 8px;
+            padding: 14px 16px;
+            margin: 10px 0
+        }
+
+        .holo-card-green {
+            border-left: 3px solid #1a7f37
+        }
+
+        .holo-warn-red {
+            background: #fef2f2;
+            border: 1px solid #cf222e;
+            border-left: 4px solid #cf222e;
+            border-radius: 8px;
+            padding: 14px 16px;
+            margin: 14px 0;
+            line-height: 1.8
+        }
+
+        .holo-warn-yellow {
+            background: #fffbeb;
+            border: 1px solid #9a6700;
+            border-left: 4px solid #9a6700;
+            border-radius: 8px;
+            padding: 14px 16px;
+            margin: 14px 0
+        }
+
+        .holo-warn-purple {
+            background: #faf5ff;
+            border: 1px solid #7c3aed;
+            border-left: 4px solid #7c3aed;
+            border-radius: 8px;
+            padding: 14px 16px;
+            margin: 14px 0
+        }
+
+        .holo-tip {
+            background: #f5f7fa;
+            border: 1px solid #d0d7de;
+            border-radius: 8px;
+            padding: 14px 16px;
+            margin: 14px 0
+        }
+
+        .holo-blockquote {
+            border-left: 3px solid #3d444d;
+            padding: 4px 16px;
+            color: #666666;
+            margin: 16px 0;
+            font-style: italic
+        }
+
+        .holo-label {
+            font-size: .78em;
+            text-transform: uppercase;
+            letter-spacing: .07em;
+            color: #666666;
+            margin: 0 0 6px;
+            display: block
+        }
+
+        /* ===== テーブル（モバイル：カード積み / PC：通常テーブル） ===== */
+        .holo-table-wrap {
+            margin: 14px 0
+        }
+
+        .holo-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: .9em
+        }
+
+        .holo-table th {
+            background: #f5f7fa;
+            color: #666666;
+            font-weight: 500;
+            text-align: left;
+            padding: 9px 12px;
+            border: 1px solid #d0d7de;
+            font-size: .8em;
+            text-transform: uppercase;
+            letter-spacing: .03em
+        }
+
+        .holo-table td {
+            padding: 9px 12px;
+            border: 1px solid #d0d7de;
+            color: #333333;
+            vertical-align: top;
+            line-height: 1.6
+        }
+
+        .holo-table tr:nth-child(even) td {
+            background: #ffffff
+        }
+
+        /* モバイル：行をカード化 */
+        @media(max-width:600px) {
+            .holo-table-wrap {
+                overflow-x: visible
+            }
+
+            /* theadがないため tr:first-child でヘッダー行を非表示 */
+            .holo-table tr:first-child {
+                display: none
+            }
+
+            .holo-table,
+            .holo-table tbody,
+            .holo-table tr,
+            .holo-table td {
+                display: block;
+                width: 100%
+            }
+
+            .holo-table tr {
+                background: #f5f7fa;
+                border: 1px solid #d0d7de;
+                border-radius: 8px;
+                margin-bottom: 10px;
+                overflow: hidden
+            }
+
+            .holo-table tr:nth-child(even) td {
+                background: transparent
+            }
+
+            .holo-table td {
+                border: none;
+                border-bottom: 1px solid #d0d7de;
+                padding: 8px 14px
+            }
+
+            .holo-table td:last-child {
+                border-bottom: none
+            }
+
+            .holo-table td::before {
+                content: attr(data-label);
+                display: block;
+                font-size: .7em;
+                color: #003366;
+                text-transform: uppercase;
+                letter-spacing: .05em;
+                margin-bottom: 3px;
+                font-weight: 600
+            }
+        }
+
+        /* PC */
+        @media(min-width:601px) {
+            .holo-table-wrap {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                border-radius: 8px
+            }
+
+            .holo-table {
+                font-size: .93em
+            }
+        }
+
+        /* ===== コードブロック ===== */
+        .holo-pre {
+            background: #f5f7fa;
+            border: 1px solid #d0d7de;
+            border-radius: 8px;
+            padding: 14px;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            line-height: 1.7;
+            font-size: .82em;
+            white-space: pre;
+            color: #333333
+        }
+
+        /* ===== PC ===== */
+        @media(min-width:640px) {
+            .holo-table {
+                font-size: .93em;
+                white-space: normal
+            }
+
+            .holo-pre {
+                font-size: .88em
+            }
+        }
+
+        /* ===== スクロールフェードイン ===== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(16px);
+            transition: opacity .6s ease, transform .6s ease
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0)
+        }
+
+        .fade-in-delay-1 {
+            transition-delay: .1s
+        }
+
+        .fade-in-delay-2 {
+            transition-delay: .2s
+        }
+
+        .fade-in-delay-3 {
+            transition-delay: .3s
+        }
+
+        /* ===== 硝化サイクル図 ===== */
+        @keyframes nc-flow {
+            0% {
+                transform: translateY(-2px);
+                opacity: 0
+            }
+
+            20% {
+                opacity: 1
+            }
+
+            100% {
+                transform: translateY(36px);
+                opacity: 0
+            }
+        }
+
+        @keyframes nc-fadein {
+            from {
+                opacity: 0;
+                transform: translateY(8px)
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0)
+            }
+        }
+
+        @keyframes nc-pulse {
+
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(88, 166, 255, 0)
+            }
+
+            50% {
+                box-shadow: 0 0 0 8px rgba(0, 51, 102, .15)
+            }
+        }
+
+        .nc-wrap {
+            max-width: 400px;
+            margin: 20px auto
+        }
+
+        .nc-node {
+            border-radius: 8px;
+            padding: 10px 14px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            animation: nc-fadein .5s ease both
+        }
+
+        .nc-node-base {
+            background: #f5f7fa;
+            border: 1px solid #d0d7de
+        }
+
+        .nc-node-danger {
+            background: #fce8e8;
+            border: 1px solid #cf222e
+        }
+
+        .nc-node-warn {
+            background: #2d1f08;
+            border: 1px solid #9a6700
+        }
+
+        .nc-node-acc {
+            background: #f0fdf4;
+            border: 1px solid #1a7f37
+        }
+
+        .nc-node-sys {
+            background: #eff6ff;
+            border: 1px solid #003366;
+            animation: nc-pulse 2s infinite, nc-fadein .5s ease both
+        }
+
+        .nc-node-out {
+            background: #f0fdf4;
+            border: 1px solid #1a7f37
+        }
+
+        .nc-name {
+            color: #333333;
+            font-weight: bold;
+            font-size: .88em
+        }
+
+        .nc-sub {
+            color: #666666;
+            font-size: .74em;
+            margin-top: 2px
+        }
+
+        .nc-badge {
+            font-size: .68em;
+            padding: 2px 8px;
+            border-radius: 10px;
+            white-space: nowrap;
+            flex-shrink: 0;
+            margin-left: 8px
+        }
+
+        .nc-badge-red {
+            background: #3d0f0f;
+            color: #cf222e;
+            border: 1px solid #cf222e
+        }
+
+        .nc-badge-ora {
+            background: #fffbeb;
+            color: #9a6700;
+            border: 1px solid #9a6700
+        }
+
+        .nc-badge-yel {
+            background: #1a2a0a;
+            color: #1a7f37;
+            border: 1px solid #1a7f37
+        }
+
+        .nc-conn {
+            position: relative;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+
+        .nc-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #d0d7de;
+            transform: translateX(-50%)
+        }
+
+        .nc-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #003366;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: nc-flow 1.6s ease-in infinite
+        }
+
+        .nc-dot-green {
+            background: #1a7f37
+        }
+
+        .nc-lbl {
+            background: #ffffff;
+            color: #666666;
+            font-size: .72em;
+            padding: 3px 10px;
+            border-radius: 4px;
+            border: 1px solid #d0d7de;
+            position: relative;
+            z-index: 1
+        }
+
+        .nc-cross {
+            max-width: 400px;
+            margin: 0 auto 8px;
+            padding: 8px 14px;
+            background: #111;
+            border: 1px dashed #3d444d;
+            border-radius: 8px;
+            text-align: center;
+            color: #888888;
+            font-size: .8em;
+            text-decoration: line-through
+        }
+
+        .nc-label-sys {
+            text-align: center;
+            color: #003366;
+            font-size: .72em;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            margin: 4px 0 0
+        }
+
+        /* ===== ベントスループ図 ===== */
+        @keyframes bl-spin {
+            to {
+                stroke-dashoffset: -440
+            }
+        }
+
+        @keyframes bl-badge-pulse {
+
+            0%,
+            100% {
+                transform: scale(1)
+            }
+
+            50% {
+                transform: scale(1.05)
+            }
+        }
+
+        .bl-wrap {
+            margin: 20px auto;
+            max-width: 480px
+        }
+
+        .bl-cycle {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            grid-template-rows: auto auto auto;
+            gap: 0;
+            align-items: center;
+            justify-items: center
+        }
+
+        .bl-box {
+            background: #f5f7fa;
+            border: 1px solid #d0d7de;
+            border-radius: 8px;
+            padding: 10px 12px;
+            font-size: .82em;
+            color: #333333;
+            text-align: center;
+            width: 100%;
+            line-height: 1.5
+        }
+
+        .bl-box-sump {
+            border-color: #003366;
+            background: #eff6ff
+        }
+
+        .bl-box-main {
+            border-color: #1a7f37;
+            background: #f0fdf4
+        }
+
+        .bl-box-label {
+            font-size: .68em;
+            text-transform: uppercase;
+            letter-spacing: .05em;
+            margin-bottom: 4px
+        }
+
+        .bl-box-sump .bl-box-label {
+            color: #003366
+        }
+
+        .bl-box-main .bl-box-label {
+            color: #1a7f37
+        }
+
+        .bl-arrow-v {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 4px 0;
+            position: relative;
+            min-height: 48px
+        }
+
+        .bl-arrow-line {
+            width: 2px;
+            flex: 1;
+            background: linear-gradient(to bottom, #d0d7de, #d0d7de)
+        }
+
+        .bl-arrow-label {
+            font-size: .68em;
+            color: #666666;
+            text-align: center;
+            padding: 2px 6px;
+            background: #ffffff;
+            border: 1px solid #d0d7de;
+            border-radius: 4px;
+            position: relative;
+            z-index: 1;
+            white-space: nowrap
+        }
+
+        @keyframes bl-dotfall {
+            0% {
+                top: 0;
+                opacity: 0
+            }
+
+            10% {
+                opacity: 1
+            }
+
+            90% {
+                opacity: 1
+            }
+
+            100% {
+                top: 100%;
+                opacity: 0
+            }
+        }
+
+        .bl-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bl-dotfall 2s ease-in infinite
+        }
+
+        .bl-dot-blue {
+            background: #003366
+        }
+
+        .bl-dot-green {
+            background: #1a7f37
+        }
+
+        .bl-arrow-h-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 4px;
+            height: 100%
+        }
+
+        .bl-arrow-h {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            flex-direction: column
+        }
+
+        .bl-arrow-h-line {
+            width: 2px;
+            height: 80px;
+            background: #d0d7de;
+            position: relative;
+            overflow: hidden
+        }
+
+        @keyframes bl-hflow {
+            0% {
+                top: -10px;
+                opacity: 0
+            }
+
+            20% {
+                opacity: 1
+            }
+
+            80% {
+                opacity: 1
+            }
+
+            100% {
+                top: calc(100% + 10px);
+                opacity: 0
+            }
+        }
+
+        .bl-h-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bl-hflow 2s linear infinite
+        }
+
+        .bl-h-dot-down {
+            background: #003366;
+            animation-delay: 0s
+        }
+
+        .bl-h-dot-up {
+            background: #1a7f37;
+            animation-delay: 1s
+        }
+
+        .bl-arrow-h-label {
+            font-size: .65em;
+            color: #666666;
+            text-align: center;
+            writing-mode: horizontal-tb
+        }
+
+        /* ===== STEPタイムライン ===== */
+        .step-wrap {
+            position: relative;
+            padding-left: 20px;
+            margin: 24px 0
+        }
+
+        .step-wrap::before {
+            content: '';
+            position: absolute;
+            left: 16px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #003366, #1a7f37)
+        }
+
+        .step-item {
+            position: relative;
+            padding: 0 0 24px 32px
+        }
+
+        .step-item:last-child {
+            padding-bottom: 0
+        }
+
+        .step-num {
+            position: absolute;
+            left: -4px;
+            top: 0;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: #ffffff;
+            border: 2px solid #003366;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: .75em;
+            font-weight: bold;
+            color: #003366;
+            z-index: 1;
+            flex-shrink: 0
+        }
+
+        .step-item:last-child .step-num {
+            border-color: #1a7f37;
+            color: #1a7f37
+        }
+
+        .step-title {
+            font-weight: bold;
+            color: #333333;
+            margin: 4px 0 8px;
+            font-size: .95em;
+            padding-top: 3px
+        }
+
+        .step-body {
+            color: #333333;
+            font-size: .9em;
+            line-height: 1.75
+        }
+
+        /* ===== pHカウンター ===== */
+        .ph-counter-wrap {
+            background: #ffffff;
+            border: 1px solid #d0d7de;
+            border-radius: 12px;
+            padding: 24px 16px;
+            margin: 20px 0;
+            text-align: center
+        }
+
+        .ph-value {
+            font-size: 3.5em;
+            font-weight: bold;
+            color: #003366;
+            letter-spacing: .05em;
+            line-height: 1;
+            font-variant-numeric: tabular-nums
+        }
+
+        .ph-unit {
+            font-size: 1.2em;
+            color: #666666;
+            margin-left: 4px
+        }
+
+        .ph-label {
+            color: #666666;
+            font-size: .88em;
+            margin-top: 8px
+        }
+
+        .ph-bar-wrap {
+            background: #f5f7fa;
+            border-radius: 8px;
+            height: 8px;
+            margin: 16px 0 8px;
+            overflow: hidden
+        }
+
+        .ph-bar {
+            height: 100%;
+            background: linear-gradient(to right, #cf222e, #9a6700, #003366, #1a7f37);
+            width: 0;
+            border-radius: 8px;
+            transition: width 1.5s ease
+        }
+
+        .ph-bar.animated {
+            width: 100%
+        }
+
+        .ph-bar-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: .7em;
+            color: #888888
+        }
+
+        /* ===== 「三つの無」カード ===== */
+        .zero-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            margin: 16px 0
+        }
+
+        @media(min-width:500px) {
+            .zero-grid {
+                grid-template-columns: repeat(3, 1fr)
+            }
+        }
+
+        .zero-card {
+            background: #eff6ff;
+            border: 1px solid #d0d7de;
+            border-radius: 10px;
+            padding: 16px;
+            text-align: center
+        }
+
+        .zero-icon {
+            font-size: 2em;
+            margin-bottom: 8px
+        }
+
+        .zero-title {
+            font-weight: bold;
+            color: #003366;
+            font-size: .92em;
+            margin-bottom: 6px
+        }
+
+        .zero-body {
+            font-size: .82em;
+            color: #666666;
+            line-height: 1.6;
+            text-align: left
+        }
+
+        /* ===== 維持管理カード ===== */
+        .maint-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 8px;
+            margin: 14px 0
+        }
+
+        @media(min-width:400px) {
+            .maint-grid {
+                grid-template-columns: 1fr 1fr
+            }
+        }
+
+        .maint-card {
+            background: #f5f7fa;
+            border: 1px solid #d0d7de;
+            border-radius: 8px;
+            padding: 12px 14px;
+            display: flex;
+            gap: 10px;
+            align-items: flex-start
+        }
+
+        .maint-freq {
+            font-size: .7em;
+            font-weight: bold;
+            padding: 2px 8px;
+            border-radius: 4px;
+            white-space: nowrap;
+            flex-shrink: 0;
+            margin-top: 2px
+        }
+
+        .maint-freq-daily {
+            background: #eff6ff;
+            color: #003366;
+            border: 1px solid #003366
+        }
+
+        .maint-freq-any {
+            background: #f0fdf4;
+            color: #1a7f37;
+            border: 1px solid #1a7f37
+        }
+
+        .maint-text {
+            color: #333333;
+            font-size: .85em;
+            line-height: 1.5
+        }
+
+        /* ===== faq：スマホ向けアコーディオン ===== */
+        details.holo-details {
+            background: #f5f7fa;
+            border: 1px solid #d0d7de;
+            border-radius: 8px;
+            margin: 8px 0;
+            overflow: hidden
+        }
+
+        details.holo-details summary {
+            padding: 12px 16px;
+            cursor: pointer;
+            color: #333333;
+            font-weight: bold;
+            font-size: .9em;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            -webkit-tap-highlight-color: transparent
+        }
+
+        details.holo-details summary::after {
+            content: '＋';
+            color: #666666;
+            font-size: 1.1em;
+            flex-shrink: 0
+        }
+
+        details.holo-details[open] summary::after {
+            content: '－'
+        }
+
+        details.holo-details .details-body {
+            padding: 0 16px 14px;
+            color: #333333;
+            font-size: .88em;
+            line-height: 1.75
+        }
+
+
+        .approach-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 16px 0
+        }
+
+        @media(max-width:480px) {
+            .approach-grid {
+                grid-template-columns: 1fr
+            }
+        }
+
+        .approach-card {
+            background: #f5f7fa;
+            border: 1px solid #d0d7de;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: border-color .2s
+        }
+
+        .approach-card:hover {
+            border-color: #003366
+        }
+
+        .approach-card-body {
+            padding: 10px 14px
+        }
+
+        .approach-card-title {
+            font-weight: bold;
+            font-size: .88em;
+            color: #333333;
+            margin: 0 0 4px
+        }
+
+        .approach-card-desc {
+            font-size: .78em;
+            color: #666666;
+            line-height: 1.5;
+            margin: 0
+        }
+
+        .approach-card-badge {
+            display: inline-block;
+            font-size: .68em;
+            padding: 1px 8px;
+            border-radius: 4px;
+            margin-bottom: 6px
+        }
+
+        .badge-green {
+            background: #f0fdf4;
+            color: #1a7f37;
+            border: 1px solid #1a7f37
+        }
+
+        .badge-yellow {
+            background: #fffbeb;
+            color: #9a6700;
+            border: 1px solid #9a6700
+        }
+
+        .badge-red {
+            background: #fef2f2;
+            color: #cf222e;
+            border: 1px solid #cf222e
+        }
+
+        .badge-blue {
+            background: #eff6ff;
+            color: #003366;
+            border: 1px solid #003366
+        }
+
+
+        .ap-svg {
+            width: 100%;
+            display: block;
+            background: #ffffff;
+            border-radius: 8px 8px 0 0
+        }
+
+        @keyframes ap-flow {
+            0% {
+                opacity: 0
+            }
+
+            15% {
+                opacity: 1
+            }
+
+            85% {
+                opacity: 1
+            }
+
+            100% {
+                opacity: 0
+            }
+        }
+
+        @keyframes ap-pulse {
+
+            0%,
+            100% {
+                r: 3
+            }
+
+            50% {
+                r: 5
+            }
+        }
+
+        @keyframes ap-dash {
+            to {
+                stroke-dashoffset: -12
+            }
+        }
+
+        .ap-dot {
+            animation: ap-flow 2s ease infinite
+        }
+
+        .ap-blink {
+            animation: ap-pulse 1.5s ease infinite
+        }
+
+        .ap-dashed {
+            stroke-dasharray: 4 4;
+            animation: ap-dash 1s linear infinite
+        }
+
+
+        .recipe-wrap {
+            margin: 16px 0
+        }
+
+        .recipe-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 14px
+        }
+
+        @media(max-width:500px) {
+            .recipe-grid {
+                grid-template-columns: 1fr
+            }
+        }
+
+        .recipe-card-item {
+            background: #f5f7fa;
+            border: 1px solid #d0d7de;
+            border-radius: 10px;
+            padding: 14px 12px;
+            text-align: center;
+            position: relative;
+            overflow: hidden
+        }
+
+        .recipe-card-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px
+        }
+
+        .recipe-fast::before {
+            background: linear-gradient(to right, #cf222e, #9a6700)
+        }
+
+        .recipe-mid::before {
+            background: #9a6700
+        }
+
+        .recipe-slow::before {
+            background: #1a7f37
+        }
+
+        .recipe-emoji {
+            font-size: 2.2em;
+            margin-bottom: 6px
+        }
+
+        .recipe-name {
+            font-weight: bold;
+            color: #333333;
+            font-size: .9em;
+            margin-bottom: 4px
+        }
+
+        .recipe-amount {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #003366;
+            margin-bottom: 4px
+        }
+
+        .recipe-component {
+            font-size: .72em;
+            color: #666666;
+            margin-bottom: 6px
+        }
+
+        .recipe-speed {
+            display: inline-block;
+            font-size: .68em;
+            padding: 2px 8px;
+            border-radius: 10px
+        }
+
+        .speed-fast {
+            background: #fef2f2;
+            color: #cf222e;
+            border: 1px solid #cf222e
+        }
+
+        .speed-mid {
+            background: #fffbeb;
+            color: #9a6700;
+            border: 1px solid #9a6700
+        }
+
+        .speed-slow {
+            background: #f0fdf4;
+            color: #1a7f37;
+            border: 1px solid #1a7f37
+        }
+
+        .recipe-mineral-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px
+        }
+
+        @media(max-width:500px) {
+            .recipe-mineral-grid {
+                grid-template-columns: 1fr 1fr
+            }
+        }
+
+        .recipe-mineral-item {
+            background: #f5f7fa;
+            border: 1px solid #d0d7de;
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center
+        }
+
+        .recipe-mineral-emoji {
+            font-size: 1.6em;
+            margin-bottom: 4px
+        }
+
+        .recipe-mineral-name {
+            font-size: .78em;
+            font-weight: bold;
+            color: #333333
+        }
+
+        .recipe-mineral-note {
+            font-size: .68em;
+            color: #666666;
+            margin-top: 2px
+        }
+
+        .recipe-section-label {
+            font-size: .75em;
+            text-transform: uppercase;
+            letter-spacing: .06em;
+            color: #666666;
+            margin: 14px 0 8px;
+            padding-left: 2px
+        }
+
+
+        .wq-graph {
+            background: #ffffff;
+            border: 1px solid #d0d7de;
+            border-radius: 10px;
+            padding: 14px;
+            margin-top: 14px
+        }
+
+        .wq-title {
+            font-size: .75em;
+            color: #666666;
+            text-transform: uppercase;
+            letter-spacing: .06em;
+            margin-bottom: 10px;
+            text-align: center
+        }
+
+        .wq-chart {
+            position: relative;
+            height: 140px;
+            background: linear-gradient(to bottom, rgba(0, 51, 102, .05), transparent);
+            border-radius: 6px;
+            overflow: hidden
+        }
+
+        .wq-area {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background: linear-gradient(to right, transparent 0%, rgba(139, 148, 158, .25) 3%, rgba(139, 148, 158, .5) 8%, rgba(248, 81, 73, .35) 15%, rgba(248, 81, 73, .5) 25%, rgba(248, 81, 73, .45) 35%, rgba(210, 153, 34, .3) 50%, rgba(210, 153, 34, .2) 60%, rgba(63, 185, 80, .15) 72%, rgba(63, 185, 80, .08) 80%, rgba(88, 166, 255, .12) 100%);
+            clip-path: polygon(0% 95%, 3% 80%, 8% 45%, 15% 20%, 22% 12%, 30% 15%, 40% 18%, 50% 25%, 60% 40%, 70% 70%, 75% 88%, 80% 93%, 85% 95%, 100% 95%, 100% 100%, 0% 100%)
+        }
+
+        @keyframes wq-line-draw {
+            from {
+                stroke-dashoffset: 800
+            }
+
+            to {
+                stroke-dashoffset: 0
+            }
+        }
+
+        .wq-svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%
+        }
+
+        .wq-svg polyline {
+            stroke-dasharray: 800;
+            animation: wq-line-draw 3s ease forwards
+        }
+
+        .wq-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 6px;
+            font-size: .65em;
+            color: #888888
+        }
+
+        .wq-event {
+            position: absolute;
+            font-size: .65em;
+            color: #333333;
+            text-align: center;
+            white-space: nowrap
+        }
+
+        .wq-event-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin: 0 auto 3px
+        }
+
+
+        .pyramid-section {
+            margin: 20px 0;
+            text-align: center
+        }
+
+        .pyramid-title {
+            font-size: .8em;
+            color: #666666;
+            text-transform: uppercase;
+            letter-spacing: .08em;
+            margin-bottom: 16px
+        }
+
+        .pyramid-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            max-width: 420px;
+            margin: 0 auto
+        }
+
+        .pyramid-tier {
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+            position: relative;
+            transition: transform .2s
+        }
+
+        .pyramid-tier:hover {
+            transform: scale(1.02)
+        }
+
+        .pyramid-t1 {
+            background: linear-gradient(135deg, #fef2f2, #fce8e8);
+            border: 1px solid #cf222e;
+            max-width: 50%
+        }
+
+        .pyramid-t2 {
+            background: linear-gradient(135deg, #eff6ff, #eff6ff);
+            border: 1px solid #003366;
+            max-width: 65%
+        }
+
+        .pyramid-t3 {
+            background: linear-gradient(135deg, #f0fdf4, #f0fdf4);
+            border: 1px solid #1a7f37;
+            max-width: 80%
+        }
+
+        .pyramid-t4 {
+            background: linear-gradient(135deg, #f5f7fa, #d0d7de);
+            border: 1px solid #d0d7de;
+            max-width: 95%
+        }
+
+        .pyramid-emoji {
+            font-size: 1.6em;
+            margin-bottom: 2px
+        }
+
+        .pyramid-name {
+            font-weight: bold;
+            color: #333333;
+            font-size: .88em
+        }
+
+        .pyramid-desc {
+            font-size: .7em;
+            color: #666666;
+            margin-top: 2px
+        }
+
+        .pyramid-arrow {
+            color: #d0d7de;
+            font-size: 1.2em;
+            line-height: 1
+        }
+
+        .pyramid-label {
+            font-size: .65em;
+            color: #666666;
+            letter-spacing: .05em;
+            margin-top: 12px
+        }
+
+        .pyramid-concept {
+            display: inline-block;
+            font-size: .72em;
+            padding: 4px 14px;
+            border-radius: 20px;
+            background: #eff6ff;
+            color: #003366;
+            border: 1px solid rgba(0, 51, 102, .3);
+            margin-top: 10px;
+            letter-spacing: .05em
+        }
+
+
+        /* ===== Language Switcher ===== */
+        .lang-switch {
+            position: fixed;
+            top: 16px;
+            right: 16px;
+            z-index: 9999;
+            display: flex;
+            gap: 0;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid #d0d7de;
+            background: rgba(255, 255, 255, .95);
+            backdrop-filter: blur(8px);
+            font-size: .78em;
+            transition: opacity .4s, transform .4s;
+        }
+
+        .lang-switch.hidden {
+            opacity: 0;
+            transform: translateY(-20px);
+            pointer-events: none;
+        }
+
+        @media (max-width:600px) {
+            .lang-switch {
+                top: 8px;
+                right: 8px;
+                font-size: .7em
+            }
+
+            .lang-btn {
+                padding: 5px 10px
+            }
+        }
+
+        .lang-btn {
+            padding: 6px 14px;
+            color: #666666;
+            text-decoration: none;
+            transition: all .2s;
+            font-weight: 600;
+        }
+
+        .lang-btn:hover {
+            color: #333333
+        }
+
+        .lang-btn.active {
+            background: #003366;
+            color: #ffffff;
+        }
+
+
+        /* ===== Photo Gallery ===== */
+        .photo-wrap {
+            margin: 20px 0;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #d0d7de;
+        }
+
+        .photo-wrap img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: contain;
+            display: block;
+            background: #f5f7fa;
+        }
+
+        .photo-caption {
+            padding: 10px 14px;
+            font-size: .8em;
+            color: #666666;
+            background: #f5f7fa;
+            border-top: 1px solid #d0d7de;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 20px 0;
+        }
+
+        @media (max-width:600px) {
+            .photo-grid {
+                grid-template-columns: 1fr
+            }
+        }
+
+        /* ===== Hero Banner ===== */
+        .hero-banner {
+            position: relative;
+            height: 180px;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 24px;
+            background: linear-gradient(rgba(0, 51, 102, .6), rgba(0, 34, 68, .85)), url('../photos/tank_overview.jpg') center/cover no-repeat;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 50%, #ffffff 100%);
+        }
+
+        .hero-content {
+            position: absolute;
+            bottom: 24px;
+            left: 24px;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            font-size: .82em;
+            padding: 6px 16px;
+            border-radius: 20px;
+            background: rgba(0, 51, 102, .15);
+            color: #003366;
+            border: 1px solid rgba(0, 51, 102, .3);
+            letter-spacing: .08em;
+            font-weight: 600;
+        }
+
+        /* ===== Table of Contents ===== */
+        .toc {
+            background: #f5f7fa;
+            border: 1px solid #d0d7de;
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin: 16px 0;
+        }
+
+        .toc-list {
+            margin: 0;
+            padding-left: 20px;
+            list-style: decimal;
+        }
+
+        .toc-list li {
+            margin: 4px 0;
+            font-size: .88em;
+        }
+
+        .toc-list a {
+            color: #666666;
+            text-decoration: none;
+            transition: color .2s;
+        }
+
+        .toc-list a:hover {
+            color: #003366;
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        /* ===== N収支系統図（インタラクティブ版） ===== */
+        .ntree-wrap { margin: 20px 0 }
+        .ntree-root {
+            background: #f5f7fa; border: 1px solid #d0d7de; border-radius: 10px;
+            padding: 12px; text-align: center; margin-bottom: 4px;
+        }
+        .ntree-root-title { font-weight: 700; font-size: .88em; color: #333333 }
+        .ntree-root-sub { font-size: .7em; color: #666666; margin-top: 2px }
+        .ntree-vline { width: 2px; height: 20px; background: #d0d7de; margin: 0 auto }
+        .ntree-fork {
+            display: flex; align-items: flex-start; justify-content: center;
+            height: 20px; position: relative;
+        }
+        .ntree-fork::before {
+            content: ''; position: absolute; top: 0; left: 50%;
+            width: 2px; height: 10px; background: #d0d7de; transform: translateX(-50%);
+        }
+        .ntree-fork::after {
+            content: ''; position: absolute; top: 10px;
+            left: 25%; right: 25%; height: 2px; background: #d0d7de;
+        }
+        .ntree-fork-arm {
+            position: absolute; top: 10px; width: 2px; height: 10px; background: #d0d7de;
+        }
+        .ntree-fork-arm-l { left: 25%; transform: translateX(-50%) }
+        .ntree-fork-arm-r { right: 25%; transform: translateX(50%) }
+        .ntree-branch { display: flex; gap: 8px; margin-bottom: 4px }
+        .ntree-branch-col { flex: 1; display: flex; flex-direction: column; align-items: center }
+        .ntree-bh {
+            width: 100%; border-radius: 8px; padding: 10px 8px; text-align: center;
+        }
+        .ntree-bh-export { background: linear-gradient(135deg,#fef2f2,#fffbeb); border: 1px solid #9a6700 }
+        .ntree-bh-cycle { background: linear-gradient(135deg,#eff6ff,#f0fdf4); border: 1px solid #003366 }
+        .ntree-bl { font-size: .68em; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 2px }
+        .ntree-bl-export { color: #9a6700 }
+        .ntree-bl-cycle { color: #003366 }
+        .ntree-bt { font-weight: 700; font-size: .82em; color: #333333 }
+        .ntree-bd { font-size: .65em; color: #666666; margin-top: 2px }
+        .ntree-vline-sm { width: 2px; height: 8px; background: #d0d7de; margin: 0 auto }
+        .ntree-sub-label {
+            font-size: .62em; color: #666666; text-align: center;
+            padding: 4px 0 2px; letter-spacing: .04em;
+        }
+        /* リーフカード */
+        .ntree-lc {
+            width: 100%; border-radius: 8px; padding: 8px 10px; margin-top: 4px;
+            text-align: left; transition: transform .2s, border-color .2s; cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .ntree-lc:active { transform: scale(.98) }
+        .ntree-lc-phys { background: #f5f7fa; border: 1px solid #d0d7de }
+        .ntree-lc-gas { background: #fffbeb; border: 1px solid #9a6700 }
+        .ntree-lc-bio { background: #f0fdf4; border: 1px solid #1a7f37 }
+        .ntree-lc-cycle { background: #eff6ff; border: 1px solid #003366 }
+        .ntree-lc-holo {
+            background: #eff6ff; border: 2px solid #003366;
+            animation: nc-pulse 2.5s ease infinite;
+        }
+        .ntree-lc-romance { background: #faf5ff; border: 1px solid #7c3aed; opacity: .7 }
+        .ntree-ln { font-weight: 600; font-size: .78em; color: #333333 }
+        .ntree-ld { font-size: .65em; color: #666666; margin-top: 2px; line-height: 1.4 }
+        .ntree-lb {
+            display: inline-block; font-size: .6em; padding: 1px 6px;
+            border-radius: 4px; margin-top: 4px;
+        }
+        .ntree-lb-phys { background: #d0d7de; color: #666666; border: 1px solid #d0d7de }
+        .ntree-lb-gas { background: #fffbeb; color: #9a6700; border: 1px solid #9a6700 }
+        .ntree-lb-bio { background: #f0fdf4; color: #1a7f37; border: 1px solid #1a7f37 }
+        .ntree-lb-cycle { background: #eff6ff; color: #003366; border: 1px solid #003366 }
+        .ntree-lb-romance { background: #faf5ff; color: #7c3aed; border: 1px solid #7c3aed }
+        /* 展開パネル */
+        .ntree-detail {
+            max-height: 0; overflow: hidden; transition: max-height .3s ease;
+        }
+        .ntree-lc.open .ntree-detail { max-height: 200px }
+        .ntree-detail-inner {
+            padding: 6px 0 0; border-top: 1px solid rgba(0,0,0,.05); margin-top: 6px;
+        }
+        .ntree-dr {
+            display: flex; justify-content: space-between; font-size: .62em; padding: 2px 0;
+        }
+        .ntree-dr-l { color: #666666 }
+        .ntree-dr-v { font-weight: 600 }
+        .ntree-dr-pro { color: #1a7f37 }
+        .ntree-dr-con { color: #cf222e }
+        .ntree-tap-hint {
+            text-align: center; font-size: .65em; color: #888888; margin: 10px 0 16px;
+        }
+        /* 硝化注記 */
+        .ntree-nitri-note {
+            background: #111; border: 1px dashed #3d444d; border-radius: 8px;
+            padding: 10px 12px; margin: 16px auto 0; max-width: 420px; text-align: center;
+        }
+        .ntree-nitri-title {
+            font-size: .72em; color: #888888; text-decoration: line-through; margin-bottom: 4px;
+        }
+        .ntree-nitri-body { font-size: .68em; color: #888888; line-height: 1.5 }
+        /* モバイル：縦スタック */
+        @media(max-width:600px) {
+            .ntree-branch { flex-direction: column; gap: 12px }
+            .ntree-fork { display: none }
+        }
+        /* ===== Part ヘッダー ===== */
+        .part-header {
+            margin: 40px 0 24px;
+            text-align: center;
+        }
+        .part-label {
+            display: inline-block;
+            font-size: .65em;
+            text-transform: uppercase;
+            letter-spacing: .12em;
+            padding: 3px 12px;
+            border-radius: 4px;
+            margin-bottom: 8px;
+        }
+        .part-label-theory {
+            background: #eff6ff;
+            color: #003366;
+            border: 1px solid #003366;
+        }
+        .part-label-practice {
+            background: #f0fdf4;
+            color: #1a7f37;
+            border: 1px solid #1a7f37;
+        }
+        .part-title {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #333333;
+        }
+        .part-subtitle {
+            font-size: .78em;
+            color: #666666;
+            margin-top: 4px;
+        }
+        /* TOC ネスト */
+        .toc-part-label {
+            font-size: .7em;
+            text-transform: uppercase;
+            letter-spacing: .08em;
+            margin: 10px 0 4px;
+            padding-left: 0;
+        }
+        .toc-part-theory { color: #003366 }
+        .toc-part-practice { color: #1a7f37 }
+
+        /* ===== ページナビゲーション ===== */
+        .page-nav {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 0;
+            margin: 0 0 20px;
+            border-bottom: 1px solid #d0d7de;
+            flex-wrap: wrap;
+        }
+        .page-nav-bottom {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 16px 0 0;
+            margin: 32px 0 0;
+            border-top: 1px solid #d0d7de;
+            flex-wrap: wrap;
+        }
+        .page-nav-btn {
+            color: #666666;
+            text-decoration: none;
+            font-size: .83em;
+            padding: 6px 14px;
+            border-radius: 6px;
+            border: 1px solid #d0d7de;
+            background: #f5f7fa;
+            transition: all .2s;
+            white-space: nowrap;
+        }
+        .page-nav-btn:hover {
+            color: #333333;
+            border-color: #003366;
+        }
+        .page-nav-spacer { flex: 1; min-width: 8px; }
+
+    </style>
+    <link rel="stylesheet" href="../ibee.css">
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // スクロールフェードイン
+            const io = new IntersectionObserver(entries => {
+                entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible') } });
+            }, { threshold: .15 });
+            document.querySelectorAll('.fade-in').forEach(el => io.observe(el));
+
+            // pHカウンターアップ
+            const phEl = document.getElementById('ph-count');
+            const phBar = document.getElementById('ph-bar');
+            let phDone = false;
+            if (phEl) {
+                const phIo = new IntersectionObserver(entries => {
+                    if (entries[0].isIntersecting && !phDone) {
+                        phDone = true;
+                        let v = 0, target = 6.85, dur = 1800, step = target / (dur / 16);
+                        const tick = () => {
+                            v = Math.min(v + step, target);
+                            phEl.textContent = v.toFixed(2);
+                            if (v < target) requestAnimationFrame(tick);
+                            else { if (phBar) phBar.classList.add('animated') }
+                        };
+                        requestAnimationFrame(tick);
+                    }
+                }, { threshold: .3 });
+                phIo.observe(phEl);
+            }
+
+            // Language switcher: auto-hide on scroll
+            const langSw = document.querySelector('.lang-switch');
+            if (langSw) {
+                let hideTimer;
+                const showSwitch = () => { langSw.classList.remove('hidden'); clearTimeout(hideTimer); hideTimer = setTimeout(() => langSw.classList.add('hidden'), 3000); };
+                window.addEventListener('scroll', () => { langSw.classList.add('hidden'); clearTimeout(hideTimer); hideTimer = setTimeout(() => langSw.classList.remove('hidden'), 800); }, { passive: true });
+                // Show on tap/hover
+                langSw.addEventListener('mouseenter', showSwitch);
+                document.addEventListener('touchstart', (e) => { if (langSw.contains(e.target)) { showSwitch() } });
+                // Initially visible, auto-hide after 4s
+                setTimeout(() => langSw.classList.add('hidden'), 4000);
+            }
+        });
+
+    </script>
+
+    <div class="holo-body">
+        <div class="lang-switch">
+            <span class="lang-btn active">EN</span>
+            <a href="../ja/part2.html" class="lang-btn">日本語</a>
+        </div>
+        <nav class="page-nav">
+            <a href="index.html" class="page-nav-btn">Contents</a>
+            <div class="page-nav-spacer"></div>
+            <a href="part1.html" class="page-nav-btn">← Ch.1 Theory</a>
+            <a href="part3.html" class="page-nav-btn">Ch.3 Methods →</a>
+        </nav>
+        <!-- ===== 第２章：構築可能な環境 ===== -->
+        <div class="part-header fade-in" id="part-configurations">
+            <div><span class="part-label part-label-practice">Chapter 2</span></div>
+            <div class="part-title">Viable Environments — Parameter Flexibility</div>
+            <div class="part-subtitle">Applicable configurations and their options</div>
+        </div>
+
+        <h2 id="sec-configurations">2.1 Configuration Flexibility</h2>
+        <p>The mandatory requirements for this theory to function are limited; other elements can be freely chosen.</p>
+
+        <div class="holo-card fade-in" style="border-left:4px solid #cf222e">
+            <span class="holo-label" style="color:#cf222e">Requirements</span>
+            <ul style="margin:4px 0 0;padding-left:20px;font-size:.88em;line-height:1.9">
+                <li><strong>Overflow system</strong> (oxygen supply via splash aeration, large sump)</li>
+                <li><strong>Porous media in sump</strong> (bacterial colonization surface)</li>
+                <li><strong>Regular carbon source dosing</strong> (C:N ratio maintenance)</li>
+                <li><strong>Detritivorous organisms</strong> (biomass consumers)</li>
+            </ul>
+        </div>
+        <p>With requirements met, the following parameters can be freely chosen.</p>
+
+        <div class="holo-table-wrap fade-in">
+            <table class="holo-table">
+                <tr>
+                    <th>Parameter</th>
+                    <th>Options</th>
+                    <th>Effect</th>
+                </tr>
+                <tr>
+                    <td data-label="Parameter">Substrate</td>
+                    <td data-label="Options">Fired akadama (+peat moss), Oiso gravel, coral sand, bare tank</td>
+                    <td data-label="Effect">Determines pH lock equilibrium</td>
+                </tr>
+                <tr>
+                    <td data-label="Parameter">Detritivores</td>
+                    <td data-label="Options">Daphnia, Tubifex, Gammarus, Neocaridina, Loach, etc.</td>
+                    <td data-label="Effect">Size determines full-auto viability</td>
+                </tr>
+                <tr>
+                    <td data-label="Parameter">Circulation</td>
+                    <td data-label="Options">Full-auto / Manual / Large pump</td>
+                    <td data-label="Effect">Maintenance effort</td>
+                </tr>
+                <tr>
+                    <td data-label="Parameter">Carbon source</td>
+                    <td data-label="Options">Ethanol, acetic acid, sucrose, etc.</td>
+                    <td data-label="Effect">Different decomposition rates</td>
+                </tr>
+                <tr>
+                    <td data-label="Parameter">Main tank</td>
+                    <td data-label="Options">Planted / bare / large tank</td>
+                    <td data-label="Effect">Theoretically applicable to all</td>
+                </tr>
+            </table>
+        </div>
+
+        <h3>2.1.1 Substrate Material Selection</h3>
+        <p>The substrate material is the parameter that determines the pH lock equilibrium point. Since the primary bacterial colonization surface in this theory is the porous media in the sump, the substrate functions to set the pH baseline. The sump media must be porous, but if this condition is met, the same material as the substrate can be used.</p>
+        <div class="fade-in" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px;margin:16px 0">
+
+            <!-- 焼赤玉土+ピートモス (pH 5.5〜6.5) -->
+            <div style="background:#f5f7fa;border:1px solid #d0d7de;border-radius:10px;overflow:hidden">
+                <div style="position:relative">
+                    <img src="../photos/substrate_akadama_peat.png" alt="Fired akadama + peat moss" style="width:100%;height:100px;object-fit:cover;display:block">
+                    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.65));padding:6px 10px 4px">
+                        <div style="font-size:.82em;font-weight:700;color:#fff">Fired Akadama + Peat Moss</div>
+                    </div>
+                </div>
+                <div style="padding:10px 12px">
+                    <span style="display:inline-block;background:#fffbeb;border:1px solid #9a6700;color:#9a6700;font-size:.72em;font-weight:700;border-radius:4px;padding:2px 8px;margin-bottom:6px">pH 5.5〜6.5</span>
+                    <div style="font-size:.78em;color:#333333;line-height:1.6;margin-bottom:6px">Tannic and fulvic acids from peat moss leach out, lowering pH. Does not disintegrate; long-term viable</div>
+                    <div style="font-size:.72em;color:#666666"> Chocolate gourami, Apistogramma, and other ultra-soft, weakly acidic species</div>
+                </div>
+            </div>
+
+            <!-- 焼赤玉土 (pH 6.7〜6.9) -->
+            <div style="background:#f5f7fa;border:1px solid #d0d7de;border-radius:10px;overflow:hidden">
+                <div style="position:relative">
+                    <img src="../photos/substrate_akadama.png" alt="Fired akadama soil" style="width:100%;height:100px;object-fit:cover;display:block">
+                    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.65));padding:6px 10px 4px">
+                        <div style="font-size:.82em;font-weight:700;color:#fff">Fired Akadama</div>
+                    </div>
+                </div>
+                <div style="padding:10px 12px">
+                    <span style="display:inline-block;background:#eff6ff;border:1px solid #003366;color:#003366;font-size:.72em;font-weight:700;border-radius:4px;padding:2px 8px;margin-bottom:6px">pH 6.7〜6.9</span>
+                    <div style="font-size:.78em;color:#333333;line-height:1.6;margin-bottom:6px">Weakly acidic, porous with good bacterial colonization. Long-term viable</div>
+                    <div style="font-size:.72em;color:#666666"> Tetras, angelfish, and other weakly acidic fish</div>
+                </div>
+            </div>
+
+            <!-- 大磯砂 (pH 7.0) -->
+            <div style="background:#f5f7fa;border:1px solid #d0d7de;border-radius:10px;overflow:hidden">
+                <div style="position:relative">
+                    <img src="../photos/substrate_oiso.png" alt="Oiso gravel" style="width:100%;height:100px;object-fit:cover;display:block">
+                    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.65));padding:6px 10px 4px">
+                        <div style="font-size:.82em;font-weight:700;color:#fff">Oiso Gravel</div>
+                    </div>
+                </div>
+                <div style="padding:10px 12px">
+                    <span style="display:inline-block;background:#f0f3f7;border:1px solid #d0d7de;color:#666666;font-size:.72em;font-weight:700;border-radius:4px;padding:2px 8px;margin-bottom:6px">pH ~7.0</span>
+                    <div style="font-size:.78em;color:#333333;line-height:1.6;margin-bottom:6px">Neutral, stable, long-term usable. Slightly alkaline if shell content is high</div>
+                    <div style="font-size:.72em;color:#666666"> Goldfish, medaka, and fish preferring neutral to mildly alkaline</div>
+                </div>
+            </div>
+
+            <!-- ベアタンク (pH 7.0) -->
+            <div style="background:#f5f7fa;border:1px solid #d0d7de;border-radius:10px;overflow:hidden">
+                <div style="position:relative">
+                    <img src="../photos/substrate_bare_tank.png" alt="Bare tank" style="width:100%;height:100px;object-fit:cover;display:block">
+                    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.65));padding:6px 10px 4px">
+                        <div style="font-size:.82em;font-weight:700;color:#fff">Bare Tank</div>
+                    </div>
+                </div>
+                <div style="padding:10px 12px">
+                    <span style="display:inline-block;background:#f0f3f7;border:1px solid #d0d7de;color:#666666;font-size:.72em;font-weight:700;border-radius:4px;padding:2px 8px;margin-bottom:6px">pH ~7.0</span>
+                    <div style="font-size:.78em;color:#333333;line-height:1.6;margin-bottom:6px">No substrate. pH equilibrium depends on sump media. Easy maintenance</div>
+                    <div style="font-size:.72em;color:#666666"> Large carnivorous fish, training purposes, etc.</div>
+                </div>
+            </div>
+
+            <!-- サンゴ砂 (pH 8.0〜8.4) -->
+            <div style="background:#f5f7fa;border:1px solid #d0d7de;border-radius:10px;overflow:hidden">
+                <div style="position:relative">
+                    <img src="../photos/substrate_coral_sand.png" alt="Coral sand" style="width:100%;height:100px;object-fit:cover;display:block">
+                    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.65));padding:6px 10px 4px">
+                        <div style="font-size:.82em;font-weight:700;color:#fff">Coral Sand</div>
+                    </div>
+                </div>
+                <div style="padding:10px 12px">
+                    <span style="display:inline-block;background:#f0fdf4;border:1px solid #1a7f37;color:#1a7f37;font-size:.72em;font-weight:700;border-radius:4px;padding:2px 8px;margin-bottom:6px">pH 8.0〜8.4</span>
+                    <div style="font-size:.78em;color:#333333;line-height:1.6;margin-bottom:6px">Strongly alkaline. Calcium carbonate dissolution continuously raises pH</div>
+                    <div style="font-size:.72em;color:#666666"> Marine fish, African cichlids, brackish fish, etc.</div>
+                </div>
+            </div>
+
+        </div>        <h3>2.1.2 Types and Properties of Carbon Sources</h3>
+        <p>Carbon sources are the energy source for bacteria, with different decomposition rates depending on type. Since the nitrogen source (NH₄⁺) is rate-limiting, excess carbon is dissipated as CO₂, making precise measurement unnecessary. However, extreme overdosing can degrade water quality, so adjusting dosage based on pH trends is recommended.</p>
+        <div class="recipe-wrap fade-in">
+            <div class="recipe-grid">
+                <div class="recipe-card-item recipe-fast">
+                    <div class="recipe-emoji"></div>
+                    <div class="recipe-name">Ethanol<br><small style="font-weight:400;opacity:.7">C₂H₅OH</small></div>
+                    <div class="recipe-component">Ethanol → Acetic acid → TCA cycle</div>
+                    <span class="recipe-speed speed-fast">Fast</span>
+                </div>
+                <div class="recipe-card-item recipe-mid">
+                    <div class="recipe-emoji"></div>
+                    <div class="recipe-name">Acetic Acid<br><small style="font-weight:400;opacity:.7">CH₃COOH</small></div>
+                    <div class="recipe-component">Supplied directly as acetic acid</div>
+                    <span class="recipe-speed speed-mid">Medium</span>
+                </div>
+                <div class="recipe-card-item recipe-slow">
+                    <div class="recipe-emoji"></div>
+                    <div class="recipe-name">Sucrose<br><small style="font-weight:400;opacity:.7">C₁₂H₂₂O₁₁</small></div>
+                    <div class="recipe-component">Sucrose → Hydrolysis to monosaccharides</div>
+                    <span class="recipe-speed speed-slow">Slow</span>
+                </div>
+            </div>
+        </div>
+        <p>This theory uses a "carbon source extract" mixing multiple carbon sources. This mitigates the risk of rapid bacterial proliferation and oxygen consumption while achieving stable continuous supply. Specific recipes are explained in Chapter 3.</p>
+
+        <h3>2.1.3 Benthos Selection and Full-Auto Conditions</h3>
+        <p>The selection of detritivorous organisms (benthos) directly affects the degree of circulation automation. For the full-auto method, benthos must be small enough to pass through the supply pump impeller.</p>
+        <div class="fade-in" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px;margin:16px 0">
+
+            <!-- ミジンコ -->
+            <div style="background:#f5f7fa;border:1px solid #d0d7de;border-radius:10px;overflow:hidden">
+                <div style="position:relative">
+                    <img src="../photos/benthos_daphnia.png" alt="Daphnia" style="width:100%;height:100px;object-fit:cover;display:block">
+                    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.65));padding:6px 10px 4px">
+                        <div style="font-size:.82em;font-weight:700;color:#fff">Daphnia</div>
+                    </div>
+                </div>
+                <div style="padding:10px 12px">
+                    <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px">
+                        <span style="display:inline-block;background:#f0f3f7;border:1px solid #d0d7de;color:#333333;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">0.2〜3mm</span>
+                        <span style="display:inline-block;background:#f0fdf4;border:1px solid #1a7f37;color:#1a7f37;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">Full-auto</span>
+                    </div>
+                    <div style="font-size:.78em;color:#333333;line-height:1.6">Directly filter-feeds suspended bacteria. High water quality improvement effect, ideal live food for small fish. Also serves as dissolved oxygen indicator</div>
+                </div>
+            </div>
+
+            <!-- イトミミズ -->
+            <div style="background:#f5f7fa;border:1px solid #d0d7de;border-radius:10px;overflow:hidden">
+                <div style="position:relative">
+                    <img src="../photos/benthos_tubifex.png" alt="Tubifex worms" style="width:100%;height:100px;object-fit:cover;display:block">
+                    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.65));padding:6px 10px 4px">
+                        <div style="font-size:.82em;font-weight:700;color:#fff">Tubifex</div>
+                    </div>
+                </div>
+                <div style="padding:10px 12px">
+                    <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px">
+                        <span style="display:inline-block;background:#f0f3f7;border:1px solid #d0d7de;color:#333333;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">〜2mm</span>
+                        <span style="display:inline-block;background:#f0fdf4;border:1px solid #1a7f37;color:#1a7f37;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">Full-auto</span>
+                    </div>
+                    <div style="font-size:.78em;color:#333333;line-height:1.6">Fast reproduction rate, easy to supply stably. Highly palatable to fish</div>
+                </div>
+            </div>
+
+            <!-- ヨコエビ -->
+            <div style="background:#f5f7fa;border:1px solid #d0d7de;border-radius:10px;overflow:hidden">
+                <div style="position:relative">
+                    <img src="../photos/benthos_gammarus.png" alt="Gammarus" style="width:100%;height:100px;object-fit:cover;display:block">
+                    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.65));padding:6px 10px 4px">
+                        <div style="font-size:.82em;font-weight:700;color:#fff">Gammarus</div>
+                    </div>
+                </div>
+                <div style="padding:10px 12px">
+                    <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px">
+                        <span style="display:inline-block;background:#f0f3f7;border:1px solid #d0d7de;color:#333333;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">2〜10mm</span>
+                        <span style="display:inline-block;background:#f0fdf4;border:1px solid #1a7f37;color:#1a7f37;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">Full-auto</span>
+                    </div>
+                    <div style="font-size:.78em;color:#333333;line-height:1.6">Also effective at substrate agitation. Many fish readily prey on them</div>
+                </div>
+            </div>
+
+            <!-- ミズムシ -->
+            <div style="background:#f5f7fa;border:1px solid #d0d7de;border-radius:10px;overflow:hidden">
+                <div style="position:relative">
+                    <img src="../photos/benthos_asellus.png" alt="Asellus" style="width:100%;height:100px;object-fit:cover;display:block">
+                    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.65));padding:6px 10px 4px">
+                        <div style="font-size:.82em;font-weight:700;color:#fff">Asellus (Water Louse)</div>
+                    </div>
+                </div>
+                <div style="padding:10px 12px">
+                    <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px">
+                        <span style="display:inline-block;background:#f0f3f7;border:1px solid #d0d7de;color:#333333;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">5〜15mm</span>
+                        <span style="display:inline-block;background:#f0fdf4;border:1px solid #1a7f37;color:#1a7f37;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">Full-auto</span>
+                    </div>
+                    <div style="font-size:.78em;color:#333333;line-height:1.6">High detritus decomposition ability. Tolerant of low temperatures, stable reproduction in freshwater</div>
+                </div>
+            </div>
+
+            <!-- トランペットスネール -->
+            <div style="background:#f5f7fa;border:1px solid #d0d7de;border-radius:10px;overflow:hidden">
+                <div style="position:relative">
+                    <img src="../photos/benthos_mts.png" alt="Malaysian trumpet snail" style="width:100%;height:100px;object-fit:cover;display:block">
+                    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.65));padding:6px 10px 4px">
+                        <div style="font-size:.82em;font-weight:700;color:#fff">Malaysian Trumpet Snail</div>
+                    </div>
+                </div>
+                <div style="padding:10px 12px">
+                    <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px">
+                        <span style="display:inline-block;background:#f0f3f7;border:1px solid #d0d7de;color:#333333;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">1〜3cm</span>
+                        <span style="display:inline-block;background:#fffbeb;border:1px solid #9a6700;color:#9a6700;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">Manual (substrate agitation)</span>
+                    </div>
+                    <div style="font-size:.78em;color:#333333;line-height:1.6">Burrows into substrate during day preventing anaerobic conditions. Feeds on detritus at night. Substrate agitation function aligns with "non-anaerobic substrate" consequence</div>
+                </div>
+            </div>
+
+            <!-- ミナミヌマエビ -->
+            <div style="background:#f5f7fa;border:1px solid #d0d7de;border-radius:10px;overflow:hidden">
+                <div style="position:relative">
+                    <img src="../photos/benthos_cherry_shrimp.png" alt="Neocaridina shrimp" style="width:100%;height:100px;object-fit:cover;display:block">
+                    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.65));padding:6px 10px 4px">
+                        <div style="font-size:.82em;font-weight:700;color:#fff">Neocaridina Shrimp</div>
+                    </div>
+                </div>
+                <div style="padding:10px 12px">
+                    <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px">
+                        <span style="display:inline-block;background:#f0f3f7;border:1px solid #d0d7de;color:#333333;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">1.5〜3cm</span>
+                        <span style="display:inline-block;background:#f0fdf4;border:1px solid #1a7f37;color:#1a7f37;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">Full-auto</span>
+                    </div>
+                    <div style="font-size:.78em;color:#333333;line-height:1.6">Broadly feeds on detritus, algae, and bacterial biomass. Short reproduction cycle with constant supply of juveniles. Easy to obtain</div>
+                </div>
+            </div>
+
+            <!-- ヤマトヌマエビ -->
+            <div style="background:#f5f7fa;border:1px solid #d0d7de;border-radius:10px;overflow:hidden">
+                <div style="position:relative">
+                    <img src="../photos/benthos_amano_shrimp.png" alt="Amano shrimp" style="width:100%;height:100px;object-fit:cover;display:block">
+                    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.65));padding:6px 10px 4px">
+                        <div style="font-size:.82em;font-weight:700;color:#fff">Amano Shrimp</div>
+                    </div>
+                </div>
+                <div style="padding:10px 12px">
+                    <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px">
+                        <span style="display:inline-block;background:#f0f3f7;border:1px solid #d0d7de;color:#333333;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">3〜5cm</span>
+                        <span style="display:inline-block;background:#fffbeb;border:1px solid #9a6700;color:#9a6700;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">Manual / Large pump</span>
+                    </div>
+                    <div style="font-size:.78em;color:#333333;line-height:1.6">Detritus decomposition ability stronger than Neocaridina. Can process larger organic matter.<span style="color:#666666">Does not breed in freshwater, so population does not naturally increase</span></div>
+                </div>
+            </div>
+
+            <!-- ドジョウ -->
+            <div style="background:#f5f7fa;border:1px solid #d0d7de;border-radius:10px;overflow:hidden">
+                <div style="position:relative">
+                    <img src="../photos/benthos_loach.png" alt="Loach" style="width:100%;height:100px;object-fit:cover;display:block">
+                    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.65));padding:6px 10px 4px">
+                        <div style="font-size:.82em;font-weight:700;color:#fff">Loach</div>
+                    </div>
+                </div>
+                <div style="padding:10px 12px">
+                    <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px">
+                        <span style="display:inline-block;background:#f0f3f7;border:1px solid #d0d7de;color:#333333;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">5〜15cm</span>
+                        <span style="display:inline-block;background:#fffbeb;border:1px solid #9a6700;color:#9a6700;font-size:.7em;font-weight:700;border-radius:4px;padding:2px 8px">Manual / Large pump</span>
+                    </div>
+                    <div style="font-size:.78em;color:#333333;line-height:1.6">Strong substrate agitation. Ideal as food for large carnivorous fish</div>
+                </div>
+            </div>
+
+        </div>
+        <div class="holo-tip fade-in">
+            <span class="holo-label">Full-Auto Criteria</span>
+            If the pump impeller clearance is approximately 3mm or more, passage of Tubifex and juvenile Gammarus is often possible. However, checking pump specifications in advance is recommended.
+        </div>
+
+        <h3>2.1.4 Difficult-to-Apply Configurations</h3>
+        <p>While this theory has broad applicability, the following configurations make it difficult to meet mandatory requirements (sufficient oxygen supply, large sump).</p>
+        <div class="holo-warn-red fade-in">
+            <strong>× HOB filter alone:</strong> Lacks a large-capacity processing chamber equivalent to a sump, unable to secure space needed for bacterial biomass accumulation and benthos proliferation.
+        </div>
+        <div class="holo-warn-red fade-in">
+            <strong>× Canister filter alone:</strong> Sealed structure provides insufficient internal oxygen supply. Cannot maintain long-term growth conditions for aerobic heterotrophic bacteria.
+        </div>
+        <div class="holo-warn-yellow fade-in">
+            <strong>※ Tanks under 30L:</strong> Not technically impossible, but bioload and carbon source management become extremely demanding. Recommended only after gaining sufficient experience.
+        </div>
+
+        <hr>
+        <nav class="page-nav-bottom">
+            <a href="index.html" class="page-nav-btn">Contents</a>
+            <div class="page-nav-spacer"></div>
+            <a href="part1.html" class="page-nav-btn">← Ch.1 Theory</a>
+            <a href="part3.html" class="page-nav-btn">Ch.3 Methods →</a>
+        </nav>
+
+    </div>
+    <footer class="ibee-footer"><div class="ibee-footer-inner"><div class="ibee-footer-org">生物環境技術研究会</div><div class="ibee-footer-en">Institute of Biological Environmental Engineering</div><div class="ibee-footer-since">Since. 1999</div><div class="ibee-footer-cite"><div class="ibee-footer-cite-label">Recommended Citation</div>生物環境技術研究会 (2026). ホロビオントアクアリウム理論. Retrieved from https://holobiont-aqua.github.io/IBEE/ja/</div><div class="ibee-footer-note">* This site is operated by an individual as a technical information resource</div></div></footer>
+</body>
+
+</html>
